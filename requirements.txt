@@ -1,0 +1,7 @@
+neo4j-graphrag[openai]==1.23.0
+leidenalg
+igraph
+openpyxl
+pytest
+python-dotenv
+tiktoken

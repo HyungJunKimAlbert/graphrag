@@ -1,0 +1,20 @@
+# 비밀
+.env
+.env.*
+*.env
+.neo4j-*.env
+
+# 가상환경·캐시
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# 대용량·재생성 가능한 캐시 (OpenAI 응답·임베딩)
+out/embeddings.jsonl
+out/llm_cache/
+out/pip_install.log
+
+# 개인 설정
+.claude/settings.local.json
+.DS_Store

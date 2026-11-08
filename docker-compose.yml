@@ -1,0 +1,22 @@
+# GraphRAG 전용 Neo4j. 개발 DB(supplement-neo4j-dev)를 복제해 색인을 쌓는 곳이다.
+# 실행: docker compose --env-file .neo4j-rag.env up -d
+name: supplement-rag
+services:
+  neo4j-rag:
+    image: neo4j:5.26
+    container_name: supplement-neo4j-rag
+    restart: unless-stopped
+    ports:
+      - "7476:7474"   # HTTP·브라우저
+      - "7689:7687"   # Bolt
+    environment:
+      NEO4J_AUTH: "neo4j/${NEO4J_PASSWORD:?.neo4j-rag.env의 NEO4J_PASSWORD가 필요합니다}"
+      NEO4J_server_memory_heap_initial__size: 512m
+      NEO4J_server_memory_heap_max__size: 1G
+      NEO4J_server_memory_pagecache_size: 512m
+    volumes:
+      - supplement-neo4j-rag-data:/data
+      - supplement-neo4j-rag-logs:/logs
+volumes:
+  supplement-neo4j-rag-data:
+  supplement-neo4j-rag-logs:
