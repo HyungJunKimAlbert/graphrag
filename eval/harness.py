@@ -19,6 +19,25 @@ RESULT_KEYS = ["status", "message", "recommendations", "excluded", "warnings", "
 JUDGE_TASK = "judge"
 PASS_RATIO = 0.8
 SELECTOR = {"llm": "LLM 선택", "fallback_rules": "규칙 순서 대체"}
+TASK_LABELS = {"normalize": "주호소 정규화", "select": "성분 선택", JUDGE_TASK: "채점"}
+STAGES = [("normalize", "주호소 정규화(LLM)"), ("context", "검진·문진 맥락(그래프)"), ("candidates", "후보·근거 조회(그래프)"),
+          ("safety", "금지 판정"), ("select", "성분 선택(LLM+검증)"), ("total", "전체")]
+
+
+def sec(ms):
+    return None if ms is None else round(ms / 1000, 2)
+
+
+def usage_totals(result):
+    """환자 1명의 LLM 호출 합계: (전체 시간 초, 입력 토큰, 출력 토큰). 토큰 정보가 없으면 None."""
+    calls = result.get("trace", {}).get("llm_calls", [])
+    tok = lambda k: sum(c[k] for c in calls) if calls and all(c.get(k) is not None for c in calls) else None
+    return sec(result.get("trace", {}).get("timings_ms", {}).get("total")), tok("input"), tok("output")
+
+
+def p95(values):
+    values = sorted(v for v in values if v is not None)
+    return values[min(len(values) - 1, int(round(0.95 * (len(values) - 1))))] if values else None
 
 JUDGE_SYSTEM = """당신은 약사입니다. 같은 환자에게 두 시스템(A, B)이 고른 영양성분 3개를 비교해 어느 쪽이 나은지 채점합니다.
 어느 쪽이 어떤 시스템인지는 알려 주지 않습니다. 순서나 문장 길이에 끌리지 말고 내용으로만 판단합니다.
@@ -248,6 +267,13 @@ def xlsx(path, patients, results, engine_rows, problems, verdicts):
                 ("G2 무", agg["tie"]), ("G2 패", agg["loss"]), ("G2 승+무 비율", agg["ratio"]),
                 ("G2 새 시스템 확실히 못함", agg["new_clearly_worse"]), ("G2 통과", "예" if agg["pass"] else "아니오")]:
         ws.append(row)
+    totals = [usage_totals(by_res[p["id"]]) for p in patients]
+    secs, ins, outs = ([t[i] for t in totals if t[i] is not None] for i in range(3))
+    for row in [("전체 시간 평균(초)", round(sum(secs) / len(secs), 2) if secs else None), ("전체 시간 p95(초)", p95(secs)),
+                ("입력 토큰 합계", sum(ins) if ins else None), ("출력 토큰 합계(추론 포함)", sum(outs) if outs else None),
+                ("환자당 입력 토큰 평균", round(sum(ins) / len(ins)) if ins else None),
+                ("환자당 출력 토큰 평균", round(sum(outs) / len(outs)) if outs else None)]:
+        ws.append(row)
     for p in problems:
         ws.append(("G1 위반 내용", p))
 
@@ -262,7 +288,7 @@ def xlsx(path, patients, results, engine_rows, problems, verdicts):
         return "\n".join(f"{x['rank']}. {x['name']}: {x['reason']}" for x in r["recommendations"])
 
     header = ("환자", "그룹", "메모", "환자 요약", "상태", "선택 방식", "엔진 3개", "새 3개", "추천 이유", "새 근거",
-              "판정", "채점 이유")
+              "판정", "채점 이유", "총 시간(초)", "입력 토큰", "출력 토큰")
     diff, full = wb.create_sheet("불일치"), wb.create_sheet("전체")
     diff.append(header)
     full.append(header)
@@ -270,7 +296,7 @@ def xlsx(path, patients, results, engine_rows, problems, verdicts):
         new, old, v = by_res[p["id"]], by_eng.get(p["id"]), by_ver.get(p["id"])
         row = (p["id"], p["group"], p["note"], describe_patient(p["patient"]), new["status"], SELECTOR.get(new["selector"], ""),
                names(old), names(new), reasons(new), evidence(new), v["new_side_result"] if v else "",
-               v["verdict"]["why"] if v else "")
+               v["verdict"]["why"] if v else "", *usage_totals(new))
         full.append(row)
         if old is not None and not same_set(new, old):
             diff.append(row)
@@ -283,6 +309,29 @@ def xlsx(path, patients, results, engine_rows, problems, verdicts):
             steps.append((p["id"], a["attempt"], ", ".join(f"{x.get('rank')}. {x['name']}" for x in picked),
                           "통과" if not a["errors"] else "거부: " + " / ".join(a["errors"]),
                           "\n".join(f"{x['name']}: {x.get('reason', '')}" for x in picked)))
+
+    info = wb.create_sheet("성분 세부사항")  # LLM 선택 뒤 코드가 붙인 제품 정보(그래프·원료 DB). 환자별 주의는 cautions
+    info.append(("환자", "순위", "성분", "일일섭취량", "원재료명", "섭취 시 주의사항", "주된 기능성"))
+    for p in patients:
+        for x in by_res[p["id"]]["recommendations"]:
+            d = x.get("details") or {}
+            info.append((p["id"], x["rank"], x["name"], d.get("daily_intake"), d.get("raw_materials"), d.get("precautions"),
+                         d.get("function")))
+
+    calls = wb.create_sheet("LLM 호출")  # 호출 1회 = 1행. 출력 토큰은 추론 토큰을 포함한다
+    calls.append(("환자", "단계", "시도", "시간(초)", "입력 토큰", "출력 토큰(추론 포함)", "추론 토큰", "캐시된 입력 토큰"))
+    for p in patients:
+        seen = {}
+        for c in by_res[p["id"]].get("trace", {}).get("llm_calls", []):
+            seen[c["task"]] = seen.get(c["task"], 0) + 1
+            calls.append((p["id"], TASK_LABELS.get(c["task"], c["task"]), seen[c["task"]], sec(c["latency_ms"]),
+                          c.get("input"), c.get("output"), c.get("reasoning"), c.get("cached")))
+
+    stages = wb.create_sheet("단계별 시간")  # 초. 빈 칸은 그 단계를 거치지 않음(진료 권유 중단·후보 부족)
+    stages.append(("환자", *(label for _, label in STAGES)))
+    for p in patients:
+        t = by_res[p["id"]].get("trace", {}).get("timings_ms", {})
+        stages.append((p["id"], *(sec(t.get(key)) for key, _ in STAGES)))
     Path(path).parent.mkdir(parents=True, exist_ok=True)
     wb.save(path)
 

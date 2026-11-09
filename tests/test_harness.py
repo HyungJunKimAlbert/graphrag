@@ -134,3 +134,43 @@ def test_xlsx_selection_sheet_readable_without_engine(tmp_path):
     assert "비타민 B12" in text and "근거 목록에 없는" in text and "통과" in text and "NUT-1" not in text
     full = " ".join(str(c) for r in wb["전체"].iter_rows(values_only=True) for c in r)
     assert "[복용약 고갈]" in full and "이유" in full
+
+
+def test_xlsx_latency_and_token_sheets(tmp_path):
+    from openpyxl import load_workbook
+    result = {"status": "ok", "message": None, "excluded": [], "warnings": [], "selector": "llm",
+              "recommendations": [],
+              "trace": {"selection": [],
+                        "llm_calls": [{"task": "normalize", "latency_ms": 1500.0, "input": 1000, "output": 200,
+                                       "reasoning": 150, "cached": 0},
+                                      {"task": "select", "latency_ms": 2500.0, "input": 3000, "output": 400,
+                                       "reasoning": 300, "cached": 1024}],
+                        "timings_ms": {"normalize": 1500.0, "context": 100.0, "candidates": 200.0, "safety": 50.0,
+                                       "select": 2500.0, "total": 4400.0}}}
+    patients = [{"id": "X", "group": "g", "note": "", "patient": {"age": 60, "sex": "M"}}]
+    path = tmp_path / "x.xlsx"
+    harness.xlsx(path, patients, [{"id": "X", "result": result}], [], [], [])
+    wb = load_workbook(path)
+    calls = list(wb["LLM 호출"].iter_rows(values_only=True))
+    assert calls[1][:4] == ("X", "주호소 정규화", 1, 1.5) and calls[2][1] == "성분 선택" and calls[2][4] == 3000
+    stages = list(wb["단계별 시간"].iter_rows(values_only=True))
+    assert stages[1][0] == "X" and stages[1][-1] == 4.4
+    summary = " ".join(str(c) for r in wb["요약"].iter_rows(values_only=True) for c in r)
+    assert "전체 시간 평균(초)" in summary and "입력 토큰 합계" in summary
+    full = list(wb["전체"].iter_rows(values_only=True))
+    assert "총 시간(초)" in full[0] and 4.4 in full[1] and 4000 in full[1]
+
+
+def test_xlsx_details_sheet(tmp_path):
+    from openpyxl import load_workbook
+    rec = {"rank": 1, "ingredient_id": "NTC-2-54", "name": "테아닌", "reason": "r", "evidence": [], "cautions": [],
+           "details": {"daily_intake": "200 ~ 250 mg", "raw_materials": "L-글루타민", "precautions": "(가) 임산부 주의",
+                       "function": "긴장완화"}}
+    result = {"status": "ok", "message": None, "excluded": [], "warnings": [], "selector": "llm",
+              "recommendations": [rec], "trace": {"selection": []}}
+    patients = [{"id": "X", "group": "g", "note": "", "patient": {"age": 60, "sex": "M"}}]
+    path = tmp_path / "x.xlsx"
+    harness.xlsx(path, patients, [{"id": "X", "result": result}], [], [], [])
+    rows = list(load_workbook(path)["성분 세부사항"].iter_rows(values_only=True))
+    assert rows[0] == ("환자", "순위", "성분", "일일섭취량", "원재료명", "섭취 시 주의사항", "주된 기능성")
+    assert rows[1] == ("X", 1, "테아닌", "200 ~ 250 mg", "L-글루타민", "(가) 임산부 주의", "긴장완화")

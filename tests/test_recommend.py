@@ -153,3 +153,25 @@ def test_trace_selection_on_success(patient_80m):
     (only,) = r["trace"]["selection"]
     assert only["attempt"] == 1 and only["errors"] == [] and len(only["picks"]) == 3
     assert all(p["name"] for p in only["picks"])
+
+
+@pytest.mark.graph
+def test_trace_records_llm_calls_and_stage_timings(patient_80m):
+    """LLM 호출(정규화·선택 시도)마다 시간·토큰, 단계별 시간을 trace에 남긴다."""
+    r = recommend({**patient_80m, "complaint": "다리에 쥐가 나요"}, smart(bad_first=1))
+    calls = r["trace"]["llm_calls"]
+    assert [c["task"] for c in calls] == ["normalize", "select", "select"]
+    assert all(c["latency_ms"] >= 0 for c in calls)
+    t = r["trace"]["timings_ms"]
+    assert set(t) == {"normalize", "context", "candidates", "safety", "select", "total"}
+    assert t["total"] >= t["select"] >= 0
+
+
+@pytest.mark.graph
+def test_recommendations_carry_details(patient_80m):
+    """추천 성분마다 일일섭취량·원재료명·섭취 시 주의사항·주된 기능성을 붙인다."""
+    r = recommend(patient_80m, smart())
+    assert r["recommendations"]
+    for rec in r["recommendations"]:
+        assert set(rec["details"]) == {"daily_intake", "raw_materials", "precautions", "function"}
+        assert rec["details"]["function"]

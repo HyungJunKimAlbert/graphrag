@@ -4,6 +4,7 @@ SessionLLM이 답하는 프롬프트는 운영 GPT에 보낼 문자열과 같다
 """
 import hashlib
 import json
+import time
 from pathlib import Path
 from typing import Callable, Protocol
 
@@ -74,6 +75,7 @@ class OpenAILLM:
         self.model = model
         self.effort = effort
         self._client = None
+        self.last_usage = None
 
     def _get(self):
         if self._client is None:
@@ -87,4 +89,33 @@ class OpenAILLM:
             model=self.model, reasoning={"effort": self.effort},
             input=[{"role": "system", "content": system}, {"role": "user", "content": user}],
             text={"format": {"type": "json_schema", "name": task, "strict": True, "schema": schema}})
+        self.last_usage = usage_of(res)
         return json.loads(res.output_text)
+
+
+def usage_of(res):
+    """Responses API usage → {input, output(추론 포함), reasoning, cached}. 없으면 None."""
+    u = getattr(res, "usage", None)
+    if u is None:
+        return None
+    return {"input": u.input_tokens, "output": u.output_tokens,
+            "reasoning": getattr(getattr(u, "output_tokens_details", None), "reasoning_tokens", None),
+            "cached": getattr(getattr(u, "input_tokens_details", None), "cached_tokens", None)}
+
+
+class Meter:
+    """클라이언트를 감싸 호출마다 걸린 시간과 토큰(클라이언트가 last_usage를 주면)을 calls에 남긴다."""
+
+    def __init__(self, client):
+        self.client = client
+        self.calls = []
+
+    def complete_json(self, task, system, user, schema):
+        if hasattr(self.client, "last_usage"):
+            self.client.last_usage = None
+        start = time.perf_counter()
+        out = self.client.complete_json(task, system, user, schema)
+        usage = getattr(self.client, "last_usage", None) or {}
+        self.calls.append({"task": task, "latency_ms": round((time.perf_counter() - start) * 1000, 1),
+                           **{k: usage.get(k) for k in ("input", "output", "reasoning", "cached")}})
+        return out
