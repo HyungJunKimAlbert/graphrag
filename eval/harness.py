@@ -342,7 +342,8 @@ def main(argv=None):
     parser.add_argument("--tag", required=True)
     parser.add_argument("--patients", type=Path, default=PATIENTS)
     parser.add_argument("--session", type=Path, default=config.SESSION_DIR)
-    parser.add_argument("--llm", choices=["session", "openai"], default="session")
+    parser.add_argument("--llm", choices=["session", "openai", "anthropic"], default="session")
+    parser.add_argument("--effort", choices=["low", "medium", "high"], default="low")  # GPT·Claude effort
     args = parser.parse_args(argv)
     patients = load_patients(args.patients)
     res_path, eng_path = OUT / f"{args.tag}.jsonl", OUT / f"{args.tag}-engine.jsonl"
@@ -354,7 +355,10 @@ def main(argv=None):
         client = None
         if args.llm == "openai":
             from rxrag.llm import OpenAILLM
-            client = OpenAILLM()
+            client = OpenAILLM(effort=args.effort)  # 과금: GPT
+        elif args.llm == "anthropic":
+            from rxrag import llm
+            client = llm.AnthropicLLM(effort=args.effort)  # 과금: Claude Haiku
         try:
             run(patients, args.session, res_path, client=client)
         except MissingResponse as e:

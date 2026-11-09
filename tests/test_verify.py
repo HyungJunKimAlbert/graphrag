@@ -107,3 +107,54 @@ def test_fallback_reason_never_forbidden():
 def test_errors_name_ingredients_in_korean():
     errors = verify.check(picks(pick("A", 1, facts=["SYM_DIRECT:S>B"]), pick("B", 2), pick("C", 3)), POOL, set(), 3)
     assert errors and "테아닌" in errors[0]
+
+
+# --- 리뷰에서 미룬 minor: 형식이 깨진 응답은 예외 대신 오류 문구로 ---
+def test_non_dict_pick_is_error_not_exception():
+    errors = verify.check({"picks": ["A", pick("B", 2), pick("C", 3)]}, POOL, set(), 3)
+    assert errors and any("객체" in e for e in errors)
+
+
+def test_missing_reason_is_error():
+    p = pick("A", 1)
+    del p["reason"]
+    assert any("reason" in e for e in verify.check(picks(p, pick("B", 2), pick("C", 3)), POOL, set(), 3))
+
+
+def test_blank_reason_is_error():
+    assert verify.check(picks(pick("A", 1, reason="  "), pick("B", 2), pick("C", 3)), POOL, set(), 3)
+
+
+def test_fact_ids_string_is_error():
+    p = pick("A", 1, facts="SYM_DIRECT:S>A")
+    assert any("fact_ids" in e for e in verify.check(picks(p, pick("B", 2), pick("C", 3)), POOL, set(), 3))
+
+
+def test_unhashable_ingredient_id_is_error():
+    p = pick("A", 1)
+    p["ingredient_id"] = ["A"]
+    assert verify.check(picks(p, pick("B", 2), pick("C", 3)), POOL, {"C"}, 3)
+
+
+# --- 이름 중복: 괄호 속 제품명·추출물/분말 접미어·별칭이 달라도 같은 원료면 중복 ---
+def _two(a, b):
+    pool = [cand("X", a, 0), cand("Y", b, 1), cand("C", "셀레늄", 2)]
+    return verify.check(picks(pick("X", 1), pick("Y", 2), pick("C", 3)), pool, set(), 3)
+
+
+def test_same_raw_material_different_product_tag():
+    assert _two("아쉬아간다 추출물", "아쉬아간다추출물(Sensoril®)((주)노바렉스, 제2024-30호)")
+
+
+def test_suffix_variants_clash():
+    assert _two("루테인지아잔틴복합추출물20%", "루테인지아잔틴추출복합물")
+
+
+def test_alias_in_parentheses_or_hyphen_clash():
+    assert _two("사탕수수왁스알코올(폴리코사놀)", "폴리코사놀-사탕수수왁스알코올")
+
+
+def test_different_ingredients_do_not_clash():
+    for a, b in [("인삼", "인삼가수분해 농축액"), ("홍삼", "홍삼추출효소처리분말"), ("비타민 B1", "비타민 B12"),
+                 ("크릴오일(FJH-KO)", "크릴오일등복합물(FlexPro MDⓇ)"), ("녹차추출물 (카테킨)", "테아닌")]:
+        assert _two(a, b) == [], (a, b)

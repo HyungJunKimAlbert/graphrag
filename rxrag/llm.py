@@ -132,11 +132,23 @@ class AnthropicLLM:
             model=self.model, max_tokens=self.max_tokens,
             system=[{"type": "text", "text": system, "cache_control": {"type": "ephemeral"}}],
             messages=[{"role": "user", "content": user}],
-            output_config={"effort": self.effort, "format": {"type": "json_schema", "schema": schema}})
+            output_config={"effort": self.effort, "format": {"type": "json_schema", "schema": claude_schema(schema)}})
         self.last_usage = anthropic_usage_of(res)
         if res.stop_reason in ("max_tokens", "refusal"):
             raise RuntimeError(f"Claude 응답이 완결되지 않았습니다: {task}/{res.stop_reason}")
         return json.loads(next(b.text for b in res.content if b.type == "text"))
+
+
+def claude_schema(schema):
+    """Claude 구조화 출력이 받지 않는 배열 제약(maxItems, 2 이상의 minItems)을 뺀 사본. 개수는 verify.check가 검사한다."""
+    if isinstance(schema, list):
+        return [claude_schema(x) for x in schema]
+    if not isinstance(schema, dict):
+        return schema
+    out = {k: claude_schema(v) for k, v in schema.items() if k != "maxItems"}
+    if isinstance(out.get("minItems"), int) and out["minItems"] > 1:
+        del out["minItems"]
+    return out
 
 
 def anthropic_usage_of(res):

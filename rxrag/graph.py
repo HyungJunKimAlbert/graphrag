@@ -1,6 +1,7 @@
 """읽기 전용 그래프 연결. dev DB HTTP(7475)만 허용하고 쓰기 쿼리는 보내기 전에 거부한다."""
 import os
 import re
+from functools import lru_cache
 from urllib.parse import urlparse
 
 from dotenv import dotenv_values
@@ -8,7 +9,10 @@ from dotenv import dotenv_values
 from . import config
 from .legacy import Neo4j
 
-WRITE = re.compile(r"\b(CREATE|MERGE|DELETE|DETACH|SET|REMOVE|DROP|LOAD\s+CSV|CALL\s+apoc\.(?!meta))\b", re.I)
+# CALL은 읽기용 메타 프로시저만 허용한다. db.createLabel·dbms.*·인덱스 생성·CALL {서브쿼리} 등은 모두 거부(안전한 쪽)
+READ_PROCEDURES = r"(?:db\.(?:labels|relationshipTypes|propertyKeys)|apoc\.meta\.[A-Za-z.]+)\s*\("
+WRITE = re.compile(r"\b(CREATE|MERGE|DELETE|DETACH|SET|REMOVE|DROP|FOREACH|LOAD\s+CSV)\b"
+                   rf"|\bCALL\b(?!\s+{READ_PROCEDURES})", re.I)
 KEYS = ("NEO4J_HTTP_URL", "NEO4J_USER", "NEO4J_PASSWORD")
 
 
@@ -37,6 +41,22 @@ def _env():
     return values
 
 
+def _rag_env():
+    return dict(dotenv_values(config.RAG_ENV)) if config.RAG_ENV.exists() else {}
+
+
+def connect_rag(write=False):
+    """RAG DB(HTTP 7476). 추천은 읽기 전용, 쓰기 연결은 적재 스크립트(rxrag.mechanism)만 쓴다."""
+    env = _rag_env()
+    url = env.get("NEO4J_HTTP_URL")
+    if not url or urlparse(url).port != config.RAG_HTTP_PORT:
+        raise ConfigError(f"RAG DB HTTP({config.RAG_HTTP_PORT}) 주소가 아닙니다. .neo4j-rag.env를 확인하세요.")
+    if not env.get("NEO4J_PASSWORD"):
+        raise ConfigError("RAG DB NEO4J_PASSWORD가 없습니다.")
+    inner = Neo4j(url, env.get("NEO4J_USER") or "neo4j", env["NEO4J_PASSWORD"])
+    return inner if write else ReadOnlyDB(inner)
+
+
 def connect():
     env = _env()
     url = env.get("NEO4J_HTTP_URL")
@@ -47,3 +67,9 @@ def connect():
     if not env.get("NEO4J_PASSWORD"):
         raise ConfigError("NEO4J_PASSWORD가 없습니다.")
     return ReadOnlyDB(Neo4j(url, env.get("NEO4J_USER") or "neo4j", env["NEO4J_PASSWORD"]))
+
+
+@lru_cache(maxsize=1)
+def rag():
+    """추천용 RAG DB 읽기 연결(프로세스당 하나)."""
+    return connect_rag()

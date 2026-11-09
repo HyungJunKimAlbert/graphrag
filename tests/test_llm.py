@@ -124,3 +124,32 @@ def test_anthropic_refuses_truncated_or_refused_output():
         c._client = NS(messages=NS(create=lambda **kw: res))
         with pytest.raises(RuntimeError, match=reason):
             c.complete_json("normalize", "s", "u", {})
+
+
+def test_anthropic_strips_unsupported_array_constraints():
+    """Claude 구조화 출력은 복잡한 배열 제약을 받지 않는다. 개수는 verify.check가 검사하므로 maxItems·minItems>1을 빼고 보낸다."""
+    from types import SimpleNamespace as NS
+    from rxrag import select
+    from rxrag.llm import AnthropicLLM
+    sent = {}
+    res = NS(stop_reason="end_turn", usage=None, content=[NS(type="text", text='{"picks": []}')])
+    c = AnthropicLLM()
+    c._client = NS(messages=NS(create=lambda **kw: sent.update(kw) or res))
+    pool = [{"ingredient_id": "A", "facts": [{"fact_id": "F1"}]}]
+    original = select.schema(pool, 3)
+    c.complete_json("select", "s", "u", original)
+    picks = sent["output_config"]["format"]["schema"]["properties"]["picks"]
+    assert "maxItems" not in picks and "minItems" not in picks
+    assert picks["items"]["properties"]["fact_ids"]["minItems"] == 1  # 0·1은 지원
+    assert original["properties"]["picks"]["maxItems"] == 3  # 원본 스키마는 그대로(검증·GPT가 쓴다)
+
+
+def test_harness_cli_accepts_anthropic(monkeypatch, tmp_path):
+    from eval import harness
+    import rxrag.llm as llm
+    made = {}
+    monkeypatch.setattr(llm, "AnthropicLLM", lambda **kw: made.setdefault("client", ("anthropic", kw)))
+    monkeypatch.setattr(harness, "run", lambda patients, root, out, client=None: made.update(run=client))
+    monkeypatch.setattr(harness, "load_patients", lambda path: [])
+    harness.main(["run", "--tag", "t", "--llm", "anthropic"])
+    assert made["run"] == ("anthropic", {"effort": "low"})

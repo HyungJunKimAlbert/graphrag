@@ -69,3 +69,18 @@ def test_legacy_path_does_not_shadow_our_packages():
     from rxrag.config import GRAPHDB, ROOT
     paths = [str(Path(p or ".").resolve()) for p in sys.path]
     assert paths.index(str(ROOT)) < paths.index(str(GRAPHDB))
+
+
+def test_procedure_writes_refused():
+    db = ReadOnlyDB(FakeInner())
+    for q in ["CALL db.createLabel('X')", "CALL db.createProperty('p')", "call dbms.setConfigValue('a','b')",
+              "CALL db.index.fulltext.createNodeIndex('i',['L'],['p'])", "CALL gds.graph.drop('g')",
+              "CALL { MATCH (n) RETURN n } RETURN 1", "MATCH (n) FOREACH (x IN [1] | SET n.y = x)"]:
+        with pytest.raises(WriteRefused):
+            db.run(q)
+
+
+def test_read_meta_procedures_pass():
+    db = ReadOnlyDB(FakeInner(rows=[[1]]))
+    for q in ["CALL db.labels()", "CALL db.relationshipTypes()", "CALL db.propertyKeys()", "CALL apoc.meta.schema()"]:
+        assert db.run(q) == [[1]]

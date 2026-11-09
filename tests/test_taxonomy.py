@@ -34,3 +34,15 @@ def test_prompt_text_line_format():
 @pytest.mark.graph
 def test_matches_graph():
     assert taxonomy.graph_mismatch(graph.connect(), taxonomy.load()) == {"only_xlsx": [], "only_graph": []}
+
+
+def test_taxonomy_path_not_hardcoded_to_user(monkeypatch, tmp_path):
+    import importlib
+    from rxrag import config
+    monkeypatch.setenv("RXRAG_TAXONOMY_XLSX", str(tmp_path / "t.xlsx"))
+    try:
+        assert importlib.reload(config).TAXONOMY_XLSX == tmp_path / "t.xlsx"
+    finally:
+        monkeypatch.delenv("RXRAG_TAXONOMY_XLSX")
+        importlib.reload(config)
+    assert "/Users/user/" not in open(config.__file__, encoding="utf-8").read()

@@ -26,6 +26,17 @@ def _drugs(drugs):
     return out
 
 
+def _texts(value):
+    """문자열 하나는 [문자열]로 감싼다(엔진이 원소마다 쉼표로 나눈다). 문자열 리스트가 아니면 None."""
+    if value is None:
+        return []
+    if isinstance(value, str):
+        return [value]
+    if isinstance(value, list) and all(isinstance(v, str) for v in value):
+        return value
+    return None
+
+
 def validate(patient):
     """(정리된 patient, []) 또는 (None, 오류 문구들)."""
     if not isinstance(patient, dict):
@@ -40,9 +51,17 @@ def validate(patient):
     drugs = _drugs(patient.get("drugs"))
     if drugs is None:
         errors.append("drugs는 약 이름 문자열 또는 {name} 객체의 리스트여야 합니다.")
+    lists = {}
+    for key in ("conditions", "symptoms"):
+        if key in patient:
+            lists[key] = _texts(patient[key])
+            if lists[key] is None:
+                errors.append(f"{key}는 문자열 또는 문자열 리스트여야 합니다.")
+    if patient.get("complaint") is not None and not isinstance(patient["complaint"], str):
+        errors.append("complaint는 문자열이어야 합니다.")
     if errors:
         return None, errors
-    return {**patient, "age": age, "sex": sex, "drugs": drugs}, []
+    return {**patient, **lists, "age": age, "sex": sex, "drugs": drugs}, []
 
 
 def result(status, recommendations=(), excluded=(), warnings=(), selector=None, trace=None, message=None):

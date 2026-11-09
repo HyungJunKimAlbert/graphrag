@@ -68,3 +68,23 @@ def test_80m_exclusions(patient_80m_ctx):
     kept, excluded = safety.split(db, candidates.pool(db, ctx), ctx)
     names = {e["name"] for e in excluded}
     assert {"마그네슘", "코엔자임Q10"} <= names and not names & {c["name"] for c in kept}
+
+
+def pregnancy_caution(code="pop-pregnant"):
+    return {"conditions": [{"code": code, "label": "임신", "reason": "임산부 섭취 시 주의", "severity": "caution",
+                            "scope": None, "review": None}]}
+
+
+@pytest.mark.parametrize("code", ["pop-pregnant", "pop-lactating"])
+def test_pregnancy_lactation_caution_always_excluded(code):
+    """V-20: 임신부에게 '임산부 주의' 성분이 2순위로 나갔다. 임신·수유 대상 주의는 keep 정책에서도 제외한다."""
+    kept, excluded = safety.split(SafetyDB({"I0": pregnancy_caution(code)}), [cand(0, 0), cand(1, 1)],
+                                  {**CTX, "codes": [code]})
+    assert [c["ingredient_id"] for c in kept] == ["I1"]
+    assert excluded == [{"ingredient_id": "I0", "name": "성분0", "reasons": [{"by": code, "text": "임산부 섭취 시 주의"}]}]
+
+
+def test_other_condition_caution_still_kept():
+    v = pregnancy_caution("h-1")
+    kept, excluded = safety.split(SafetyDB({"I0": v}), [cand(0, 0)], CTX)
+    assert excluded == [] and kept[0]["cautions"] == [{"by": "h-1", "text": "임산부 섭취 시 주의"}]

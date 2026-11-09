@@ -22,6 +22,10 @@ SEX_KEYS = _normalize.SEX_KEYS
 PREGNANCY_UNKNOWN = "임신·수유 여부가 입력되지 않았습니다. 해당하면 차단 규칙이 달라집니다."  # 엔진 engine.recommend 문구
 
 
+def resolve_symptoms(db, names):
+    return _normalize.resolve_symptoms(db, names)
+
+
 def build_context(db, patient, normalized=None):
     return _normalize.build_context(db, patient, normalized)
 
@@ -39,4 +43,4 @@ def rule_version(db):
 
 
 __all__ = ["Neo4j", "GENERATORS", "INCOMPLETE", "FORBIDDEN", "SEX_VALUES", "SEX_KEYS", "PREGNANCY_UNKNOWN",
-           "FALLBACK", "build_context", "safety_check", "engine_recommend", "rule_version", "fold_groups"]
+           "FALLBACK", "resolve_symptoms", "build_context", "safety_check", "engine_recommend", "rule_version", "fold_groups"]

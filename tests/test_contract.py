@@ -41,3 +41,31 @@ def test_result_shape():
 
 def test_statuses():
     assert STATUSES == ("ok", "needs_review", "partial", "stopped", "invalid_input")
+
+
+# --- 리뷰에서 미룬 minor: 엔진은 리스트 원소마다 쉼표로 나눈다. 문자열이 오면 글자 단위로 읽어 금기 판정이 빠진다 ---
+def test_conditions_string_wrapped_as_one_item():
+    assert validate({"age": 50, "sex": "F", "conditions": "당뇨, 고혈압"})[0]["conditions"] == ["당뇨, 고혈압"]
+
+
+def test_symptoms_string_wrapped_as_one_item():
+    assert validate({"age": 50, "sex": "F", "symptoms": "피로"})[0]["symptoms"] == ["피로"]
+
+
+def test_conditions_non_string_items_invalid():
+    patient, errors = validate({"age": 50, "sex": "F", "conditions": ["당뇨", 3]})
+    assert patient is None and any("conditions" in e for e in errors)
+
+
+def test_symptoms_wrong_type_invalid():
+    patient, errors = validate({"age": 50, "sex": "F", "symptoms": {"피로": True}})
+    assert patient is None and any("symptoms" in e for e in errors)
+
+
+def test_complaint_non_string_invalid():
+    patient, errors = validate({"age": 50, "sex": "F", "complaint": ["피곤"]})
+    assert patient is None and any("complaint" in e for e in errors)
+
+
+def test_complaint_null_ok():
+    assert validate({"age": 50, "sex": "F", "complaint": None})[0] is not None

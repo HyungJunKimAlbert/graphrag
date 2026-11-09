@@ -8,7 +8,7 @@ def _brief(findings):
 
 
 def split(db, pool, ctx, policy=config.CAUTION_POLICY):
-    """avoid → excluded. policy="exclude"면 caution도 excluded. kept에는 cautions를 붙이고 rule_rank 순서를 유지한다."""
+    """avoid → excluded. policy="exclude"면 caution도, 임신·수유 대상 caution은 항상 excluded. kept에는 cautions를 붙이고 rule_rank 순서를 유지한다."""
     assert policy in ("keep", "exclude"), policy
     if not pool:
         return [], []
@@ -20,6 +20,8 @@ def split(db, pool, ctx, policy=config.CAUTION_POLICY):
             excluded.append({"ingredient_id": c["ingredient_id"], "name": c["name"], "reasons": _brief(v["avoid"])})
         elif policy == "exclude" and v["caution"]:
             excluded.append({"ingredient_id": c["ingredient_id"], "name": c["name"], "reasons": _brief(v["caution"])})
+        elif strict := [f for f in v["caution"] if f["by"] in config.ALWAYS_EXCLUDE_CAUTION]:
+            excluded.append({"ingredient_id": c["ingredient_id"], "name": c["name"], "reasons": _brief(strict)})
         else:
             kept.append({**c, "cautions": _brief(v["caution"])})
     return kept, excluded

@@ -10,7 +10,7 @@ SYSTEM = """당신은 약사가 환자 상담에 참고할 영양성분 {n}개�
 [선택 규칙]
 - 반드시 아래 후보 목록 안에서만 {n}개를 고릅니다. 목록에 없는 성분을 만들지 않습니다.
 - 성분마다 fact_ids에 그 성분 행에 적힌 근거 fact_id를 1개 이상 인용합니다. fact_id는 대괄호 [ ] 안의 문자열 전체이며, 콜론 앞의 종류(SYM_DIRECT 등)까지 포함해 그대로 씁니다. 다른 성분의 fact_id는 쓰지 않습니다.
-- 근거 강도 순서: 확인된 고갈(DRUG_SYM_DEPLETE, DRUG_DEPLETE)·증상 직접 완화(SYM_DIRECT) > 증상 분류 기능(CAT_FUNC) > 검진·질환 규칙(RULE_EXAM, RULE_COND, RULE_BORDER) > 관심사(INTEREST).
+- 근거 강도 순서: 확인된 고갈(DRUG_SYM_DEPLETE, DRUG_DEPLETE)·증상 직접 완화(SYM_DIRECT) > 증상 기전 근거(SYM_MECH: 공식 출처의 증상-기전 + 식약처 기능성) > 증상 분류 기능(CAT_FUNC) > 검진·질환 규칙(RULE_EXAM, RULE_COND, RULE_BORDER) > 관심사(INTEREST).
 - 여러 근거가 겹쳐 환자의 여러 문제를 함께 커버하는 성분을 우대합니다.
 - {n}개가 한 가지 문제에 몰리지 않도록 서로 다른 문제를 나눠 맡게 합니다.
 - 주의 문구가 있는 성분은 비슷한 대안이 있으면 뒤로 미루거나 대안을 고릅니다.

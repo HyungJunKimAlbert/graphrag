@@ -3,12 +3,14 @@
 엔진 쿼리는 근거를 문자열로 합쳐 노드 ID를 잃는다. 여기 쿼리는 WHERE 조건을 그대로 두고 경로의 노드 ID를 RETURN한다.
 엔진과의 어긋남은 tests/test_candidates.py의 동등성 테스트(엔진 성분 ID ⊆ 풀 성분 ID)가 막는다.
 """
+from . import config, graph
+
 UNRANKED = 999  # recommend/candidates.py UNRANKED
 
 # kind → 엔진 단계 순번(tier_rank)
-KINDS = {"SYM_DIRECT": 0, "DRUG_SYM_DEPLETE": 1, "CAT_FUNC": 2, "RULE_EXAM": 3, "RULE_COND": 4, "DRUG_DEPLETE": 5,
+KINDS = {"SYM_DIRECT": 0, "DRUG_SYM_DEPLETE": 1, "SYM_MECH": 1.5, "CAT_FUNC": 2, "RULE_EXAM": 3, "RULE_COND": 4, "DRUG_DEPLETE": 5,
          "RULE_BORDER": 6, "INTEREST": 7}
-KIND_LABELS = {"SYM_DIRECT": "증상 직접 근거", "DRUG_SYM_DEPLETE": "복용약 고갈+증상", "CAT_FUNC": "증상 분류 기능성",
+KIND_LABELS = {"SYM_DIRECT": "증상 직접 근거", "DRUG_SYM_DEPLETE": "복용약 고갈+증상", "SYM_MECH": "증상 기전 근거", "CAT_FUNC": "증상 분류 기능성",
                "RULE_EXAM": "검진 규칙", "RULE_COND": "질환 규칙", "DRUG_DEPLETE": "복용약 고갈",
                "RULE_BORDER": "경계 수치", "INTEREST": "성별·연령 관심사"}
 DATA_KINDS ={"RULE_EXAM", "RULE_COND", "RULE_BORDER", "DRUG_DEPLETE"}  # 엔진 data_signals 출신. 묶음 접기 대상
@@ -57,6 +59,17 @@ RETURN i.ingredient_id, i.name, i.type, [g.code, n.code, i.ingredient_id],
        n.name + ' → ' + i.name + CASE WHEN r.reason = '' THEN '' ELSE ' (' + r.reason + ')' END, null,
        h.order * 100 + r.order"""
 
+# RAG DB(7689)의 증상 → 기전 → 성분 층. 엔진에는 없는 우리 경로다(근거: symptom_mechanism_evidence_kr.xlsx)
+Q_MECH = """MATCH (s:Symptom)-[e:HAS_MECHANISM]->(m:Mechanism)-[x:ADDRESSED_BY]->(i:Ingredient)
+WHERE s.symptom_id IN $ids AND e.verdict IN $verdicts
+RETURN s.symptom_id, s.name, m.mechanism_id, m.name, e.source_org, e.verdict, i.ingredient_id, x.claim, x.source, e.url"""
+# 추천 가능 여부·이름·유형은 dev 그래프가 원천이다. 기능성이 모두 다른 성별(·임신) 대상이면 뺀다(Q_FUNCTION의 target 조건)
+Q_RECOMMENDABLE = """MATCH (i:Ingredient) WHERE i.ingredient_id IN $ids AND i.recommendable
+OPTIONAL MATCH (i)-[f:HAS_FUNCTION]->()
+WITH i, collect(f) AS fs
+WHERE size(fs) = 0 OR any(f IN fs WHERE f.target IS NULL OR f.target = $sex OR (f.target = 'pregnancy' AND $pregnant))
+RETURN i.ingredient_id, i.name, i.type"""
+
 # from recommend/candidates.py Q_GROUPS
 Q_GROUPS = "MATCH (i:Ingredient {type: 'group'}) RETURN i.ingredient_id, i.members"
 
@@ -66,12 +79,29 @@ def expanded_symptoms(db, ctx):
     return [i for i in db.run(Q_EXPAND, ids=ids)[0][0] if i] if ids else []
 
 
+def mechanism_paths(db, rag, symptom_ids, sex, pregnant):
+    """환자 증상(정규화 직후, RELATED_TO 확장 전)의 기전 경로. row 형식은 다른 경로와 같다. 국내 대표 근거를 앞에 둔다."""
+    if rag is None or not symptom_ids:
+        return []
+    hits = rag.run(Q_MECH, ids=symptom_ids, verdicts=list(config.MECH_VERDICTS))
+    ids = sorted({h[6] for h in hits})
+    ok = {r[0]: (r[1], r[2]) for r in db.run(Q_RECOMMENDABLE, ids=ids, sex=sex, pregnant=pregnant)} if hits else {}
+    out = []
+    for sid, sname, mid, mname, org, _verdict, iid, claim, src, url in hits:
+        if iid not in ok:
+            continue
+        name, typ = ok[iid]
+        text = f"{sname} → {mname}({org}) → {name}: {claim}"
+        out.append(("SYM_MECH", [iid, name, typ, [sid, mid, iid], text, url or src, 0]))
+    return out
+
+
 def rule_kind(row):
     """엔진 data_signals와 같은 구분: level '경계' → 경계, kind exam → 검진, 그 외 → 질환."""
     return "RULE_BORDER" if row[8] == "경계" else "RULE_EXAM" if row[7] == "exam" else "RULE_COND"
 
 
-def paths(db, ctx):
+def paths(db, ctx, rag=None):
     """(kind, row) 목록. row = [iid, name, type, node_ids, text, source, priority, ...]."""
     ids = expanded_symptoms(db, ctx)
     direct_ids = [s["symptom_id"] for s in ctx["symptoms"]]
@@ -81,6 +111,7 @@ def paths(db, ctx):
         out += [("SYM_DIRECT", r) for r in db.run(Q_DIRECT, ids=ids)]
         if drugs:
             out += [("DRUG_SYM_DEPLETE", r) for r in db.run(Q_DEPLETION, ids=ids, drugs=drugs)]
+    out += mechanism_paths(db, rag, direct_ids, ctx["sex"], ctx["pregnant"])
     if direct_ids or ctx["categories"]:
         out += [("CAT_FUNC", r) for r in db.run(Q_FUNCTION, ids=direct_ids, categories=ctx["categories"],
                                                   sex=ctx["sex"], pregnant=ctx["pregnant"])]
@@ -142,8 +173,10 @@ def rank(cands):
     return ordered
 
 
-def pool(db, ctx):
-    found = fold_groups(db, collect(paths(db, ctx)))
+def pool(db, ctx, rag=None):
+    """rag 없음(None)이면 graph.rag()의 기본 연결을 쓴다. 기전 경로를 끄려면 rag=False."""
+    rag = graph.rag() if rag is None else (rag or None)
+    found = fold_groups(db, collect(paths(db, ctx, rag)))
     cands = []
     for c in found.values():
         c["facts"].sort(key=lambda f: (KINDS[f["kind"]], c["_prio"][f["fact_id"]], f["fact_id"]))
