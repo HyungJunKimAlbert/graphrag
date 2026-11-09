@@ -63,3 +63,13 @@ def test_fact_has_korean_kind_label():
     row = ["I", "이름", "nutrient", ["D", "I"], "메트포르민 복용 → 이름 고갈", None, 0]
     f = candidates.fact("DRUG_DEPLETE", row)
     assert f["label"] == "복용약 고갈" and set(candidates.KIND_LABELS) == set(KINDS)
+
+
+def test_tier_is_secondary_only_for_interest_only():
+    def c(*kinds):
+        return {"facts": [{"kind": k} for k in kinds]}
+    assert candidates.tier(c("SYM_DIRECT")) == 1
+    assert candidates.tier(c("RULE_EXAM")) == 1 and candidates.tier(c("DRUG_DEPLETE")) == 1
+    assert candidates.tier(c("RULE_BORDER")) == 1 and candidates.tier(c("SYM_MECH")) == 1
+    assert candidates.tier(c("INTEREST", "RULE_COND")) == 1
+    assert candidates.tier(c("INTEREST")) == 2

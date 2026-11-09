@@ -175,3 +175,29 @@ def test_recommendations_carry_details(patient_80m):
     for rec in r["recommendations"]:
         assert set(rec["details"]) == {"daily_intake", "raw_materials", "precautions", "function"}
         assert rec["details"]["function"]
+
+
+@pytest.mark.graph
+def test_llm_sees_only_primary_when_enough(patient_80m):
+    f = smart(normalize={**NO_FLAG, "matches": [{"category": "스트레스/수면", "symptoms": ["새벽 각성"]}]})
+    recommend(patient_80m, f)
+    user = select_calls(f)[0]["user"]
+    # 1순위 후보가 관심사 근거를 덧붙여 가질 수는 있다. 관심사만 있는 2순위 후보는 보내지 않는다
+    assert "2순위: 관심사만" not in user
+
+
+@pytest.mark.graph
+def test_interest_fills_when_primary_short(patient_80m, monkeypatch):
+    real_pool = candidates.pool
+
+    def two_primary(db, ctx):
+        pool = real_pool(db, ctx)
+        primary = [c for c in pool if candidates.tier(c) == 1 and c["name"] in ("테아닌", "비타민 B12")]
+        return primary + [c for c in pool if candidates.tier(c) == 2]
+    monkeypatch.setattr(rec.candidates, "pool", two_primary)
+    f = smart()
+    r = recommend(patient_80m, f)
+    assert r["selector"] == "llm" and len(r["recommendations"]) == 3
+    assert "2순위: 관심사만" in select_calls(f)[0]["user"]
+    tiers = [candidates.tier({"facts": x["evidence"]}) for x in r["recommendations"]]
+    assert tiers.count(1) == 2

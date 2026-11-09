@@ -95,7 +95,11 @@ def recommend(patient, client, db=None, n=config.N, policy=config.CAUTION_POLICY
                       f"추천 가능한 성분이 {len(distinct)}개뿐입니다. 억지로 채우지 않았습니다.")
 
     excluded_ids = {e["ingredient_id"] for e in excluded}
-    picks, selector, attempts = stage("select", lambda: choose(meter, ctx, normalized, capped, excluded_ids, n,
+    # 계층 채우기: 1순위만으로 n개를 채울 수 있으면 LLM에 1순위만 보낸다. 모자라면 2순위(관심사)까지 보내고 verify가 순서를 강제한다
+    primary = [c for c in capped if candidates.tier(c) == 1]
+    llm_pool = primary if len(verify.fallback(primary, n)) >= n else capped
+    trace["llm_pool"] = {"primary": len(primary), "sent": len(llm_pool)}
+    picks, selector, attempts = stage("select", lambda: choose(meter, ctx, normalized, llm_pool, excluded_ids, n,
                                                                clean.get("conditions") or []))
     trace["selection"] = attempts
     status = "needs_review" if warnings else "ok"

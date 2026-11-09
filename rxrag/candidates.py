@@ -14,6 +14,12 @@ KIND_LABELS = {"SYM_DIRECT": "증상 직접 근거", "DRUG_SYM_DEPLETE": "복용
                "RULE_EXAM": "검진 규칙", "RULE_COND": "질환 규칙", "DRUG_DEPLETE": "복용약 고갈",
                "RULE_BORDER": "경계 수치", "INTEREST": "성별·연령 관심사"}
 DATA_KINDS ={"RULE_EXAM", "RULE_COND", "RULE_BORDER", "DRUG_DEPLETE"}  # 엔진 data_signals 출신. 묶음 접기 대상
+SECONDARY_KINDS = {"INTEREST"}  # 2순위: 성별·연령 관심사. 1순위(증상·검진·질환·복용약)가 모자랄 때만 채운다
+
+
+def tier(c):
+    """후보 계층. 1순위 근거가 하나라도 있으면 1, 관심사 근거만 있으면 2."""
+    return 2 if all(f["kind"] in SECONDARY_KINDS for f in c["facts"]) else 1
 
 # from recommend/candidates.py Q_EXPAND
 Q_EXPAND = """MATCH (s:Symptom) WHERE s.symptom_id IN $ids

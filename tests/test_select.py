@@ -80,3 +80,15 @@ def test_system_lists_forbidden_words():
     """근거 문장의 '예방'을 이유에 옮겨 써서 거부됐다(g3 V-26)."""
     s, _ = select.prompt(CTX, NORM, POOL)
     assert all(w in s for w in ("예방", "치료", "개선됩니다")) and "옮겨" in s
+
+
+def test_system_states_tier_fill_rule():
+    system, _ = select.prompt(CTX, NORM, POOL)
+    assert "1순위" in system and "2순위" in system
+
+
+def test_table_marks_interest_only_as_second_tier():
+    pool = POOL + [cand("E", "칼슘", ["INTEREST:SEG>E"])]
+    _, user = select.prompt(CTX, NORM, pool)
+    row = next(line for line in user.splitlines() if line.startswith("E | "))
+    assert "2순위" in row and "2순위" not in next(line for line in user.splitlines() if line.startswith("A | "))

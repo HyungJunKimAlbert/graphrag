@@ -1,6 +1,7 @@
 """⑥ 검증과 규칙 대체. LLM 응답을 코드로 검사하고, 통과하지 못하면 규칙 점수 순으로 채운다."""
 import re
 
+from .candidates import tier
 from .legacy import FALLBACK as FALLBACK_REASON
 from .legacy import FORBIDDEN
 
@@ -85,6 +86,11 @@ def check(picks, pool, excluded_ids, n):
             errors.append(f"{c['name']}의 reason이 비었습니다.")
         elif FORBIDDEN.search(re.sub(r"\s+", "", reason)):
             errors.append(f"{c['name']}의 reason에 건강기능식품에 쓸 수 없는 표현이 있습니다.")
+    need = len(fallback([c for c in pool if tier(c) == 1], n))  # 1순위에서 겹치지 않게 고를 수 있는 수(최대 n)
+    got = len({c["ingredient_id"] for c in chosen if tier(c) == 1})
+    if got < need:
+        errors.append(f"1순위(증상·검진·질환·복용약 근거) 후보에서 {need}개를 먼저 골라야 하는데 {got}개입니다. "
+                      "2순위(관심사)는 1순위가 모자랄 때만 씁니다.")
     return errors
 
 

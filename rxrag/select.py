@@ -1,6 +1,6 @@
 """⑤ 최종 선택 프롬프트·스키마. LLM은 금지 판정을 통과한 후보 안에서만 고르고, 성분마다 그 후보의 근거 사실 ID를 인용한다."""
 from . import config
-from .candidates import KIND_LABELS
+from .candidates import KIND_LABELS, tier
 
 TASK = "select"
 SEX = {"M": "남성", "F": "여성"}
@@ -9,6 +9,7 @@ SYSTEM = """당신은 약사가 환자 상담에 참고할 영양성분 {n}개�
 
 [선택 규칙]
 - 반드시 아래 후보 목록 안에서만 {n}개를 고릅니다. 목록에 없는 성분을 만들지 않습니다.
+- 후보는 1순위(증상·검진·질환·복용약 근거)와 2순위(성별·연령 관심사만, 이름 옆에 "2순위"로 표시)로 나뉩니다. 1순위에서 서로 겹치지 않게 고를 수 있는 만큼 먼저 고르고, 1순위가 {n}개에 모자랄 때만 2순위로 나머지를 채웁니다.
 - 성분마다 fact_ids에 그 성분 행에 적힌 근거 fact_id를 1개 이상 인용합니다. fact_id는 대괄호 [ ] 안의 문자열 전체이며, 콜론 앞의 종류(SYM_DIRECT 등)까지 포함해 그대로 씁니다. 다른 성분의 fact_id는 쓰지 않습니다.
 - 근거 강도 순서: 확인된 고갈(DRUG_SYM_DEPLETE, DRUG_DEPLETE)·증상 직접 완화(SYM_DIRECT) > 증상 기전 근거(SYM_MECH: 공식 출처의 증상-기전 + 식약처 기능성) > 증상 분류 기능(CAT_FUNC) > 검진·질환 규칙(RULE_EXAM, RULE_COND, RULE_BORDER) > 관심사(INTEREST).
 - 여러 근거가 겹쳐 환자의 여러 문제를 함께 커버하는 성분을 우대합니다.
@@ -57,7 +58,8 @@ def candidate_table(pool):
         facts = " / ".join(f"[{f['fact_id']}] ({KIND_LABELS[f['kind']]}) {f['text']}" for f in c["facts"])
         cautions = " / ".join(f"{x['by']}: {x['text']}" for x in c.get("cautions", [])) or "-"
         members = f" (묶음: {', '.join(c['members'])})" if c.get("members") else ""
-        rows.append(f"{c['ingredient_id']} | {c['name']}{members} | {facts} | {cautions}")
+        second = " (2순위: 관심사만)" if tier(c) == 2 else ""
+        rows.append(f"{c['ingredient_id']} | {c['name']}{members}{second} | {facts} | {cautions}")
     return "\n".join(rows)
 
 

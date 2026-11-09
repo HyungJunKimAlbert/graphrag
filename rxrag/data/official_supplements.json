@@ -1,0 +1,44 @@
+{
+ "NUT-45669": {
+  "raw_materials": {
+   "value": "비타민 B12(Cyanocobalamin), 식품원료를 사용하여 비타민 B12를 보충할 수 있도록 제조･가공한 것",
+   "ref": "식약처 「건강기능식품의 기준 및 규격」 고시 제2026-43호 제3. 1-12 1)(1) 원료. https://www.mfds.go.kr/brd/m_211/view.do?seq=14973"
+  }
+ },
+ "NUT-45673": {
+  "raw_materials": {
+   "value": "글루콘산마그네슘(Magnesium Gluconate), 산화마그네슘(Magnesium Oxide), 수산화마그네슘(Magnesium Hydroxide), 염화마그네슘(Magnesium Chloride), 탄산마그네슘(Magnesium Carbonate), 황산마그네슘(Magnesium Sulphate), 제이인산마그네슘(Magnesium Phosphate, Dibasic), 제삼인산마그네슘(Magnesium Phosphate, Tribasic), 젖산마그네슘(Magnesium L-Lactate), 스테아린산마그네슘(Magnesium Stearate), 식품원료를 사용하여 마그네슘을 보충할 수 있도록 제조･가공한 것",
+   "ref": "식약처 「건강기능식품의 기준 및 규격」 고시 제2026-43호 제3. 1-16 1)(1) 원료. https://www.mfds.go.kr/brd/m_211/view.do?seq=14973"
+  }
+ },
+ "NUT-45674": {
+  "raw_materials": {
+   "value": "구연산철(Ferric Citrate), 구연산철암모늄(Ferric Ammonium Citrate), 글루콘산철(Ferrous Gluconate), 인산철(Ferric Phosphate), 젖산철(Ferrous Lactate), 푸마르산제일철(Ferrous Fumarate), 피로인산제이철(Ferric Pyrophosphate), 피로인산철나트륨(Sodium Ferric Pyrophosphate), 황산제일철(Ferrous Sulphate), 헴철(Heme Iron), 염화제이철(Ferric Chloride), 환원철(Iron Reduced), 구연산제일철나트륨(Sodium ferrous citrate), 당산제이철(Ferric Saccharate), 식품원료를 사용하여 철을 보충할 수 있도록 제조･가공한 것",
+   "ref": "식약처 「건강기능식품의 기준 및 규격」 고시 제2026-43호 제3. 1-17 1)(1) 원료. https://www.mfds.go.kr/brd/m_211/view.do?seq=14973"
+  }
+ },
+ "NUT-45675": {
+  "raw_materials": {
+   "value": "글루콘산아연(Zinc Gluconate), 산화아연(Zinc Oxide), 황산아연(Zinc Sulphate), 구연산아연(Zinc Citrate), 식품원료를 사용하여 아연을 보충할 수 있도록 제조･가공한 것",
+   "ref": "식약처 「건강기능식품의 기준 및 규격」 고시 제2026-43호 제3. 1-18 1)(1) 원료. https://www.mfds.go.kr/brd/m_211/view.do?seq=14973"
+  }
+ },
+ "NUT-45677": {
+  "raw_materials": {
+   "value": "아셀렌산나트륨(Sodium Selenite), 셀렌산나트륨(Sodium Selenate), 식품원료를 사용하여 셀레늄을 보충할 수 있도록 제조･가공한 것",
+   "ref": "식약처 「건강기능식품의 기준 및 규격」 고시 제2026-43호 제3. 1-20 1)(1) 원료(고시 항목명 '셀레늄(또는 셀렌)'). https://www.mfds.go.kr/brd/m_211/view.do?seq=14973"
+  }
+ },
+ "NUT-45667": {
+  "precautions": {
+   "value": "- 손발 따끔거림, 작열감 또는 저림 등의 이상사례 발생 시 섭취를 중단하고 전문가와 상담할 것",
+   "ref": "식약처 「건강기능식품의 기준 및 규격」 고시 제2026-43호 제3. 1-10 3)(3) 섭취 시 주의사항. https://www.mfds.go.kr/brd/m_211/view.do?seq=14973"
+  }
+ },
+ "IND-2025-45": {
+  "raw_materials": {
+   "value": "녹용유산균발효분말(기능성원료인정제2025-45호)",
+   "ref": "식품안전나라 Open API I-0040 기능성 원료인정현황, 인정번호 2025-45 신청원료명(APLC_RAWMTRL_NM). 다른 개별인정형과 같은 '원료명(인정번호)' 형식"
+  }
+ }
+}

@@ -158,3 +158,48 @@ def test_different_ingredients_do_not_clash():
     for a, b in [("인삼", "인삼가수분해 농축액"), ("홍삼", "홍삼추출효소처리분말"), ("비타민 B1", "비타민 B12"),
                  ("크릴오일(FJH-KO)", "크릴오일등복합물(FlexPro MDⓇ)"), ("녹차추출물 (카테킨)", "테아닌")]:
         assert _two(a, b) == [], (a, b)
+
+
+# 계층 채우기: 1순위(증상·검진·질환·복용약)에서 고를 수 있는 만큼 먼저, 모자랄 때만 2순위(관심사)
+def interest(iid, name, rank):
+    c = cand(iid, name, rank)
+    c["facts"] = [{"fact_id": f"INTEREST:SEG>{iid}", "kind": "INTEREST", "text": f"{name} 관심사", "source": "s"}]
+    return c
+
+
+def ipick(iid, rank):
+    return pick(iid, rank, facts=[f"INTEREST:SEG>{iid}"])
+
+
+TIERED = [cand("A", "테아닌", 0), cand("B", "비타민 B12", 1), cand("C", "홍경천 추출물", 2),
+          interest("X", "칼슘", 3), interest("Y", "비타민 D", 4)]
+
+
+def test_interest_rejected_when_primary_enough():
+    errors = verify.check(picks(pick("A", 1), pick("B", 2), ipick("X", 3)), TIERED, set(), 3)
+    assert any("1순위" in e for e in errors)
+
+
+def test_primary_only_passes():
+    assert verify.check(picks(pick("A", 1), pick("B", 2), pick("C", 3)), TIERED, set(), 3) == []
+
+
+def test_interest_fills_when_primary_short():
+    pool = TIERED[:2] + TIERED[3:]
+    assert verify.check(picks(pick("A", 1), pick("B", 2), ipick("X", 3)), pool, set(), 3) == []
+
+
+def test_must_take_all_primary_when_short():
+    pool = TIERED[:2] + TIERED[3:]
+    errors = verify.check(picks(pick("A", 1), ipick("X", 2), ipick("Y", 3)), pool, set(), 3)
+    assert any("1순위" in e for e in errors)
+
+
+def test_primary_counted_without_duplicates():
+    pool = [cand("I1", "인삼", 0), cand("I2", "인 삼", 1), cand("A", "테아닌", 2), interest("X", "칼슘", 3)]
+    assert verify.check(picks(pick("I1", 1), pick("A", 2), ipick("X", 3)), pool, set(), 3) == []
+
+
+def test_interest_only_pool_passes():
+    pool = [interest("X", "칼슘", 0), interest("Y", "비타민 D", 1), interest("Z", "마그네슘", 2)]
+    assert verify.check(picks(ipick("X", 1), ipick("Y", 2), ipick("Z", 3)), pool, set(), 3) == []
