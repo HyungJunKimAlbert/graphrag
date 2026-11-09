@@ -1,0 +1,683 @@
+{
+ "group": "C",
+ "sources": [
+  {
+   "source_id": "MLP-zinc-diet",
+   "org": "MedlinePlus (NIH NLM)",
+   "title": "Zinc in diet",
+   "url": "https://medlineplus.gov/ency/article/002416.htm",
+   "accessed": "2026-11-09",
+   "fetch_method": "curl",
+   "file": "sources/MLP-zinc-diet.txt"
+  },
+  {
+   "source_id": "MLP-immunodeficiency",
+   "org": "MedlinePlus (NIH NLM)",
+   "title": "Immunodeficiency disorders",
+   "url": "https://medlineplus.gov/ency/article/000818.htm",
+   "accessed": "2026-11-09",
+   "fetch_method": "curl",
+   "file": "sources/MLP-immunodeficiency.txt"
+  },
+  {
+   "source_id": "NCCIH-probiotics",
+   "org": "NIH NCCIH",
+   "title": "Probiotics: What You Need To Know",
+   "url": "https://www.nccih.nih.gov/health/probiotics-what-you-need-to-know",
+   "accessed": "2026-11-09",
+   "fetch_method": "curl",
+   "file": "sources/NCCIH-probiotics.txt"
+  },
+  {
+   "source_id": "NCCIH-antioxidants",
+   "org": "NIH NCCIH",
+   "title": "Antioxidant Supplements: What You Need To Know",
+   "url": "https://www.nccih.nih.gov/health/antioxidants-in-depth",
+   "accessed": "2026-11-09",
+   "fetch_method": "curl",
+   "file": "sources/NCCIH-antioxidants.txt"
+  },
+  {
+   "source_id": "NIAMS-ra",
+   "org": "NIH NIAMS",
+   "title": "Rheumatoid Arthritis",
+   "url": "https://www.niams.nih.gov/health-topics/rheumatoid-arthritis",
+   "accessed": "2026-11-09",
+   "fetch_method": "curl",
+   "file": "sources/NIAMS-ra.txt"
+  },
+  {
+   "source_id": "NIAMS-acne",
+   "org": "NIH NIAMS",
+   "title": "Acne",
+   "url": "https://www.niams.nih.gov/health-topics/acne",
+   "accessed": "2026-11-09",
+   "fetch_method": "curl",
+   "file": "sources/NIAMS-acne.txt"
+  },
+  {
+   "source_id": "NIDDK-constipation-causes",
+   "org": "NIH NIDDK",
+   "title": "Symptoms & Causes of Constipation",
+   "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/constipation/symptoms-causes",
+   "accessed": "2026-11-09",
+   "fetch_method": "curl",
+   "file": "sources/NIDDK-constipation-causes.txt"
+  },
+  {
+   "source_id": "NIDDK-indigestion-causes",
+   "org": "NIH NIDDK",
+   "title": "Symptoms & Causes of Indigestion",
+   "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/indigestion-dyspepsia/symptoms-causes",
+   "accessed": "2026-11-09",
+   "fetch_method": "curl",
+   "file": "sources/NIDDK-indigestion-causes.txt"
+  },
+  {
+   "source_id": "NIDDK-gastritis-causes",
+   "org": "NIH NIDDK",
+   "title": "Symptoms & Causes of Gastritis & Gastropathy",
+   "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/gastritis-gastropathy/symptoms-causes",
+   "accessed": "2026-11-09",
+   "fetch_method": "curl",
+   "file": "sources/NIDDK-gastritis-causes.txt"
+  },
+  {
+   "source_id": "NIDDK-gastroparesis-causes",
+   "org": "NIH NIDDK",
+   "title": "Symptoms & Causes of Gastroparesis",
+   "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/gastroparesis/symptoms-causes",
+   "accessed": "2026-11-09",
+   "fetch_method": "curl",
+   "file": "sources/NIDDK-gastroparesis-causes.txt"
+  },
+  {
+   "source_id": "NIDDK-pepticulcer-causes",
+   "org": "NIH NIDDK",
+   "title": "Symptoms & Causes of Peptic Ulcers",
+   "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/peptic-ulcers-stomach-ulcers/symptoms-causes",
+   "accessed": "2026-11-09",
+   "fetch_method": "curl",
+   "file": "sources/NIDDK-pepticulcer-causes.txt"
+  },
+  {
+   "source_id": "NIDDK-gas-causes",
+   "org": "NIH NIDDK",
+   "title": "Symptoms & Causes of Gas in the Digestive Tract",
+   "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/gas-digestive-tract/symptoms-causes",
+   "accessed": "2026-11-09",
+   "fetch_method": "curl",
+   "file": "sources/NIDDK-gas-causes.txt"
+  },
+  {
+   "source_id": "NIDDK-diarrhea-causes",
+   "org": "NIH NIDDK",
+   "title": "Symptoms & Causes of Diarrhea",
+   "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/diarrhea/symptoms-causes",
+   "accessed": "2026-11-09",
+   "fetch_method": "curl",
+   "file": "sources/NIDDK-diarrhea-causes.txt"
+  },
+  {
+   "source_id": "NIDDK-ibs-causes",
+   "org": "NIH NIDDK",
+   "title": "Symptoms & Causes of Irritable Bowel Syndrome",
+   "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/irritable-bowel-syndrome/symptoms-causes",
+   "accessed": "2026-11-09",
+   "fetch_method": "curl",
+   "file": "sources/NIDDK-ibs-causes.txt"
+  }
+ ],
+ "links": [
+  {
+   "symptom": "만성피로",
+   "mech_id": "I2",
+   "mech": "I2 만성 저도 염증",
+   "level": "2차",
+   "status": "partial",
+   "source_id": "NIAMS-ra",
+   "quote": "RA may cause fatigue, occasional fevers, and a loss of appetite.",
+   "quote_ko": "류마티스관절염은 피로, 간헐적 발열, 식욕 저하를 일으킬 수 있다",
+   "note": "류마티스관절염(만성 염증성 자가면역질환)의 증상으로 피로를 명시. 활막 염증이 만성화된다는 문장(NIAMS-ra)과 함께 보면 '만성 염증→피로' 연결이지만, 질환 수준 염증이며 '저도 염증' 가설 자체를 뒷받침하지는 않음"
+  },
+  {
+   "symptom": "무기력",
+   "mech_id": "I2",
+   "mech": "I2 만성 저도 염증",
+   "level": "2차",
+   "status": "partial",
+   "source_id": "NIAMS-ra",
+   "quote": "RA may cause fatigue, occasional fevers, and a loss of appetite.",
+   "quote_ko": "류마티스관절염은 피로, 간헐적 발열, 식욕 저하를 일으킬 수 있다",
+   "note": "류마티스관절염(만성 염증성 자가면역질환)의 증상으로 피로를 명시. 활막 염증이 만성화된다는 문장(NIAMS-ra)과 함께 보면 '만성 염증→피로' 연결이지만, 질환 수준 염증이며 '저도 염증' 가설 자체를 뒷받침하지는 않음. '무기력'은 피로(fatigue)로 근사"
+  },
+  {
+   "symptom": "기운 없음",
+   "mech_id": "I2",
+   "mech": "I2 만성 저도 염증",
+   "level": "2차",
+   "status": "partial",
+   "source_id": "NIAMS-ra",
+   "quote": "RA may cause fatigue, occasional fevers, and a loss of appetite.",
+   "quote_ko": "류마티스관절염은 피로, 간헐적 발열, 식욕 저하를 일으킬 수 있다",
+   "note": "류마티스관절염(만성 염증성 자가면역질환)의 증상으로 피로를 명시. 활막 염증이 만성화된다는 문장(NIAMS-ra)과 함께 보면 '만성 염증→피로' 연결이지만, 질환 수준 염증이며 '저도 염증' 가설 자체를 뒷받침하지는 않음"
+  },
+  {
+   "symptom": "체력 저하",
+   "mech_id": "I2",
+   "mech": "I2 만성 저도 염증",
+   "level": "2차",
+   "status": "partial",
+   "source_id": "NIAMS-ra",
+   "quote": "RA may cause fatigue, occasional fevers, and a loss of appetite.",
+   "quote_ko": "류마티스관절염은 피로, 간헐적 발열, 식욕 저하를 일으킬 수 있다",
+   "note": "류마티스관절염(만성 염증성 자가면역질환)의 증상으로 피로를 명시. 활막 염증이 만성화된다는 문장(NIAMS-ra)과 함께 보면 '만성 염증→피로' 연결이지만, 질환 수준 염증이며 '저도 염증' 가설 자체를 뒷받침하지는 않음. '체력 저하'는 피로로 근사"
+  },
+  {
+   "symptom": "감기",
+   "mech_id": "I1",
+   "mech": "I1 면역 방어력 저하",
+   "level": "1차",
+   "status": "partial",
+   "source_id": "MLP-immunodeficiency",
+   "quote": "Your health care provider might think you have an immunodeficiency disorder if you have: Infections that keep coming back or do not go away",
+   "quote_ko": "재발하거나 낫지 않는 감염이 있으면 의료진은 면역결핍 질환을 의심할 수 있다",
+   "note": "재발·지속 감염을 면역결핍의 신호로 제시. 감기를 특정하지 않고 '감염' 일반으로만 언급"
+  },
+  {
+   "symptom": "감기",
+   "mech_id": "X7",
+   "mech": "X7 아연·미네랄 부족",
+   "level": "2차",
+   "status": "partial",
+   "source_id": "MLP-zinc-diet",
+   "quote": "Symptoms of zinc deficiency include: Frequent infections",
+   "quote_ko": "아연 결핍 증상에는 잦은 감염이 포함된다",
+   "note": "아연 결핍 증상 목록의 첫 항목(목록 머리말+항목 인접). 감기가 아닌 '잦은 감염' 일반. 같은 페이지의 감기 문장은 보충제 효과이지 결핍 문장이 아님"
+  },
+  {
+   "symptom": "감기",
+   "mech_id": "D1",
+   "mech": "D1 장내 균총 불균형",
+   "level": "2차",
+   "status": "partial",
+   "source_id": "NCCIH-probiotics",
+   "quote": "A 2015 evaluation of 12 studies with 3,720 total participants indicated that people taking probiotics may have fewer and shorter upper respiratory infections.",
+   "quote_ko": "12개 연구(3,720명) 평가에서 프로바이오틱스 복용자는 상기도 감염이 더 적고 짧을 수 있음이 시사되었다",
+   "note": "프로바이오틱스 섭취 시 상기도감염(감기 포함) 감소 가능성(저품질 근거)만 있음. 장내 균총 불균형이 감기의 원인이라는 문장은 없음"
+  },
+  {
+   "symptom": "염증",
+   "mech_id": "I2",
+   "mech": "I2 만성 저도 염증",
+   "level": "1차",
+   "status": "partial",
+   "source_id": "NIAMS-ra",
+   "quote": "This inflammation becomes chronic, and the synovium thickens due to an increase of cells, production of proteins, and other factors in the joint, which can lead to pain, redness, and warmth.",
+   "quote_ko": "이 염증은 만성화되고 활막이 두꺼워져 통증·발적·열감을 일으킬 수 있다",
+   "note": "만성 염증이 통증 등을 일으킨다는 문장은 있으나 질환(RA) 수준 만성 염증이며, '염증'을 증상으로 보는 연결 자체가 동어반복에 가까움"
+  },
+  {
+   "symptom": "염증",
+   "mech_id": "I1",
+   "mech": "I1 면역 방어력 저하",
+   "level": "1차",
+   "status": "not_found",
+   "source_id": null,
+   "quote": "",
+   "quote_ko": "",
+   "note": "면역 방어력 '저하'가 염증을 일으킨다는 문장 없음(RA는 면역 과활성/자가면역)"
+  },
+  {
+   "symptom": "염증",
+   "mech_id": "I3",
+   "mech": "I3 산화 스트레스",
+   "level": "2차",
+   "status": "not_found",
+   "source_id": null,
+   "quote": "",
+   "quote_ko": "",
+   "note": "NCCIH-antioxidants는 산화 스트레스가 세포 손상·만성질환에 기여할 수 있다고만 하며 염증과 잇는 문장 없음"
+  },
+  {
+   "symptom": "속쓰림",
+   "mech_id": "D2",
+   "mech": "D2 위점막 손상",
+   "level": "1차",
+   "status": "supported",
+   "source_id": "NIDDK-pepticulcer-causes",
+   "quote": "Abdominal pain is the most common symptom of a peptic ulcer. The pain may be dull or burning and may come and go over time.",
+   "quote_ko": "복통은 소화성 궤양의 가장 흔한 증상이며, 둔하거나 타는 듯한 통증이 오락가락할 수 있다",
+   "note": "소화성 궤양(점막 손상)의 가장 흔한 증상이 타는 듯한 복통. 같은 페이지에 NSAID가 위 점막을 손상·궤양에 취약하게 만든다는 문장 있음. 속쓰림≈상복부 작열통으로 해석"
+  },
+  {
+   "symptom": "소화불량",
+   "mech_id": "D2",
+   "mech": "D2 위점막 손상",
+   "level": "1차",
+   "status": "supported",
+   "source_id": "NIDDK-gastritis-causes",
+   "quote": "In some cases, gastritis and gastropathy cause symptoms of indigestion , also called dyspepsia. Symptoms may include",
+   "quote_ko": "일부 경우 위염과 위병증은 소화불량(dyspepsia) 증상을 일으킨다. 증상은 다음과 같다",
+   "note": "위염·위병증이 소화불량을 일으킨다고 명시. 같은 페이지에서 위병증은 위 점막 자극 물질로 생긴다고 설명"
+  },
+  {
+   "symptom": "소화불량",
+   "mech_id": "D3",
+   "mech": "D3 장 운동 저하",
+   "level": "1차",
+   "status": "partial",
+   "source_id": "NIDDK-gastroparesis-causes",
+   "quote": "Certain medicines may delay gastric emptying or affect motility , resulting in symptoms that are similar to those of gastroparesis.",
+   "quote_ko": "일부 약물은 위 배출을 지연시키거나 운동성에 영향을 주어 위마비와 비슷한 증상을 일으킬 수 있다",
+   "note": "위 배출 지연·운동성 저하가 위마비 유사 증상(조기 포만감, 식후 오래 배부름 등)을 일으킨다는 문장. 위 운동 근거이며 '장' 운동은 아님"
+  },
+  {
+   "symptom": "소화불량",
+   "mech_id": "D1",
+   "mech": "D1 장내 균총 불균형",
+   "level": "2차",
+   "status": "not_found",
+   "source_id": null,
+   "quote": "",
+   "quote_ko": "",
+   "note": "NIDDK 소화불량 원인에 항생제·H. pylori 등 감염은 있으나 장내 균총 불균형과 잇는 문장 없음"
+  },
+  {
+   "symptom": "변비",
+   "mech_id": "D3",
+   "mech": "D3 장 운동 저하",
+   "level": "1차",
+   "status": "supported",
+   "source_id": "NIDDK-constipation-causes",
+   "quote": "You may be constipated for many reasons, and constipation may have more than one cause at a time. Causes of constipation may include slow movement of stool through your colon",
+   "quote_ko": "변비에는 여러 원인이 있을 수 있으며, 원인에는 대장을 통한 대변의 느린 이동이 포함된다",
+   "note": "변비 원인으로 대장 내 대변의 느린 이동을 명시(머리말+첫 항목 인접 줄)"
+  },
+  {
+   "symptom": "변비",
+   "mech_id": "D1",
+   "mech": "D1 장내 균총 불균형",
+   "level": "1차",
+   "status": "partial",
+   "source_id": "NIDDK-ibs-causes",
+   "quote": "small intestinal bacterial overgrowth, an increase in the number or a change in the type of bacteria in your small intestine",
+   "quote_ko": "소장 세균 과증식(소장 세균 수 증가 또는 종류 변화)",
+   "note": "NIDDK는 소장 세균 과증식이 IBS의 원인에 관여할 수 있다고 보고, IBS 증상으로 변비/설사를 듦. 균총 변화→IBS→변비의 2단계 연결이며 직접 문장 아님"
+  },
+  {
+   "symptom": "설사",
+   "mech_id": "D1",
+   "mech": "D1 장내 균총 불균형",
+   "level": "1차",
+   "status": "supported",
+   "source_id": "NIDDK-gas-causes",
+   "quote": "Small intestinal bacterial overgrowth is an increase in the number of bacteria or a change in the type of bacteria in your small intestine. These bacteria can produce extra gas and may also cause diarrhea and weight loss.",
+   "quote_ko": "소장 세균 과증식은 소장 내 세균 수의 증가나 세균 종류의 변화이다. 이 세균은 추가 가스를 만들고 설사와 체중 감소도 일으킬 수 있다",
+   "note": "소장 세균 수 증가·종류 변화(균총 불균형)가 설사를 일으킬 수 있다고 명시. NIDDK-diarrhea에도 항생제가 장내 세균총을 바꿔 C. difficile 설사를 일으킨다는 문장 있음"
+  },
+  {
+   "symptom": "설사",
+   "mech_id": "D2",
+   "mech": "D2 위점막 손상",
+   "level": "2차",
+   "status": "not_found",
+   "source_id": null,
+   "quote": "",
+   "quote_ko": "",
+   "note": "위염·위병증·소화성 궤양 증상 목록에 설사 없음"
+  },
+  {
+   "symptom": "설사",
+   "mech_id": "D3",
+   "mech": "D3 장 운동 저하",
+   "level": "2차",
+   "status": "not_found",
+   "source_id": null,
+   "quote": "",
+   "quote_ko": "",
+   "note": "NIDDK-ibs는 음식이 '너무 빨리' 이동할 때 배변 변화가 생긴다고 함. 운동 저하→설사 문장은 없음(반대 방향)"
+  },
+  {
+   "symptom": "복통",
+   "mech_id": "D1",
+   "mech": "D1 장내 균총 불균형",
+   "level": "1차",
+   "status": "partial",
+   "source_id": "NIDDK-ibs-causes",
+   "quote": "small intestinal bacterial overgrowth, an increase in the number or a change in the type of bacteria in your small intestine",
+   "quote_ko": "소장 세균 과증식(소장 세균 수 증가 또는 종류 변화)",
+   "note": "소장 세균 과증식이 IBS 원인에 관여할 수 있고, IBS 대표 증상이 복통. 2단계 연결"
+  },
+  {
+   "symptom": "복통",
+   "mech_id": "D2",
+   "mech": "D2 위점막 손상",
+   "level": "2차",
+   "status": "supported",
+   "source_id": "NIDDK-gastritis-causes",
+   "quote": "In some cases, gastritis and gastropathy cause symptoms of indigestion , also called dyspepsia. Symptoms may include pain or discomfort in the upper abdomen",
+   "quote_ko": "일부 경우 위염과 위병증은 소화불량 증상을 일으키며, 상복부 통증이나 불편감이 포함된다",
+   "note": "위염·위병증이 상복부 통증·불편감을 일으킨다고 명시. 상복부로 한정"
+  },
+  {
+   "symptom": "복통",
+   "mech_id": "D3",
+   "mech": "D3 장 운동 저하",
+   "level": "2차",
+   "status": "partial",
+   "source_id": "NIDDK-gastroparesis-causes",
+   "quote": "The movement of food through the digestive tract is then slowed or stopped.",
+   "quote_ko": "그러면 소화관을 통한 음식의 이동이 느려지거나 멈춘다",
+   "note": "위마비에서 위·소장 근육 이상으로 음식 이동이 느려진다는 기전 문장. 위마비 증상 목록에 '상복부 통증'이 있으나 별도 문장"
+  },
+  {
+   "symptom": "복부 팽만감",
+   "mech_id": "D1",
+   "mech": "D1 장내 균총 불균형",
+   "level": "1차",
+   "status": "partial",
+   "source_id": "NIDDK-gas-causes",
+   "quote": "Small intestinal bacterial overgrowth is an increase in the number of bacteria or a change in the type of bacteria in your small intestine. These bacteria can produce extra gas and may also cause diarrhea and weight loss.",
+   "quote_ko": "소장 세균 과증식은 소장 내 세균 수의 증가나 세균 종류의 변화이다. 이 세균은 추가 가스를 만들고 설사와 체중 감소도 일으킬 수 있다",
+   "note": "소장 세균 과증식이 추가 가스를 만든다고 명시. 같은 페이지에서 팽만은 가스 증상으로 설명되나 한 문장으로 잇지는 않음"
+  },
+  {
+   "symptom": "복부 팽만감",
+   "mech_id": "D3",
+   "mech": "D3 장 운동 저하",
+   "level": "1차",
+   "status": "partial",
+   "source_id": "NIDDK-gastroparesis-causes",
+   "quote": "The movement of food through the digestive tract is then slowed or stopped.",
+   "quote_ko": "그러면 소화관을 통한 음식의 이동이 느려지거나 멈춘다",
+   "note": "위마비(위·소장 운동 저하) 기전 문장. 증상 목록에 'too much bloating'이 있으나 별도 문장. 위 운동 중심"
+  },
+  {
+   "symptom": "복부 팽만감",
+   "mech_id": "D2",
+   "mech": "D2 위점막 손상",
+   "level": "2차",
+   "status": "supported",
+   "source_id": "NIDDK-pepticulcer-causes",
+   "quote": "Peptic ulcers may cause symptoms of indigestion . Common symptoms include",
+   "quote_ko": "소화성 궤양은 소화불량 증상을 일으킬 수 있으며 흔한 증상은 다음과 같다",
+   "note": "소화성 궤양(점막 손상)의 흔한 증상 목록에 bloating 포함(목록 머리말 인용)"
+  },
+  {
+   "symptom": "울렁거림",
+   "mech_id": "D2",
+   "mech": "D2 위점막 손상",
+   "level": "1차",
+   "status": "supported",
+   "source_id": "NIDDK-gastritis-causes",
+   "quote": "In some cases, gastritis and gastropathy cause symptoms of indigestion , also called dyspepsia. Symptoms may include",
+   "quote_ko": "일부 경우 위염과 위병증은 소화불량(dyspepsia) 증상을 일으킨다. 증상은 다음과 같다",
+   "note": "위염·위병증 증상 목록에 'nausea or vomiting' 포함(목록 머리말 인용)"
+  },
+  {
+   "symptom": "울렁거림",
+   "mech_id": "D3",
+   "mech": "D3 장 운동 저하",
+   "level": "1차",
+   "status": "partial",
+   "source_id": "NIDDK-gastroparesis-causes",
+   "quote": "The movement of food through the digestive tract is then slowed or stopped.",
+   "quote_ko": "그러면 소화관을 통한 음식의 이동이 느려지거나 멈춘다",
+   "note": "위마비 기전 문장. 증상 목록에 nausea가 있으나 별도 문장. 위 운동 중심"
+  },
+  {
+   "symptom": "울렁거림",
+   "mech_id": "D1",
+   "mech": "D1 장내 균총 불균형",
+   "level": "2차",
+   "status": "not_found",
+   "source_id": null,
+   "quote": "",
+   "quote_ko": "",
+   "note": "장내 균총 불균형과 메스꺼움을 잇는 문장 없음"
+  },
+  {
+   "symptom": "무력감",
+   "mech_id": "I2",
+   "mech": "I2 만성 저도 염증",
+   "level": "2차",
+   "status": "partial",
+   "source_id": "NIAMS-ra",
+   "quote": "RA may cause fatigue, occasional fevers, and a loss of appetite.",
+   "quote_ko": "류마티스관절염은 피로, 간헐적 발열, 식욕 저하를 일으킬 수 있다",
+   "note": "류마티스관절염(만성 염증성 자가면역질환)의 증상으로 피로를 명시. 활막 염증이 만성화된다는 문장(NIAMS-ra)과 함께 보면 '만성 염증→피로' 연결이지만, 질환 수준 염증이며 '저도 염증' 가설 자체를 뒷받침하지는 않음. '무력감'은 피로로 근사"
+  },
+  {
+   "symptom": "소화불량",
+   "mech_id": "D2",
+   "mech": "D2 위점막 손상",
+   "level": "1차",
+   "status": "supported",
+   "source_id": "NIDDK-gastritis-causes",
+   "quote": "In some cases, gastritis and gastropathy cause symptoms of indigestion , also called dyspepsia. Symptoms may include",
+   "quote_ko": "일부 경우 위염과 위병증은 소화불량(dyspepsia) 증상을 일으킨다. 증상은 다음과 같다",
+   "note": "위염·위병증이 소화불량을 일으킨다고 명시. 같은 페이지에서 위병증은 위 점막 자극 물질로 생긴다고 설명"
+  },
+  {
+   "symptom": "소화불량",
+   "mech_id": "D3",
+   "mech": "D3 장 운동 저하",
+   "level": "1차",
+   "status": "partial",
+   "source_id": "NIDDK-gastroparesis-causes",
+   "quote": "Certain medicines may delay gastric emptying or affect motility , resulting in symptoms that are similar to those of gastroparesis.",
+   "quote_ko": "일부 약물은 위 배출을 지연시키거나 운동성에 영향을 주어 위마비와 비슷한 증상을 일으킬 수 있다",
+   "note": "위 배출 지연·운동성 저하가 위마비 유사 증상(조기 포만감, 식후 오래 배부름 등)을 일으킨다는 문장. 위 운동 근거이며 '장' 운동은 아님"
+  },
+  {
+   "symptom": "소화불량",
+   "mech_id": "D1",
+   "mech": "D1 장내 균총 불균형",
+   "level": "2차",
+   "status": "not_found",
+   "source_id": null,
+   "quote": "",
+   "quote_ko": "",
+   "note": "NIDDK 소화불량 원인에 항생제·H. pylori 등 감염은 있으나 장내 균총 불균형과 잇는 문장 없음"
+  },
+  {
+   "symptom": "음주 후 불평감",
+   "mech_id": "D2",
+   "mech": "D2 위점막 손상",
+   "level": "2차",
+   "status": "partial",
+   "source_id": "NIDDK-gastritis-causes",
+   "quote": "Contact with substances that irritate the stomach lining—including NSAIDs, alcohol, and cocaine—can also cause acute erosive gastropathy.",
+   "quote_ko": "NSAID, 알코올, 코카인 등 위 점막을 자극하는 물질과의 접촉도 급성 미란성 위병증을 일으킬 수 있다",
+   "note": "알코올이 위 점막을 자극해 급성 미란성 위병증을 일으킨다는 문장. 위병증이 소화불량 증상을 일으킨다는 문장과 합쳐야 '음주 후 불편'이 됨(2단계)"
+  },
+  {
+   "symptom": "피부 트러블",
+   "mech_id": "I2",
+   "mech": "I2 만성 저도 염증",
+   "level": "1차",
+   "status": "partial",
+   "source_id": "NIAMS-acne",
+   "quote": "Acne is an inflammatory disorder of the skin, which has sebaceous (oil) glands that connects to the hair follicle, which contains a fine hair.",
+   "quote_ko": "여드름은 피부의 염증성 질환이다",
+   "note": "여드름이 피부의 염증성 질환이라는 문장. 국소 피부 염증이지 전신 만성 저도 염증이 아님"
+  },
+  {
+   "symptom": "피부 트러블",
+   "mech_id": "X7",
+   "mech": "X7 아연·미네랄 부족",
+   "level": "2차",
+   "status": "partial",
+   "source_id": "MLP-zinc-diet",
+   "quote": "Skin sores",
+   "quote_ko": "피부 궤양(헌데)",
+   "note": "아연 결핍 증상 목록('Symptoms of zinc deficiency include:') 항목. '피부 궤양'으로, 일반적 피부 트러블보다 좁음"
+  },
+  {
+   "symptom": "약물 복용 후 메스꺼움",
+   "mech_id": "D2",
+   "mech": "D2 위점막 손상",
+   "level": "2차",
+   "status": "partial",
+   "source_id": "NIDDK-pepticulcer-causes",
+   "quote": "NSAIDs relieve pain , but they also make the stomach lining more prone to damage and ulcers.",
+   "quote_ko": "NSAID는 통증을 줄이지만 위 점막을 손상과 궤양에 더 취약하게 만든다",
+   "note": "NSAID가 위 점막을 손상에 취약하게 만든다는 문장. 소화성 궤양 증상에 메스꺼움이 있으나 별도 문장(2단계)"
+  },
+  {
+   "symptom": "입 텁텁함",
+   "mech_id": "D2",
+   "mech": "D2 위점막 손상",
+   "level": "2차",
+   "status": "not_found",
+   "source_id": null,
+   "quote": "",
+   "quote_ko": "",
+   "note": "위 점막 손상과 입안 텁텁함을 잇는 문장 없음"
+  },
+  {
+   "symptom": "탈모",
+   "mech_id": "X7",
+   "mech": "X7 아연·미네랄 부족",
+   "level": "1차",
+   "status": "supported",
+   "source_id": "MLP-zinc-diet",
+   "quote": "Loss of hair",
+   "quote_ko": "탈모",
+   "note": "MedlinePlus 'Symptoms of zinc deficiency include:' 목록 항목으로 'Loss of hair' 명시"
+  },
+  {
+   "symptom": "관절 통증",
+   "mech_id": "I2",
+   "mech": "I2 만성 저도 염증",
+   "level": "1차",
+   "status": "partial",
+   "source_id": "NIAMS-ra",
+   "quote": "This inflammation becomes chronic, and the synovium thickens due to an increase of cells, production of proteins, and other factors in the joint, which can lead to pain, redness, and warmth.",
+   "quote_ko": "이 염증은 만성화되고 활막이 두꺼워져 통증·발적·열감을 일으킬 수 있다",
+   "note": "만성화된 관절 활막 염증이 통증을 일으킨다고 명시. RA 질환 수준이며 저도 염증 가설은 아님"
+  },
+  {
+   "symptom": "관절 소리",
+   "mech_id": "I2",
+   "mech": "I2 만성 저도 염증",
+   "level": "1차",
+   "status": "not_found",
+   "source_id": null,
+   "quote": "",
+   "quote_ko": "",
+   "note": "관절 소리와 염증을 잇는 문장 없음"
+  },
+  {
+   "symptom": "움직임 불편",
+   "mech_id": "I2",
+   "mech": "I2 만성 저도 염증",
+   "level": "1차",
+   "status": "partial",
+   "source_id": "NIAMS-ra",
+   "quote": "The disease causes pain, swelling, stiffness, and loss of function in joints.",
+   "quote_ko": "이 질환은 관절의 통증, 부기, 뻣뻣함, 기능 상실을 일으킨다",
+   "note": "RA(만성 염증성 질환)가 관절 뻣뻣함·기능 상실을 일으킨다고 명시. 질환 수준"
+  },
+  {
+   "symptom": "무릎/허리 부담감",
+   "mech_id": "I2",
+   "mech": "I2 만성 저도 염증",
+   "level": "1차",
+   "status": "not_found",
+   "source_id": null,
+   "quote": "",
+   "quote_ko": "",
+   "note": "무릎·허리 부담감과 만성 염증을 잇는 문장 없음"
+  },
+  {
+   "symptom": "기력 저하",
+   "mech_id": "I2",
+   "mech": "I2 만성 저도 염증",
+   "level": "2차",
+   "status": "partial",
+   "source_id": "NIAMS-ra",
+   "quote": "RA may cause fatigue, occasional fevers, and a loss of appetite.",
+   "quote_ko": "류마티스관절염은 피로, 간헐적 발열, 식욕 저하를 일으킬 수 있다",
+   "note": "류마티스관절염(만성 염증성 자가면역질환)의 증상으로 피로를 명시. 활막 염증이 만성화된다는 문장(NIAMS-ra)과 함께 보면 '만성 염증→피로' 연결이지만, 질환 수준 염증이며 '저도 염증' 가설 자체를 뒷받침하지는 않음"
+  },
+  {
+   "symptom": "체중 감소",
+   "mech_id": "D2",
+   "mech": "D2 위점막 손상",
+   "level": "2차",
+   "status": "supported",
+   "source_id": "NIDDK-gastritis-causes",
+   "quote": "In some cases, gastritis and gastropathy cause symptoms of indigestion , also called dyspepsia. Symptoms may include",
+   "quote_ko": "일부 경우 위염과 위병증은 소화불량(dyspepsia) 증상을 일으킨다. 증상은 다음과 같다",
+   "note": "위염·위병증 증상 목록에 'weight loss' 포함(목록 머리말 인용)"
+  },
+  {
+   "symptom": "식욕변화",
+   "mech_id": "D2",
+   "mech": "D2 위점막 손상",
+   "level": "1차",
+   "status": "supported",
+   "source_id": "NIDDK-gastritis-causes",
+   "quote": "In some cases, gastritis and gastropathy cause symptoms of indigestion , also called dyspepsia. Symptoms may include",
+   "quote_ko": "일부 경우 위염과 위병증은 소화불량(dyspepsia) 증상을 일으킨다. 증상은 다음과 같다",
+   "note": "위염·위병증 증상 목록에 'loss of appetite' 포함(식욕 저하로 한정)"
+  },
+  {
+   "symptom": "눈 건조함",
+   "mech_id": "I3",
+   "mech": "I3 산화 스트레스",
+   "level": "2차",
+   "status": "not_found",
+   "source_id": null,
+   "quote": "",
+   "quote_ko": "",
+   "note": "산화 스트레스와 안구 건조를 잇는 공식 문장 없음(NCCIH는 항산화제 효과를 AMD에 한해 언급)"
+  },
+  {
+   "symptom": "눈 피로감",
+   "mech_id": "I3",
+   "mech": "I3 산화 스트레스",
+   "level": "2차",
+   "status": "not_found",
+   "source_id": null,
+   "quote": "",
+   "quote_ko": "",
+   "note": "산화 스트레스와 눈 피로를 잇는 문장 없음"
+  },
+  {
+   "symptom": "충혈",
+   "mech_id": "I3",
+   "mech": "I3 산화 스트레스",
+   "level": "2차",
+   "status": "not_found",
+   "source_id": null,
+   "quote": "",
+   "quote_ko": "",
+   "note": "산화 스트레스와 충혈을 잇는 문장 없음"
+  },
+  {
+   "symptom": "눈 부심",
+   "mech_id": "I3",
+   "mech": "I3 산화 스트레스",
+   "level": "2차",
+   "status": "not_found",
+   "source_id": null,
+   "quote": "",
+   "quote_ko": "",
+   "note": "산화 스트레스와 눈부심을 잇는 문장 없음"
+  },
+  {
+   "symptom": "기억력 감소",
+   "mech_id": "I3",
+   "mech": "I3 산화 스트레스",
+   "level": "2차",
+   "status": "not_found",
+   "source_id": null,
+   "quote": "",
+   "quote_ko": "",
+   "note": "NCCIH-antioxidants는 항산화 보충제의 인지 효과가 저확실성·소규모라고만 함. 산화 스트레스→기억력 저하 문장 없음"
+  }
+ ]
+}

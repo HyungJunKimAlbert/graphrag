@@ -1,103 +1,88 @@
-# Handoff — 2026-11-09
+# Handoff — 2026-11-09 (5차)
 
-> ⚠️ 이 문서는 세션 종료 시점의 해석이다. 사실로 받아들이지 말고 코드와 대조해 검증할 것.
-> 프로젝트는 git 저장소가 아니다. 변경 이력은 `.superpowers/sdd/261107_general_graphrag_plan/progress.md`(원장)가 유일한 기록이다.
+> ⚠️ 이 문서는 세션 종료 시점의 해석이다. 사실로 받아들이지 말고 코드·파일과 대조해 검증할 것.
+> 이전 핸드오프: `handoff_2026-11-09_4차.md`(근거 엑셀 v05, 기전 층), `handoff_2026-11-09_3차.md`(태스크 정의 U1~U11, DB·포트 규칙). 거기서 뒤집지 않은 결정·제약은 유효하다고 본다.
 
 ## Summary
 
-플랜 `261107_general_graphrag_plan.md`의 1단계(Task 0~7)가 끝났다. Task 7 평가 160건(문항 80 × vector·local)을 실행해 게이트 G1(금기 위반 0, 위험 중단 누락 0, 사실·다중홉에서 Local ≥ vector)을 통과했고, `MIN_SCORE`는 분포가 겹쳐 쓰지 않기로 했으며, 평가 중 발견한 검증기 오탐(같은 이름의 Ingredient ID가 여럿일 때 "문맥 밖"으로 거절)을 TDD로 고쳤다(115 passed). 그 뒤 사용자 요청 「결과 없으면 관심사/연령/성별 기준으로 추천」의 설계를 검토해 방향을 합의했고, 샘플 환자별 관심사 추천 결과를 `~/Downloads/관심사_추천_샘플_261108.xlsx`로 만들었다. **대체 추천 코드는 아직 한 줄도 없다.**
+승인된 14태스크 플랜(`docs/superpowers/plans/2026-11-09-patient-graphrag-recommend.md`)을 브랜치 `feature/rxrag`에서 끝까지 실행했다. 새 패키지 `rxrag/`(환자 JSON → 그래프 후보·근거 사실 ID → 규칙 금지 판정 → LLM 3개 선택 → 코드 검증)와 평가 도구 `eval/`이 생겼고 테스트 118개가 통과한다. 평가는 Claude 세션(s1)과 운영 모델 GPT-6-Luna(g3 → 프롬프트 수정 후 g3b)로 돌렸으며, g3b는 30명 중 LLM 선택 29명 전원이 1차 시도에 검증 통과, G1(금지·근거 없음·후보 밖) 위반 0건이다. 결과 엑셀은 `wellcheck/data/`, `~/Downloads/`, `wellcheck/result/`에 `rxrag_recommend_gpt6luna_g3b.xlsx`로 저장했다.
 
 ## Key Decisions
 
-- `MIN_SCORE = None` 유지 — p1 캐시 재계산 결과 답없음(0.654/0.718/0.82)과 사실(0.649/0.748/0.84)의 max_seed_score 분포가 완전히 겹침. 플랜 Task 7 Step 2 규정대로 `answerable` 플래그만 쓴다. 근거는 `wcrag/config.py` 주석.
-- `guard.outside_context`를 이름 단위 판정으로 수정 — '인삼'은 Ingredient ID가 3개(고시형 1 + 개별인정형 2), '홍삼'은 2개. 그중 하나가 문맥에 있으면 문맥 안으로 본다. 정답·채점기는 손대지 않았다(원장 Ruling). 틀리면 같은 이름·다른 ID의 문맥 밖 권유가 통과하지만, 이름이 같으면 금기 규칙도 같아 위험이 낮다고 봤다.
-- 수정 뒤 재채점은 저장된 LLM 응답만으로(`api=` 자리에 예외를 던지는 함수 주입, 외부 호출 0) 별도 태그 `p1-guardfix`에 저장 — 원본 `p1`은 그대로 두어 "평가 뒤 정답 수정 금지" 원칙과 재현성을 지켰다. 바뀐 행은 M-10 local, P-14 vector 두 건뿐.
-- 대체 추천은 **LLM 없이 규칙으로** — 기존 엔진 `../graphdb/recommend/candidates.py`의 `interest` 생성기와 같은 쿼리(Segment→HAS_INTEREST→Interest→RECOMMENDS→Ingredient, `recommendable`만, `h.order*100+r.order` 정렬)와 같은 금기 필터를 써서 상위 3개. 이유: 결과가 이미 규칙으로 정해지는 일이라 LLM을 거치면 비용·검증 부담만 늘고, 기존 엔진과 결과가 같아야 설명이 쉽다. 재채점도 캐시만으로 돌 수 있다.
-- 새 상태값 `fallback`(질문 직접 근거 없음 + 관심사 일반 추천) — `answered`와 섞으면 "질문에 답했다"로 채점되므로 분리. 답없음 유형 채점에서는 거절로 센다는 제안.
-- 발동 지점은 `ask.py`의 `no_evidence` 두 곳(검색 문맥 비었을 때, LLM `answerable=False`)만 — `rejected`·`blocked`는 "답이 있었는데 검증에 걸린 것"이라 제외. **이건 내 판단이며 사용자가 아직 확정하지 않았다.**
-- 나이·성별은 **필수 입력**(사용자 확인, 2026-11-08) — 대체 추천에 "나이·성별 없을 때" 안내 분기는 넣지 않기로 했다. 단, `ask()`는 지금도 `patient=None`으로 호출될 수 있고(테스트·평가 문항 다수) `legacy.build_context`는 `patient["sex"]`, `float(patient["age"])`를 그대로 읽어 KeyError가 나므로 코드에서는 여전히 방어해야 한다.
-- 기각한 대안: 대체 추천 문장을 LLM이 쓰는 방식(위 이유), Text2Cypher로 관심사 추천(2단계 Task 8~9 범위이며 아직 없음), LifeStage 노드 활용(관계가 0건이라 쓸 수 없음).
+- **플랜 그대로 실행, 기전 층(증상→기전→성분, 4차 엑셀)은 범위 밖** — 사용자가 "플랜 그대로 실행"을 지시했고 플랜에 기전 층 태스크가 없다. 그래프 7689 적재도 하지 않았다.
+- **같은 작업 트리에 브랜치 `feature/rxrag`, 경로 지정 커밋** — 미추적 `data/`·`.venv`·env 파일을 그대로 써야 해서 worktree 대신 선택. main 작업 트리의 이전 `wcrag` 삭제분(staged `D` 31개)은 커밋하지 않고 남겨 뒀다.
+- **must_not(금지 정답)은 후보 풀이 아니라 추천 가능한 전체 성분에 금지 판정해 계산**(`eval/build_must_not.py`) — 풀은 LLM 정규화에 따라 바뀌지만 금지는 환자 조건만으로 정해진다. G1이 더 엄격해진다.
+- **G2 블라인드 채점 문구에서 새 시스템 이유 문장·엔진 단계명 제거** — 둘 다 어느 쪽인지 드러냈다. 대신 이유 문장 품질은 G2에서 평가되지 않는다.
+- **최종 리뷰 Important 2건 수정** — ① 규칙 대체 시 사실 문장의 "예방" 등 금지 표현을 reason으로 내보내던 것 → 엔진 `FALLBACK` 문구로 대체, ② 서로 겹치는 후보뿐이라 3개 못 채워도 `ok`이던 것 → 겹치지 않게 고를 수 있는 수로 `partial` 판정.
+- **선택 프롬프트 수정(g3 실패 원인 대응)** — 후보 표 `[fact_id] (한글 종류) 문장`으로 경계 명시, 스키마 `fact_ids`를 풀의 실제 fact_id enum으로 제한, 금지 단어 나열 + "근거 문장에 있어도 옮겨 쓰지 말 것". 결과: 규칙 대체 4건 → 0건. 대가: s1(Claude)과 프롬프트가 달라져 같은 조건 비교가 아니다.
+- **결과 표시 한글화** — ID는 JSON에 추적용으로 남기고, 사실마다 `label`(한글 종류), 검증 오류 문구·`trace.selection`에 성분 이름, 엑셀 「선택 과정」 시트 추가. 사용자 요청("NTC 이런건 사람이 보기 힘든데 한글로").
+- **G3(GPT 과금)는 사용자 승인 후 실행** — "gpt-6-Luna 기준으로 뽑아보자"를 승인으로 받았다. 호출: 스모크 2 + g3 30명 + 실패 4명 재실행 + g3b 30명.
+- **Claude Docs 가이드 문서 반영은 보류** — 공유 문서이고 기전 층도 없어 사용자 확인 후 한 번에 갱신하기로 했다(사용자 미확인).
+- 기각: 손으로 쓴 must_not(마그네슘을 잘못 넣어 G1이 오탐 — 계산기로 대체), 엔진 경로를 `sys.path` 앞에 넣기(아래 Traps).
 
 ## Traps to Avoid
 
-- `eval/gold.json`은 `{rule_version, built_at, universes, questions}` dict다. `questions`를 꺼내지 않고 ID로 인덱싱하면 KeyError. 반면 `eval/questions.json`은 list(105건)다.
-- 평가 결과 레코드(`out/eval/*.jsonl`)에는 `max_seed_score`가 없다. 분포를 보려면 캐시만으로 `analyze → retrieve`를 재실행해야 한다(스크립트 `seed_scores.py` 참고, 아래 Relevant Files).
-- 캐시 전용 재실행은 `llm.embed(texts, api=raise_fn)`·`llm.complete(..., api=raise_fn)`로 한다. `llm.USAGE_LOG`의 `cached` 플래그로 외부 호출 0을 확인할 것. 캐시 키가 프롬프트 전체이므로 analyze/generate 프롬프트를 바꾸면 160건 전부 다시 과금된다.
-- 같은 이름의 Ingredient가 여러 ID를 가진다(인삼 3, 홍삼 2). 이름→ID 매핑을 1:1로 가정하는 코드는 오탐을 낸다.
-- `LifeStage` 7개는 관계가 0건, `Segment`는 10개(남·여 × 29세↓/30~39/40~49/50~64/65↑, 0~150세 전 구간 커버).
-- 관심사 추천은 **개인화가 아니라 구분 기본값**이다. 65세 이상 남성 샘플 5명이 모두 비타민 C·단백질·B1로 수렴했다. 답변 문구에서 이를 개인 맞춤처럼 말하면 안 된다.
-- 금기 필터가 실제로 결과를 바꾼다: EPA·DHA는 당뇨치료제·항응고제·혈압강하제 규칙에 차단(P-01·P-11·P-12·P-14·P-15), 비타민 K는 와파린 규칙에 차단(P-07, 원문 consult를 차단으로 상향). 대체 추천에서 금기 판정을 빼면 위반이 바로 생긴다.
-- `eval/run.py`의 `score()`는 `status == "no_evidence"`만 거절로 세고(`refuse` 종류), `summarize()`는 상태 목록이 하드코딩돼 있다. 새 상태 `fallback`을 넣으면 두 곳과 `answered` 판정(`citation_valid`, `safety_violation` 계산)에 모두 손대야 한다. 그러지 않으면 fallback 행이 어떤 집계에도 안 잡힌다.
-- Claude Docs 갱신: 글자 범위 타깃은 `{"kind":"chars","range":[start,end]}`(start/end 키 아님), 블록 통째 교체·삭제는 `ifHash`+`ifRev` 필요, `read`는 `container`와 payload kind(`view`/`search`) 필수. 문서 현재 rev 23(세션 종료 시점; 바뀌었을 수 있음).
-- 메모리 디렉터리(`~/.claude/projects/.../memory/`) 쓰기가 권한 설정으로 거부됐다. 메모리에 저장된 것은 없다.
-- `python3 scripts/load_graph.py --reset` 금지. `supplement-neo4j-dev`(7688)는 읽기만, `supplement-neo4j`(7687)는 접속 금지, 쓰기는 `supplement-neo4j-rag`(7689)만.
+- **엔진 경로를 `sys.path` 앞에 넣으면 `graphdb/tests`가 우리 `tests`를 가린다** — `rxrag/legacy.py`는 `append`로 붙인다. `tests/test_graph.py::test_legacy_path_does_not_shadow_our_packages`가 막는다.
+- **후보 표에서 `fact_id: 문장` 형식은 GPT가 `SYM_DIRECT:` 접두어를 잘라 읽는다** — fact_id 안에도 콜론이 있어서. 지금은 `[ ]`로 감싸고 스키마 enum으로 막았다. 형식을 되돌리지 말 것.
+- **근거 문장 원문(그래프 데이터)에 "예방", "개선" 같은 건기식 금지 표현이 있다** — 관심사·증상 사실 116개 중 39개(리뷰어 측정). 금지 표현 검사는 LLM `reason`과 규칙 대체 reason에만 적용되고 `evidence[].text` 원문은 그대로 나간다.
+- **G2는 Claude가 Claude 선택을 채점한 것** — 블라인드여도 같은 계열 선호 가능성. s1 승+무 93.1%는 이 점을 감안해야 한다. g3b(GPT)는 아직 G2 채점을 안 했다.
+- **세션 응답 파일 `out/session/`은 gitignore** — 정규화 492·select 29·judge 29 응답이 로컬에만 있다. 지우면 s1 재현 불가. 또 프롬프트를 바꿔서 기존 select 응답 키(프롬프트 해시)는 이제 맞지 않는다.
+- **정규화 필수 증상 충족 71.3%는 우리 채점 규칙 기준** — 정답은 엔진 증상 마스터 이름인데 우리 출력은 분류표 키워드+자유 텍스트라 "포함되면 맞힘"으로 판정했다(`eval/normalize_eval.py:_found`). 엔진 채점기와 수치가 다르다.
+- **macOS에 `timeout` 명령이 없다** — 셸에서 쓰지 말 것.
+- **그래프 데이터 공백**: 빌베리-와파린 상호작용이 그래프에 없어 금지 판정이 안 된다(s1 V-13 블라인드 채점에서 지적). 코드 문제 아님.
+- 3차 핸드오프의 함정(7474/7687 접속 금지, `load_graph.py --reset` 금지, 엔진 `db.connect()`의 7474 기본값)은 유효. `rxrag/graph.py`는 포트 7475가 아니면 거부한다.
 
 ## Working Agreements
 
-- 모든 답변은 한국어.
-- 구현은 TDD: 실패 테스트 작성 → 실패 확인 → 구현 → `.venv/bin/python -m pytest tests -q` 전체 통과. 가상환경은 `graphdb-rag/.venv`만.
-- 새 동작(기능)은 설계를 먼저 글로 보여 주고 사용자 승인 뒤 코드를 쓴다(brainstorming 게이트). 사용자는 "어떻게 동작하는지", "LLM이 Cypher를 짜는지" 같은 구조 설명을 원했다 — 변경을 제안할 때 동작 흐름을 함께 설명한다.
-- OpenAI 호출이 있는 실행은 `--dry-run`으로 건수·토큰을 먼저 보이고 범위를 말한 뒤 승인받는다. 160건 평가는 AskUserQuestion으로 승인받고 실행했다.
-- `../graphdb` 코드·규칙·CSV·테스트는 수정하지 않는다. 읽는 곳은 `wcrag/legacy.py` 한 파일.
-- `.env`, `.neo4j-dev.env`, `.neo4j-rag.env` 값은 읽지도 출력하지도 않는다.
-- 평가 결과를 본 뒤 정답(`eval/gold.json`)을 고치지 않는다. RC-03 "남편이 어제 쓰러짐"이 두 방식 모두 stopped인데 정답은 no_stop이어도 그대로 뒀다.
-- 개발·평가에는 가상 문항만 쓴다. 실제 환자 문장을 넣지 않는다.
-- 결과 정리를 엑셀로 원할 때 `~/Downloads/`에 저장한다(openpyxl, `.venv`에 있음).
-- 플랜 실행 중 내린 판단은 원장에 `Ruling: 무엇 — 왜 — 틀리면 비용` 형식으로 남기고, 최종 보고에 모은다.
-- 작업공간 `.superpowers/sdd/261107_general_graphrag_plan/`은 삭제하지 않기로 했다(git이 없어 원장이 유일한 기록).
+- 모든 답변 한국어. 결론·근거를 표로 짧게. 갈림길은 추천안을 붙여 묻는다.
+- 사람이 보는 결과에는 ID(NTC-2-16 등) 대신 한글 이름·설명을 쓴다(이번 세션 사용자 요청).
+- 결과 엑셀은 **`wellcheck/result/`**에 저장(2026-11-09 사용자 지시로 이전의 data/·Downloads 두 곳 규칙을 대체). 메모리 디렉터리는 권한상 쓰기가 막혀 이 규칙이 메모리에 저장되지 않았다.
+- API 과금(OpenAI)은 사용자 승인 후에만. 개발·평가 LLM 판단은 세션·서브에이전트로(과금 0).
+- `../graphdb` 수정 금지(import·읽기만). dev DB(http 7475) 읽기만, 7474/7687 접속 금지, 쓰기는 7689만. `.env`·`.neo4j-*.env` 값 출력 금지(코드가 읽는 것은 허용). 가상환경 `graphdb-rag/.venv`.
+- 커밋 메시지 "영어 동사: 한글 요약" + `Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>`. 푸시는 사용자가 `! git push`로 직접.
+- 새 기능·수정은 TDD(실패 테스트 확인 → 구현 → 전체 통과).
+- 사용자는 "지금 건 누가(어떤 모델이) 한 건가"를 확인한다 — 결과마다 어떤 모델이 답했는지 밝힐 것.
 
 ## Relevant Files
 
-- `wcrag/answer/ask.py:92-96`, `:113-115` — `no_evidence`가 나는 두 지점. 대체 추천이 들어갈 자리. `:98-110`은 `person` 생성과 금기 판정 흐름(대체 추천도 같은 `person`·`verdicts`를 써야 한다).
-- `wcrag/answer/safety_tool.py:26-47` — `merge_patient`(환자 정보 + 질문 단서 합치기), `verdicts`(`legacy.build_context` 결과에 `segment`가 들어 있다).
-- `wcrag/legacy.py:30-37` — 기존 엔진 `build_context`·`safety_check` 어댑터(읽기 전용).
-- `../graphdb/recommend/candidates.py:29-33`, `:71-74`, `:142-143` — `Q_INTEREST`, `interest` 생성기, GENERATORS 순서(관심사가 마지막). 대체 추천이 따라야 할 원본. **수정 금지.**
-- `../graphdb/recommend/normalize.py:42`, `:206-238` — `Q_SEGMENT`(sex·minAge·maxAge), `ctx["segment"]` 생성. `patient["sex"]`·`patient["age"]` 필수.
-- `../graphdb/recommend/engine.py:37-59` — `select()`: 금기 판정 → 차단/채택, N개 채우기, 묶음(group) 중복 처리. 대체 추천의 채택 규칙 참고.
-- `wcrag/retrieve/local.py:69-99` — 관계 문장 틀(`TEMPLATES`, `HAS_INTEREST`·`RECOMMENDS` 포함)과 `fact_id`. 대체 추천 근거 ID를 같은 체계로 만들 때 쓴다.
-- `wcrag/answer/guard.py:72-86` — 이번에 고친 `outside_context`(이름 단위 판정).
-- `wcrag/config.py:33-36` — `ENABLED_MODES`, `MIN_SCORE`와 미적용 근거 주석.
-- `eval/run.py:84-106`, `:190-205` — `score()`·`summarize()`. `fallback` 상태를 넣을 때 고쳐야 할 곳.
-- `eval/questions.json` — 가상 문항 105건(list). `patient`가 있는 14건(P-01~P-15, P-13 제외)이 대체 추천 샘플이다.
-- `tests/test_answer.py` — `test_same_name_with_several_ids_is_inside_if_any_id_is_in_context`가 이번 수정의 테스트. 대체 추천 테스트도 여기에 가짜 그래프·가짜 LLM으로 붙이는 게 자연스럽다.
-- `.superpowers/sdd/261107_general_graphrag_plan/progress.md` — 원장. 끝부분 "Task 7 Step 1~3"과 Ruling, Deferred minors 10건.
-- `261107_general_graphrag_plan.md` — 플랜. 2단계(Task 8~9 Text2Cypher, 게이트 G2)는 미착수.
-- `out/eval/p1-guardfix.xlsx` — 현재 기준 평가 결과(sheets rows/summary). `p1.xlsx`는 수정 전 원본.
-- `~/Downloads/관심사_추천_샘플_261108.xlsx` — 샘플 24명(평가 환자 14 + 구분별 기본 10)의 관심사 추천·차단 결과, 전체 경로 91건, Segment 10개.
-- `/private/tmp/claude-501/-Users-user-Documents-projects-wellcheck-graphdb-rag/af6a2786-330e-4fc0-ac46-0e90652ac140/scratchpad/interest_samples.py` — 위 엑셀을 만든 스크립트(세션 임시 폴더라 사라졌을 수 있음; `fallback()` 함수가 제안한 설계의 프로토타입이다). 같은 폴더 `seed_scores.py`는 MIN_SCORE 분포 재계산 스크립트.
-- 가이드 문서(Claude Docs): https://claude.ai/artifact/AZkz2iqkCc85sH7hAFnx2i — 「1단계 측정 결과 (2026-11-07)」 절까지 반영됨. 대체 추천 내용은 없음.
+- `rxrag/recommend.py:26-80` — 진입점 흐름. `named`(trace용 이름 붙이기), `choose`(LLM 선택→검증→1회 재시도→규칙 대체, 시도별 `trace.selection`), partial 판정(겹치지 않는 수 기준).
+- `rxrag/candidates.py:9-16,74-160` — 사실 종류 `KINDS`·한글 `KIND_LABELS`, 엔진과 같은 조건의 8개 경로 쿼리, 묶음 접기(`fold_groups`: 데이터 신호 사실만 묶음으로), `rule_rank` 정렬.
+- `rxrag/select.py:8-70` — 선택 시스템 프롬프트(금지 단어 목록 포함), 스키마(ingredient_id·fact_ids enum), 후보 표 형식 `[fact_id] (종류) 문장`.
+- `rxrag/verify.py:18-85` — 검증 규칙(후보 밖·금지·중복 이름·묶음+구성·근거 소속·금지 표현), `fallback`, `safe_reason`.
+- `rxrag/safety.py:10-29` — 금지 판정 분리(엔진 `safety.check` 재사용), 상한은 판정 뒤에 자름.
+- `rxrag/graph.py:11-50`, `rxrag/legacy.py` — 읽기 전용 래퍼(쓰기 쿼리 거부·포트 7475 강제), 엔진 어댑터(sys.path append).
+- `eval/harness.py` — export/run/g1/engine/g2-export/g2/xlsx. 엑셀 시트 요약·불일치·전체·선택 과정.
+- `eval/patients.json`, `eval/build_must_not.py` — 가상 환자 30명과 금지 정답(커밋 후 수정 금지).
+- `out/eval/s1*.{jsonl,json,xlsx}`, `normalize-s1.*`, `g3.jsonl`, `g3-fail4.jsonl`, `g3b.{jsonl,xlsx}` — 평가 결과(커밋됨).
+- `.superpowers/sdd/2026-11-09-patient-graphrag-recommend/progress.md` — 실행 ledger. `Ruling:` 27개, 미룬 minor 5개(gitignore, 로컬에만).
 
 ## Open Work
 
-- 「결과 없으면 관심사 기준 대체 추천」은 설계 단계이며 코드가 없다. 합의된 것: LLM 없이 규칙, Segment→Interest→Ingredient, 금기 필터, 상위 3개, 새 상태 `fallback`, 나이·성별 필수. 미확정: `rejected`까지 대체 추천으로 채울지(내 제안은 제외). 사용자는 "이대로 TDD로 들어가도 될까요?"에 답하지 않은 채 핸드오프를 요청했다.
-- 대체 추천을 넣으면 `eval/run.py`의 채점·집계가 `fallback` 상태를 모르는 상태다. 답없음 유형 `refused_ok`의 정의(no_evidence만 / fallback 포함 / 고립 개체 인용 answered 포함)는 사용자 결정 사항으로 남아 있다.
-- Task 7 뒤 사용자가 정할 것 3가지가 미정이다: ① 답없음 local의 answered 4건(전부 고립 개체 인용 "연결된 근거 없음")을 거절로 셀지(세면 refused_ok 0.5→0.9), ② RC-03 "어제 쓰러짐" 오중단 — 위험 신호 기준을 넓게 둘지, ③ 사실 0.734 / 다중홉 0.606을 다음 단계 기준값으로 쓸지.
-- 환자상황 no_evidence 2건(P-03 스타틴 근육통, P-15 아스피린·고혈압 관절통)은 문맥이 있었는데 LLM이 답하지 못한 상태다. 원인은 보지 않았다. 대체 추천이 들어가면 이 둘은 fallback으로 바뀔 것으로 예상된다(샘플 엑셀에 결과 있음).
-- 2단계(Task 8~9 Text2Cypher, 게이트 G2)는 미착수이며 별도 지시가 필요하다.
-- 가이드 문서에 대체 추천·Text2Cypher 여부 설명이 없다(사용자가 이번에 물어본 내용).
-- 원장의 Deferred minors 10건은 그대로 남아 있다(예: `guard.compact` 소문자화 안 함, eval `default_ask()`가 드라이버를 안 닫음, 엑셀 recommended 열이 이름 아닌 ID).
+- 브랜치 `feature/rxrag`(커밋 20개)는 푸시·병합되지 않았다. 병합/PR/유지 결정이 나지 않았다. main 작업 트리의 staged `wcrag` 삭제분과 미추적 `data/`·`docs/`·`handoff*.md`도 미커밋이다(플랜·설계 문서 `docs/superpowers/`도 미커밋).
+- g3b(GPT, 수정 프롬프트) 결과는 엔진과 G2 블라인드 채점을 하지 않았다. s1 G2는 승13·무14·패2(93.1%), 확실히 못함 0.
+- GPT(g3, 수정 전 프롬프트)와 Claude(s1)의 비교: 1순위 일치 21/29, 집합 일치 6/29, 정규화 결과가 다른 환자 8명. g3b와 s1 비교는 계산하지 않았다.
+- 기전 층(증상→기전→성분)은 그래프·코드 어디에도 없다. 후보 경로에 넣으려면 `rxrag/candidates.py`에 새 종류와 쿼리가 필요하고, 7689 재구성은 설계 C5와 충돌한 채 남아 있다.
+- 미룬 minor(리뷰): `verify.check`가 dict 아닌 항목·reason 누락에서 예외, 이름 중복 판정이 공백 제거뿐(…분말/영문 병기 차이 못 잡음), 쓰기 거부 정규식이 `CALL db.createLabel` 류 프로시저 쓰기를 못 막음, `contract.validate`가 `symptoms`·`conditions` 문자열·`complaint` 비문자열을 거르지 않음, 분류표 경로가 사용자 Documents 절대경로.
+- 결과 엑셀에서 같은 B군 개별 성분 3개(B1·B2·나이아신)를 고르는 환자가 여러 명 있다(검증은 묶음+구성만 막고 형제 구성 성분끼리는 허용). 의도된 동작인지 판단되지 않았다.
+- Claude Docs 가이드 문서(https://claude.ai/artifact/2QzTGSk1rDPaXPSDcfLumg)에 구현·평가 결과가 반영되지 않았다.
+- 메모리 디렉터리의 `MEMORY.md`가 가리키는 두 파일은 여전히 없다(4차 기준, 이번 세션에서 확인 안 함).
 
 ## Prompt for New Chat
 
 ```
-건기식 GraphRAG 질의응답(wellcheck/graphdb-rag). 플랜 261107_general_graphrag_plan.md의 1단계(Task 0~7)는 끝났고 게이트 G1을 통과했다(평가 결과 out/eval/p1-guardfix.xlsx, 원장 .superpowers/sdd/261107_general_graphrag_plan/progress.md). 모든 답변은 한국어.
+건기식 GraphRAG(wellcheck/graphdb-rag). 태스크: 질의 없이 BE 환자 JSON만으로 영양성분 3개를 우선순위대로 추천하고 그 과정에 GraphRAG를 쓴다. 모든 답변은 한국어.
 
-현재 상태: 「검색 결과가 없으면 나이·성별(필수 입력) → Segment → 관심사 → 성분으로 대체 추천」을 설계만 합의하고 코드는 없다. 합의안은 handoff.md Key Decisions에 있다(LLM 없이 규칙, 기존 엔진 recommend/candidates.py의 interest 생성기와 같은 쿼리·금기 필터, 상위 3개, 새 status "fallback", 발동은 ask.py의 no_evidence 두 지점). rejected까지 채울지는 미확정. 샘플 결과는 ~/Downloads/관심사_추천_샘플_261108.xlsx.
+현재 상태: 14태스크 플랜을 브랜치 feature/rxrag에서 다 실행했다(커밋 20개, 푸시 안 함, 테스트 118개 통과). 패키지 rxrag/(입력 검증 → 주호소 LLM 정규화 → 그래프 후보+근거 사실 ID → 엔진 금지 판정 → LLM 3개 선택 → 코드 검증·재시도·규칙 대체)와 eval/ 하네스가 있다. 운영 모델 GPT-6-Luna로 수정 프롬프트 재평가(g3b): 29명 전원 1차 검증 통과, G1 위반 0. 결과 엑셀 out/eval/g3b.xlsx(사본 wellcheck/result/rxrag_recommend_gpt6luna_g3b.xlsx). 남은 갈림길: 브랜치 병합/PR, g3b G2 블라인드 채점, 기전 층 추가, 미룬 minor 5개.
 
 관련 파일:
-- handoff.md
-- wcrag/answer/ask.py:92-115
-- wcrag/answer/safety_tool.py:26-47
-- wcrag/legacy.py:30-37
-- ../graphdb/recommend/candidates.py:29-33, 71-74, 142-143 (읽기만, 수정 금지)
-- ../graphdb/recommend/normalize.py:42, 206-238 (읽기만)
-- ../graphdb/recommend/engine.py:37-59 (읽기만)
-- wcrag/retrieve/local.py:69-99
-- eval/run.py:84-106, 190-205
-- tests/test_answer.py
-- .superpowers/sdd/261107_general_graphrag_plan/progress.md (끝부분 Task 7)
+- handoff.md (이번), handoff_2026-11-09_4차.md, handoff_2026-11-09_3차.md
+- rxrag/recommend.py:26-80, rxrag/candidates.py:9-16,74-160, rxrag/select.py:8-70, rxrag/verify.py:18-85, rxrag/safety.py, rxrag/graph.py, rxrag/legacy.py
+- eval/harness.py, eval/patients.json, eval/build_must_not.py
+- out/eval/g3b.jsonl, out/eval/s1-g2.json
+- .superpowers/sdd/2026-11-09-patient-graphrag-recommend/progress.md (Ruling 목록)
+- docs/superpowers/plans/2026-11-09-patient-graphrag-recommend.md, docs/superpowers/specs/2026-11-09-patient-graphrag-recommend-design.md
 
-제약: ../graphdb 수정 금지, supplement-neo4j-dev(7688)는 읽기만·supplement-neo4j(7687)는 접속 금지·쓰기는 supplement-neo4j-rag(7689)만, .env 류 값 출력 금지, 가상환경은 graphdb-rag/.venv만, OpenAI 호출은 --dry-run 뒤 승인받고 실행, 구현은 실패 테스트 먼저(TDD), 평가 뒤 정답(eval/gold.json) 수정 금지.
+제약: OpenAI 과금은 승인 후만, ../graphdb 수정 금지, dev DB(7475) 읽기만·7474/7687 접속 금지·쓰기는 7689만, .env 값 출력 금지, .venv만 사용, 결과 엑셀은 wellcheck/result에 저장, 사람이 보는 결과는 ID 대신 한글, 푸시는 사용자가 직접.
 
 나열된 파일을 Read 도구로 직접 읽어서 이 문서의 주장을 코드와 대조해 검증해.
 요약본이라고 주장하거나 기억에서 답하지 말고, 실제 파일을 확인한 뒤 내 지시를 기다려.

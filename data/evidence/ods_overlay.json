@@ -1,0 +1,91 @@
+{
+ "sources": [
+  {
+   "source_id": "ODS-magnesium-hp",
+   "org": "NIH Office of Dietary Supplements",
+   "title": "Magnesium - Health Professional Fact Sheet",
+   "url": "https://ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/",
+   "accessed": "2026-11-09",
+   "fetch_method": "chrome(사용자 브라우저, 관련 문장 발췌)",
+   "file": "sources/ODS-magnesium-hp.txt"
+  },
+  {
+   "source_id": "ODS-b6-hp",
+   "org": "NIH Office of Dietary Supplements",
+   "title": "Vitamin B6 - Health Professional Fact Sheet",
+   "url": "https://ods.od.nih.gov/factsheets/VitaminB6-HealthProfessional/",
+   "accessed": "2026-11-09",
+   "fetch_method": "chrome(사용자 브라우저, 관련 문장 발췌)",
+   "file": "sources/ODS-b6-hp.txt"
+  },
+  {
+   "source_id": "ODS-pantothenic-hp",
+   "org": "NIH Office of Dietary Supplements",
+   "title": "Pantothenic Acid - Health Professional Fact Sheet",
+   "url": "https://ods.od.nih.gov/factsheets/PantothenicAcid-HealthProfessional/",
+   "accessed": "2026-11-09",
+   "fetch_method": "chrome(사용자 브라우저, 관련 문장 발췌)",
+   "file": "sources/ODS-pantothenic-hp.txt"
+  },
+  {
+   "source_id": "ODS-b12-hp",
+   "org": "NIH Office of Dietary Supplements",
+   "title": "Vitamin B12 - Health Professional Fact Sheet",
+   "url": "https://ods.od.nih.gov/factsheets/VitaminB12-HealthProfessional/",
+   "accessed": "2026-11-09",
+   "fetch_method": "chrome(사용자 브라우저, 관련 문장 발췌)",
+   "file": "sources/ODS-b12-hp.txt"
+  },
+  {
+   "source_id": "ODS-iron-hp",
+   "org": "NIH Office of Dietary Supplements",
+   "title": "Iron - Health Professional Fact Sheet",
+   "url": "https://ods.od.nih.gov/factsheets/Iron-HealthProfessional/",
+   "accessed": "2026-11-09",
+   "fetch_method": "chrome(사용자 브라우저, 관련 문장 발췌)",
+   "file": "sources/ODS-iron-hp.txt"
+  }
+ ],
+ "upgrades": [
+  {
+   "symptom": "두통",
+   "mech_id": "X3",
+   "source_id": "ODS-magnesium-hp",
+   "quote": "Magnesium deficiency is related to factors that promote headaches, including neurotransmitter release and vasoconstriction",
+   "quote_ko": "마그네슘 결핍은 신경전달물질 분비와 혈관 수축 등 두통을 촉진하는 요인과 관련된다."
+  },
+  {
+   "symptom": "기분 저하",
+   "mech_id": "X8",
+   "source_id": "ODS-b6-hp",
+   "quote": "Vitamin B6 deficiency is associated with microcytic anemia, electroencephalographic abnormalities, dermatitis with cheilosis (scaling on the lips and cracks at the corners of the mouth) and glossitis (swollen tongue), depression and confusion, and weakened immune function",
+   "quote_ko": "비타민 B6 결핍은 … 우울과 혼란 … 과 관련된다."
+  },
+  {
+   "symptom": "신경과민",
+   "mech_id": "X8",
+   "source_id": "ODS-pantothenic-hp",
+   "quote": "a deficiency is associated with numbness and burning of the hands and feet, headache, fatigue, irritability, restlessness, disturbed sleep, and gastrointestinal disturbances with anorexia",
+   "quote_ko": "판토텐산 결핍은 손발 저림·화끈거림, 두통, 피로, 과민, 안절부절, 수면 장애, 식욕부진을 동반한 위장 장애와 관련된다."
+  },
+  {
+   "symptom": "체력 저하",
+   "mech_id": "X2",
+   "source_id": "ODS-b12-hp",
+   "quote": "Vitamin B12 deficiency can cause a number of symptoms, including fatigue, neurological changes, megaloblastic anemia, glossitis of the tongue, palpitations, and low counts of white and red blood cells.",
+   "quote_ko": "비타민 B12 결핍은 피로, 신경 변화, 거대적아구성 빈혈 등 여러 증상을 일으킬 수 있다."
+  },
+  {
+   "symptom": "체력 저하",
+   "mech_id": "X1",
+   "source_id": "ODS-iron-hp",
+   "quote": "People with iron deficiency anemia may experience gastrointestinal disturbances, weakness, fatigue, and difficulty concentrating.",
+   "quote_ko": "철 결핍성 빈혈이 있는 사람은 위장 장애, 쇠약, 피로, 집중력 저하를 겪을 수 있다."
+  }
+ ],
+ "checked_no_support": {
+  "X3": "ODS 마그네슘 팩트시트(HP) 확인: 수면·불안·기분·스트레스·변비·생리 관련 결핍 문장 없음",
+  "X8": "ODS 비타민 B군 팩트시트 확인: 긴장·불안·스트레스 관련 결핍 문장 없음",
+  "X1": "ODS 철 팩트시트 확인: 현기증·기립성 저혈압·혈액순환 관련 문장 없음"
+ }
+}
