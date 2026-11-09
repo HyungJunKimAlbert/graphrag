@@ -18,3 +18,13 @@ out/pip_install.log
 # 개인 설정
 .claude/settings.local.json
 .DS_Store
+
+# 플랜 실행 작업 공간
+.superpowers/
+
+# 세션 응답·캐시
+out/session/
+out/cache/
+
+# 근거 원문 수집본(출처 URL로 재수집 가능, 6MB)
+data/evidence/sources/

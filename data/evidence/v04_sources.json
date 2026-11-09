@@ -1,0 +1,464 @@
+[
+ {
+  "source_id": "V04-KDCA-1104",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=1104",
+  "file": "sources/V04-KDCA-1104.txt",
+  "fetch_method": "curl",
+  "chars": 18430
+ },
+ {
+  "source_id": "V04-KDCA-1667",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=1667",
+  "file": "sources/V04-KDCA-1667.txt",
+  "fetch_method": "curl",
+  "chars": 11816
+ },
+ {
+  "source_id": "V04-KDCA-1831",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=1831",
+  "file": "sources/V04-KDCA-1831.txt",
+  "fetch_method": "curl",
+  "chars": 18332
+ },
+ {
+  "source_id": "V04-KDCA-1988",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=1988",
+  "file": "sources/V04-KDCA-1988.txt",
+  "fetch_method": "curl",
+  "chars": 21109
+ },
+ {
+  "source_id": "V04-KDCA-2057",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=2057",
+  "file": "sources/V04-KDCA-2057.txt",
+  "fetch_method": "curl",
+  "chars": 12510
+ },
+ {
+  "source_id": "V04-KDCA-3947",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=3947",
+  "file": "sources/V04-KDCA-3947.txt",
+  "fetch_method": "curl",
+  "chars": 16126
+ },
+ {
+  "source_id": "V04-KDCA-5221",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5221",
+  "file": "sources/V04-KDCA-5221.txt",
+  "fetch_method": "curl",
+  "chars": 16984
+ },
+ {
+  "source_id": "V04-KDCA-5226",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5226",
+  "file": "sources/V04-KDCA-5226.txt",
+  "fetch_method": "curl",
+  "chars": 11003
+ },
+ {
+  "source_id": "V04-KDCA-5250",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5250",
+  "file": "sources/V04-KDCA-5250.txt",
+  "fetch_method": "curl",
+  "chars": 13300
+ },
+ {
+  "source_id": "V04-KDCA-5269",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5269",
+  "file": "sources/V04-KDCA-5269.txt",
+  "fetch_method": "curl",
+  "chars": 14564
+ },
+ {
+  "source_id": "V04-KDCA-5304",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5304",
+  "file": "sources/V04-KDCA-5304.txt",
+  "fetch_method": "curl",
+  "chars": 8702
+ },
+ {
+  "source_id": "V04-KDCA-5305",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5305",
+  "file": "sources/V04-KDCA-5305.txt",
+  "fetch_method": "curl",
+  "chars": 59040
+ },
+ {
+  "source_id": "V04-KDCA-5310",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5310",
+  "file": "sources/V04-KDCA-5310.txt",
+  "fetch_method": "curl",
+  "chars": 18866
+ },
+ {
+  "source_id": "V04-KDCA-5362",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5362",
+  "file": "sources/V04-KDCA-5362.txt",
+  "fetch_method": "curl",
+  "chars": 9842
+ },
+ {
+  "source_id": "V04-KDCA-5423",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5423",
+  "file": "sources/V04-KDCA-5423.txt",
+  "fetch_method": "curl",
+  "chars": 13595
+ },
+ {
+  "source_id": "V04-KDCA-5698",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5698",
+  "file": "sources/V04-KDCA-5698.txt",
+  "fetch_method": "curl",
+  "chars": 16662
+ },
+ {
+  "source_id": "V04-KDCA-5701",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5701",
+  "file": "sources/V04-KDCA-5701.txt",
+  "fetch_method": "curl",
+  "chars": 8986
+ },
+ {
+  "source_id": "V04-KDCA-5704",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5704",
+  "file": "sources/V04-KDCA-5704.txt",
+  "fetch_method": "curl",
+  "chars": 15542
+ },
+ {
+  "source_id": "V04-KDCA-5804",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5804",
+  "file": "sources/V04-KDCA-5804.txt",
+  "fetch_method": "curl",
+  "chars": 10611
+ },
+ {
+  "source_id": "V04-KDCA-5810",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5810",
+  "file": "sources/V04-KDCA-5810.txt",
+  "fetch_method": "curl",
+  "chars": 12647
+ },
+ {
+  "source_id": "V04-KDCA-5827",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5827",
+  "file": "sources/V04-KDCA-5827.txt",
+  "fetch_method": "curl",
+  "chars": 18137
+ },
+ {
+  "source_id": "V04-KDCA-5830",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5830",
+  "file": "sources/V04-KDCA-5830.txt",
+  "fetch_method": "curl",
+  "chars": 11107
+ },
+ {
+  "source_id": "V04-KDCA-5833",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5833",
+  "file": "sources/V04-KDCA-5833.txt",
+  "fetch_method": "curl",
+  "chars": 16063
+ },
+ {
+  "source_id": "V04-KDCA-5846",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5846",
+  "file": "sources/V04-KDCA-5846.txt",
+  "fetch_method": "curl",
+  "chars": 7918
+ },
+ {
+  "source_id": "V04-KDCA-5857",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5857",
+  "file": "sources/V04-KDCA-5857.txt",
+  "fetch_method": "curl",
+  "chars": 14463
+ },
+ {
+  "source_id": "V04-KDCA-5858",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5858",
+  "file": "sources/V04-KDCA-5858.txt",
+  "fetch_method": "curl",
+  "chars": 10735
+ },
+ {
+  "source_id": "V04-KDCA-5969",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5969",
+  "file": "sources/V04-KDCA-5969.txt",
+  "fetch_method": "curl",
+  "chars": 15772
+ },
+ {
+  "source_id": "V04-KDCA-6275",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6275",
+  "file": "sources/V04-KDCA-6275.txt",
+  "fetch_method": "curl",
+  "chars": 9104
+ },
+ {
+  "source_id": "V04-KDCA-6306",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6306",
+  "file": "sources/V04-KDCA-6306.txt",
+  "fetch_method": "curl",
+  "chars": 18808
+ },
+ {
+  "source_id": "V04-KDCA-6308",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6308",
+  "file": "sources/V04-KDCA-6308.txt",
+  "fetch_method": "curl",
+  "chars": 14929
+ },
+ {
+  "source_id": "V04-KDCA-6544",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6544",
+  "file": "sources/V04-KDCA-6544.txt",
+  "fetch_method": "curl",
+  "chars": 13916
+ },
+ {
+  "source_id": "V04-KDCA-6546",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6546",
+  "file": "sources/V04-KDCA-6546.txt",
+  "fetch_method": "curl",
+  "chars": 10412
+ },
+ {
+  "source_id": "V04-KDCA-6549",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6549",
+  "file": "sources/V04-KDCA-6549.txt",
+  "fetch_method": "curl",
+  "chars": 16883
+ },
+ {
+  "source_id": "V04-KDCA-6550",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6550",
+  "file": "sources/V04-KDCA-6550.txt",
+  "fetch_method": "curl",
+  "chars": 15240
+ },
+ {
+  "source_id": "V04-KDCA-6613",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6613",
+  "file": "sources/V04-KDCA-6613.txt",
+  "fetch_method": "curl",
+  "chars": 11931
+ },
+ {
+  "source_id": "V04-KDCA-6687",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6687",
+  "file": "sources/V04-KDCA-6687.txt",
+  "fetch_method": "curl",
+  "chars": 18696
+ },
+ {
+  "source_id": "V04-KDCA-6689",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6689",
+  "file": "sources/V04-KDCA-6689.txt",
+  "fetch_method": "curl",
+  "chars": 14085
+ },
+ {
+  "source_id": "V04-KDCA-6693",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6693",
+  "file": "sources/V04-KDCA-6693.txt",
+  "fetch_method": "curl",
+  "chars": 33565
+ },
+ {
+  "source_id": "V04-KDCA-6700",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6700",
+  "file": "sources/V04-KDCA-6700.txt",
+  "fetch_method": "curl",
+  "chars": 13056
+ },
+ {
+  "source_id": "V04-KDCA-6708",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6708",
+  "file": "sources/V04-KDCA-6708.txt",
+  "fetch_method": "curl",
+  "chars": 23457
+ },
+ {
+  "source_id": "V04-KDCA-6715",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6715",
+  "file": "sources/V04-KDCA-6715.txt",
+  "fetch_method": "curl",
+  "chars": 12160
+ },
+ {
+  "source_id": "V04-KDCA-6722",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6722",
+  "file": "sources/V04-KDCA-6722.txt",
+  "fetch_method": "curl",
+  "chars": 13332
+ },
+ {
+  "source_id": "V04-KDCA-6723",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6723",
+  "file": "sources/V04-KDCA-6723.txt",
+  "fetch_method": "curl",
+  "chars": 25918
+ },
+ {
+  "source_id": "V04-KDCA-6761",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6761",
+  "file": "sources/V04-KDCA-6761.txt",
+  "fetch_method": "curl",
+  "chars": 12791
+ },
+ {
+  "source_id": "V04-KDCA-6762",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6762",
+  "file": "sources/V04-KDCA-6762.txt",
+  "fetch_method": "curl",
+  "chars": 17414
+ },
+ {
+  "source_id": "V04-KDCA-6764",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6764",
+  "file": "sources/V04-KDCA-6764.txt",
+  "fetch_method": "curl",
+  "chars": 28596
+ },
+ {
+  "source_id": "V04-KDCA-6774",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6774",
+  "file": "sources/V04-KDCA-6774.txt",
+  "fetch_method": "curl",
+  "chars": 11971
+ },
+ {
+  "source_id": "V04-KDCA-6777",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6777",
+  "file": "sources/V04-KDCA-6777.txt",
+  "fetch_method": "curl",
+  "chars": 9845
+ },
+ {
+  "source_id": "V04-KDCA-6781",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6781",
+  "file": "sources/V04-KDCA-6781.txt",
+  "fetch_method": "curl",
+  "chars": 18028
+ },
+ {
+  "source_id": "V04-KDCA-6788",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6788",
+  "file": "sources/V04-KDCA-6788.txt",
+  "fetch_method": "curl",
+  "chars": 37393
+ },
+ {
+  "source_id": "V04-KDCA-6807",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6807",
+  "file": "sources/V04-KDCA-6807.txt",
+  "fetch_method": "curl",
+  "chars": 6028
+ },
+ {
+  "source_id": "V04-KDCA-6879",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6879",
+  "file": "sources/V04-KDCA-6879.txt",
+  "fetch_method": "curl",
+  "chars": 15328
+ },
+ {
+  "source_id": "V04-KDCA-6880",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6880",
+  "file": "sources/V04-KDCA-6880.txt",
+  "fetch_method": "curl",
+  "chars": 12599
+ },
+ {
+  "source_id": "V04-KDCA-6887",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6887",
+  "file": "sources/V04-KDCA-6887.txt",
+  "fetch_method": "curl",
+  "chars": 15797
+ },
+ {
+  "source_id": "V04-KDCA-6900",
+  "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6900",
+  "file": "sources/V04-KDCA-6900.txt",
+  "fetch_method": "curl",
+  "chars": 8149
+ },
+ {
+  "source_id": "V04-helpline-724b5d98",
+  "url": "https://helpline.kdca.go.kr/cdchelp/ph/rdiz/selectRdizInfDetail.do?fixOpenType=PRINT&rdizCd=RA201710091",
+  "file": "sources/V04-helpline-724b5d98.txt",
+  "fetch_method": "curl",
+  "chars": 7117
+ },
+ {
+  "source_id": "V04-mohw-03555a78",
+  "url": "https://mohw.go.kr/board.es?act=view&bid=0027&cg_code=&list_no=289376&mid=a10503010100&tag=",
+  "file": "sources/V04-mohw-03555a78.txt",
+  "fetch_method": "curl",
+  "chars": 19583
+ },
+ {
+  "source_id": "V04-foodsafetykorea-07a360f2",
+  "url": "https://www.foodsafetykorea.go.kr/portal/healthyfoodlife/functionalityView.do?viewNo=23",
+  "file": "sources/V04-foodsafetykorea-07a360f2.txt",
+  "fetch_method": "curl",
+  "chars": 3462
+ },
+ {
+  "source_id": "V04-kns-c46704ec",
+  "url": "https://www.kns.or.kr/FileRoom/FileRoom_view.asp?BoardID=Kdr&idx=108",
+  "file": "sources/V04-kns-c46704ec.txt",
+  "fetch_method": "curl",
+  "chars": 8484
+ },
+ {
+  "source_id": "V04-mentalhealth-454d5364",
+  "url": "https://www.mentalhealth.go.kr/portal/disease/diseaseDetail.do?dissId=30&srCodeNm=%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%8A%A4",
+  "file": "sources/V04-mentalhealth-454d5364.txt",
+  "fetch_method": "curl",
+  "chars": 19128
+ },
+ {
+  "source_id": "V04-mentalhealth-b4bf6b84",
+  "url": "https://www.mentalhealth.go.kr/portal/disease/diseaseDetail.do?dissId=31&srCodeNm=%EB%B6%88%EB%A9%B4%EC%9E%A5%EC%95%A0",
+  "file": "sources/V04-mentalhealth-b4bf6b84.txt",
+  "fetch_method": "curl",
+  "chars": 18082
+ },
+ {
+  "source_id": "V04-nhis-57f90314",
+  "url": "https://www.nhis.or.kr/magazin/128/html/c05.html",
+  "file": "sources/V04-nhis-57f90314.txt",
+  "fetch_method": "curl",
+  "chars": 4527
+ },
+ {
+  "source_id": "V04-nhis-2a6e4fa8",
+  "url": "https://www.nhis.or.kr/magazin/140/html/c07.html",
+  "file": "sources/V04-nhis-2a6e4fa8.txt",
+  "fetch_method": "curl",
+  "chars": 5130
+ },
+ {
+  "source_id": "V04-nhis-ca25a4e9",
+  "url": "https://www.nhis.or.kr/magazin/174/html/sub5.html",
+  "file": "sources/V04-nhis-ca25a4e9.txt",
+  "fetch_method": "curl",
+  "chars": 1905
+ },
+ {
+  "source_id": "V04-nhis-c10650ef",
+  "url": "https://www.nhis.or.kr/nbinfo/wbhfaa06200m29.do?mode=view&articleNo=11000086&title=%EB%B6%88%EC%95%88%EC%9E%A5%EC%95%A0%28anxiety+disorder%29",
+  "file": "sources/V04-nhis-c10650ef.txt",
+  "fetch_method": "curl",
+  "chars": 4513
+ },
+ {
+  "source_id": "V04-nhis-0278df6a",
+  "url": "https://www.nhis.or.kr/static/alim/paper/oldpaper/202405/sub/section1_2.html",
+  "file": "sources/V04-nhis-0278df6a.txt",
+  "fetch_method": "curl",
+  "chars": 4766
+ }
+]

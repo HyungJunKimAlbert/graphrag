@@ -1,0 +1,4643 @@
+{
+ "cases": [
+  {
+   "id": "SF-001",
+   "utterance": "점심 먹고 나면 졸음 쏟아짐",
+   "phrases": [
+    {
+     "name": "식후 졸림",
+     "phrase": "점심 먹고 나면 졸음 쏟아짐",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-002",
+   "utterance": "앉았다 일어나면 눈앞이 캄캄함",
+   "phrases": [
+    {
+     "name": "기립성 저혈압",
+     "phrase": "앉았다 일어나면 눈앞이 캄캄함",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-003",
+   "utterance": "피부가 건조하고 당김",
+   "phrases": [
+    {
+     "name": "피부 건조함",
+     "phrase": "피부가 건조하고 당김",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-004",
+   "utterance": "무릎에서 뚝뚝 소리 남",
+   "phrases": [
+    {
+     "name": "관절 소리",
+     "phrase": "무릎에서 뚝뚝 소리 남",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-005",
+   "utterance": "관절 소리",
+   "phrases": [
+    {
+     "name": "관절 소리",
+     "phrase": "관절 소리",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-006",
+   "utterance": "자다가 소변 때문에 깸",
+   "phrases": [
+    {
+     "name": "야간뇨",
+     "phrase": "자다가 소변 때문에 깸",
+     "also_ok": [
+      "잦은 배뇨"
+     ]
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-007",
+   "utterance": "체중 감소",
+   "phrases": [
+    {
+     "name": "체중 감소",
+     "phrase": "체중 감소",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-008",
+   "utterance": "야맹증",
+   "phrases": [
+    {
+     "name": "야맹증",
+     "phrase": "야맹증",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-009",
+   "utterance": "다리 부종",
+   "phrases": [
+    {
+     "name": "부종",
+     "phrase": "다리 부종",
+     "also_ok": [
+      "붓기"
+     ]
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-010",
+   "utterance": "밤에 운전할 때 잘 안 보임",
+   "phrases": [
+    {
+     "name": "야맹증",
+     "phrase": "밤에 운전할 때 잘 안 보임",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-011",
+   "utterance": "갱년기 증상",
+   "phrases": [
+    {
+     "name": "갱년기 증상",
+     "phrase": "갱년기 증상",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-012",
+   "utterance": "관절 통증",
+   "phrases": [
+    {
+     "name": "관절 통증",
+     "phrase": "관절 통증",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-013",
+   "utterance": "사소한 일에도 신경이 곤두섬",
+   "phrases": [
+    {
+     "name": "신경과민",
+     "phrase": "사소한 일에도 신경이 곤두섬",
+     "also_ok": [
+      "예민함"
+     ]
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-014",
+   "utterance": "손톱이 잘 부서짐",
+   "phrases": [
+    {
+     "name": "손발톱 약화",
+     "phrase": "손톱이 잘 부서짐",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-015",
+   "utterance": "기립성 저혈압",
+   "phrases": [
+    {
+     "name": "기립성 저혈압",
+     "phrase": "기립성 저혈압",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-016",
+   "utterance": "묽은 변을 자주 봄",
+   "phrases": [
+    {
+     "name": "설사",
+     "phrase": "묽은 변을 자주 봄",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-017",
+   "utterance": "양치할 때 잇몸 피",
+   "phrases": [
+    {
+     "name": "잇몸 출혈",
+     "phrase": "양치할 때 잇몸 피",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-018",
+   "utterance": "눈이 쉽게 피로함",
+   "phrases": [
+    {
+     "name": "눈 피로감",
+     "phrase": "눈이 쉽게 피로함",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-019",
+   "utterance": "생리 날짜가 들쭉날쭉함",
+   "phrases": [
+    {
+     "name": "생리주기 불규칙",
+     "phrase": "생리 날짜가 들쭉날쭉함",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-020",
+   "utterance": "눈 충혈",
+   "phrases": [
+    {
+     "name": "충혈",
+     "phrase": "눈 충혈",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-021",
+   "utterance": "일할 때 집중이 안 됨",
+   "phrases": [
+    {
+     "name": "집중력 저하",
+     "phrase": "일할 때 집중이 안 됨",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-022",
+   "utterance": "속이 울렁거림",
+   "phrases": [
+    {
+     "name": "울렁거림",
+     "phrase": "속이 울렁거림",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-023",
+   "utterance": "손발 저림",
+   "phrases": [
+    {
+     "name": "손발 저림",
+     "phrase": "손발 저림",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-024",
+   "utterance": "예전보다 체력이 떨어짐",
+   "phrases": [
+    {
+     "name": "체력 저하",
+     "phrase": "예전보다 체력이 떨어짐",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-025",
+   "utterance": "시야가 뿌옇게 보임",
+   "phrases": [
+    {
+     "name": "시야 흐림",
+     "phrase": "시야가 뿌옇게 보임",
+     "also_ok": [
+      "침침함"
+     ]
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-026",
+   "utterance": "시야 흐림",
+   "phrases": [
+    {
+     "name": "시야 흐림",
+     "phrase": "시야 흐림",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-027",
+   "utterance": "얼굴에 뾰루지가 자꾸 남",
+   "phrases": [
+    {
+     "name": "피부 트러블",
+     "phrase": "얼굴에 뾰루지가 자꾸 남",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-028",
+   "utterance": "반응이 굼떠짐",
+   "phrases": [
+    {
+     "name": "반응 속도 저하",
+     "phrase": "반응이 굼떠짐",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-029",
+   "utterance": "늘 몸이 긴장돼 있음",
+   "phrases": [
+    {
+     "name": "긴장",
+     "phrase": "늘 몸이 긴장돼 있음",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-030",
+   "utterance": "머리가 멍함",
+   "phrases": [
+    {
+     "name": "멍함",
+     "phrase": "머리가 멍함",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-031",
+   "utterance": "설사",
+   "phrases": [
+    {
+     "name": "설사",
+     "phrase": "설사",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-032",
+   "utterance": "자꾸 깜빡깜빡함",
+   "phrases": [
+    {
+     "name": "기억력 감소",
+     "phrase": "자꾸 깜빡깜빡함",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-033",
+   "utterance": "기분이 축 처짐",
+   "phrases": [
+    {
+     "name": "기분 저하",
+     "phrase": "기분이 축 처짐",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-034",
+   "utterance": "약 먹고 나면 메스꺼움",
+   "phrases": [
+    {
+     "name": "약물 복용 후 메스꺼움",
+     "phrase": "약 먹고 나면 메스꺼움",
+     "also_ok": [
+      "울렁거림"
+     ]
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-035",
+   "utterance": "입이 텁텁함",
+   "phrases": [
+    {
+     "name": "입 텁텁함",
+     "phrase": "입이 텁텁함",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-036",
+   "utterance": "반응 속도가 느려짐",
+   "phrases": [
+    {
+     "name": "반응 속도 저하",
+     "phrase": "반응 속도가 느려짐",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-037",
+   "utterance": "머리가 지끈지끈 아픔",
+   "phrases": [
+    {
+     "name": "두통",
+     "phrase": "머리가 지끈지끈 아픔",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-038",
+   "utterance": "식후에 졸림",
+   "phrases": [
+    {
+     "name": "식후 졸림",
+     "phrase": "식후에 졸림",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-039",
+   "utterance": "온몸에 힘이 없음",
+   "phrases": [
+    {
+     "name": "무력감",
+     "phrase": "온몸에 힘이 없음",
+     "also_ok": [
+      "기운 없음"
+     ]
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-040",
+   "utterance": "새벽 3시면 깨서 다시 못 잠",
+   "phrases": [
+    {
+     "name": "새벽 각성",
+     "phrase": "새벽 3시면 깨서 다시 못 잠",
+     "also_ok": [
+      "수면 질 저하"
+     ]
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-041",
+   "utterance": "기력 저하",
+   "phrases": [
+    {
+     "name": "기력 저하",
+     "phrase": "기력 저하",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-042",
+   "utterance": "감기 기운",
+   "phrases": [
+    {
+     "name": "감기",
+     "phrase": "감기 기운",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-043",
+   "utterance": "아침마다 얼굴이 퉁퉁 부음",
+   "phrases": [
+    {
+     "name": "부종",
+     "phrase": "아침마다 얼굴이 퉁퉁 부음",
+     "also_ok": [
+      "붓기"
+     ]
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-044",
+   "utterance": "혈액순환이 잘 안 됨",
+   "phrases": [
+    {
+     "name": "혈액순환 전반",
+     "phrase": "혈액순환이 잘 안 됨",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-045",
+   "utterance": "우울한 기분이 오래감",
+   "phrases": [
+    {
+     "name": "기분 저하",
+     "phrase": "우울한 기분이 오래감",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-046",
+   "utterance": "앞이 흐릿하게 보임",
+   "phrases": [
+    {
+     "name": "시야 흐림",
+     "phrase": "앞이 흐릿하게 보임",
+     "also_ok": [
+      "침침함"
+     ]
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-047",
+   "utterance": "잠들기가 어려움",
+   "phrases": [
+    {
+     "name": "불면",
+     "phrase": "잠들기가 어려움",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-048",
+   "utterance": "술 마신 다음 날 너무 힘듦",
+   "phrases": [
+    {
+     "name": "음주 후 불평감",
+     "phrase": "술 마신 다음 날 너무 힘듦",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-049",
+   "utterance": "입맛이 없어짐",
+   "phrases": [
+    {
+     "name": "식욕변화",
+     "phrase": "입맛이 없어짐",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-050",
+   "utterance": "일어날 때 핑 돎",
+   "phrases": [
+    {
+     "name": "기립성 저혈압",
+     "phrase": "일어날 때 핑 돎",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-051",
+   "utterance": "화면 오래 보면 눈이 피곤함",
+   "phrases": [
+    {
+     "name": "눈 피로감",
+     "phrase": "화면 오래 보면 눈이 피곤함",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-052",
+   "utterance": "발목이 잘 부음",
+   "phrases": [
+    {
+     "name": "부종",
+     "phrase": "발목이 잘 부음",
+     "also_ok": [
+      "붓기"
+     ]
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-053",
+   "utterance": "뱃살이 늘어남",
+   "phrases": [
+    {
+     "name": "복부 지방 증가",
+     "phrase": "뱃살이 늘어남",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-054",
+   "utterance": "손발이 차가움",
+   "phrases": [
+    {
+     "name": "수족냉증",
+     "phrase": "손발이 차가움",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-055",
+   "utterance": "변이 물처럼 나옴",
+   "phrases": [
+    {
+     "name": "설사",
+     "phrase": "변이 물처럼 나옴",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-056",
+   "utterance": "자고 일어나면 얼굴이 부어 있음",
+   "phrases": [
+    {
+     "name": "붓기",
+     "phrase": "자고 일어나면 얼굴이 부어 있음",
+     "also_ok": [
+      "부종"
+     ]
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-057",
+   "utterance": "속이 메슥거림",
+   "phrases": [
+    {
+     "name": "울렁거림",
+     "phrase": "속이 메슥거림",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-058",
+   "utterance": "기억력이 떨어짐",
+   "phrases": [
+    {
+     "name": "기억력 감소",
+     "phrase": "기억력이 떨어짐",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-059",
+   "utterance": "기운 없음",
+   "phrases": [
+    {
+     "name": "기운 없음",
+     "phrase": "기운 없음",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-060",
+   "utterance": "시력이 많이 떨어짐",
+   "phrases": [
+    {
+     "name": "시력 저하",
+     "phrase": "시력이 많이 떨어짐",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-061",
+   "utterance": "감기에 자주 걸림",
+   "phrases": [
+    {
+     "name": "감기",
+     "phrase": "감기에 자주 걸림",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-062",
+   "utterance": "기력이 달림",
+   "phrases": [
+    {
+     "name": "기력 저하",
+     "phrase": "기력이 달림",
+     "also_ok": [
+      "기운 없음"
+     ]
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-063",
+   "utterance": "순발력이 떨어짐",
+   "phrases": [
+    {
+     "name": "반응 속도 저하",
+     "phrase": "순발력이 떨어짐",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-064",
+   "utterance": "자도 잔 것 같지 않음",
+   "phrases": [
+    {
+     "name": "수면 질 저하",
+     "phrase": "자도 잔 것 같지 않음",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-065",
+   "utterance": "밥만 먹으면 꾸벅꾸벅 졺",
+   "phrases": [
+    {
+     "name": "식후 졸림",
+     "phrase": "밥만 먹으면 꾸벅꾸벅 졺",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-066",
+   "utterance": "울렁거림",
+   "phrases": [
+    {
+     "name": "울렁거림",
+     "phrase": "울렁거림",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-067",
+   "utterance": "물을 마셔도 계속 목마름",
+   "phrases": [
+    {
+     "name": "갈증",
+     "phrase": "물을 마셔도 계속 목마름",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-068",
+   "utterance": "무기력함",
+   "phrases": [
+    {
+     "name": "무기력",
+     "phrase": "무기력함",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-069",
+   "utterance": "약 복용 후 메스꺼움",
+   "phrases": [
+    {
+     "name": "약물 복용 후 메스꺼움",
+     "phrase": "약 복용 후 메스꺼움",
+     "also_ok": [
+      "울렁거림"
+     ]
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-070",
+   "utterance": "근육통",
+   "phrases": [
+    {
+     "name": "근육통",
+     "phrase": "근육통",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-071",
+   "utterance": "목이 칼칼하고 콧물 남",
+   "phrases": [
+    {
+     "name": "감기",
+     "phrase": "목이 칼칼하고 콧물 남",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-072",
+   "utterance": "어두운 곳에서 잘 안 보임",
+   "phrases": [
+    {
+     "name": "야맹증",
+     "phrase": "어두운 곳에서 잘 안 보임",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-073",
+   "utterance": "속이 니글거림",
+   "phrases": [
+    {
+     "name": "울렁거림",
+     "phrase": "속이 니글거림",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-074",
+   "utterance": "몸 움직이기가 불편함",
+   "phrases": [
+    {
+     "name": "움직임 불편",
+     "phrase": "몸 움직이기가 불편함",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-075",
+   "utterance": "긴장이 잘 안 풀림",
+   "phrases": [
+    {
+     "name": "긴장",
+     "phrase": "긴장이 잘 안 풀림",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-076",
+   "utterance": "변비",
+   "phrases": [
+    {
+     "name": "변비",
+     "phrase": "변비",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-077",
+   "utterance": "추위와 더위를 유난히 탐",
+   "phrases": [
+    {
+     "name": "온도 민감",
+     "phrase": "추위와 더위를 유난히 탐",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-078",
+   "utterance": "숙취가 오래감",
+   "phrases": [
+    {
+     "name": "음주 후 불평감",
+     "phrase": "숙취가 오래감",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-079",
+   "utterance": "식사 후 나른하고 졸림",
+   "phrases": [
+    {
+     "name": "식후 졸림",
+     "phrase": "식사 후 나른하고 졸림",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-080",
+   "utterance": "괜히 불안함",
+   "phrases": [
+    {
+     "name": "불안",
+     "phrase": "괜히 불안함",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-081",
+   "utterance": "며칠씩 변을 못 봄",
+   "phrases": [
+    {
+     "name": "변비",
+     "phrase": "며칠씩 변을 못 봄",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-082",
+   "utterance": "기력이 없음",
+   "phrases": [
+    {
+     "name": "기력 저하",
+     "phrase": "기력이 없음",
+     "also_ok": [
+      "기운 없음"
+     ]
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-083",
+   "utterance": "눈이 침침함",
+   "phrases": [
+    {
+     "name": "침침함",
+     "phrase": "눈이 침침함",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-084",
+   "utterance": "글씨가 흐려 보임",
+   "phrases": [
+    {
+     "name": "시야 흐림",
+     "phrase": "글씨가 흐려 보임",
+     "also_ok": [
+      "침침함"
+     ]
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-085",
+   "utterance": "눈 밑이 파르르 떨림",
+   "phrases": [
+    {
+     "name": "눈 떨림",
+     "phrase": "눈 밑이 파르르 떨림",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-086",
+   "utterance": "눈이 금방 지침",
+   "phrases": [
+    {
+     "name": "눈 피로감",
+     "phrase": "눈이 금방 지침",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-087",
+   "utterance": "무릎이랑 허리가 부담됨",
+   "phrases": [
+    {
+     "name": "무릎/허리 부담감",
+     "phrase": "무릎이랑 허리가 부담됨",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-088",
+   "utterance": "설사가 잦음",
+   "phrases": [
+    {
+     "name": "설사",
+     "phrase": "설사가 잦음",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-089",
+   "utterance": "비듬",
+   "phrases": [
+    {
+     "name": "비듬",
+     "phrase": "비듬",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-090",
+   "utterance": "새벽에 자주 깸",
+   "phrases": [
+    {
+     "name": "새벽 각성",
+     "phrase": "새벽에 자주 깸",
+     "also_ok": [
+      "수면 질 저하"
+     ]
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-091",
+   "utterance": "기력이 떨어짐",
+   "phrases": [
+    {
+     "name": "기력 저하",
+     "phrase": "기력이 떨어짐",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-092",
+   "utterance": "배고프면 어지러움",
+   "phrases": [
+    {
+     "name": "공복 현기증",
+     "phrase": "배고프면 어지러움",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-093",
+   "utterance": "아무것도 하기 싫음",
+   "phrases": [
+    {
+     "name": "무기력",
+     "phrase": "아무것도 하기 싫음",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-094",
+   "utterance": "부종",
+   "phrases": [
+    {
+     "name": "부종",
+     "phrase": "부종",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-095",
+   "utterance": "눈이 빨갛게 충혈됨",
+   "phrases": [
+    {
+     "name": "충혈",
+     "phrase": "눈이 빨갛게 충혈됨",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-096",
+   "utterance": "뼈마디가 쑤심",
+   "phrases": [
+    {
+     "name": "관절 통증",
+     "phrase": "뼈마디가 쑤심",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-097",
+   "utterance": "눈이 나빠짐",
+   "phrases": [
+    {
+     "name": "시력 저하",
+     "phrase": "눈이 나빠짐",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-098",
+   "utterance": "소변을 자주 봄",
+   "phrases": [
+    {
+     "name": "잦은 배뇨",
+     "phrase": "소변을 자주 봄",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-099",
+   "utterance": "수족냉증",
+   "phrases": [
+    {
+     "name": "수족냉증",
+     "phrase": "수족냉증",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-100",
+   "utterance": "온몸 근육이 쑤심",
+   "phrases": [
+    {
+     "name": "근육통",
+     "phrase": "온몸 근육이 쑤심",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-101",
+   "utterance": "신경이 날카로움",
+   "phrases": [
+    {
+     "name": "신경과민",
+     "phrase": "신경이 날카로움",
+     "also_ok": [
+      "예민함"
+     ]
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-102",
+   "utterance": "눈 피로",
+   "phrases": [
+    {
+     "name": "눈 피로감",
+     "phrase": "눈 피로",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-103",
+   "utterance": "염증이 잘 생김",
+   "phrases": [
+    {
+     "name": "염증",
+     "phrase": "염증이 잘 생김",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-104",
+   "utterance": "체중 증가",
+   "phrases": [
+    {
+     "name": "체중 증가",
+     "phrase": "체중 증가",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-105",
+   "utterance": "머리에 각질이 많이 떨어짐",
+   "phrases": [
+    {
+     "name": "비듬",
+     "phrase": "머리에 각질이 많이 떨어짐",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-106",
+   "utterance": "스트레스가 심함",
+   "phrases": [
+    {
+     "name": "스트레스",
+     "phrase": "스트레스가 심함",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-107",
+   "utterance": "자주 멍해짐",
+   "phrases": [
+    {
+     "name": "멍함",
+     "phrase": "자주 멍해짐",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-108",
+   "utterance": "코막힘",
+   "phrases": [
+    {
+     "name": "코막힘",
+     "phrase": "코막힘",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-109",
+   "utterance": "건망증이 심해짐",
+   "phrases": [
+    {
+     "name": "기억력 감소",
+     "phrase": "건망증이 심해짐",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-110",
+   "utterance": "밤에 다리에 쥐가 남",
+   "phrases": [
+    {
+     "name": "근육경련(쥐남)",
+     "phrase": "밤에 다리에 쥐가 남",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-111",
+   "utterance": "복부 지방 증가",
+   "phrases": [
+    {
+     "name": "복부 지방 증가",
+     "phrase": "복부 지방 증가",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-112",
+   "utterance": "햇빛에 눈이 부심",
+   "phrases": [
+    {
+     "name": "눈 부심",
+     "phrase": "햇빛에 눈이 부심",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-113",
+   "utterance": "몇 달째 계속 피곤함",
+   "phrases": [
+    {
+     "name": "만성피로",
+     "phrase": "몇 달째 계속 피곤함",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-114",
+   "utterance": "두피가 가려움",
+   "phrases": [
+    {
+     "name": "두피 가려움",
+     "phrase": "두피가 가려움",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-115",
+   "utterance": "무릎 관절이 아픔, 짜증이 늘어남",
+   "phrases": [
+    {
+     "name": "관절 통증",
+     "phrase": "무릎 관절이 아픔",
+     "also_ok": []
+    },
+    {
+     "name": "예민함",
+     "phrase": "짜증이 늘어남",
+     "also_ok": [
+      "신경과민"
+     ]
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-116",
+   "utterance": "다리가 부음, 체중이 줄었음",
+   "phrases": [
+    {
+     "name": "부종",
+     "phrase": "다리가 부음",
+     "also_ok": [
+      "붓기"
+     ]
+    },
+    {
+     "name": "체중 감소",
+     "phrase": "체중이 줄었음",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-117",
+   "utterance": "반응이 느려짐, 피부가 푸석푸석함",
+   "phrases": [
+    {
+     "name": "반응 속도 저하",
+     "phrase": "반응이 느려짐",
+     "also_ok": []
+    },
+    {
+     "name": "피부 건조함",
+     "phrase": "피부가 푸석푸석함",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-118",
+   "utterance": "어깨에 비듬이 떨어짐, 손끝 발끝이 저림",
+   "phrases": [
+    {
+     "name": "비듬",
+     "phrase": "어깨에 비듬이 떨어짐",
+     "also_ok": []
+    },
+    {
+     "name": "손발 저림",
+     "phrase": "손끝 발끝이 저림",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-119",
+   "utterance": "무력감, 예민해짐",
+   "phrases": [
+    {
+     "name": "무력감",
+     "phrase": "무력감",
+     "also_ok": []
+    },
+    {
+     "name": "예민함",
+     "phrase": "예민해짐",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-120",
+   "utterance": "생리 주기가 불규칙함, 감기를 달고 삶",
+   "phrases": [
+    {
+     "name": "생리주기 불규칙",
+     "phrase": "생리 주기가 불규칙함",
+     "also_ok": []
+    },
+    {
+     "name": "감기",
+     "phrase": "감기를 달고 삶",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-121",
+   "utterance": "관절에서 소리 남, 오래 서 있으면 무릎이랑 허리가 버거움",
+   "phrases": [
+    {
+     "name": "관절 소리",
+     "phrase": "관절에서 소리 남",
+     "also_ok": []
+    },
+    {
+     "name": "무릎/허리 부담감",
+     "phrase": "오래 서 있으면 무릎이랑 허리가 버거움",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-122",
+   "utterance": "음주 후 속이 불편함, 기운이 없음",
+   "phrases": [
+    {
+     "name": "음주 후 불평감",
+     "phrase": "음주 후 속이 불편함",
+     "also_ok": []
+    },
+    {
+     "name": "기운 없음",
+     "phrase": "기운이 없음",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-123",
+   "utterance": "폐경 후 열이 확 오름, 마음이 가라앉음",
+   "phrases": [
+    {
+     "name": "갱년기 증상",
+     "phrase": "폐경 후 열이 확 오름",
+     "also_ok": [
+      "온도 민감"
+     ]
+    },
+    {
+     "name": "기분 저하",
+     "phrase": "마음이 가라앉음",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-124",
+   "utterance": "새벽에 깨면 잠이 안 옴, 어지러움",
+   "phrases": [
+    {
+     "name": "새벽 각성",
+     "phrase": "새벽에 깨면 잠이 안 옴",
+     "also_ok": [
+      "수면 질 저하"
+     ]
+    },
+    {
+     "name": "어지러움",
+     "phrase": "어지러움",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-125",
+   "utterance": "저녁이면 다리가 퉁퉁 부음, 눈이 자주 빨개짐",
+   "phrases": [
+    {
+     "name": "부종",
+     "phrase": "저녁이면 다리가 퉁퉁 부음",
+     "also_ok": [
+      "붓기"
+     ]
+    },
+    {
+     "name": "충혈",
+     "phrase": "눈이 자주 빨개짐",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-126",
+   "utterance": "입안이 헐어서 아픔, 눈이 피로함",
+   "phrases": [
+    {
+     "name": "구강통증",
+     "phrase": "입안이 헐어서 아픔",
+     "also_ok": []
+    },
+    {
+     "name": "눈 피로감",
+     "phrase": "눈이 피로함",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-127",
+   "utterance": "감기가 잘 안 떨어짐, 손가락 마디가 아픔",
+   "phrases": [
+    {
+     "name": "감기",
+     "phrase": "감기가 잘 안 떨어짐",
+     "also_ok": []
+    },
+    {
+     "name": "관절 통증",
+     "phrase": "손가락 마디가 아픔",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-128",
+   "utterance": "불면증, 눈에 핏발이 섬",
+   "phrases": [
+    {
+     "name": "불면",
+     "phrase": "불면증",
+     "also_ok": []
+    },
+    {
+     "name": "충혈",
+     "phrase": "눈에 핏발이 섬",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-129",
+   "utterance": "피부 트러블, 상처에 염증이 잘 생김",
+   "phrases": [
+    {
+     "name": "피부 트러블",
+     "phrase": "피부 트러블",
+     "also_ok": []
+    },
+    {
+     "name": "염증",
+     "phrase": "상처에 염증이 잘 생김",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-130",
+   "utterance": "입이 자주 마름, 변이 딱딱하게 나옴",
+   "phrases": [
+    {
+     "name": "갈증",
+     "phrase": "입이 자주 마름",
+     "also_ok": []
+    },
+    {
+     "name": "변비",
+     "phrase": "변이 딱딱하게 나옴",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-131",
+   "utterance": "코가 꽉 막힘, 얼굴이 잘 부음",
+   "phrases": [
+    {
+     "name": "코막힘",
+     "phrase": "코가 꽉 막힘",
+     "also_ok": []
+    },
+    {
+     "name": "붓기",
+     "phrase": "얼굴이 잘 부음",
+     "also_ok": [
+      "부종"
+     ]
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-132",
+   "utterance": "발이 부음, 손발톱이 약해짐",
+   "phrases": [
+    {
+     "name": "부종",
+     "phrase": "발이 부음",
+     "also_ok": [
+      "붓기"
+     ]
+    },
+    {
+     "name": "손발톱 약화",
+     "phrase": "손발톱이 약해짐",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-133",
+   "utterance": "소화가 잘 안 됨, 피부 건조함",
+   "phrases": [
+    {
+     "name": "소화불량",
+     "phrase": "소화가 잘 안 됨",
+     "also_ok": []
+    },
+    {
+     "name": "피부 건조함",
+     "phrase": "피부 건조함",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-134",
+   "utterance": "눈앞이 침침함, 사물이 번져 보임",
+   "phrases": [
+    {
+     "name": "침침함",
+     "phrase": "눈앞이 침침함",
+     "also_ok": []
+    },
+    {
+     "name": "시야 흐림",
+     "phrase": "사물이 번져 보임",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-135",
+   "utterance": "추위를 많이 탐, 만사가 귀찮음",
+   "phrases": [
+    {
+     "name": "온도 민감",
+     "phrase": "추위를 많이 탐",
+     "also_ok": []
+    },
+    {
+     "name": "무기력",
+     "phrase": "만사가 귀찮음",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-136",
+   "utterance": "몸에 염증이 자주 생김, 더위를 못 견딤",
+   "phrases": [
+    {
+     "name": "염증",
+     "phrase": "몸에 염증이 자주 생김",
+     "also_ok": []
+    },
+    {
+     "name": "온도 민감",
+     "phrase": "더위를 못 견딤",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-137",
+   "utterance": "신경과민, 몸이 자꾸 가려움",
+   "phrases": [
+    {
+     "name": "신경과민",
+     "phrase": "신경과민",
+     "also_ok": []
+    },
+    {
+     "name": "가려움",
+     "phrase": "몸이 자꾸 가려움",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-138",
+   "utterance": "손끝 감각이 둔함, 생리통이 심함",
+   "phrases": [
+    {
+     "name": "무감각",
+     "phrase": "손끝 감각이 둔함",
+     "also_ok": [
+      "손발 저림"
+     ]
+    },
+    {
+     "name": "생리통",
+     "phrase": "생리통이 심함",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-139",
+   "utterance": "피부가 건조해 각질이 일어남, 업무 스트레스",
+   "phrases": [
+    {
+     "name": "피부 건조함",
+     "phrase": "피부가 건조해 각질이 일어남",
+     "also_ok": []
+    },
+    {
+     "name": "스트레스",
+     "phrase": "업무 스트레스",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-140",
+   "utterance": "갈증이 심함, 손이 찌릿찌릿함",
+   "phrases": [
+    {
+     "name": "갈증",
+     "phrase": "갈증이 심함",
+     "also_ok": []
+    },
+    {
+     "name": "손발 저림",
+     "phrase": "손이 찌릿찌릿함",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-141",
+   "utterance": "배가 자주 아픔, 머리가 가려움",
+   "phrases": [
+    {
+     "name": "복통",
+     "phrase": "배가 자주 아픔",
+     "also_ok": []
+    },
+    {
+     "name": "두피 가려움",
+     "phrase": "머리가 가려움",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-142",
+   "utterance": "손톱이 얇아지고 갈라짐, 새벽 각성",
+   "phrases": [
+    {
+     "name": "손발톱 약화",
+     "phrase": "손톱이 얇아지고 갈라짐",
+     "also_ok": []
+    },
+    {
+     "name": "새벽 각성",
+     "phrase": "새벽 각성",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-143",
+   "utterance": "손이 부음, 거동이 불편함",
+   "phrases": [
+    {
+     "name": "붓기",
+     "phrase": "손이 부음",
+     "also_ok": [
+      "부종"
+     ]
+    },
+    {
+     "name": "움직임 불편",
+     "phrase": "거동이 불편함",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-144",
+   "utterance": "몸이 늘 굳어 있고 긴장됨, 종아리 부종",
+   "phrases": [
+    {
+     "name": "긴장",
+     "phrase": "몸이 늘 굳어 있고 긴장됨",
+     "also_ok": []
+    },
+    {
+     "name": "부종",
+     "phrase": "종아리 부종",
+     "also_ok": [
+      "붓기"
+     ]
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-145",
+   "utterance": "붓기, 몸에 힘이 하나도 없음",
+   "phrases": [
+    {
+     "name": "붓기",
+     "phrase": "붓기",
+     "also_ok": []
+    },
+    {
+     "name": "무력감",
+     "phrase": "몸에 힘이 하나도 없음",
+     "also_ok": [
+      "기운 없음"
+     ]
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-146",
+   "utterance": "먹으면 잘 체함, 손발이 시림",
+   "phrases": [
+    {
+     "name": "소화불량",
+     "phrase": "먹으면 잘 체함",
+     "also_ok": []
+    },
+    {
+     "name": "수족냉증",
+     "phrase": "손발이 시림",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-147",
+   "utterance": "어깨가 결림, 잠을 깊이 못 잠",
+   "phrases": [
+    {
+     "name": "어깨통증",
+     "phrase": "어깨가 결림",
+     "also_ok": []
+    },
+    {
+     "name": "수면 질 저하",
+     "phrase": "잠을 깊이 못 잠",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-148",
+   "utterance": "남성 갱년기 증상, 코가 막혀 답답함",
+   "phrases": [
+    {
+     "name": "갱년기 증상",
+     "phrase": "남성 갱년기 증상",
+     "also_ok": []
+    },
+    {
+     "name": "코막힘",
+     "phrase": "코가 막혀 답답함",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-149",
+   "utterance": "배에 가스가 차서 빵빵함, 밤에 잠이 안 옴",
+   "phrases": [
+    {
+     "name": "복부 팽만감",
+     "phrase": "배에 가스가 차서 빵빵함",
+     "also_ok": []
+    },
+    {
+     "name": "불면",
+     "phrase": "밤에 잠이 안 옴",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-150",
+   "utterance": "손발이 얼음장 같음, 스트레스 많이 받음",
+   "phrases": [
+    {
+     "name": "수족냉증",
+     "phrase": "손발이 얼음장 같음",
+     "also_ok": []
+    },
+    {
+     "name": "스트레스",
+     "phrase": "스트레스 많이 받음",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-151",
+   "utterance": "코막힘이 심함, 어깨 통증",
+   "phrases": [
+    {
+     "name": "코막힘",
+     "phrase": "코막힘이 심함",
+     "also_ok": []
+    },
+    {
+     "name": "어깨통증",
+     "phrase": "어깨 통증",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-152",
+   "utterance": "배가 나옴, 허리에 부담이 감",
+   "phrases": [
+    {
+     "name": "복부 지방 증가",
+     "phrase": "배가 나옴",
+     "also_ok": []
+    },
+    {
+     "name": "무릎/허리 부담감",
+     "phrase": "허리에 부담이 감",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-153",
+   "utterance": "작은 소리에도 신경 쓰임, 아침에 입안이 텁텁함",
+   "phrases": [
+    {
+     "name": "신경과민",
+     "phrase": "작은 소리에도 신경 쓰임",
+     "also_ok": [
+      "예민함"
+     ]
+    },
+    {
+     "name": "입 텁텁함",
+     "phrase": "아침에 입안이 텁텁함",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-154",
+   "utterance": "식욕이 줄었음, 소화불량",
+   "phrases": [
+    {
+     "name": "식욕변화",
+     "phrase": "식욕이 줄었음",
+     "also_ok": []
+    },
+    {
+     "name": "소화불량",
+     "phrase": "소화불량",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-155",
+   "utterance": "생리가 건너뛸 때가 있음, 눈이 흐릿하고 침침함",
+   "phrases": [
+    {
+     "name": "생리주기 불규칙",
+     "phrase": "생리가 건너뛸 때가 있음",
+     "also_ok": []
+    },
+    {
+     "name": "침침함",
+     "phrase": "눈이 흐릿하고 침침함",
+     "also_ok": [
+      "시야 흐림"
+     ]
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-156",
+   "utterance": "입이 텁텁하고 쓴맛 남, 관절이 시큰거림",
+   "phrases": [
+    {
+     "name": "입 텁텁함",
+     "phrase": "입이 텁텁하고 쓴맛 남",
+     "also_ok": []
+    },
+    {
+     "name": "관절 통증",
+     "phrase": "관절이 시큰거림",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-157",
+   "utterance": "예민함, 몸이 뻣뻣해서 움직이기 힘듦",
+   "phrases": [
+    {
+     "name": "예민함",
+     "phrase": "예민함",
+     "also_ok": []
+    },
+    {
+     "name": "움직임 불편",
+     "phrase": "몸이 뻣뻣해서 움직이기 힘듦",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-158",
+   "utterance": "속쓰림, 눈꺼풀이 떨림",
+   "phrases": [
+    {
+     "name": "속쓰림",
+     "phrase": "속쓰림",
+     "also_ok": []
+    },
+    {
+     "name": "눈 떨림",
+     "phrase": "눈꺼풀이 떨림",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-159",
+   "utterance": "무릎에서 우두둑 소리 남, 피로가 잘 안 풀림",
+   "phrases": [
+    {
+     "name": "관절 소리",
+     "phrase": "무릎에서 우두둑 소리 남",
+     "also_ok": []
+    },
+    {
+     "name": "느린 피로 회복",
+     "phrase": "피로가 잘 안 풀림",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-160",
+   "utterance": "시력 저하, 끼니 거르면 어지러움",
+   "phrases": [
+    {
+     "name": "시력 저하",
+     "phrase": "시력 저하",
+     "also_ok": []
+    },
+    {
+     "name": "공복 현기증",
+     "phrase": "끼니 거르면 어지러움",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-161",
+   "utterance": "몸이 잘 부음, 눈 떨림",
+   "phrases": [
+    {
+     "name": "부종",
+     "phrase": "몸이 잘 부음",
+     "also_ok": [
+      "붓기"
+     ]
+    },
+    {
+     "name": "눈 떨림",
+     "phrase": "눈 떨림",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-162",
+   "utterance": "눈이 뿌연 느낌, 공복에 어지러움",
+   "phrases": [
+    {
+     "name": "침침함",
+     "phrase": "눈이 뿌연 느낌",
+     "also_ok": [
+      "시야 흐림"
+     ]
+    },
+    {
+     "name": "공복 현기증",
+     "phrase": "공복에 어지러움",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-163",
+   "utterance": "생리주기 불규칙, 속이 쓰림",
+   "phrases": [
+    {
+     "name": "생리주기 불규칙",
+     "phrase": "생리주기 불규칙",
+     "also_ok": []
+    },
+    {
+     "name": "속쓰림",
+     "phrase": "속이 쓰림",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-164",
+   "utterance": "소화가 더딤, 눈가가 씰룩거림",
+   "phrases": [
+    {
+     "name": "소화불량",
+     "phrase": "소화가 더딤",
+     "also_ok": []
+    },
+    {
+     "name": "눈 떨림",
+     "phrase": "눈가가 씰룩거림",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-165",
+   "utterance": "움직임이 불편함, 식사하면 졸음이 몰려옴",
+   "phrases": [
+    {
+     "name": "움직임 불편",
+     "phrase": "움직임이 불편함",
+     "also_ok": []
+    },
+    {
+     "name": "식후 졸림",
+     "phrase": "식사하면 졸음이 몰려옴",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-166",
+   "utterance": "밤에 소변보러 자주 일어남, 숙면을 못 취함",
+   "phrases": [
+    {
+     "name": "야간뇨",
+     "phrase": "밤에 소변보러 자주 일어남",
+     "also_ok": [
+      "잦은 배뇨"
+     ]
+    },
+    {
+     "name": "수면 질 저하",
+     "phrase": "숙면을 못 취함",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-167",
+   "utterance": "발이 저림, 집중력 저하",
+   "phrases": [
+    {
+     "name": "손발 저림",
+     "phrase": "발이 저림",
+     "also_ok": []
+    },
+    {
+     "name": "집중력 저하",
+     "phrase": "집중력 저하",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-168",
+   "utterance": "목이 자주 마름, 피부에 뭐가 자꾸 올라옴",
+   "phrases": [
+    {
+     "name": "갈증",
+     "phrase": "목이 자주 마름",
+     "also_ok": []
+    },
+    {
+     "name": "피부 트러블",
+     "phrase": "피부에 뭐가 자꾸 올라옴",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-169",
+   "utterance": "야간뇨, 눈이 자주 침침함",
+   "phrases": [
+    {
+     "name": "야간뇨",
+     "phrase": "야간뇨",
+     "also_ok": [
+      "잦은 배뇨"
+     ]
+    },
+    {
+     "name": "침침함",
+     "phrase": "눈이 자주 침침함",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-170",
+   "utterance": "마음이 불안하고 초조함, 수면의 질이 떨어짐",
+   "phrases": [
+    {
+     "name": "불안",
+     "phrase": "마음이 불안하고 초조함",
+     "also_ok": []
+    },
+    {
+     "name": "수면 질 저하",
+     "phrase": "수면의 질이 떨어짐",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-171",
+   "utterance": "코가 막힘, 의욕이 없음",
+   "phrases": [
+    {
+     "name": "코막힘",
+     "phrase": "코가 막힘",
+     "also_ok": []
+    },
+    {
+     "name": "무기력",
+     "phrase": "의욕이 없음",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-172",
+   "utterance": "약 먹으면 속이 메슥거림, 갱년기로 얼굴이 화끈거림",
+   "phrases": [
+    {
+     "name": "약물 복용 후 메스꺼움",
+     "phrase": "약 먹으면 속이 메슥거림",
+     "also_ok": [
+      "울렁거림"
+     ]
+    },
+    {
+     "name": "갱년기 증상",
+     "phrase": "갱년기로 얼굴이 화끈거림",
+     "also_ok": [
+      "온도 민감"
+     ]
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-173",
+   "utterance": "발등이 부음, 눈 건조함",
+   "phrases": [
+    {
+     "name": "부종",
+     "phrase": "발등이 부음",
+     "also_ok": [
+      "붓기"
+     ]
+    },
+    {
+     "name": "눈 건조함",
+     "phrase": "눈 건조함",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-174",
+   "utterance": "불빛이 눈부심, 변이 잘 안 나옴",
+   "phrases": [
+    {
+     "name": "눈 부심",
+     "phrase": "불빛이 눈부심",
+     "also_ok": []
+    },
+    {
+     "name": "변비",
+     "phrase": "변이 잘 안 나옴",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-175",
+   "utterance": "눈이 충혈됨, 빈속에 속이 쓰림",
+   "phrases": [
+    {
+     "name": "충혈",
+     "phrase": "눈이 충혈됨",
+     "also_ok": []
+    },
+    {
+     "name": "속쓰림",
+     "phrase": "빈속에 속이 쓰림",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-176",
+   "utterance": "모니터 빛이 눈부심, 손목 관절이 아픔",
+   "phrases": [
+    {
+     "name": "눈 부심",
+     "phrase": "모니터 빛이 눈부심",
+     "also_ok": []
+    },
+    {
+     "name": "관절 통증",
+     "phrase": "손목 관절이 아픔",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-177",
+   "utterance": "점심 후 졸음, 날씨 변화에 몸이 민감함",
+   "phrases": [
+    {
+     "name": "식후 졸림",
+     "phrase": "점심 후 졸음",
+     "also_ok": []
+    },
+    {
+     "name": "온도 민감",
+     "phrase": "날씨 변화에 몸이 민감함",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-178",
+   "utterance": "스트레스, 배가 더부룩함",
+   "phrases": [
+    {
+     "name": "스트레스",
+     "phrase": "스트레스",
+     "also_ok": []
+    },
+    {
+     "name": "복부 팽만감",
+     "phrase": "배가 더부룩함",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-179",
+   "utterance": "종아리에 쥐가 자주 남, 만성피로",
+   "phrases": [
+    {
+     "name": "근육경련(쥐남)",
+     "phrase": "종아리에 쥐가 자주 남",
+     "also_ok": []
+    },
+    {
+     "name": "만성피로",
+     "phrase": "만성피로",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-180",
+   "utterance": "머릿속이 뿌연 느낌, 손이 저림",
+   "phrases": [
+    {
+     "name": "멍함",
+     "phrase": "머릿속이 뿌연 느낌",
+     "also_ok": []
+    },
+    {
+     "name": "손발 저림",
+     "phrase": "손이 저림",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-181",
+   "utterance": "메스꺼움, 기침",
+   "phrases": [
+    {
+     "name": "울렁거림",
+     "phrase": "메스꺼움",
+     "also_ok": []
+    },
+    {
+     "name": "기침",
+     "phrase": "기침",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-182",
+   "utterance": "살이 찜, 생리할 때 배가 너무 아픔",
+   "phrases": [
+    {
+     "name": "체중 증가",
+     "phrase": "살이 찜",
+     "also_ok": []
+    },
+    {
+     "name": "생리통",
+     "phrase": "생리할 때 배가 너무 아픔",
+     "also_ok": [
+      "복통"
+     ]
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-183",
+   "utterance": "어깨가 아픔, 복통",
+   "phrases": [
+    {
+     "name": "어깨통증",
+     "phrase": "어깨가 아픔",
+     "also_ok": []
+    },
+    {
+     "name": "복통",
+     "phrase": "복통",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-184",
+   "utterance": "체력 저하, 밝은 데서 눈을 못 뜨겠음",
+   "phrases": [
+    {
+     "name": "체력 저하",
+     "phrase": "체력 저하",
+     "also_ok": []
+    },
+    {
+     "name": "눈 부심",
+     "phrase": "밝은 데서 눈을 못 뜨겠음",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-185",
+   "utterance": "마음이 늘 긴장 상태, 피로 회복이 느림",
+   "phrases": [
+    {
+     "name": "긴장",
+     "phrase": "마음이 늘 긴장 상태",
+     "also_ok": []
+    },
+    {
+     "name": "느린 피로 회복",
+     "phrase": "피로 회복이 느림",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-186",
+   "utterance": "밤눈이 어두움, 몸 반응이 늦음",
+   "phrases": [
+    {
+     "name": "야맹증",
+     "phrase": "밤눈이 어두움",
+     "also_ok": []
+    },
+    {
+     "name": "반응 속도 저하",
+     "phrase": "몸 반응이 늦음",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-187",
+   "utterance": "구내염으로 입안이 아픔, 신경이 예민해짐",
+   "phrases": [
+    {
+     "name": "구강통증",
+     "phrase": "구내염으로 입안이 아픔",
+     "also_ok": []
+    },
+    {
+     "name": "신경과민",
+     "phrase": "신경이 예민해짐",
+     "also_ok": [
+      "예민함"
+     ]
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-188",
+   "utterance": "기운 빠지고 늘어짐, 두통",
+   "phrases": [
+    {
+     "name": "무기력",
+     "phrase": "기운 빠지고 늘어짐",
+     "also_ok": [
+      "기운 없음"
+     ]
+    },
+    {
+     "name": "두통",
+     "phrase": "두통",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-189",
+   "utterance": "음주 후 불편함, 힘이 없음",
+   "phrases": [
+    {
+     "name": "음주 후 불평감",
+     "phrase": "음주 후 불편함",
+     "also_ok": []
+    },
+    {
+     "name": "기운 없음",
+     "phrase": "힘이 없음",
+     "also_ok": [
+      "무력감"
+     ]
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-190",
+   "utterance": "손발이 붓기 쉬움, 체중이 늘었음",
+   "phrases": [
+    {
+     "name": "붓기",
+     "phrase": "손발이 붓기 쉬움",
+     "also_ok": [
+      "부종"
+     ]
+    },
+    {
+     "name": "체중 증가",
+     "phrase": "체중이 늘었음",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-191",
+   "utterance": "눈이 뻑뻑함, 발목 부종",
+   "phrases": [
+    {
+     "name": "눈 건조함",
+     "phrase": "눈이 뻑뻑함",
+     "also_ok": []
+    },
+    {
+     "name": "부종",
+     "phrase": "발목 부종",
+     "also_ok": [
+      "붓기"
+     ]
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-192",
+   "utterance": "눈이 잘 안 보임, 발에 감각이 없음",
+   "phrases": [
+    {
+     "name": "시력 저하",
+     "phrase": "눈이 잘 안 보임",
+     "also_ok": []
+    },
+    {
+     "name": "무감각",
+     "phrase": "발에 감각이 없음",
+     "also_ok": [
+      "손발 저림"
+     ]
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-193",
+   "utterance": "화장실을 자주 감, 머리가 아픔",
+   "phrases": [
+    {
+     "name": "잦은 배뇨",
+     "phrase": "화장실을 자주 감",
+     "also_ok": []
+    },
+    {
+     "name": "두통",
+     "phrase": "머리가 아픔",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-194",
+   "utterance": "기분 저하, 입안이 따가움",
+   "phrases": [
+    {
+     "name": "기분 저하",
+     "phrase": "기분 저하",
+     "also_ok": []
+    },
+    {
+     "name": "구강통증",
+     "phrase": "입안이 따가움",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-195",
+   "utterance": "두피가 근질거림, 공복 현기증",
+   "phrases": [
+    {
+     "name": "두피 가려움",
+     "phrase": "두피가 근질거림",
+     "also_ok": []
+    },
+    {
+     "name": "공복 현기증",
+     "phrase": "공복 현기증",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-196",
+   "utterance": "급히 일어서면 어지러움, 만성 피로",
+   "phrases": [
+    {
+     "name": "기립성 저혈압",
+     "phrase": "급히 일어서면 어지러움",
+     "also_ok": []
+    },
+    {
+     "name": "만성피로",
+     "phrase": "만성 피로",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-197",
+   "utterance": "소화가 느림, 아랫배에 살이 붙음",
+   "phrases": [
+    {
+     "name": "소화불량",
+     "phrase": "소화가 느림",
+     "also_ok": []
+    },
+    {
+     "name": "복부 지방 증가",
+     "phrase": "아랫배에 살이 붙음",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-198",
+   "utterance": "술 마신 다음 날 몸이 무거움, 눈이 떨림",
+   "phrases": [
+    {
+     "name": "음주 후 불평감",
+     "phrase": "술 마신 다음 날 몸이 무거움",
+     "also_ok": []
+    },
+    {
+     "name": "눈 떨림",
+     "phrase": "눈이 떨림",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-199",
+   "utterance": "피가 잘 안 도는 느낌, 눈 피로감",
+   "phrases": [
+    {
+     "name": "혈액순환 전반",
+     "phrase": "피가 잘 안 도는 느낌",
+     "also_ok": []
+    },
+    {
+     "name": "눈 피로감",
+     "phrase": "눈 피로감",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-200",
+   "utterance": "생리가 늦어졌다 빨라졌다 함, 눈부심이 심함",
+   "phrases": [
+    {
+     "name": "생리주기 불규칙",
+     "phrase": "생리가 늦어졌다 빨라졌다 함",
+     "also_ok": []
+    },
+    {
+     "name": "눈 부심",
+     "phrase": "눈부심이 심함",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-201",
+   "utterance": "근육경련, 체력이 달림",
+   "phrases": [
+    {
+     "name": "근육경련(쥐남)",
+     "phrase": "근육경련",
+     "also_ok": []
+    },
+    {
+     "name": "체력 저하",
+     "phrase": "체력이 달림",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-202",
+   "utterance": "손톱이 쉽게 깨짐, 어깨가 쑤심",
+   "phrases": [
+    {
+     "name": "손발톱 약화",
+     "phrase": "손톱이 쉽게 깨짐",
+     "also_ok": []
+    },
+    {
+     "name": "어깨통증",
+     "phrase": "어깨가 쑤심",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-203",
+   "utterance": "침침함, 생리통",
+   "phrases": [
+    {
+     "name": "침침함",
+     "phrase": "침침함",
+     "also_ok": []
+    },
+    {
+     "name": "생리통",
+     "phrase": "생리통",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-204",
+   "utterance": "신경이 과민해짐, 쉽게 지침",
+   "phrases": [
+    {
+     "name": "신경과민",
+     "phrase": "신경이 과민해짐",
+     "also_ok": []
+    },
+    {
+     "name": "체력 저하",
+     "phrase": "쉽게 지침",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-205",
+   "utterance": "체한 느낌이 자주 듦, 몸이 부음",
+   "phrases": [
+    {
+     "name": "소화불량",
+     "phrase": "체한 느낌이 자주 듦",
+     "also_ok": []
+    },
+    {
+     "name": "부종",
+     "phrase": "몸이 부음",
+     "also_ok": [
+      "붓기"
+     ]
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-206",
+   "utterance": "시력이 나빠짐, 잇몸에서 피가 남",
+   "phrases": [
+    {
+     "name": "시력 저하",
+     "phrase": "시력이 나빠짐",
+     "also_ok": []
+    },
+    {
+     "name": "잇몸 출혈",
+     "phrase": "잇몸에서 피가 남",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-207",
+   "utterance": "손발 감각이 무딤, 입이 깔깔하고 텁텁함",
+   "phrases": [
+    {
+     "name": "무감각",
+     "phrase": "손발 감각이 무딤",
+     "also_ok": [
+      "손발 저림"
+     ]
+    },
+    {
+     "name": "입 텁텁함",
+     "phrase": "입이 깔깔하고 텁텁함",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-208",
+   "utterance": "머리카락이 많이 빠짐, 잇몸 출혈",
+   "phrases": [
+    {
+     "name": "탈모",
+     "phrase": "머리카락이 많이 빠짐",
+     "also_ok": []
+    },
+    {
+     "name": "잇몸 출혈",
+     "phrase": "잇몸 출혈",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-209",
+   "utterance": "멍함, 피부가 거칠고 건조함",
+   "phrases": [
+    {
+     "name": "멍함",
+     "phrase": "멍함",
+     "also_ok": []
+    },
+    {
+     "name": "피부 건조함",
+     "phrase": "피부가 거칠고 건조함",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-210",
+   "utterance": "기운이 쭉 빠짐, 피부에 트러블이 잦음",
+   "phrases": [
+    {
+     "name": "기운 없음",
+     "phrase": "기운이 쭉 빠짐",
+     "also_ok": []
+    },
+    {
+     "name": "피부 트러블",
+     "phrase": "피부에 트러블이 잦음",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-211",
+   "utterance": "근육이 뻐근하고 아픔, 갱년기",
+   "phrases": [
+    {
+     "name": "근육통",
+     "phrase": "근육이 뻐근하고 아픔",
+     "also_ok": []
+    },
+    {
+     "name": "갱년기 증상",
+     "phrase": "갱년기",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-212",
+   "utterance": "비듬이 많음, 사소한 일에 짜증이 남",
+   "phrases": [
+    {
+     "name": "비듬",
+     "phrase": "비듬이 많음",
+     "also_ok": []
+    },
+    {
+     "name": "예민함",
+     "phrase": "사소한 일에 짜증이 남",
+     "also_ok": [
+      "신경과민"
+     ]
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-213",
+   "utterance": "가려움, 변이 묽음",
+   "phrases": [
+    {
+     "name": "가려움",
+     "phrase": "가려움",
+     "also_ok": []
+    },
+    {
+     "name": "설사",
+     "phrase": "변이 묽음",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-214",
+   "utterance": "기침이 계속 남, 배가 살살 아픔",
+   "phrases": [
+    {
+     "name": "기침",
+     "phrase": "기침이 계속 남",
+     "also_ok": []
+    },
+    {
+     "name": "복통",
+     "phrase": "배가 살살 아픔",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-215",
+   "utterance": "몸이 굳어서 움직이기 힘듦, 머리에 하얀 각질이 떨어짐",
+   "phrases": [
+    {
+     "name": "움직임 불편",
+     "phrase": "몸이 굳어서 움직이기 힘듦",
+     "also_ok": []
+    },
+    {
+     "name": "비듬",
+     "phrase": "머리에 하얀 각질이 떨어짐",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-216",
+   "utterance": "뱃살이 붙음, 까칠해짐",
+   "phrases": [
+    {
+     "name": "복부 지방 증가",
+     "phrase": "뱃살이 붙음",
+     "also_ok": []
+    },
+    {
+     "name": "예민함",
+     "phrase": "까칠해짐",
+     "also_ok": [
+      "신경과민"
+     ]
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-217",
+   "utterance": "행동이 굼떠짐, 탈모",
+   "phrases": [
+    {
+     "name": "반응 속도 저하",
+     "phrase": "행동이 굼떠짐",
+     "also_ok": []
+    },
+    {
+     "name": "탈모",
+     "phrase": "탈모",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-218",
+   "utterance": "식욕이 들쭉날쭉함, 머리가 어질어질함",
+   "phrases": [
+    {
+     "name": "식욕변화",
+     "phrase": "식욕이 들쭉날쭉함",
+     "also_ok": []
+    },
+    {
+     "name": "어지러움",
+     "phrase": "머리가 어질어질함",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-219",
+   "utterance": "일어설 때 눈앞이 하얘짐, 허리가 묵직함",
+   "phrases": [
+    {
+     "name": "기립성 저혈압",
+     "phrase": "일어설 때 눈앞이 하얘짐",
+     "also_ok": []
+    },
+    {
+     "name": "무릎/허리 부담감",
+     "phrase": "허리가 묵직함",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-220",
+   "utterance": "야맹증이 있음, 근육에 쥐가 남",
+   "phrases": [
+    {
+     "name": "야맹증",
+     "phrase": "야맹증이 있음",
+     "also_ok": []
+    },
+    {
+     "name": "근육경련(쥐남)",
+     "phrase": "근육에 쥐가 남",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-221",
+   "utterance": "감기, 기력이 없어짐",
+   "phrases": [
+    {
+     "name": "감기",
+     "phrase": "감기",
+     "also_ok": []
+    },
+    {
+     "name": "기력 저하",
+     "phrase": "기력이 없어짐",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-222",
+   "utterance": "손가락 관절에서 딱딱 소리 남, 멍한 상태가 자주 옴",
+   "phrases": [
+    {
+     "name": "관절 소리",
+     "phrase": "손가락 관절에서 딱딱 소리 남",
+     "also_ok": []
+    },
+    {
+     "name": "멍함",
+     "phrase": "멍한 상태가 자주 옴",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-223",
+   "utterance": "기립성 어지럼, 계단 오를 때 무릎에 부담",
+   "phrases": [
+    {
+     "name": "기립성 저혈압",
+     "phrase": "기립성 어지럼",
+     "also_ok": []
+    },
+    {
+     "name": "무릎/허리 부담감",
+     "phrase": "계단 오를 때 무릎에 부담",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-224",
+   "utterance": "잠이 안 옴, 피부가 가려움",
+   "phrases": [
+    {
+     "name": "불면",
+     "phrase": "잠이 안 옴",
+     "also_ok": []
+    },
+    {
+     "name": "가려움",
+     "phrase": "피부가 가려움",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-225",
+   "utterance": "몸무게가 줄어듦, 무기력",
+   "phrases": [
+    {
+     "name": "체중 감소",
+     "phrase": "몸무게가 줄어듦",
+     "also_ok": []
+    },
+    {
+     "name": "무기력",
+     "phrase": "무기력",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-226",
+   "utterance": "설사를 자주 함, 혈액순환 장애, 입안이 텁텁함",
+   "phrases": [
+    {
+     "name": "설사",
+     "phrase": "설사를 자주 함",
+     "also_ok": []
+    },
+    {
+     "name": "혈액순환 전반",
+     "phrase": "혈액순환 장애",
+     "also_ok": []
+    },
+    {
+     "name": "입 텁텁함",
+     "phrase": "입안이 텁텁함",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-227",
+   "utterance": "팔다리에 힘이 없음, 집중이 잘 안 됨, 머리숱이 줄어듦",
+   "phrases": [
+    {
+     "name": "무력감",
+     "phrase": "팔다리에 힘이 없음",
+     "also_ok": [
+      "기운 없음"
+     ]
+    },
+    {
+     "name": "집중력 저하",
+     "phrase": "집중이 잘 안 됨",
+     "also_ok": []
+    },
+    {
+     "name": "탈모",
+     "phrase": "머리숱이 줄어듦",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-228",
+   "utterance": "입맛이 변함, 피곤하면 회복이 오래 걸림, 혓바늘이 돋아 아픔",
+   "phrases": [
+    {
+     "name": "식욕변화",
+     "phrase": "입맛이 변함",
+     "also_ok": []
+    },
+    {
+     "name": "느린 피로 회복",
+     "phrase": "피곤하면 회복이 오래 걸림",
+     "also_ok": []
+    },
+    {
+     "name": "구강통증",
+     "phrase": "혓바늘이 돋아 아픔",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-229",
+   "utterance": "어지럼증, 윗배가 아픔, 잠을 설침",
+   "phrases": [
+    {
+     "name": "어지러움",
+     "phrase": "어지럼증",
+     "also_ok": []
+    },
+    {
+     "name": "복통",
+     "phrase": "윗배가 아픔",
+     "also_ok": []
+    },
+    {
+     "name": "수면 질 저하",
+     "phrase": "잠을 설침",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-230",
+   "utterance": "피로 회복이 더딤, 약 먹은 뒤 울렁거림, 소변이 자주 마려움",
+   "phrases": [
+    {
+     "name": "느린 피로 회복",
+     "phrase": "피로 회복이 더딤",
+     "also_ok": []
+    },
+    {
+     "name": "약물 복용 후 메스꺼움",
+     "phrase": "약 먹은 뒤 울렁거림",
+     "also_ok": [
+      "울렁거림"
+     ]
+    },
+    {
+     "name": "잦은 배뇨",
+     "phrase": "소변이 자주 마려움",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-231",
+   "utterance": "체중이 늘어남, 밥 먹고 나면 소화가 안 됨, 발톱이 잘 깨짐",
+   "phrases": [
+    {
+     "name": "체중 증가",
+     "phrase": "체중이 늘어남",
+     "also_ok": []
+    },
+    {
+     "name": "소화불량",
+     "phrase": "밥 먹고 나면 소화가 안 됨",
+     "also_ok": []
+    },
+    {
+     "name": "손발톱 약화",
+     "phrase": "발톱이 잘 깨짐",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-232",
+   "utterance": "밥 거르면 핑 돎, 손발이 저림, 잦은 배뇨",
+   "phrases": [
+    {
+     "name": "공복 현기증",
+     "phrase": "밥 거르면 핑 돎",
+     "also_ok": []
+    },
+    {
+     "name": "손발 저림",
+     "phrase": "손발이 저림",
+     "also_ok": []
+    },
+    {
+     "name": "잦은 배뇨",
+     "phrase": "잦은 배뇨",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-233",
+   "utterance": "복부 비만, 기억력 감소, 관절에서 뚝 소리 남",
+   "phrases": [
+    {
+     "name": "복부 지방 증가",
+     "phrase": "복부 비만",
+     "also_ok": []
+    },
+    {
+     "name": "기억력 감소",
+     "phrase": "기억력 감소",
+     "also_ok": []
+    },
+    {
+     "name": "관절 소리",
+     "phrase": "관절에서 뚝 소리 남",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-234",
+   "utterance": "기운이 하나도 없음, 체력이 약해짐, 허벅지 근육통",
+   "phrases": [
+    {
+     "name": "기운 없음",
+     "phrase": "기운이 하나도 없음",
+     "also_ok": []
+    },
+    {
+     "name": "체력 저하",
+     "phrase": "체력이 약해짐",
+     "also_ok": []
+    },
+    {
+     "name": "근육통",
+     "phrase": "허벅지 근육통",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-235",
+   "utterance": "뒷머리가 무거움, 술 먹고 나면 다음 날 고생함, 시력 감퇴",
+   "phrases": [
+    {
+     "name": "두통",
+     "phrase": "뒷머리가 무거움",
+     "also_ok": []
+    },
+    {
+     "name": "음주 후 불평감",
+     "phrase": "술 먹고 나면 다음 날 고생함",
+     "also_ok": []
+    },
+    {
+     "name": "시력 저하",
+     "phrase": "시력 감퇴",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-236",
+   "utterance": "온도 변화에 민감함, 잇몸이 붓고 피가 남, 탈모가 진행됨",
+   "phrases": [
+    {
+     "name": "온도 민감",
+     "phrase": "온도 변화에 민감함",
+     "also_ok": []
+    },
+    {
+     "name": "잇몸 출혈",
+     "phrase": "잇몸이 붓고 피가 남",
+     "also_ok": []
+    },
+    {
+     "name": "탈모",
+     "phrase": "탈모가 진행됨",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-237",
+   "utterance": "속이 울렁울렁함, 복부 팽만감, 정신이 멍함",
+   "phrases": [
+    {
+     "name": "울렁거림",
+     "phrase": "속이 울렁울렁함",
+     "also_ok": []
+    },
+    {
+     "name": "복부 팽만감",
+     "phrase": "복부 팽만감",
+     "also_ok": []
+    },
+    {
+     "name": "멍함",
+     "phrase": "정신이 멍함",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-238",
+   "utterance": "피부가 근질근질함, 깜빡하는 일이 잦음, 소화가 안 됨",
+   "phrases": [
+    {
+     "name": "가려움",
+     "phrase": "피부가 근질근질함",
+     "also_ok": []
+    },
+    {
+     "name": "기억력 감소",
+     "phrase": "깜빡하는 일이 잦음",
+     "also_ok": []
+    },
+    {
+     "name": "소화불량",
+     "phrase": "소화가 안 됨",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-239",
+   "utterance": "온도 민감, 살이 빠짐, 목마름",
+   "phrases": [
+    {
+     "name": "온도 민감",
+     "phrase": "온도 민감",
+     "also_ok": []
+    },
+    {
+     "name": "체중 감소",
+     "phrase": "살이 빠짐",
+     "also_ok": []
+    },
+    {
+     "name": "갈증",
+     "phrase": "목마름",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-240",
+   "utterance": "한번 피곤하면 며칠 감, 두피 가려움, 체중이 빠짐",
+   "phrases": [
+    {
+     "name": "느린 피로 회복",
+     "phrase": "한번 피곤하면 며칠 감",
+     "also_ok": []
+    },
+    {
+     "name": "두피 가려움",
+     "phrase": "두피 가려움",
+     "also_ok": []
+    },
+    {
+     "name": "체중 감소",
+     "phrase": "체중이 빠짐",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-241",
+   "utterance": "어지러움이 잦음, 피곤이 몇 달째 계속됨, 명치가 쓰림",
+   "phrases": [
+    {
+     "name": "어지러움",
+     "phrase": "어지러움이 잦음",
+     "also_ok": []
+    },
+    {
+     "name": "만성피로",
+     "phrase": "피곤이 몇 달째 계속됨",
+     "also_ok": []
+    },
+    {
+     "name": "속쓰림",
+     "phrase": "명치가 쓰림",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-242",
+   "utterance": "눈이 건조함, 늘 긴장 상태, 식후 소화불량",
+   "phrases": [
+    {
+     "name": "눈 건조함",
+     "phrase": "눈이 건조함",
+     "also_ok": []
+    },
+    {
+     "name": "긴장",
+     "phrase": "늘 긴장 상태",
+     "also_ok": []
+    },
+    {
+     "name": "소화불량",
+     "phrase": "식후 소화불량",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-243",
+   "utterance": "잠이 잘 안 옴, 불안감, 몸에 힘이 빠짐",
+   "phrases": [
+    {
+     "name": "불면",
+     "phrase": "잠이 잘 안 옴",
+     "also_ok": []
+    },
+    {
+     "name": "불안",
+     "phrase": "불안감",
+     "also_ok": []
+    },
+    {
+     "name": "무력감",
+     "phrase": "몸에 힘이 빠짐",
+     "also_ok": [
+      "기운 없음"
+     ]
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-244",
+   "utterance": "집중력이 떨어짐, 긴장감이 심함, 스트레스로 지침",
+   "phrases": [
+    {
+     "name": "집중력 저하",
+     "phrase": "집중력이 떨어짐",
+     "also_ok": []
+    },
+    {
+     "name": "긴장",
+     "phrase": "긴장감이 심함",
+     "also_ok": []
+    },
+    {
+     "name": "스트레스",
+     "phrase": "스트레스로 지침",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-245",
+   "utterance": "위가 쓰림, 체력이 예전 같지 않음, 피로가 늘 쌓여 있음",
+   "phrases": [
+    {
+     "name": "속쓰림",
+     "phrase": "위가 쓰림",
+     "also_ok": []
+    },
+    {
+     "name": "체력 저하",
+     "phrase": "체력이 예전 같지 않음",
+     "also_ok": []
+    },
+    {
+     "name": "만성피로",
+     "phrase": "피로가 늘 쌓여 있음",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-246",
+   "utterance": "배가 빵빵함, 새벽 4시쯤 깸, 마른기침",
+   "phrases": [
+    {
+     "name": "복부 팽만감",
+     "phrase": "배가 빵빵함",
+     "also_ok": []
+    },
+    {
+     "name": "새벽 각성",
+     "phrase": "새벽 4시쯤 깸",
+     "also_ok": [
+      "수면 질 저하"
+     ]
+    },
+    {
+     "name": "기침",
+     "phrase": "마른기침",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-247",
+   "utterance": "머리카락이 가늘어지고 빠짐, 햇빛 보면 눈이 시림, 기운이 달림",
+   "phrases": [
+    {
+     "name": "탈모",
+     "phrase": "머리카락이 가늘어지고 빠짐",
+     "also_ok": []
+    },
+    {
+     "name": "눈 부심",
+     "phrase": "햇빛 보면 눈이 시림",
+     "also_ok": []
+    },
+    {
+     "name": "기운 없음",
+     "phrase": "기운이 달림",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-248",
+   "utterance": "두피가 간지러움, 체중이 감소함, 밤에 사물이 잘 안 보임",
+   "phrases": [
+    {
+     "name": "두피 가려움",
+     "phrase": "두피가 간지러움",
+     "also_ok": []
+    },
+    {
+     "name": "체중 감소",
+     "phrase": "체중이 감소함",
+     "also_ok": []
+    },
+    {
+     "name": "야맹증",
+     "phrase": "밤에 사물이 잘 안 보임",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-249",
+   "utterance": "자다가 다리에 쥐가 남, 시야가 흐릿함, 여드름이 잘 남",
+   "phrases": [
+    {
+     "name": "근육경련(쥐남)",
+     "phrase": "자다가 다리에 쥐가 남",
+     "also_ok": []
+    },
+    {
+     "name": "시야 흐림",
+     "phrase": "시야가 흐릿함",
+     "also_ok": []
+    },
+    {
+     "name": "피부 트러블",
+     "phrase": "여드름이 잘 남",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-250",
+   "utterance": "눈이 메마른 느낌, 생리 주기가 일정하지 않음, 식욕이 갑자기 늘었다 줄었다 함",
+   "phrases": [
+    {
+     "name": "눈 건조함",
+     "phrase": "눈이 메마른 느낌",
+     "also_ok": []
+    },
+    {
+     "name": "생리주기 불규칙",
+     "phrase": "생리 주기가 일정하지 않음",
+     "also_ok": []
+    },
+    {
+     "name": "식욕변화",
+     "phrase": "식욕이 갑자기 늘었다 줄었다 함",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-251",
+   "utterance": "비듬이 생김, 몸무게가 늘었음, 기분이 가라앉음",
+   "phrases": [
+    {
+     "name": "비듬",
+     "phrase": "비듬이 생김",
+     "also_ok": []
+    },
+    {
+     "name": "체중 증가",
+     "phrase": "몸무게가 늘었음",
+     "also_ok": []
+    },
+    {
+     "name": "기분 저하",
+     "phrase": "기분이 가라앉음",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-252",
+   "utterance": "생리통 있음, 몸이 굳어 잘 안 움직여짐, 혈액순환이 안 되는 느낌",
+   "phrases": [
+    {
+     "name": "생리통",
+     "phrase": "생리통 있음",
+     "also_ok": []
+    },
+    {
+     "name": "움직임 불편",
+     "phrase": "몸이 굳어 잘 안 움직여짐",
+     "also_ok": []
+    },
+    {
+     "name": "혈액순환 전반",
+     "phrase": "혈액순환이 안 되는 느낌",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-253",
+   "utterance": "아랫배 통증, 배가 부풀어 오름, 발에 쥐가 남",
+   "phrases": [
+    {
+     "name": "복통",
+     "phrase": "아랫배 통증",
+     "also_ok": []
+    },
+    {
+     "name": "복부 팽만감",
+     "phrase": "배가 부풀어 오름",
+     "also_ok": []
+    },
+    {
+     "name": "근육경련(쥐남)",
+     "phrase": "발에 쥐가 남",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-254",
+   "utterance": "밤새 뒤척이며 못 잠, 배앓이, 입맛이 들쑥날쑥함",
+   "phrases": [
+    {
+     "name": "불면",
+     "phrase": "밤새 뒤척이며 못 잠",
+     "also_ok": []
+    },
+    {
+     "name": "복통",
+     "phrase": "배앓이",
+     "also_ok": []
+    },
+    {
+     "name": "식욕변화",
+     "phrase": "입맛이 들쑥날쑥함",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-255",
+   "utterance": "생리할 때 아랫배 통증, 우울함, 공부에 집중이 안 됨",
+   "phrases": [
+    {
+     "name": "생리통",
+     "phrase": "생리할 때 아랫배 통증",
+     "also_ok": [
+      "복통"
+     ]
+    },
+    {
+     "name": "기분 저하",
+     "phrase": "우울함",
+     "also_ok": []
+    },
+    {
+     "name": "집중력 저하",
+     "phrase": "공부에 집중이 안 됨",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-256",
+   "utterance": "스트레스 받음, 잔기침, 아침에 눈두덩이 부음",
+   "phrases": [
+    {
+     "name": "스트레스",
+     "phrase": "스트레스 받음",
+     "also_ok": []
+    },
+    {
+     "name": "기침",
+     "phrase": "잔기침",
+     "also_ok": []
+    },
+    {
+     "name": "붓기",
+     "phrase": "아침에 눈두덩이 부음",
+     "also_ok": [
+      "부종"
+     ]
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-257",
+   "utterance": "칫솔질하면 피가 남, 허리가 뻐근하고 부담됨, 불안",
+   "phrases": [
+    {
+     "name": "잇몸 출혈",
+     "phrase": "칫솔질하면 피가 남",
+     "also_ok": []
+    },
+    {
+     "name": "무릎/허리 부담감",
+     "phrase": "허리가 뻐근하고 부담됨",
+     "also_ok": []
+    },
+    {
+     "name": "불안",
+     "phrase": "불안",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-258",
+   "utterance": "복용 약 때문에 속이 메스꺼움, 염증, 한쪽 눈이 떨림",
+   "phrases": [
+    {
+     "name": "약물 복용 후 메스꺼움",
+     "phrase": "복용 약 때문에 속이 메스꺼움",
+     "also_ok": [
+      "울렁거림"
+     ]
+    },
+    {
+     "name": "염증",
+     "phrase": "염증",
+     "also_ok": []
+    },
+    {
+     "name": "눈 떨림",
+     "phrase": "한쪽 눈이 떨림",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-259",
+   "utterance": "입안이 끈적하고 텁텁함, 폐경기 증상, 갈증",
+   "phrases": [
+    {
+     "name": "입 텁텁함",
+     "phrase": "입안이 끈적하고 텁텁함",
+     "also_ok": []
+    },
+    {
+     "name": "갱년기 증상",
+     "phrase": "폐경기 증상",
+     "also_ok": []
+    },
+    {
+     "name": "갈증",
+     "phrase": "갈증",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-260",
+   "utterance": "손발이 늘 참, 혈액순환 불량, 불안함",
+   "phrases": [
+    {
+     "name": "수족냉증",
+     "phrase": "손발이 늘 참",
+     "also_ok": []
+    },
+    {
+     "name": "혈액순환 전반",
+     "phrase": "혈액순환 불량",
+     "also_ok": []
+    },
+    {
+     "name": "불안",
+     "phrase": "불안함",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-261",
+   "utterance": "피부가 자꾸 뒤집어짐, 밤에 두세 번 소변 봄, 기력이 쇠함",
+   "phrases": [
+    {
+     "name": "피부 트러블",
+     "phrase": "피부가 자꾸 뒤집어짐",
+     "also_ok": []
+    },
+    {
+     "name": "야간뇨",
+     "phrase": "밤에 두세 번 소변 봄",
+     "also_ok": [
+      "잦은 배뇨"
+     ]
+    },
+    {
+     "name": "기력 저하",
+     "phrase": "기력이 쇠함",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-262",
+   "utterance": "편두통, 속에 가스가 참, 눈이 시고 마름",
+   "phrases": [
+    {
+     "name": "두통",
+     "phrase": "편두통",
+     "also_ok": []
+    },
+    {
+     "name": "복부 팽만감",
+     "phrase": "속에 가스가 참",
+     "also_ok": []
+    },
+    {
+     "name": "눈 건조함",
+     "phrase": "눈이 시고 마름",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-263",
+   "utterance": "손발 감각이 둔해짐, 식후 속쓰림, 잠을 자주 깸",
+   "phrases": [
+    {
+     "name": "무감각",
+     "phrase": "손발 감각이 둔해짐",
+     "also_ok": [
+      "손발 저림"
+     ]
+    },
+    {
+     "name": "속쓰림",
+     "phrase": "식후 속쓰림",
+     "also_ok": []
+    },
+    {
+     "name": "수면 질 저하",
+     "phrase": "잠을 자주 깸",
+     "also_ok": [
+      "새벽 각성"
+     ]
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-264",
+   "utterance": "눈이 벌겋게 됨, 안구 건조, 현기증",
+   "phrases": [
+    {
+     "name": "충혈",
+     "phrase": "눈이 벌겋게 됨",
+     "also_ok": []
+    },
+    {
+     "name": "눈 건조함",
+     "phrase": "안구 건조",
+     "also_ok": []
+    },
+    {
+     "name": "어지러움",
+     "phrase": "현기증",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-265",
+   "utterance": "피로가 쉽게 안 풀림, 다리 감각이 무뎌짐, 예민해진 기분",
+   "phrases": [
+    {
+     "name": "느린 피로 회복",
+     "phrase": "피로가 쉽게 안 풀림",
+     "also_ok": []
+    },
+    {
+     "name": "무감각",
+     "phrase": "다리 감각이 무뎌짐",
+     "also_ok": [
+      "손발 저림"
+     ]
+    },
+    {
+     "name": "예민함",
+     "phrase": "예민해진 기분",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-266",
+   "utterance": "변을 보기 힘듦, 무력감이 심함, 음식이 얹힌 느낌",
+   "phrases": [
+    {
+     "name": "변비",
+     "phrase": "변을 보기 힘듦",
+     "also_ok": []
+    },
+    {
+     "name": "무력감",
+     "phrase": "무력감이 심함",
+     "also_ok": []
+    },
+    {
+     "name": "소화불량",
+     "phrase": "음식이 얹힌 느낌",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-267",
+   "utterance": "소변 횟수가 늘었음, 등이 가려움, 기억이 잘 안 남",
+   "phrases": [
+    {
+     "name": "잦은 배뇨",
+     "phrase": "소변 횟수가 늘었음",
+     "also_ok": []
+    },
+    {
+     "name": "가려움",
+     "phrase": "등이 가려움",
+     "also_ok": []
+    },
+    {
+     "name": "기억력 감소",
+     "phrase": "기억이 잘 안 남",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-268",
+   "utterance": "혈액순환, 밤에 화장실 자주 감, 살이 붙음",
+   "phrases": [
+    {
+     "name": "혈액순환 전반",
+     "phrase": "혈액순환",
+     "also_ok": []
+    },
+    {
+     "name": "야간뇨",
+     "phrase": "밤에 화장실 자주 감",
+     "also_ok": [
+      "잦은 배뇨"
+     ]
+    },
+    {
+     "name": "체중 증가",
+     "phrase": "살이 붙음",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-269",
+   "utterance": "발이 시림, 두통이 잦음, 근육 통증",
+   "phrases": [
+    {
+     "name": "수족냉증",
+     "phrase": "발이 시림",
+     "also_ok": []
+    },
+    {
+     "name": "두통",
+     "phrase": "두통이 잦음",
+     "also_ok": []
+    },
+    {
+     "name": "근육통",
+     "phrase": "근육 통증",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-270",
+   "utterance": "잇몸이 욱신거림, 변비가 심함, 머리가 많이 빠짐",
+   "phrases": [
+    {
+     "name": "구강통증",
+     "phrase": "잇몸이 욱신거림",
+     "also_ok": []
+    },
+    {
+     "name": "변비",
+     "phrase": "변비가 심함",
+     "also_ok": []
+    },
+    {
+     "name": "탈모",
+     "phrase": "머리가 많이 빠짐",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": null
+  },
+  {
+   "id": "SF-271",
+   "utterance": "항응고제 먹는데 코피가 안 멈춤, 소화 불량",
+   "phrases": [
+    {
+     "name": "소화불량",
+     "phrase": "소화 불량",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": "항응고제 먹는데 코피가 안 멈춤"
+  },
+  {
+   "id": "SF-272",
+   "utterance": "가족 얼굴을 못 알아봄, 새벽에 일찍 깸",
+   "phrases": [
+    {
+     "name": "새벽 각성",
+     "phrase": "새벽에 일찍 깸",
+     "also_ok": [
+      "수면 질 저하"
+     ]
+    }
+   ],
+   "red_phrase": "가족 얼굴을 못 알아봄"
+  },
+  {
+   "id": "SF-273",
+   "utterance": "소변에 피가 섞여 나옴, 기침이 잦음",
+   "phrases": [
+    {
+     "name": "기침",
+     "phrase": "기침이 잦음",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": "소변에 피가 섞여 나옴"
+  },
+  {
+   "id": "SF-274",
+   "utterance": "몇 달 사이 이유 없이 살이 크게 빠짐, 약 먹으면 구역질 남",
+   "phrases": [
+    {
+     "name": "약물 복용 후 메스꺼움",
+     "phrase": "약 먹으면 구역질 남",
+     "also_ok": [
+      "울렁거림"
+     ]
+    }
+   ],
+   "red_phrase": "몇 달 사이 이유 없이 살이 크게 빠짐"
+  },
+  {
+   "id": "SF-275",
+   "utterance": "소변 색이 콜라처럼 진함, 어깨가 결리고 아픔",
+   "phrases": [
+    {
+     "name": "어깨통증",
+     "phrase": "어깨가 결리고 아픔",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": "소변 색이 콜라처럼 진함"
+  },
+  {
+   "id": "SF-276",
+   "utterance": "자다가 숨이 막혀서 깸, 만성적인 피로",
+   "phrases": [
+    {
+     "name": "만성피로",
+     "phrase": "만성적인 피로",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": "자다가 숨이 막혀서 깸"
+  },
+  {
+   "id": "SF-277",
+   "utterance": "머리 부딪힌 후 계속 토함, 염증이 잘 낫지 않음",
+   "phrases": [
+    {
+     "name": "염증",
+     "phrase": "염증이 잘 낫지 않음",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": "머리 부딪힌 후 계속 토함"
+  },
+  {
+   "id": "SF-278",
+   "utterance": "숨이 차서 말을 잇기 힘듦, 소변이 잦음",
+   "phrases": [
+    {
+     "name": "잦은 배뇨",
+     "phrase": "소변이 잦음",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": "숨이 차서 말을 잇기 힘듦"
+  },
+  {
+   "id": "SF-279",
+   "utterance": "한쪽 팔다리에 힘이 빠짐, 소화가 잘 안 되는 편",
+   "phrases": [
+    {
+     "name": "소화불량",
+     "phrase": "소화가 잘 안 되는 편",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": "한쪽 팔다리에 힘이 빠짐"
+  },
+  {
+   "id": "SF-280",
+   "utterance": "난생처음 겪는 극심한 두통, 불안감이 큼",
+   "phrases": [
+    {
+     "name": "불안",
+     "phrase": "불안감이 큼",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": "난생처음 겪는 극심한 두통"
+  },
+  {
+   "id": "SF-281",
+   "utterance": "갑자기 숨이 차고 입술이 파래짐, 생리통이 심한 편",
+   "phrases": [
+    {
+     "name": "생리통",
+     "phrase": "생리통이 심한 편",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": "갑자기 숨이 차고 입술이 파래짐"
+  },
+  {
+   "id": "SF-282",
+   "utterance": "얼굴 한쪽이 처짐, 공복 시 어지러움",
+   "phrases": [
+    {
+     "name": "공복 현기증",
+     "phrase": "공복 시 어지러움",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": "얼굴 한쪽이 처짐"
+  },
+  {
+   "id": "SF-283",
+   "utterance": "변이 검게 나옴, 두피가 가렵고 따가움",
+   "phrases": [
+    {
+     "name": "두피 가려움",
+     "phrase": "두피가 가렵고 따가움",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": "변이 검게 나옴"
+  },
+  {
+   "id": "SF-284",
+   "utterance": "말이 어눌해짐, 집중이 안 됨",
+   "phrases": [
+    {
+     "name": "집중력 저하",
+     "phrase": "집중이 안 됨",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": "말이 어눌해짐"
+  },
+  {
+   "id": "SF-285",
+   "utterance": "갑자기 한쪽 눈이 안 보임, 몸 여기저기 염증",
+   "phrases": [
+    {
+     "name": "염증",
+     "phrase": "몸 여기저기 염증",
+     "also_ok": []
+    }
+   ],
+   "red_phrase": "갑자기 한쪽 눈이 안 보임"
+  },
+  {
+   "id": "SF-286",
+   "utterance": "왼팔이 저리고 가슴이 답답함",
+   "phrases": [],
+   "red_phrase": "왼팔이 저리고 가슴이 답답함"
+  },
+  {
+   "id": "SF-287",
+   "utterance": "혈당이 400 넘고 계속 토함",
+   "phrases": [],
+   "red_phrase": "혈당이 400 넘고 계속 토함"
+  },
+  {
+   "id": "SF-288",
+   "utterance": "명치가 아프고 식은땀 남",
+   "phrases": [],
+   "red_phrase": "명치가 아프고 식은땀 남"
+  },
+  {
+   "id": "SF-289",
+   "utterance": "입술과 혀가 붓고 숨쉬기 힘듦",
+   "phrases": [],
+   "red_phrase": "입술과 혀가 붓고 숨쉬기 힘듦"
+  },
+  {
+   "id": "SF-290",
+   "utterance": "가슴을 쥐어짜는 통증",
+   "phrases": [],
+   "red_phrase": "가슴을 쥐어짜는 통증"
+  },
+  {
+   "id": "SF-291",
+   "utterance": "변에 피가 섞여 나옴",
+   "phrases": [],
+   "red_phrase": "변에 피가 섞여 나옴"
+  },
+  {
+   "id": "SF-292",
+   "utterance": "한쪽 다리만 갑자기 붓고 아픔",
+   "phrases": [],
+   "red_phrase": "한쪽 다리만 갑자기 붓고 아픔"
+  },
+  {
+   "id": "SF-293",
+   "utterance": "피가 섞인 구토",
+   "phrases": [],
+   "red_phrase": "피가 섞인 구토"
+  },
+  {
+   "id": "SF-294",
+   "utterance": "고열에 목이 뻣뻣함",
+   "phrases": [],
+   "red_phrase": "고열에 목이 뻣뻣함"
+  },
+  {
+   "id": "SF-295",
+   "utterance": "의식을 잃고 쓰러짐",
+   "phrases": [],
+   "red_phrase": "의식을 잃고 쓰러짐"
+  },
+  {
+   "id": "SF-296",
+   "utterance": "계단 오르면 가슴이 조임",
+   "phrases": [],
+   "red_phrase": "계단 오르면 가슴이 조임"
+  },
+  {
+   "id": "SF-297",
+   "utterance": "갑자기 커튼 친 것처럼 앞이 안 보임",
+   "phrases": [],
+   "red_phrase": "갑자기 커튼 친 것처럼 앞이 안 보임"
+  },
+  {
+   "id": "SF-298",
+   "utterance": "토할 때 피가 나옴",
+   "phrases": [],
+   "red_phrase": "토할 때 피가 나옴"
+  },
+  {
+   "id": "SF-299",
+   "utterance": "배가 너무 아파서 꼼짝 못 함",
+   "phrases": [],
+   "red_phrase": "배가 너무 아파서 꼼짝 못 함"
+  },
+  {
+   "id": "SF-300",
+   "utterance": "죽고 싶다는 생각이 듦",
+   "phrases": [],
+   "red_phrase": "죽고 싶다는 생각이 듦"
+  }
+ ]
+}

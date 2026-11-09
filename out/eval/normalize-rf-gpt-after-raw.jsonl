@@ -1,0 +1,45 @@
+{"id": "위험-001", "response": {"matches": [], "unmatched": [{"text": "가슴 쥐어짜는 통증", "kind": "분류표 밖 증상"}, {"text": "식은땀", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "가슴을 쥐어짜는 통증과 식은땀이 동반됨"}}
+{"id": "위험-002", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["손발 저림"]}], "unmatched": [{"text": "가슴 답답함", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "가슴 답답함"}}
+{"id": "위험-003", "response": {"matches": [], "unmatched": [{"text": "말이 어눌해짐", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "갑자기 말이 어눌해짐은 뇌 응급 신호입니다."}}
+{"id": "위험-004", "response": {"matches": [], "unmatched": [{"text": "오른쪽 팔다리 힘 빠짐", "kind": "분류표 밖 증상"}, {"text": "오늘 아침부터", "kind": "기타"}], "red_flag": true, "red_flag_reason": "오른쪽 팔다리 힘 빠짐은 뇌졸중 등 응급 신호인 한쪽 팔다리 힘 빠짐에 해당합니다."}}
+{"id": "위험-005", "response": {"matches": [{"category": "스트레스/수면", "symptoms": []}], "unmatched": [{"text": "자다가 숨 막혀서 깸", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "자다가 숨이 막혀 깸"}}
+{"id": "위험-006", "response": {"matches": [], "unmatched": [{"text": "검은 변", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "검은 변이 3일째 지속됨"}}
+{"id": "위험-007", "response": {"matches": [], "unmatched": [{"text": "토할 때 피 섞임", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "토혈"}}
+{"id": "위험-008", "response": {"matches": [], "unmatched": [{"text": "소변에 피", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "혈뇨"}}
+{"id": "위험-009", "response": {"matches": [], "unmatched": [{"text": "한쪽 눈 안 보임", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "갑작스러운 시력 상실"}}
+{"id": "위험-010", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["두통"]}], "unmatched": [], "red_flag": true, "red_flag_reason": "태어나서 제일 심한 두통(평생 처음 겪는 정도의 갑작스러운 극심한 두통)"}}
+{"id": "위험-011", "response": {"matches": [], "unmatched": [{"text": "의식 잃고 쓰러짐", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "의식을 잃고 쓰러짐(실신)"}}
+{"id": "위험-012", "response": {"matches": [], "unmatched": [{"text": "죽고 싶다는 생각", "kind": "기타"}], "red_flag": true, "red_flag_reason": "자살 생각"}}
+{"id": "위험-013", "response": {"matches": [], "unmatched": [{"text": "입술·혀 붓기", "kind": "분류표 밖 증상"}, {"text": "숨쉬기 힘듦", "kind": "분류표 밖 증상"}, {"text": "약 먹고", "kind": "약 관련"}], "red_flag": true, "red_flag_reason": "약 복용 후 입술·혀가 붓고 숨쉬기 힘듦"}}
+{"id": "위험-014", "response": {"matches": [], "unmatched": [{"text": "고열 39도", "kind": "분류표 밖 증상"}, {"text": "목 뻣뻣", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "고열과 목 경직"}}
+{"id": "위험-015", "response": {"matches": [{"category": "체중/체지방", "symptoms": ["체중 감소"]}], "unmatched": [], "red_flag": true, "red_flag_reason": "이유 없는 급격한 체중감소(6개월간 10kg 감소)"}}
+{"id": "위험-016", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["붓기"]}], "unmatched": [{"text": "아픔", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "한쪽 다리만 갑자기 붓고 아픔"}}
+{"id": "위험-017", "response": {"matches": [{"category": "소화/장", "symptoms": ["복통", "울렁거림"]}], "unmatched": [], "red_flag": true, "red_flag_reason": "명치 통증과 식은땀이 동반됨"}}
+{"id": "위험-018", "response": {"matches": [{"category": "소화/장", "symptoms": ["소화불량", "변비"]}], "unmatched": [{"text": "오른손에 힘이 없음", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "한쪽 팔다리(오른손)에 힘이 없음"}}
+{"id": "위험-019", "response": {"matches": [], "unmatched": [{"text": "코피 안 멈춤", "kind": "분류표 밖 증상"}, {"text": "와파린 복용 중", "kind": "약 관련"}], "red_flag": true, "red_flag_reason": "멈추지 않는 출혈(와파린 복용 중)"}}
+{"id": "위험-020", "response": {"matches": [{"category": "피로/활력", "symptoms": []}, {"category": "뼈/관절", "symptoms": ["관절 통증"]}], "unmatched": [{"text": "가슴 조이는 느낌", "kind": "분류표 밖 증상"}, {"text": "계단에서 심해짐", "kind": "기타"}], "red_flag": true, "red_flag_reason": "가슴 조이는 느낌이 계단에서 심해짐"}}
+{"id": "위험-021", "response": {"matches": [], "unmatched": [{"text": "혈변", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "혈변"}}
+{"id": "위험-022", "response": {"matches": [{"category": "소화/장", "symptoms": ["복통"]}], "unmatched": [], "red_flag": true, "red_flag_reason": "움직이기 힘들 정도의 심한 복통"}}
+{"id": "위험-023", "response": {"matches": [], "unmatched": [{"text": "얼굴 한쪽 처짐", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "얼굴 한쪽 처짐"}}
+{"id": "위험-024", "response": {"matches": [], "unmatched": [{"text": "숨이 차서 말을 못 이어감", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "숨이 차서 말을 잇기 어려움"}}
+{"id": "위험-025", "response": {"matches": [], "unmatched": [{"text": "머리 부딪힘", "kind": "기타"}], "red_flag": true, "red_flag_reason": "머리 다친 뒤 반복 구토"}}
+{"id": "위험-026", "response": {"matches": [], "unmatched": [{"text": "다리 근육통", "kind": "분류표 밖 증상"}, {"text": "소변이 콜라색", "kind": "분류표 밖 증상"}, {"text": "스타틴 복용", "kind": "약 관련"}], "red_flag": true, "red_flag_reason": "콜라색 소변"}}
+{"id": "위험-027", "response": {"matches": [{"category": "눈 건강", "symptoms": []}], "unmatched": [{"text": "눈앞에 커튼 쳐진 것처럼 안 보임", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "커튼이 쳐진 것처럼 갑자기 안 보이는 증상은 갑작스러운 시력 상실에 해당할 수 있습니다."}}
+{"id": "위험-028", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["새벽 각성"]}], "unmatched": [{"text": "잘 때 가슴 눌리는 느낌", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "가슴 눌리는 느낌"}}
+{"id": "위험-029", "response": {"matches": [{"category": "소화/장", "symptoms": ["울렁거림"]}], "unmatched": [{"text": "혈당 400 넘음", "kind": "분류표 밖 증상"}, {"text": "토함", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "매우 높은 혈당과 반복 구토"}}
+{"id": "위험-030", "response": {"matches": [], "unmatched": [{"text": "정신이 오락가락", "kind": "분류표 밖 증상"}, {"text": "가족을 못 알아봄", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "갑작스러운 혼란 및 가족을 알아보지 못함"}}
+{"id": "위험대조-001", "response": {"matches": [], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "위험대조-002", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["기립성 저혈압"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "위험대조-003", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["손발 저림"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "위험대조-004", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["두통"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "위험대조-005", "response": {"matches": [], "unmatched": [{"text": "쓰러짐", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "쓰러짐(의식 잃음·실신 가능성)"}}
+{"id": "위험대조-006", "response": {"matches": [], "unmatched": [{"text": "커피 마시면 두근거림", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "위험대조-007", "response": {"matches": [{"category": "눈 건강", "symptoms": ["침침함"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "위험대조-008", "response": {"matches": [{"category": "소화/장", "symptoms": ["변비"]}], "unmatched": [{"text": "항문 불편", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "위험대조-009", "response": {"matches": [{"category": "뼈/관절", "symptoms": ["관절 통증"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "위험대조-010", "response": {"matches": [{"category": "면역", "symptoms": ["감기"]}], "unmatched": [{"text": "코 막힘", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "위험대조-011", "response": {"matches": [{"category": "피로/활력", "symptoms": []}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "위험대조-012", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["두통"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "위험대조-013", "response": {"matches": [{"category": "소화/장", "symptoms": ["복통"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "위험대조-014", "response": {"matches": [{"category": "신장/전해질", "symptoms": ["근육경련(쥐남)"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "위험대조-015", "response": {"matches": [], "unmatched": [{"text": "생리 양이 좀 많은 편", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}

@@ -1,103 +1,79 @@
-# Handoff — 2026-11-09
+# Handoff — 2026-11-09 (6차)
 
-> ⚠️ 이 문서는 세션 종료 시점의 해석이다. 사실로 받아들이지 말고 코드와 대조해 검증할 것.
-> 프로젝트는 git 저장소가 아니다. 변경 이력은 `.superpowers/sdd/261107_general_graphrag_plan/progress.md`(원장)가 유일한 기록이다.
+> ⚠️ 이 문서는 세션 종료 시점의 해석이다. 사실로 받아들이지 말고 코드·파일과 대조해 검증할 것.
+> 이전 핸드오프: `handoff_2026-11-09_5차.md`(추천 시간·토큰, 세부사항, 샘플 입력), `_4차.md`(근거 엑셀·기전 층), `_3차.md`(태스크 정의 U1~U11, DB·포트 규칙). 거기서 뒤집지 않은 결정·제약은 유효하다고 본다.
 
 ## Summary
-
-플랜 `261107_general_graphrag_plan.md`의 1단계(Task 0~7)가 끝났다. Task 7 평가 160건(문항 80 × vector·local)을 실행해 게이트 G1(금기 위반 0, 위험 중단 누락 0, 사실·다중홉에서 Local ≥ vector)을 통과했고, `MIN_SCORE`는 분포가 겹쳐 쓰지 않기로 했으며, 평가 중 발견한 검증기 오탐(같은 이름의 Ingredient ID가 여럿일 때 "문맥 밖"으로 거절)을 TDD로 고쳤다(115 passed). 그 뒤 사용자 요청 「결과 없으면 관심사/연령/성별 기준으로 추천」의 설계를 검토해 방향을 합의했고, 샘플 환자별 관심사 추천 결과를 `~/Downloads/관심사_추천_샘플_261108.xlsx`로 만들었다. **대체 추천 코드는 아직 한 줄도 없다.**
+주호소 정규화를 GPT-6-Luna(low·medium)로 300건 샘플 형식 테스트셋에 돌려 Claude(세션 응답)와 비교했고, 위험 신호(red flag) 규칙을 분류별 응급 목록으로 고쳐 GPT low의 위험 신호 재현율을 76.7% → 100%로 올렸다. Claude Haiku API 클라이언트(`AnthropicLLM`)와 `--llm anthropic` 옵션을 TDD로 추가했다(테스트 141개 통과). 이 변경들은 **아직 커밋되지 않았다.**
 
 ## Key Decisions
-
-- `MIN_SCORE = None` 유지 — p1 캐시 재계산 결과 답없음(0.654/0.718/0.82)과 사실(0.649/0.748/0.84)의 max_seed_score 분포가 완전히 겹침. 플랜 Task 7 Step 2 규정대로 `answerable` 플래그만 쓴다. 근거는 `wcrag/config.py` 주석.
-- `guard.outside_context`를 이름 단위 판정으로 수정 — '인삼'은 Ingredient ID가 3개(고시형 1 + 개별인정형 2), '홍삼'은 2개. 그중 하나가 문맥에 있으면 문맥 안으로 본다. 정답·채점기는 손대지 않았다(원장 Ruling). 틀리면 같은 이름·다른 ID의 문맥 밖 권유가 통과하지만, 이름이 같으면 금기 규칙도 같아 위험이 낮다고 봤다.
-- 수정 뒤 재채점은 저장된 LLM 응답만으로(`api=` 자리에 예외를 던지는 함수 주입, 외부 호출 0) 별도 태그 `p1-guardfix`에 저장 — 원본 `p1`은 그대로 두어 "평가 뒤 정답 수정 금지" 원칙과 재현성을 지켰다. 바뀐 행은 M-10 local, P-14 vector 두 건뿐.
-- 대체 추천은 **LLM 없이 규칙으로** — 기존 엔진 `../graphdb/recommend/candidates.py`의 `interest` 생성기와 같은 쿼리(Segment→HAS_INTEREST→Interest→RECOMMENDS→Ingredient, `recommendable`만, `h.order*100+r.order` 정렬)와 같은 금기 필터를 써서 상위 3개. 이유: 결과가 이미 규칙으로 정해지는 일이라 LLM을 거치면 비용·검증 부담만 늘고, 기존 엔진과 결과가 같아야 설명이 쉽다. 재채점도 캐시만으로 돌 수 있다.
-- 새 상태값 `fallback`(질문 직접 근거 없음 + 관심사 일반 추천) — `answered`와 섞으면 "질문에 답했다"로 채점되므로 분리. 답없음 유형 채점에서는 거절로 센다는 제안.
-- 발동 지점은 `ask.py`의 `no_evidence` 두 곳(검색 문맥 비었을 때, LLM `answerable=False`)만 — `rejected`·`blocked`는 "답이 있었는데 검증에 걸린 것"이라 제외. **이건 내 판단이며 사용자가 아직 확정하지 않았다.**
-- 나이·성별은 **필수 입력**(사용자 확인, 2026-11-08) — 대체 추천에 "나이·성별 없을 때" 안내 분기는 넣지 않기로 했다. 단, `ask()`는 지금도 `patient=None`으로 호출될 수 있고(테스트·평가 문항 다수) `legacy.build_context`는 `patient["sex"]`, `float(patient["age"])`를 그대로 읽어 KeyError가 나므로 코드에서는 여전히 방어해야 한다.
-- 기각한 대안: 대체 추천 문장을 LLM이 쓰는 방식(위 이유), Text2Cypher로 관심사 추천(2단계 Task 8~9 범위이며 아직 없음), LifeStage 노드 활용(관계가 0건이라 쓸 수 없음).
+- 위험 신호 규칙을 심장·뇌·의식/정신·호흡·출혈·그 밖의 분류별 응급 목록으로 교체 — 옛 짧은 목록에서 GPT low가 위험 30건 중 7건을 놓쳤다(안전 문제). 수정 후 샘플 300건 기준 TP 30/FN 0/FP 0(`sf2-gpt`), 홀드아웃 45건 기준 TP 30/FN 0/FP 1(`rf-gpt-after`).
+- GPT effort는 low 유지 — medium은 필수 충족률 +0.7%p, 위험 신호 +1건 정도의 이득에 비해 지연이 약 19% 늘고 추론 토큰이 2배이며, 분류표 밖 증상을 관절 통증으로 억지로 넣는 경향을 보였다.
+- 동일 조건 비교는 "1건당 API 1회 호출, `--workers 8` 병렬" — 이전 Claude 결과(`sf1`)는 서브에이전트 3개가 100건씩 일괄 답한 것이라 지연 시간을 GPT와 비교할 수 없고, 옛 프롬프트 기준이다. 그래서 Haiku API로 다시 돌리기로 했다.
+- `AnthropicLLM` 기본값은 `claude-haiku-5-5`, effort `low` — 사용자가 Haiku를 지정했고, GPT low와 맞추려고 effort를 명시했다(Haiku 5.5 기본값은 medium).
+- Claude 프롬프트 캐싱은 system 블록에 `cache_control: ephemeral`을 명시 — OpenAI는 자동 접두 캐싱(입력의 약 98%가 캐시)이지만 Anthropic은 명시해야 한다. Haiku 5.5 최소 캐시 길이는 512토큰이고 분류표가 든 system 프롬프트는 그보다 길다.
+- Claude 토큰 기록에서 `input`은 캐시 읽기·쓰기를 포함한 입력 합계, `cached`는 캐시 읽기, `cache_write`는 따로 기록 — OpenAI의 `input`(캐시 포함 합계)과 같은 의미로 맞춰 비교하기 위해서다.
+- `stop_reason`이 `max_tokens`/`refusal`이면 RuntimeError — 잘린 JSON을 조용히 파싱하거나 대체하지 않는다는 프로젝트 원칙.
+- 키는 `wellcheck/.env`(= `config.OPENAI_ENV`)의 `ANTHROPIC_API_KEY`에서 읽는다 — 별도 env 파일을 만들지 않았다.
 
 ## Traps to Avoid
-
-- `eval/gold.json`은 `{rule_version, built_at, universes, questions}` dict다. `questions`를 꺼내지 않고 ID로 인덱싱하면 KeyError. 반면 `eval/questions.json`은 list(105건)다.
-- 평가 결과 레코드(`out/eval/*.jsonl`)에는 `max_seed_score`가 없다. 분포를 보려면 캐시만으로 `analyze → retrieve`를 재실행해야 한다(스크립트 `seed_scores.py` 참고, 아래 Relevant Files).
-- 캐시 전용 재실행은 `llm.embed(texts, api=raise_fn)`·`llm.complete(..., api=raise_fn)`로 한다. `llm.USAGE_LOG`의 `cached` 플래그로 외부 호출 0을 확인할 것. 캐시 키가 프롬프트 전체이므로 analyze/generate 프롬프트를 바꾸면 160건 전부 다시 과금된다.
-- 같은 이름의 Ingredient가 여러 ID를 가진다(인삼 3, 홍삼 2). 이름→ID 매핑을 1:1로 가정하는 코드는 오탐을 낸다.
-- `LifeStage` 7개는 관계가 0건, `Segment`는 10개(남·여 × 29세↓/30~39/40~49/50~64/65↑, 0~150세 전 구간 커버).
-- 관심사 추천은 **개인화가 아니라 구분 기본값**이다. 65세 이상 남성 샘플 5명이 모두 비타민 C·단백질·B1로 수렴했다. 답변 문구에서 이를 개인 맞춤처럼 말하면 안 된다.
-- 금기 필터가 실제로 결과를 바꾼다: EPA·DHA는 당뇨치료제·항응고제·혈압강하제 규칙에 차단(P-01·P-11·P-12·P-14·P-15), 비타민 K는 와파린 규칙에 차단(P-07, 원문 consult를 차단으로 상향). 대체 추천에서 금기 판정을 빼면 위반이 바로 생긴다.
-- `eval/run.py`의 `score()`는 `status == "no_evidence"`만 거절로 세고(`refuse` 종류), `summarize()`는 상태 목록이 하드코딩돼 있다. 새 상태 `fallback`을 넣으면 두 곳과 `answered` 판정(`citation_valid`, `safety_violation` 계산)에 모두 손대야 한다. 그러지 않으면 fallback 행이 어떤 집계에도 안 잡힌다.
-- Claude Docs 갱신: 글자 범위 타깃은 `{"kind":"chars","range":[start,end]}`(start/end 키 아님), 블록 통째 교체·삭제는 `ifHash`+`ifRev` 필요, `read`는 `container`와 payload kind(`view`/`search`) 필수. 문서 현재 rev 23(세션 종료 시점; 바뀌었을 수 있음).
-- 메모리 디렉터리(`~/.claude/projects/.../memory/`) 쓰기가 권한 설정으로 거부됐다. 메모리에 저장된 것은 없다.
-- `python3 scripts/load_graph.py --reset` 금지. `supplement-neo4j-dev`(7688)는 읽기만, `supplement-neo4j`(7687)는 접속 금지, 쓰기는 `supplement-neo4j-rag`(7689)만.
+- 위험 신호 결과를 일반화된 성능으로 보면 안 됨 — 홀드아웃의 주제가 새 응급 목록과 겹치고, 샘플의 위험 신호 주제도 옛 위험 그룹에서 나왔다. 목록 밖 응급 상황으로 만든 새 홀드아웃이 아직 없다.
+- 엔진에는 키워드 기반 위험 신호 규칙이 없다 — `build_context`는 LLM의 `red_flag`만 쓴다. 즉 LLM이 놓치면 걸러지지 않는다.
+- `sf1`(Claude)과 GPT 결과의 지연 시간 비교 — 실행 방식이 달라 무의미하다(Key Decisions 참고).
+- pytest 요약 줄이 안 보임 — `pytest.ini` addopts의 `-q`와 겹친다. `.venv/bin/python -m pytest -o addopts="" -q -p no:cacheprovider`로 실행.
+- Pyright가 `rxrag` import 미해결, `output_config`/`reasoning` dict 타입 불일치를 보고함 — 런타임과 무관한 오탐이다. SDK의 `OutputConfigParam`은 `{effort, format:{type:"json_schema", schema}}`로 확인했다.
+- `.env` 값 출력 금지 — 코드가 읽는 것은 괜찮지만 cat/echo로 보지 말 것.
 
 ## Working Agreements
-
-- 모든 답변은 한국어.
-- 구현은 TDD: 실패 테스트 작성 → 실패 확인 → 구현 → `.venv/bin/python -m pytest tests -q` 전체 통과. 가상환경은 `graphdb-rag/.venv`만.
-- 새 동작(기능)은 설계를 먼저 글로 보여 주고 사용자 승인 뒤 코드를 쓴다(brainstorming 게이트). 사용자는 "어떻게 동작하는지", "LLM이 Cypher를 짜는지" 같은 구조 설명을 원했다 — 변경을 제안할 때 동작 흐름을 함께 설명한다.
-- OpenAI 호출이 있는 실행은 `--dry-run`으로 건수·토큰을 먼저 보이고 범위를 말한 뒤 승인받는다. 160건 평가는 AskUserQuestion으로 승인받고 실행했다.
-- `../graphdb` 코드·규칙·CSV·테스트는 수정하지 않는다. 읽는 곳은 `wcrag/legacy.py` 한 파일.
-- `.env`, `.neo4j-dev.env`, `.neo4j-rag.env` 값은 읽지도 출력하지도 않는다.
-- 평가 결과를 본 뒤 정답(`eval/gold.json`)을 고치지 않는다. RC-03 "남편이 어제 쓰러짐"이 두 방식 모두 stopped인데 정답은 no_stop이어도 그대로 뒀다.
-- 개발·평가에는 가상 문항만 쓴다. 실제 환자 문장을 넣지 않는다.
-- 결과 정리를 엑셀로 원할 때 `~/Downloads/`에 저장한다(openpyxl, `.venv`에 있음).
-- 플랜 실행 중 내린 판단은 원장에 `Ruling: 무엇 — 왜 — 틀리면 비용` 형식으로 남기고, 최종 보고에 모은다.
-- 작업공간 `.superpowers/sdd/261107_general_graphrag_plan/`은 삭제하지 않기로 했다(git이 없어 원장이 유일한 기록).
+- 모든 답변은 한국어. 사람이 보는 출력은 ID가 아니라 한국어 이름.
+- 과금 API 실행은 사용자 승인 하에, 이번 Haiku 실행은 **사용자가 직접 돌린다**고 했다.
+- 새 기능·수정은 TDD. 결과마다 어떤 모델로 만들었는지 밝힌다.
+- 결과 엑셀은 `wellcheck/result/`에 저장.
+- `../graphdb` 수정 금지(import/read만). dev DB(7475) 읽기 전용, 7474/7687 접속 금지, 쓰기는 7689만.
+- `graphdb-rag/.venv`만 사용.
+- 커밋은 사용자가 요청할 때만. 형식 "English verb: 한글 요약" + `Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>`. 푸시는 safe-push 스킬로.
 
 ## Relevant Files
-
-- `wcrag/answer/ask.py:92-96`, `:113-115` — `no_evidence`가 나는 두 지점. 대체 추천이 들어갈 자리. `:98-110`은 `person` 생성과 금기 판정 흐름(대체 추천도 같은 `person`·`verdicts`를 써야 한다).
-- `wcrag/answer/safety_tool.py:26-47` — `merge_patient`(환자 정보 + 질문 단서 합치기), `verdicts`(`legacy.build_context` 결과에 `segment`가 들어 있다).
-- `wcrag/legacy.py:30-37` — 기존 엔진 `build_context`·`safety_check` 어댑터(읽기 전용).
-- `../graphdb/recommend/candidates.py:29-33`, `:71-74`, `:142-143` — `Q_INTEREST`, `interest` 생성기, GENERATORS 순서(관심사가 마지막). 대체 추천이 따라야 할 원본. **수정 금지.**
-- `../graphdb/recommend/normalize.py:42`, `:206-238` — `Q_SEGMENT`(sex·minAge·maxAge), `ctx["segment"]` 생성. `patient["sex"]`·`patient["age"]` 필수.
-- `../graphdb/recommend/engine.py:37-59` — `select()`: 금기 판정 → 차단/채택, N개 채우기, 묶음(group) 중복 처리. 대체 추천의 채택 규칙 참고.
-- `wcrag/retrieve/local.py:69-99` — 관계 문장 틀(`TEMPLATES`, `HAS_INTEREST`·`RECOMMENDS` 포함)과 `fact_id`. 대체 추천 근거 ID를 같은 체계로 만들 때 쓴다.
-- `wcrag/answer/guard.py:72-86` — 이번에 고친 `outside_context`(이름 단위 판정).
-- `wcrag/config.py:33-36` — `ENABLED_MODES`, `MIN_SCORE`와 미적용 근거 주석.
-- `eval/run.py:84-106`, `:190-205` — `score()`·`summarize()`. `fallback` 상태를 넣을 때 고쳐야 할 곳.
-- `eval/questions.json` — 가상 문항 105건(list). `patient`가 있는 14건(P-01~P-15, P-13 제외)이 대체 추천 샘플이다.
-- `tests/test_answer.py` — `test_same_name_with_several_ids_is_inside_if_any_id_is_in_context`가 이번 수정의 테스트. 대체 추천 테스트도 여기에 가짜 그래프·가짜 LLM으로 붙이는 게 자연스럽다.
-- `.superpowers/sdd/261107_general_graphrag_plan/progress.md` — 원장. 끝부분 "Task 7 Step 1~3"과 Ruling, Deferred minors 10건.
-- `261107_general_graphrag_plan.md` — 플랜. 2단계(Task 8~9 Text2Cypher, 게이트 G2)는 미착수.
-- `out/eval/p1-guardfix.xlsx` — 현재 기준 평가 결과(sheets rows/summary). `p1.xlsx`는 수정 전 원본.
-- `~/Downloads/관심사_추천_샘플_261108.xlsx` — 샘플 24명(평가 환자 14 + 구분별 기본 10)의 관심사 추천·차단 결과, 전체 경로 91건, Segment 10개.
-- `/private/tmp/claude-501/-Users-user-Documents-projects-wellcheck-graphdb-rag/af6a2786-330e-4fc0-ac46-0e90652ac140/scratchpad/interest_samples.py` — 위 엑셀을 만든 스크립트(세션 임시 폴더라 사라졌을 수 있음; `fallback()` 함수가 제안한 설계의 프로토타입이다). 같은 폴더 `seed_scores.py`는 MIN_SCORE 분포 재계산 스크립트.
-- 가이드 문서(Claude Docs): https://claude.ai/artifact/AZkz2iqkCc85sH7hAFnx2i — 「1단계 측정 결과 (2026-11-07)」 절까지 반영됨. 대체 추천 내용은 없음.
+- `rxrag/llm.py:L72-L160` — `OpenAILLM`, 새 `AnthropicLLM`(L105~), `anthropic_usage_of`(L142~). 캐시·구조화 출력·토큰 기록 방식.
+- `rxrag/llm.py:L163-L180` — `Meter`. 호출마다 지연과 토큰(`cache_write` 포함)을 남긴다.
+- `rxrag/normalize.py:L8-L26` — 정규화 SYSTEM 프롬프트와 새 응급 신호 목록.
+- `eval/normalize_eval.py:L87-L160` — `score`(병렬), `usage_summary`(`cache_write_tokens` 추가), CLI `--llm session|openai|anthropic`, `--effort`, `--workers`.
+- `tests/test_llm.py` 끝부분 — Anthropic 테스트 3개(차단, 캐시·스키마·토큰, 잘림·거절).
+- `tests/conftest.py:L12-L26` — 테스트 중 OpenAI·Anthropic 클라이언트 생성 차단.
+- `eval/complaint_sample.json` — 300건 샘플 형식 테스트셋(정상 270, 위험 30).
+- `eval/complaint_redflag_holdout.json` — 위험 신호 홀드아웃 45건(위험 30, 위험대조 15). 미커밋.
+- `out/eval/normalize-{sf1,sf1-gpt,sf1-gpt-med,sf2-gpt,rf-gpt-before,rf-gpt-after}.json` — 비교 결과. `sf1`만 커밋됨.
+- `/private/tmp/claude-501/-Users-user-Documents-projects-wellcheck-graphdb-rag/4ebcec4b-0c7f-4c38-877a-9818784f9134/scratchpad/sf_compare.py` — 모델 비교 엑셀 생성 스크립트(TAGS에 열 추가 방식). 세션 임시 폴더라 사라졌을 수 있다.
+- `/Users/user/Documents/projects/wellcheck/result/rxrag_normalize_sample_format_claude_vs_gpt.xlsx` — 현재 모델 비교 엑셀(4개 모델 열 + 홀드아웃 시트).
+- 가이드 문서: https://claude.ai/artifact/2QzTGSk1rDPaXPSDcfLumg — 진행 상황에 Haiku·코드 안전망 항목이 미체크로 있다.
 
 ## Open Work
-
-- 「결과 없으면 관심사 기준 대체 추천」은 설계 단계이며 코드가 없다. 합의된 것: LLM 없이 규칙, Segment→Interest→Ingredient, 금기 필터, 상위 3개, 새 상태 `fallback`, 나이·성별 필수. 미확정: `rejected`까지 대체 추천으로 채울지(내 제안은 제외). 사용자는 "이대로 TDD로 들어가도 될까요?"에 답하지 않은 채 핸드오프를 요청했다.
-- 대체 추천을 넣으면 `eval/run.py`의 채점·집계가 `fallback` 상태를 모르는 상태다. 답없음 유형 `refused_ok`의 정의(no_evidence만 / fallback 포함 / 고립 개체 인용 answered 포함)는 사용자 결정 사항으로 남아 있다.
-- Task 7 뒤 사용자가 정할 것 3가지가 미정이다: ① 답없음 local의 answered 4건(전부 고립 개체 인용 "연결된 근거 없음")을 거절로 셀지(세면 refused_ok 0.5→0.9), ② RC-03 "어제 쓰러짐" 오중단 — 위험 신호 기준을 넓게 둘지, ③ 사실 0.734 / 다중홉 0.606을 다음 단계 기준값으로 쓸지.
-- 환자상황 no_evidence 2건(P-03 스타틴 근육통, P-15 아스피린·고혈압 관절통)은 문맥이 있었는데 LLM이 답하지 못한 상태다. 원인은 보지 않았다. 대체 추천이 들어가면 이 둘은 fallback으로 바뀔 것으로 예상된다(샘플 엑셀에 결과 있음).
-- 2단계(Task 8~9 Text2Cypher, 게이트 G2)는 미착수이며 별도 지시가 필요하다.
-- 가이드 문서에 대체 추천·Text2Cypher 여부 설명이 없다(사용자가 이번에 물어본 내용).
-- 원장의 Deferred minors 10건은 그대로 남아 있다(예: `guard.compact` 소문자화 안 함, eval `default_ask()`가 드라이버를 안 닫음, 엑셀 recommended 열이 이름 아닌 ID).
+- Haiku API 실행은 아직 안 됐다. `.env`에 `ANTHROPIC_API_KEY`가 들어가면 사용자가 직접 실행한다:
+  - `.venv/bin/python -m eval.normalize_eval score --tag sf2-haiku --llm anthropic --testset eval/complaint_sample.json`
+  - `.venv/bin/python -m eval.normalize_eval score --tag rf-haiku --llm anthropic --testset eval/complaint_redflag_holdout.json`
+- 실제 API로 `AnthropicLLM`을 호출해 본 적은 없다(목 객체 테스트만). 첫 실행에서 스키마 제약(예: `enum`, `additionalProperties`)이나 effort 파라미터가 거부될 가능성이 남아 있다. 캐시 적중은 결과 json의 `usage.cached_tokens`/`cache_write_tokens`로 확인 가능하다.
+- Haiku 결과가 나오면 모델 비교 표·엑셀·가이드 문서에 Haiku 열을 추가하는 작업이 남아 있다.
+- 미커밋 변경: 정규화 프롬프트 수정, `--llm/--workers/--effort` 옵션, thread-local usage, `AnthropicLLM`, `requirements.txt`의 `anthropic==2.6.0`, GPT 결과 파일들, 홀드아웃 세트, 핸드오프 파일 정리(`handoff.md` → `handoff_2026-11-09_5차.md` 이름 변경 후 새 `handoff.md`).
+- 제안만 되고 확정되지 않은 것: 위험 신호 코드 키워드 안전망, 목록 밖 응급 상황 신규 홀드아웃, 수정 프롬프트로 Claude 재응답, PR/병합 결정.
 
 ## Prompt for New Chat
-
 ```
-건기식 GraphRAG 질의응답(wellcheck/graphdb-rag). 플랜 261107_general_graphrag_plan.md의 1단계(Task 0~7)는 끝났고 게이트 G1을 통과했다(평가 결과 out/eval/p1-guardfix.xlsx, 원장 .superpowers/sdd/261107_general_graphrag_plan/progress.md). 모든 답변은 한국어.
+건강기능식품 GraphRAG(rxrag, /Users/user/Documents/projects/wellcheck/graphdb-rag, 브랜치 feature/rxrag).
+환자 JSON → 주호소 정규화(LLM) → 그래프 후보 → 금지 검사 → LLM 선택 → 성분 3개 추천.
 
-현재 상태: 「검색 결과가 없으면 나이·성별(필수 입력) → Segment → 관심사 → 성분으로 대체 추천」을 설계만 합의하고 코드는 없다. 합의안은 handoff.md Key Decisions에 있다(LLM 없이 규칙, 기존 엔진 recommend/candidates.py의 interest 생성기와 같은 쿼리·금기 필터, 상위 3개, 새 status "fallback", 발동은 ask.py의 no_evidence 두 지점). rejected까지 채울지는 미확정. 샘플 결과는 ~/Downloads/관심사_추천_샘플_261108.xlsx.
+현재 상태: 주호소 정규화를 GPT-6-Luna로 300건 평가했고 위험 신호 프롬프트를 고쳤다(미커밋).
+Claude Haiku API 클라이언트(AnthropicLLM, --llm anthropic)를 추가했지만 실제 API로는 아직 안 돌렸다.
+사용자가 .env에 ANTHROPIC_API_KEY를 넣고 직접 sf2-haiku / rf-haiku를 실행할 예정이다.
+결과가 나오면 모델 비교 엑셀·가이드 문서에 Haiku 열을 추가하는 단계다.
 
 관련 파일:
-- handoff.md
-- wcrag/answer/ask.py:92-115
-- wcrag/answer/safety_tool.py:26-47
-- wcrag/legacy.py:30-37
-- ../graphdb/recommend/candidates.py:29-33, 71-74, 142-143 (읽기만, 수정 금지)
-- ../graphdb/recommend/normalize.py:42, 206-238 (읽기만)
-- ../graphdb/recommend/engine.py:37-59 (읽기만)
-- wcrag/retrieve/local.py:69-99
-- eval/run.py:84-106, 190-205
-- tests/test_answer.py
-- .superpowers/sdd/261107_general_graphrag_plan/progress.md (끝부분 Task 7)
-
-제약: ../graphdb 수정 금지, supplement-neo4j-dev(7688)는 읽기만·supplement-neo4j(7687)는 접속 금지·쓰기는 supplement-neo4j-rag(7689)만, .env 류 값 출력 금지, 가상환경은 graphdb-rag/.venv만, OpenAI 호출은 --dry-run 뒤 승인받고 실행, 구현은 실패 테스트 먼저(TDD), 평가 뒤 정답(eval/gold.json) 수정 금지.
+- handoff.md (이 문서), handoff_2026-11-09_5차.md
+- rxrag/llm.py:L72-L180
+- rxrag/normalize.py:L8-L26
+- eval/normalize_eval.py:L87-L160
+- tests/test_llm.py, tests/conftest.py
+- eval/complaint_sample.json, eval/complaint_redflag_holdout.json
+- out/eval/normalize-*.json
 
 나열된 파일을 Read 도구로 직접 읽어서 이 문서의 주장을 코드와 대조해 검증해.
 요약본이라고 주장하거나 기억에서 답하지 말고, 실제 파일을 확인한 뒤 내 지시를 기다려.
