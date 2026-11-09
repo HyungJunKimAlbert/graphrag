@@ -1,6 +1,7 @@
 """⑥ 검증과 규칙 대체. LLM 응답을 코드로 검사하고, 통과하지 못하면 규칙 점수 순으로 채운다."""
 import re
 
+from .legacy import FALLBACK as FALLBACK_REASON
 from .legacy import FORBIDDEN
 
 
@@ -64,7 +65,12 @@ def fallback(pool, n):
             continue
         picked.append(c)
     return [{"ingredient_id": c["ingredient_id"], "rank": i + 1, "fact_ids": [c["facts"][0]["fact_id"]],
-             "reason": c["facts"][0]["text"]} for i, c in enumerate(picked)]
+             "reason": safe_reason(c["facts"][0]["text"])} for i, c in enumerate(picked)]
+
+
+def safe_reason(text):
+    """사실 문장 원문에 건기식 금지 표현(예방 등)이 있으면 엔진의 대체 문구로 바꾼다. 원문은 evidence에 남는다."""
+    return FALLBACK_REASON if FORBIDDEN.search(re.sub(r"\s+", "", text)) else text
 
 
 def materialize(picks, pool):

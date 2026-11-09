@@ -14,7 +14,7 @@ from recommend import normalize as _normalize  # noqa: E402
 from recommend import safety as _safety  # noqa: E402
 from recommend.candidates import GENERATORS, fold_groups  # noqa: E402
 from recommend.engine import INCOMPLETE  # noqa: E402
-from recommend.llm import FORBIDDEN  # noqa: E402
+from recommend.llm import FALLBACK, FORBIDDEN  # noqa: E402
 
 SEX_VALUES = _normalize.SEX_VALUES
 SEX_KEYS = _normalize.SEX_KEYS
@@ -38,4 +38,4 @@ def rule_version(db):
 
 
 __all__ = ["Neo4j", "GENERATORS", "INCOMPLETE", "FORBIDDEN", "SEX_VALUES", "SEX_KEYS", "PREGNANCY_UNKNOWN",
-           "build_context", "safety_check", "engine_recommend", "rule_version", "fold_groups"]
+           "FALLBACK", "build_context", "safety_check", "engine_recommend", "rule_version", "fold_groups"]

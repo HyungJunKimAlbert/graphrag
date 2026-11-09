@@ -57,10 +57,12 @@ def recommend(patient, client, db=None, n=config.N, policy=config.CAUTION_POLICY
     trace.update(candidate_count=len(pool), kept_count=len(kept))
     warnings = warnings_for(ctx)
 
-    if len(capped) < n:
-        picks = {"picks": verify.fallback(capped, len(capped))}
-        return contract.result("partial", verify.materialize(picks, capped), excluded, warnings, "fallback_rules", trace,
-                               f"추천 가능한 성분이 {len(capped)}개뿐입니다. 억지로 채우지 않았습니다.")
+    # 후보 수가 아니라 서로 겹치지 않게(이름·묶음) 고를 수 있는 수로 판단한다. 겹치는 후보뿐이면 LLM은 검증을 통과할 수 없다
+    distinct = verify.fallback(capped, n)
+    if len(distinct) < n:
+        return contract.result("partial", verify.materialize({"picks": distinct}, capped), excluded, warnings,
+                               "fallback_rules", trace,
+                               f"추천 가능한 성분이 {len(distinct)}개뿐입니다. 억지로 채우지 않았습니다.")
 
     excluded_ids = {e["ingredient_id"] for e in excluded}
     picks, selector = choose(client, ctx, normalized, capped, excluded_ids, n, clean.get("conditions") or [])

@@ -122,3 +122,16 @@ def test_pregnancy_unknown_warning():
 def test_missing_session_response_raises(tmp_path, patient_80m):
     with pytest.raises(MissingResponse):
         recommend(patient_80m, SessionLLM(tmp_path, mode="run"))
+
+
+@pytest.mark.graph
+def test_partial_when_candidates_clash(patient_80m, monkeypatch):
+    """후보가 3개 이상이어도 묶음·구성 성분처럼 서로 겹치면 3개를 못 채운다 → LLM을 부르지 않고 partial."""
+    real_pool = candidates.pool
+    names = ("비타민 B군", "비타민 B12", "엽산")
+    monkeypatch.setattr(rec.candidates, "pool", lambda db, ctx: [c for c in real_pool(db, ctx) if c["name"] in names])
+    f = smart()
+    r = recommend(patient_80m, f)
+    assert r["status"] == "partial" and select_calls(f) == []
+    assert r["message"] == f"추천 가능한 성분이 {len(r['recommendations'])}개뿐입니다. 억지로 채우지 않았습니다."
+    assert len(r["recommendations"]) < 3

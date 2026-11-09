@@ -93,3 +93,12 @@ def test_materialize_shape_and_order():
     assert [r["ingredient_id"] for r in out] == ["A", "B", "C"]
     assert list(out[0]) == ["rank", "ingredient_id", "name", "reason", "evidence", "cautions"]
     assert out[0]["evidence"][0]["fact_id"] == "SYM_DIRECT:S>A" and out[0]["cautions"] == [{"by": "x", "text": "y"}]
+
+
+def test_fallback_reason_never_forbidden():
+    """사실 문장 원문에 '예방' 같은 금지 표현이 있으면 reason으로 그대로 내보내지 않는다(근거는 evidence에 남는다)."""
+    c = cand("A", "비오틴", 0)
+    c["facts"][0]["text"] = "탈모 → 비오틴 (탈모 예방과 모발 건강에 도움)"
+    out = verify.fallback([c, cand("B", "비타민 B12", 1), cand("C", "홍경천 추출물", 2)], 3)
+    assert verify.check({"picks": out}, [c, cand("B", "비타민 B12", 1), cand("C", "홍경천 추출물", 2)], set(), 3) == []
+    assert "예방" not in out[0]["reason"] and out[0]["fact_ids"] == ["SYM_DIRECT:S>A"]
