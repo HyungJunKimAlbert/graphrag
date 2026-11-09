@@ -24,18 +24,19 @@ def warnings_for(ctx):
 
 
 def choose(client, ctx, normalized, pool, excluded_ids, n, conditions):
-    """LLM 선택 → 검증 → 1회 재시도 → 규칙 대체. (picks, selector)"""
+    """LLM 선택 → 검증 → 1회 재시도 → 규칙 대체. (picks, selector, attempts)
+    attempts에는 시도마다 LLM 원응답과 검증 오류를 남긴다(왜 거부·통과됐는지 추적용)."""
     system, user = select.prompt(ctx, normalized, pool, n, conditions)
     schema = select.schema(pool, n)
-    picks = client.complete_json(select.TASK, system, user, schema)
-    errors = verify.check(picks, pool, excluded_ids, n)
-    if errors:
-        retry_user = user + "\n\n이전 응답의 문제: " + " / ".join(errors)
-        picks = client.complete_json(select.TASK, system, retry_user, schema)
+    attempts = []
+    for attempt in (1, 2):
+        prompt_user = user if attempt == 1 else user + "\n\n이전 응답의 문제: " + " / ".join(attempts[-1]["errors"])
+        picks = client.complete_json(select.TASK, system, prompt_user, schema)
         errors = verify.check(picks, pool, excluded_ids, n)
-    if errors:
-        return {"picks": verify.fallback(pool, n)}, "fallback_rules"
-    return picks, "llm"
+        attempts.append({"attempt": attempt, "picks": picks, "errors": errors})
+        if not errors:
+            return picks, "llm", attempts
+    return {"picks": verify.fallback(pool, n)}, "fallback_rules", attempts
 
 
 def recommend(patient, client, db=None, n=config.N, policy=config.CAUTION_POLICY):
@@ -65,6 +66,7 @@ def recommend(patient, client, db=None, n=config.N, policy=config.CAUTION_POLICY
                                f"추천 가능한 성분이 {len(distinct)}개뿐입니다. 억지로 채우지 않았습니다.")
 
     excluded_ids = {e["ingredient_id"] for e in excluded}
-    picks, selector = choose(client, ctx, normalized, capped, excluded_ids, n, clean.get("conditions") or [])
+    picks, selector, attempts = choose(client, ctx, normalized, capped, excluded_ids, n, clean.get("conditions") or [])
+    trace["selection"] = attempts
     status = "needs_review" if warnings else "ok"
     return contract.result(status, verify.materialize(picks, capped), excluded, warnings, selector, trace)

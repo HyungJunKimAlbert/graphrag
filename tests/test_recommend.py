@@ -135,3 +135,20 @@ def test_partial_when_candidates_clash(patient_80m, monkeypatch):
     assert r["status"] == "partial" and select_calls(f) == []
     assert r["message"] == f"추천 가능한 성분이 {len(r['recommendations'])}개뿐입니다. 억지로 채우지 않았습니다."
     assert len(r["recommendations"]) < 3
+
+
+@pytest.mark.graph
+def test_trace_records_each_selection_attempt(patient_80m):
+    """LLM이 시도마다 무엇을 골랐고 왜 거부·통과됐는지 trace에 남긴다."""
+    r = recommend(patient_80m, smart(bad_first=2))
+    attempts = r["trace"]["selection"]
+    assert [a["attempt"] for a in attempts] == [1, 2] and all(a["errors"] for a in attempts)
+    assert attempts[0]["picks"]["picks"][0]["ingredient_id"] == "NOT-IN-POOL"
+    assert any("후보 목록에 없는" in e for e in attempts[0]["errors"])
+
+
+@pytest.mark.graph
+def test_trace_selection_on_success(patient_80m):
+    r = recommend(patient_80m, smart())
+    (only,) = r["trace"]["selection"]
+    assert only["attempt"] == 1 and only["errors"] == [] and len(only["picks"]["picks"]) == 3
