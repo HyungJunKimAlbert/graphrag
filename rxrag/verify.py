@@ -39,19 +39,19 @@ def check(picks, pool, excluded_ids, n):
         c = by_id[iid]
         for other in chosen:
             if other["ingredient_id"] == iid:
-                errors.append(f"{iid}를 두 번 골랐습니다.")
+                errors.append(f"{c['name']}를 두 번 골랐습니다.")
             elif _clash(c, other):
-                errors.append(f"{iid}({c['name']})와 {other['ingredient_id']}({other['name']})는 같은 성분이거나 묶음과 구성 성분입니다.")
+                errors.append(f"{c['name']}와 {other['name']}는 같은 성분이거나 묶음과 구성 성분입니다.")
         chosen.append(c)
         fact_ids = p.get("fact_ids") or []
         if not fact_ids:
-            errors.append(f"{iid}의 fact_ids가 비었습니다.")
+            errors.append(f"{c['name']}의 fact_ids가 비었습니다.")
         own = {f["fact_id"] for f in c["facts"]}
         foreign = [f for f in fact_ids if f not in own]
         if foreign:
-            errors.append(f"{iid}의 근거 목록에 없는 fact_id: {', '.join(map(str, foreign))}")
+            errors.append(f"{c['name']}의 근거 목록에 없는 fact_id: {', '.join(map(str, foreign))}")
         if FORBIDDEN.search(re.sub(r"\s+", "", str(p.get("reason", "")))):
-            errors.append(f"{iid}의 reason에 건강기능식품에 쓸 수 없는 표현이 있습니다.")
+            errors.append(f"{c['name']}의 reason에 건강기능식품에 쓸 수 없는 표현이 있습니다.")
     return errors
 
 

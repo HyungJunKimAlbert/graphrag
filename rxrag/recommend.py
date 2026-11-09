@@ -23,6 +23,16 @@ def warnings_for(ctx):
     return out
 
 
+def named(picks, pool):
+    """trace용: LLM 원응답의 각 선택에 성분 이름을 붙인다. 후보 밖 ID는 '후보 밖 성분'."""
+    names = {c["ingredient_id"]: c["name"] for c in pool}
+    items = picks.get("picks") if isinstance(picks, dict) else None
+    if not isinstance(items, list):
+        return [{"raw": picks}]
+    return [{**p, "name": names.get(p.get("ingredient_id"), "후보 밖 성분")} if isinstance(p, dict) else {"raw": p}
+            for p in items]
+
+
 def choose(client, ctx, normalized, pool, excluded_ids, n, conditions):
     """LLM 선택 → 검증 → 1회 재시도 → 규칙 대체. (picks, selector, attempts)
     attempts에는 시도마다 LLM 원응답과 검증 오류를 남긴다(왜 거부·통과됐는지 추적용)."""
@@ -33,7 +43,7 @@ def choose(client, ctx, normalized, pool, excluded_ids, n, conditions):
         prompt_user = user if attempt == 1 else user + "\n\n이전 응답의 문제: " + " / ".join(attempts[-1]["errors"])
         picks = client.complete_json(select.TASK, system, prompt_user, schema)
         errors = verify.check(picks, pool, excluded_ids, n)
-        attempts.append({"attempt": attempt, "picks": picks, "errors": errors})
+        attempts.append({"attempt": attempt, "picks": named(picks, pool), "errors": errors})
         if not errors:
             return picks, "llm", attempts
     return {"picks": verify.fallback(pool, n)}, "fallback_rules", attempts

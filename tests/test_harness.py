@@ -110,3 +110,27 @@ def test_judge_text_hides_system_tells():
     (_, user), = harness.judge_requests(patients, [{"id": "X", "result": new}], [{"id": "X", "engine": old}])
     assert "LLM이 쓴 이유 문장" not in user and "1-1 증상 직접 근거" not in user
     assert "테아닌" in user and "마그네슘" in user and "새벽 각성 → 근거" in user and "근육통 → 근거" in user
+
+
+def test_xlsx_selection_sheet_readable_without_engine(tmp_path):
+    """GPT 실행(g3)처럼 엔진·채점 결과가 없어도 엑셀을 만들고, 선택 과정은 성분 이름과 한글 사유로 보여 준다."""
+    from openpyxl import load_workbook
+    result = {"status": "ok", "message": None, "excluded": [], "warnings": [], "selector": "llm",
+              "recommendations": [{"rank": 1, "ingredient_id": "NUT-1", "name": "비타민 B12", "reason": "이유",
+                                   "evidence": [{"fact_id": "DRUG_DEPLETE:D>NUT-1", "kind": "DRUG_DEPLETE",
+                                                 "label": "복용약 고갈", "text": "메트포르민 복용 → 비타민 B12 고갈",
+                                                 "source": None}], "cautions": []}],
+              "trace": {"selection": [
+                  {"attempt": 1, "errors": ["비타민 B12의 근거 목록에 없는 fact_id: X"],
+                   "picks": [{"ingredient_id": "NUT-1", "name": "비타민 B12", "rank": 1, "fact_ids": ["X"], "reason": "r1"}]},
+                  {"attempt": 2, "errors": [],
+                   "picks": [{"ingredient_id": "NUT-1", "name": "비타민 B12", "rank": 1, "fact_ids": ["DRUG_DEPLETE:D>NUT-1"], "reason": "r2"}]}]}}
+    patients = [{"id": "X", "group": "g", "note": "", "patient": {"age": 60, "sex": "M"}}]
+    path = tmp_path / "x.xlsx"
+    harness.xlsx(path, patients, [{"id": "X", "result": result}], [], [], [])
+    wb = load_workbook(path)
+    rows = [[c for c in r] for r in wb["선택 과정"].iter_rows(values_only=True)]
+    text = " ".join(str(c) for r in rows for c in r)
+    assert "비타민 B12" in text and "근거 목록에 없는" in text and "통과" in text and "NUT-1" not in text
+    full = " ".join(str(c) for r in wb["전체"].iter_rows(values_only=True) for c in r)
+    assert "[복용약 고갈]" in full and "이유" in full

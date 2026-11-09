@@ -8,7 +8,10 @@ UNRANKED = 999  # recommend/candidates.py UNRANKED
 # kind → 엔진 단계 순번(tier_rank)
 KINDS = {"SYM_DIRECT": 0, "DRUG_SYM_DEPLETE": 1, "CAT_FUNC": 2, "RULE_EXAM": 3, "RULE_COND": 4, "DRUG_DEPLETE": 5,
          "RULE_BORDER": 6, "INTEREST": 7}
-DATA_KINDS = {"RULE_EXAM", "RULE_COND", "RULE_BORDER", "DRUG_DEPLETE"}  # 엔진 data_signals 출신. 묶음 접기 대상
+KIND_LABELS = {"SYM_DIRECT": "증상 직접 근거", "DRUG_SYM_DEPLETE": "복용약 고갈+증상", "CAT_FUNC": "증상 분류 기능성",
+               "RULE_EXAM": "검진 규칙", "RULE_COND": "질환 규칙", "DRUG_DEPLETE": "복용약 고갈",
+               "RULE_BORDER": "경계 수치", "INTEREST": "성별·연령 관심사"}
+DATA_KINDS ={"RULE_EXAM", "RULE_COND", "RULE_BORDER", "DRUG_DEPLETE"}  # 엔진 data_signals 출신. 묶음 접기 대상
 
 # from recommend/candidates.py Q_EXPAND
 Q_EXPAND = """MATCH (s:Symptom) WHERE s.symptom_id IN $ids
@@ -91,7 +94,8 @@ def paths(db, ctx):
 
 
 def fact(kind, row):
-    return {"fact_id": f"{kind}:{'>'.join(row[3])}", "kind": kind, "text": row[4], "source": row[5]}
+    return {"fact_id": f"{kind}:{'>'.join(row[3])}", "kind": kind, "label": KIND_LABELS[kind], "text": row[4],
+            "source": row[5]}
 
 
 def collect(rows):

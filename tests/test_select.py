@@ -58,3 +58,25 @@ def test_summary_no_exact_age():
 
 def test_summary_conditions():
     assert "당뇨" in select.patient_summary(CTX, NORM, conditions=["당뇨"])
+
+
+def test_table_wraps_fact_ids_in_brackets():
+    """fact_id에도 콜론이 있어 'fact_id: 문장' 형식이면 GPT가 종류 접두어를 잘라냈다(g3 V-06·V-09·V-15)."""
+    _, u = select.prompt(CTX, NORM, POOL)
+    assert "[SYM_DIRECT:S1>A]" in u and "[DRUG_DEPLETE:D>B]" in u
+
+
+def test_table_shows_korean_kind_label():
+    _, u = select.prompt(CTX, NORM, POOL)
+    assert "증상 직접 근거" in u and "복용약 고갈" in u
+
+
+def test_schema_fact_ids_limited_to_pool_facts():
+    item = select.schema(POOL, 3)["properties"]["picks"]["items"]["properties"]["fact_ids"]["items"]
+    assert item["enum"] == [f["fact_id"] for c in POOL for f in c["facts"]]
+
+
+def test_system_lists_forbidden_words():
+    """근거 문장의 '예방'을 이유에 옮겨 써서 거부됐다(g3 V-26)."""
+    s, _ = select.prompt(CTX, NORM, POOL)
+    assert all(w in s for w in ("예방", "치료", "개선됩니다")) and "옮겨" in s

@@ -18,6 +18,7 @@ OUT = ROOT / "out" / "eval"
 RESULT_KEYS = ["status", "message", "recommendations", "excluded", "warnings", "selector", "trace"]
 JUDGE_TASK = "judge"
 PASS_RATIO = 0.8
+SELECTOR = {"llm": "LLM 선택", "fallback_rules": "규칙 순서 대체"}
 
 JUDGE_SYSTEM = """당신은 약사입니다. 같은 환자에게 두 시스템(A, B)이 고른 영양성분 3개를 비교해 어느 쪽이 나은지 채점합니다.
 어느 쪽이 어떤 시스템인지는 알려 주지 않습니다. 순서나 문장 길이에 끌리지 말고 내용으로만 판단합니다.
@@ -254,19 +255,34 @@ def xlsx(path, patients, results, engine_rows, problems, verdicts):
         return ", ".join(x["name"] for x in r["recommendations"]) if r else ""
 
     def evidence(r):
-        return "\n".join(f"{x['name']}: " + " / ".join(e["text"] for e in x["evidence"]) for x in r["recommendations"])
+        return "\n".join(f"{x['name']}: " + " / ".join(f"[{e.get('label', e['kind'])}] {e['text']}" for e in x["evidence"])
+                         for x in r["recommendations"])
 
-    header = ("환자", "그룹", "메모", "환자 요약", "상태", "엔진 3개", "새 3개", "새 근거", "판정", "채점 이유")
+    def reasons(r):
+        return "\n".join(f"{x['rank']}. {x['name']}: {x['reason']}" for x in r["recommendations"])
+
+    header = ("환자", "그룹", "메모", "환자 요약", "상태", "선택 방식", "엔진 3개", "새 3개", "추천 이유", "새 근거",
+              "판정", "채점 이유")
     diff, full = wb.create_sheet("불일치"), wb.create_sheet("전체")
     diff.append(header)
     full.append(header)
     for p in patients:
         new, old, v = by_res[p["id"]], by_eng.get(p["id"]), by_ver.get(p["id"])
-        row = (p["id"], p["group"], p["note"], describe_patient(p["patient"]), new["status"], names(old), names(new),
-               evidence(new), v["new_side_result"] if v else "", v["verdict"]["why"] if v else "")
+        row = (p["id"], p["group"], p["note"], describe_patient(p["patient"]), new["status"], SELECTOR.get(new["selector"], ""),
+               names(old), names(new), reasons(new), evidence(new), v["new_side_result"] if v else "",
+               v["verdict"]["why"] if v else "")
         full.append(row)
         if old is not None and not same_set(new, old):
             diff.append(row)
+
+    steps = wb.create_sheet("선택 과정")  # LLM이 시도마다 무엇을 골랐고 왜 거부·통과됐는지. ID 대신 성분 이름
+    steps.append(("환자", "시도", "고른 성분", "결과", "LLM 이유"))
+    for p in patients:
+        for a in by_res[p["id"]]["trace"].get("selection", []):
+            picked = [x for x in a["picks"] if "name" in x]
+            steps.append((p["id"], a["attempt"], ", ".join(f"{x.get('rank')}. {x['name']}" for x in picked),
+                          "통과" if not a["errors"] else "거부: " + " / ".join(a["errors"]),
+                          "\n".join(f"{x['name']}: {x.get('reason', '')}" for x in picked)))
     Path(path).parent.mkdir(parents=True, exist_ok=True)
     wb.save(path)
 

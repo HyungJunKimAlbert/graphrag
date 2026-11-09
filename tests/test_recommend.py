@@ -6,7 +6,7 @@ from rxrag import candidates, recommend as rec
 from rxrag.llm import FakeLLM, MissingResponse, SessionLLM
 from rxrag.recommend import recommend
 
-FACT = re.compile(r"\b(?:" + "|".join(candidates.KINDS) + r"):[^\s:|/]+")
+FACT = re.compile(r"\b(?:" + "|".join(candidates.KINDS) + r"):[^\s:|/\]]+")
 NO_FLAG = {"matches": [], "unmatched": [], "red_flag": False, "red_flag_reason": ""}
 
 
@@ -143,7 +143,7 @@ def test_trace_records_each_selection_attempt(patient_80m):
     r = recommend(patient_80m, smart(bad_first=2))
     attempts = r["trace"]["selection"]
     assert [a["attempt"] for a in attempts] == [1, 2] and all(a["errors"] for a in attempts)
-    assert attempts[0]["picks"]["picks"][0]["ingredient_id"] == "NOT-IN-POOL"
+    assert attempts[0]["picks"][0]["ingredient_id"] == "NOT-IN-POOL" and attempts[0]["picks"][0]["name"] == "후보 밖 성분"
     assert any("후보 목록에 없는" in e for e in attempts[0]["errors"])
 
 
@@ -151,4 +151,5 @@ def test_trace_records_each_selection_attempt(patient_80m):
 def test_trace_selection_on_success(patient_80m):
     r = recommend(patient_80m, smart())
     (only,) = r["trace"]["selection"]
-    assert only["attempt"] == 1 and only["errors"] == [] and len(only["picks"]["picks"]) == 3
+    assert only["attempt"] == 1 and only["errors"] == [] and len(only["picks"]) == 3
+    assert all(p["name"] for p in only["picks"])

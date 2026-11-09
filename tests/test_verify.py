@@ -102,3 +102,8 @@ def test_fallback_reason_never_forbidden():
     out = verify.fallback([c, cand("B", "비타민 B12", 1), cand("C", "홍경천 추출물", 2)], 3)
     assert verify.check({"picks": out}, [c, cand("B", "비타민 B12", 1), cand("C", "홍경천 추출물", 2)], set(), 3) == []
     assert "예방" not in out[0]["reason"] and out[0]["fact_ids"] == ["SYM_DIRECT:S>A"]
+
+
+def test_errors_name_ingredients_in_korean():
+    errors = verify.check(picks(pick("A", 1, facts=["SYM_DIRECT:S>B"]), pick("B", 2), pick("C", 3)), POOL, set(), 3)
+    assert errors and "테아닌" in errors[0]

@@ -57,3 +57,9 @@ def test_rank_key_orders_tier_then_priority_then_fact_count():
     ])
     assert [c["ingredient_id"] for c in pool] == ["D", "C", "A", "B"]
     assert [c["rule_rank"] for c in pool] == [0, 1, 2, 3]
+
+
+def test_fact_has_korean_kind_label():
+    row = ["I", "이름", "nutrient", ["D", "I"], "메트포르민 복용 → 이름 고갈", None, 0]
+    f = candidates.fact("DRUG_DEPLETE", row)
+    assert f["label"] == "복용약 고갈" and set(candidates.KIND_LABELS) == set(KINDS)
