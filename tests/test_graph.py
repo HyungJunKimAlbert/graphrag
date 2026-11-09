@@ -60,3 +60,12 @@ def test_legacy_imports():
     assert len(legacy.GENERATORS) == 8 and callable(legacy.safety_check)
     assert callable(legacy.build_context) and callable(legacy.engine_recommend)
     assert legacy.INCOMPLETE and legacy.FORBIDDEN.search("당뇨를치료합니다")
+
+
+def test_legacy_path_does_not_shadow_our_packages():
+    """엔진 경로가 우리 루트보다 앞에 있으면 tests·eval 같은 같은 이름 패키지가 엔진 쪽으로 가려진다."""
+    import sys
+    from pathlib import Path
+    from rxrag.config import GRAPHDB, ROOT
+    paths = [str(Path(p or ".").resolve()) for p in sys.path]
+    assert paths.index(str(ROOT)) < paths.index(str(GRAPHDB))

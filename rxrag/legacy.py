@@ -3,9 +3,10 @@ import sys
 
 from .config import GRAPHDB, WELLCHECK
 
+# 맨 뒤에 붙인다. 앞에 넣으면 엔진의 tests 등이 우리 패키지를 가린다(우리 쪽에는 recommend·load_supplement_graph가 없다)
 for _p in (str(WELLCHECK / "scripts"), str(GRAPHDB)):
     if _p not in sys.path:
-        sys.path.insert(0, _p)
+        sys.path.append(_p)
 
 from load_supplement_graph import Neo4j  # noqa: E402
 from recommend import engine as _engine  # noqa: E402
