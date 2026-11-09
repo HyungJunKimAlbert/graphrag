@@ -1,0 +1,883 @@
+{
+ "name": "기존 테스트셋의 위험·위험대조 45건(홀드아웃 확인용)",
+ "status": "Claude 초안. 약사 검토 전. 결과를 본 뒤 정답을 고치지 않는다",
+ "created": "2026-11-06",
+ "equivalents": {
+  "만성피로": [
+   "피로감"
+  ],
+  "불면증": [
+   "수면장애"
+  ],
+  "불안": [
+   "불안증"
+  ],
+  "신경과민": [
+   "신경이 예민함",
+   "민감성",
+   "예민함"
+  ],
+  "스트레스": [
+   "스트레스가 많음"
+  ],
+  "시력 저하": [
+   "시력감소",
+   "시력이 약해짐"
+  ],
+  "시야 흐림": [
+   "흐릿한 시야"
+  ],
+  "눈 피로감": [
+   "눈 피로"
+  ],
+  "어지러움": [
+   "현기증"
+  ],
+  "공복 현기증": [
+   "공복 어지러움"
+  ],
+  "가슴통증": [
+   "흉통"
+  ],
+  "호흡곤란": [
+   "숨가쁨",
+   "숨참"
+  ],
+  "잦은 배뇨": [
+   "빈뇨",
+   "다뇨"
+  ],
+  "변비": [
+   "만성변비"
+  ],
+  "속쓰림": [
+   "가슴쓰림"
+  ],
+  "복부 팽만감": [
+   "가스 관련 불편"
+  ],
+  "기억력 감소": [
+   "기억력"
+  ],
+  "부종": [
+   "발목 부종/부종"
+  ],
+  "피부 건조함": [
+   "피부건조"
+  ],
+  "피부발진": [
+   "발진"
+  ],
+  "어깨통증": [
+   "어깨"
+  ],
+  "복부 지방 증가": [
+   "체지방 증가"
+  ],
+  "우울증": [
+   "기분 저하"
+  ],
+  "구강통증": [
+   "구내염"
+  ]
+ },
+ "cases": [
+  {
+   "id": "위험-001",
+   "group": "위험",
+   "level": "신규",
+   "utterance": "가슴 쥐어짜는 통증, 식은땀",
+   "profile": "",
+   "required": [
+    [
+     "가슴통증"
+    ]
+   ],
+   "forbid": [],
+   "route": "",
+   "red_flag": true,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험-002",
+   "group": "위험",
+   "level": "신규",
+   "utterance": "왼팔 저리고 가슴 답답함",
+   "profile": "",
+   "required": [
+    [
+     "가슴통증",
+     "압박감"
+    ]
+   ],
+   "forbid": [],
+   "route": "",
+   "red_flag": true,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험-003",
+   "group": "위험",
+   "level": "신규",
+   "utterance": "갑자기 말이 어눌해짐",
+   "profile": "",
+   "required": [],
+   "forbid": [],
+   "route": "",
+   "red_flag": true,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험-004",
+   "group": "위험",
+   "level": "신규",
+   "utterance": "오른쪽 팔다리 힘 빠짐, 오늘 아침부터",
+   "profile": "",
+   "required": [],
+   "forbid": [],
+   "route": "",
+   "red_flag": true,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험-005",
+   "group": "위험",
+   "level": "신규",
+   "utterance": "자다가 숨 막혀서 깸",
+   "profile": "",
+   "required": [
+    [
+     "호흡곤란"
+    ]
+   ],
+   "forbid": [],
+   "route": "",
+   "red_flag": true,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험-006",
+   "group": "위험",
+   "level": "신규",
+   "utterance": "검은 변 3일째",
+   "profile": "",
+   "required": [],
+   "forbid": [],
+   "route": "",
+   "red_flag": true,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험-007",
+   "group": "위험",
+   "level": "신규",
+   "utterance": "토할 때 피 섞임",
+   "profile": "",
+   "required": [],
+   "forbid": [],
+   "route": "",
+   "red_flag": true,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험-008",
+   "group": "위험",
+   "level": "신규",
+   "utterance": "소변에 피",
+   "profile": "",
+   "required": [],
+   "forbid": [],
+   "route": "",
+   "red_flag": true,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험-009",
+   "group": "위험",
+   "level": "신규",
+   "utterance": "갑자기 한쪽 눈 안 보임",
+   "profile": "",
+   "required": [],
+   "forbid": [],
+   "route": "",
+   "red_flag": true,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험-010",
+   "group": "위험",
+   "level": "신규",
+   "utterance": "태어나서 제일 심한 두통",
+   "profile": "",
+   "required": [
+    [
+     "두통"
+    ]
+   ],
+   "forbid": [],
+   "route": "",
+   "red_flag": true,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험-011",
+   "group": "위험",
+   "level": "신규",
+   "utterance": "어제 의식 잃고 쓰러짐",
+   "profile": "",
+   "required": [],
+   "forbid": [],
+   "route": "",
+   "red_flag": true,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험-012",
+   "group": "위험",
+   "level": "신규",
+   "utterance": "죽고 싶다는 생각이 듦",
+   "profile": "",
+   "required": [],
+   "forbid": [],
+   "route": "",
+   "red_flag": true,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험-013",
+   "group": "위험",
+   "level": "신규",
+   "utterance": "약 먹고 입술 혀 붓고 숨쉬기 힘듦",
+   "profile": "",
+   "required": [
+    [
+     "호흡곤란"
+    ]
+   ],
+   "forbid": [],
+   "route": "",
+   "red_flag": true,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험-014",
+   "group": "위험",
+   "level": "신규",
+   "utterance": "고열 39도, 목 뻣뻣",
+   "profile": "",
+   "required": [],
+   "forbid": [],
+   "route": "",
+   "red_flag": true,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험-015",
+   "group": "위험",
+   "level": "신규",
+   "utterance": "6개월에 이유 없이 10kg 빠짐",
+   "profile": "",
+   "required": [
+    [
+     "체중 감소"
+    ]
+   ],
+   "forbid": [],
+   "route": "",
+   "red_flag": true,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험-016",
+   "group": "위험",
+   "level": "신규",
+   "utterance": "한쪽 다리만 갑자기 붓고 아픔",
+   "profile": "",
+   "required": [
+    [
+     "부종"
+    ]
+   ],
+   "forbid": [],
+   "route": "",
+   "red_flag": true,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험-017",
+   "group": "위험",
+   "level": "신규",
+   "utterance": "명치 아프고 식은땀, 토할 것 같음",
+   "profile": "",
+   "required": [],
+   "forbid": [],
+   "route": "",
+   "red_flag": true,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험-018",
+   "group": "위험",
+   "level": "신규",
+   "utterance": "소화불량, 변비, 어제부터 오른손에 힘이 없음",
+   "profile": "",
+   "required": [
+    [
+     "소화불량"
+    ],
+    [
+     "변비"
+    ]
+   ],
+   "forbid": [],
+   "route": "",
+   "red_flag": true,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험-019",
+   "group": "위험",
+   "level": "신규",
+   "utterance": "와파린 복용 중 코피 안 멈춤",
+   "profile": "",
+   "required": [],
+   "forbid": [],
+   "route": "",
+   "red_flag": true,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험-020",
+   "group": "위험",
+   "level": "신규",
+   "utterance": "피곤, 무릎 통증, 가슴 조이는 느낌 계단에서 심해짐",
+   "profile": "",
+   "required": [
+    [
+     "만성피로"
+    ],
+    [
+     "관절 통증",
+     "무릎/허리 부담감"
+    ]
+   ],
+   "forbid": [],
+   "route": "",
+   "red_flag": true,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험-021",
+   "group": "위험",
+   "level": "신규",
+   "utterance": "혈변",
+   "profile": "",
+   "required": [],
+   "forbid": [],
+   "route": "",
+   "red_flag": true,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험-022",
+   "group": "위험",
+   "level": "신규",
+   "utterance": "심한 복통으로 움직이질 못함",
+   "profile": "",
+   "required": [
+    [
+     "복통"
+    ]
+   ],
+   "forbid": [],
+   "route": "",
+   "red_flag": true,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험-023",
+   "group": "위험",
+   "level": "신규",
+   "utterance": "얼굴 한쪽이 처짐",
+   "profile": "",
+   "required": [],
+   "forbid": [],
+   "route": "",
+   "red_flag": true,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험-024",
+   "group": "위험",
+   "level": "신규",
+   "utterance": "숨이 차서 말을 못 이어감",
+   "profile": "",
+   "required": [
+    [
+     "호흡곤란"
+    ]
+   ],
+   "forbid": [],
+   "route": "",
+   "red_flag": true,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험-025",
+   "group": "위험",
+   "level": "신규",
+   "utterance": "머리 부딪힌 뒤 계속 토함",
+   "profile": "",
+   "required": [],
+   "forbid": [],
+   "route": "",
+   "red_flag": true,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험-026",
+   "group": "위험",
+   "level": "신규",
+   "utterance": "다리 근육통, 소변이 콜라색, 스타틴 복용",
+   "profile": "",
+   "required": [
+    [
+     "근육통"
+    ]
+   ],
+   "forbid": [],
+   "route": "",
+   "red_flag": true,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험-027",
+   "group": "위험",
+   "level": "신규",
+   "utterance": "눈앞에 커튼 쳐진 것처럼 안 보임",
+   "profile": "",
+   "required": [],
+   "forbid": [],
+   "route": "",
+   "red_flag": true,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험-028",
+   "group": "위험",
+   "level": "신규",
+   "utterance": "밤에 자주 깸, 잘 때 가슴 눌리는 느낌",
+   "profile": "",
+   "required": [
+    [
+     "새벽 각성",
+     "수면 질 저하",
+     "불면증",
+     "야간뇨"
+    ]
+   ],
+   "forbid": [],
+   "route": "",
+   "red_flag": true,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험-029",
+   "group": "위험",
+   "level": "신규",
+   "utterance": "혈당 400 넘고 계속 토함",
+   "profile": "",
+   "required": [],
+   "forbid": [],
+   "route": "",
+   "red_flag": true,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험-030",
+   "group": "위험",
+   "level": "신규",
+   "utterance": "정신이 오락가락, 가족을 못 알아봄",
+   "profile": "",
+   "required": [],
+   "forbid": [],
+   "route": "",
+   "red_flag": true,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험대조-001",
+   "group": "위험대조",
+   "level": "신규",
+   "utterance": "예전에 가슴 통증 있었으나 검사 정상, 지금 없음",
+   "profile": "",
+   "required": [],
+   "forbid": [],
+   "route": "",
+   "red_flag": false,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험대조-002",
+   "group": "위험대조",
+   "level": "신규",
+   "utterance": "일어날 때 잠깐 핑 돔",
+   "profile": "",
+   "required": [
+    [
+     "기립성 저혈압",
+     "어지러움"
+    ]
+   ],
+   "forbid": [],
+   "route": "",
+   "red_flag": false,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험대조-003",
+   "group": "위험대조",
+   "level": "신규",
+   "utterance": "손발 저림 몇 년째",
+   "profile": "",
+   "required": [
+    [
+     "손발 저림"
+    ]
+   ],
+   "forbid": [],
+   "route": "",
+   "red_flag": false,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험대조-004",
+   "group": "위험대조",
+   "level": "신규",
+   "utterance": "두통 가끔",
+   "profile": "",
+   "required": [
+    [
+     "두통"
+    ]
+   ],
+   "forbid": [],
+   "route": "",
+   "red_flag": false,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험대조-005",
+   "group": "위험대조",
+   "level": "신규",
+   "utterance": "남편이 어제 쓰러짐",
+   "profile": "",
+   "required": [],
+   "forbid": [],
+   "route": "",
+   "red_flag": false,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험대조-006",
+   "group": "위험대조",
+   "level": "신규",
+   "utterance": "커피 마시면 두근거림",
+   "profile": "",
+   "required": [
+    [
+     "부정맥",
+     "불안"
+    ]
+   ],
+   "forbid": [],
+   "route": "",
+   "red_flag": false,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험대조-007",
+   "group": "위험대조",
+   "level": "신규",
+   "utterance": "눈 침침해서 신문 보기 힘듦",
+   "profile": "",
+   "required": [
+    [
+     "침침함"
+    ]
+   ],
+   "forbid": [],
+   "route": "",
+   "red_flag": false,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험대조-008",
+   "group": "위험대조",
+   "level": "신규",
+   "utterance": "변비로 항문 불편",
+   "profile": "",
+   "required": [
+    [
+     "변비"
+    ]
+   ],
+   "forbid": [],
+   "route": "",
+   "red_flag": false,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험대조-009",
+   "group": "위험대조",
+   "level": "신규",
+   "utterance": "계단 오르면 무릎 아픔",
+   "profile": "",
+   "required": [
+    [
+     "관절 통증",
+     "무릎/허리 부담감"
+    ]
+   ],
+   "forbid": [],
+   "route": "",
+   "red_flag": false,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험대조-010",
+   "group": "위험대조",
+   "level": "신규",
+   "utterance": "감기 후 코 막힘",
+   "profile": "",
+   "required": [
+    [
+     "코막힘"
+    ]
+   ],
+   "forbid": [],
+   "route": "",
+   "red_flag": false,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험대조-011",
+   "group": "위험대조",
+   "level": "신규",
+   "utterance": "죽겠다 피곤해서",
+   "profile": "",
+   "required": [
+    [
+     "만성피로"
+    ]
+   ],
+   "forbid": [],
+   "route": "",
+   "red_flag": false,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험대조-012",
+   "group": "위험대조",
+   "level": "신규",
+   "utterance": "머리 아파 죽겠어",
+   "profile": "",
+   "required": [
+    [
+     "두통"
+    ]
+   ],
+   "forbid": [],
+   "route": "",
+   "red_flag": false,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험대조-013",
+   "group": "위험대조",
+   "level": "신규",
+   "utterance": "배가 살살 아픔",
+   "profile": "",
+   "required": [
+    [
+     "복통"
+    ]
+   ],
+   "forbid": [],
+   "route": "",
+   "red_flag": false,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험대조-014",
+   "group": "위험대조",
+   "level": "신규",
+   "utterance": "다리에 쥐가 나서 잠 깸",
+   "profile": "",
+   "required": [
+    [
+     "근육경련"
+    ],
+    [
+     "새벽 각성",
+     "수면 질 저하"
+    ]
+   ],
+   "forbid": [],
+   "route": "",
+   "red_flag": false,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  },
+  {
+   "id": "위험대조-015",
+   "group": "위험대조",
+   "level": "신규",
+   "utterance": "생리 양이 좀 많은 편",
+   "profile": "",
+   "required": [
+    [
+     "월경이상"
+    ]
+   ],
+   "forbid": [],
+   "route": "",
+   "red_flag": false,
+   "no_match": false,
+   "expect": [],
+   "allow": [],
+   "note": ""
+  }
+ ]
+}

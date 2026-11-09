@@ -63,3 +63,11 @@ def test_merge_without_complaint_uses_engine_default():
 def test_prompt_has_negation_and_redflag_rules():
     s, _ = normalize.prompt("x", "남성, 80대", CATS)
     assert "없음" in s and "red_flag" in s and "분류표 밖 증상" in s and "스트레스/수면" in s
+
+
+def test_red_flag_rule_covers_emergency_groups():
+    """GPT가 짧은 목록에 있는 것만 잡았다(sf1-gpt 위험 신호 7건 누락). 응급 유형을 넓게 적고, 목록 밖이라도 같은 수준이면 잡게 한다."""
+    from rxrag import normalize
+    for term in ["식은땀", "가슴", "극심한 두통", "혈뇨", "콜라색", "복통", "알아보지", "자살", "시력", "출혈"]:
+        assert term in normalize.SYSTEM, term
+    assert "목록에 없더라도" in normalize.SYSTEM

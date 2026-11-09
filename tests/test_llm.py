@@ -78,3 +78,49 @@ def test_meter_times_each_call_and_reads_usage():
     assert [c["task"] for c in m.calls] == ["normalize", "select", "select"]
     assert all(c["latency_ms"] >= 0 and c["input"] is None for c in m.calls)  # FakeLLM은 토큰 정보가 없다
     assert len(f.calls) == 3  # 원래 클라이언트로 그대로 전달
+
+
+def test_openai_last_usage_is_per_thread():
+    """병렬 호출 때 다른 스레드의 토큰이 섞이지 않는다."""
+    import threading
+    c = OpenAILLM()
+    c.last_usage = {"input": 1}
+    seen = {}
+    t = threading.Thread(target=lambda: seen.setdefault("other", c.last_usage))
+    t.start(); t.join()
+    assert seen["other"] is None and c.last_usage == {"input": 1}
+
+
+def test_anthropic_blocked_in_tests():
+    from rxrag.llm import AnthropicLLM
+    with pytest.raises(Exception):
+        AnthropicLLM().complete_json("x", "s", "u", {})
+
+
+def test_anthropic_sends_cached_system_and_schema_and_records_usage():
+    """Haiku: system에 캐시 표시, json_schema 구조화 출력, 토큰은 캐시 읽기·쓰기 포함 입력 합계로 남긴다."""
+    from types import SimpleNamespace as NS
+    from rxrag.llm import AnthropicLLM
+    sent = {}
+    usage = NS(input_tokens=40, cache_read_input_tokens=1500, cache_creation_input_tokens=0, output_tokens=120)
+    res = NS(stop_reason="end_turn", usage=usage,
+             content=[NS(type="thinking", thinking=""), NS(type="text", text='{"ok": 1}')])
+    c = AnthropicLLM()
+    c._client = NS(messages=NS(create=lambda **kw: sent.update(kw) or res))
+    assert c.complete_json("normalize", "SYS", "USER", {"type": "object"}) == {"ok": 1}
+    assert sent["model"] == "claude-haiku-5-5"
+    assert sent["system"] == [{"type": "text", "text": "SYS", "cache_control": {"type": "ephemeral"}}]
+    assert sent["messages"] == [{"role": "user", "content": "USER"}]
+    assert sent["output_config"] == {"effort": "low", "format": {"type": "json_schema", "schema": {"type": "object"}}}
+    assert c.last_usage == {"input": 1540, "output": 120, "reasoning": None, "cached": 1500, "cache_write": 0}
+
+
+def test_anthropic_refuses_truncated_or_refused_output():
+    from types import SimpleNamespace as NS
+    from rxrag.llm import AnthropicLLM
+    for reason in ("max_tokens", "refusal"):
+        c = AnthropicLLM()
+        res = NS(stop_reason=reason, usage=None, content=[NS(type="text", text='{"ok"')])
+        c._client = NS(messages=NS(create=lambda **kw: res))
+        with pytest.raises(RuntimeError, match=reason):
+            c.complete_json("normalize", "s", "u", {})

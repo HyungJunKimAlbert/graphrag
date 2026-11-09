@@ -1,0 +1,300 @@
+{"id": "SF-001", "response": {"matches": [{"category": "혈당", "symptoms": ["식후 졸림"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-002", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["기립성 저혈압"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-003", "response": {"matches": [], "unmatched": [{"text": "피부가 건조하고 당김", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-004", "response": {"matches": [{"category": "뼈/관절", "symptoms": ["관절 소리"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-005", "response": {"matches": [{"category": "뼈/관절", "symptoms": ["관절 소리"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-006", "response": {"matches": [{"category": "신장/전해질", "symptoms": ["잦은 배뇨"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-007", "response": {"matches": [{"category": "체중/체지방", "symptoms": ["체중 감소"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-008", "response": {"matches": [{"category": "눈 건강", "symptoms": ["야맹증"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-009", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["붓기"]}, {"category": "신장/전해질", "symptoms": ["부종"]}, {"category": "호르몬 건강", "symptoms": ["부종"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-010", "response": {"matches": [{"category": "눈 건강", "symptoms": ["야맹증"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-011", "response": {"matches": [{"category": "호르몬 건강", "symptoms": ["갱년기 증상"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-012", "response": {"matches": [{"category": "뼈/관절", "symptoms": ["관절 통증"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-013", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["신경과민"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-014", "response": {"matches": [], "unmatched": [{"text": "손톱이 잘 부서짐", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-015", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["기립성 저혈압"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-016", "response": {"matches": [{"category": "소화/장", "symptoms": ["설사"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-017", "response": {"matches": [], "unmatched": [{"text": "양치할 때 잇몸 피", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-018", "response": {"matches": [{"category": "눈 건강", "symptoms": ["눈 피로감"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-019", "response": {"matches": [{"category": "호르몬 건강", "symptoms": ["생리주기 불규칙"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-020", "response": {"matches": [{"category": "눈 건강", "symptoms": ["충혈"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-021", "response": {"matches": [{"category": "피로/활력", "symptoms": ["집중력 저하"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-022", "response": {"matches": [{"category": "소화/장", "symptoms": ["울렁거림"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-023", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["손발 저림"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-024", "response": {"matches": [{"category": "피로/활력", "symptoms": ["체력 저하"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-025", "response": {"matches": [{"category": "눈 건강", "symptoms": ["시야 흐림"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-026", "response": {"matches": [{"category": "눈 건강", "symptoms": ["시야 흐림"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-027", "response": {"matches": [{"category": "간/해독", "symptoms": ["피부 트러블"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-028", "response": {"matches": [{"category": "인지/기억", "symptoms": ["반응 속도 저하"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-029", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["긴장"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-030", "response": {"matches": [{"category": "인지/기억", "symptoms": ["멍함"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-031", "response": {"matches": [{"category": "소화/장", "symptoms": ["설사"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-032", "response": {"matches": [{"category": "인지/기억", "symptoms": ["기억력 감소"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-033", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["기분 저하"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-034", "response": {"matches": [{"category": "간/해독", "symptoms": ["약물 복용 후 메스꺼움"]}], "unmatched": [{"text": "약 먹고 나면", "kind": "약 관련"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-035", "response": {"matches": [{"category": "간/해독", "symptoms": ["입 텁텁함"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-036", "response": {"matches": [{"category": "인지/기억", "symptoms": ["반응 속도 저하"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-037", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["두통"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-038", "response": {"matches": [{"category": "혈당", "symptoms": ["식후 졸림"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-039", "response": {"matches": [{"category": "피로/활력", "symptoms": ["기운 없음"]}, {"category": "신장/전해질", "symptoms": ["무력감"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-040", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["새벽 각성"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-041", "response": {"matches": [{"category": "피로/활력", "symptoms": ["기운 없음"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-042", "response": {"matches": [{"category": "면역", "symptoms": ["감기"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-043", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["붓기"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-044", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["혈액순환 전반"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-045", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["기분 저하"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-046", "response": {"matches": [{"category": "눈 건강", "symptoms": ["시야 흐림"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-047", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["불면"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-048", "response": {"matches": [{"category": "간/해독", "symptoms": ["음주 후 불평감"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-049", "response": {"matches": [{"category": "체중/체지방", "symptoms": ["식욕변화"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-050", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["기립성 저혈압"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-051", "response": {"matches": [{"category": "눈 건강", "symptoms": ["눈 피로감"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-052", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["붓기"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-053", "response": {"matches": [{"category": "체중/체지방", "symptoms": ["복부 지방 증가"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-054", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["수족냉증"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-055", "response": {"matches": [{"category": "소화/장", "symptoms": ["설사"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-056", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["붓기"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-057", "response": {"matches": [{"category": "소화/장", "symptoms": ["울렁거림"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-058", "response": {"matches": [{"category": "인지/기억", "symptoms": ["기억력 감소"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-059", "response": {"matches": [{"category": "피로/활력", "symptoms": ["기운 없음"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-060", "response": {"matches": [{"category": "눈 건강", "symptoms": ["시력 저하"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-061", "response": {"matches": [{"category": "면역", "symptoms": ["감기"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-062", "response": {"matches": [{"category": "피로/활력", "symptoms": ["기운 없음"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-063", "response": {"matches": [{"category": "인지/기억", "symptoms": ["반응 속도 저하"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-064", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["수면 질 저하"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-065", "response": {"matches": [{"category": "혈당", "symptoms": ["식후 졸림"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-066", "response": {"matches": [{"category": "소화/장", "symptoms": ["울렁거림"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-067", "response": {"matches": [{"category": "신장/전해질", "symptoms": ["갈증"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-068", "response": {"matches": [{"category": "피로/활력", "symptoms": ["무기력"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-069", "response": {"matches": [{"category": "간/해독", "symptoms": ["약물 복용 후 메스꺼움"]}], "unmatched": [{"text": "약 복용", "kind": "약 관련"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-070", "response": {"matches": [], "unmatched": [{"text": "근육통", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-071", "response": {"matches": [], "unmatched": [{"text": "목이 칼칼함", "kind": "분류표 밖 증상"}, {"text": "콧물", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-072", "response": {"matches": [{"category": "눈 건강", "symptoms": ["야맹증"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-073", "response": {"matches": [{"category": "소화/장", "symptoms": ["울렁거림"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-074", "response": {"matches": [{"category": "뼈/관절", "symptoms": ["움직임 불편"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-075", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["긴장"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-076", "response": {"matches": [{"category": "소화/장", "symptoms": ["변비"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-077", "response": {"matches": [{"category": "호르몬 건강", "symptoms": ["온도 민감"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-078", "response": {"matches": [{"category": "간/해독", "symptoms": ["음주 후 불평감"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-079", "response": {"matches": [{"category": "혈당", "symptoms": ["식후 졸림"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-080", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["불안"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-081", "response": {"matches": [{"category": "소화/장", "symptoms": ["변비"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-082", "response": {"matches": [{"category": "피로/활력", "symptoms": ["기운 없음"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-083", "response": {"matches": [{"category": "눈 건강", "symptoms": ["침침함"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-084", "response": {"matches": [{"category": "눈 건강", "symptoms": ["시야 흐림"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-085", "response": {"matches": [{"category": "눈 건강", "symptoms": ["눈 떨림"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-086", "response": {"matches": [{"category": "눈 건강", "symptoms": ["눈 피로감"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-087", "response": {"matches": [{"category": "뼈/관절", "symptoms": ["무릎/허리 부담감"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-088", "response": {"matches": [{"category": "소화/장", "symptoms": ["설사"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-089", "response": {"matches": [{"category": "모발 건강", "symptoms": ["비듬"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-090", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["새벽 각성"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-091", "response": {"matches": [{"category": "피로/활력", "symptoms": ["기운 없음"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-092", "response": {"matches": [{"category": "혈당", "symptoms": ["공복 현기증"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-093", "response": {"matches": [{"category": "피로/활력", "symptoms": ["무기력"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-094", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["붓기"]}, {"category": "신장/전해질", "symptoms": ["부종"]}, {"category": "호르몬 건강", "symptoms": ["부종"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-095", "response": {"matches": [{"category": "눈 건강", "symptoms": ["충혈"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-096", "response": {"matches": [{"category": "뼈/관절", "symptoms": ["관절 통증"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-097", "response": {"matches": [{"category": "눈 건강", "symptoms": ["시력 저하"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-098", "response": {"matches": [{"category": "신장/전해질", "symptoms": ["잦은 배뇨"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-099", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["수족냉증"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-100", "response": {"matches": [], "unmatched": [{"text": "온몸 근육이 쑤심", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-101", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["신경과민"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-102", "response": {"matches": [{"category": "눈 건강", "symptoms": ["눈 피로감"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-103", "response": {"matches": [{"category": "면역", "symptoms": ["염증"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-104", "response": {"matches": [{"category": "체중/체지방", "symptoms": ["체중 증가"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-105", "response": {"matches": [{"category": "모발 건강", "symptoms": ["비듬"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-106", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["스트레스"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-107", "response": {"matches": [{"category": "인지/기억", "symptoms": ["멍함"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-108", "response": {"matches": [], "unmatched": [{"text": "코막힘", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-109", "response": {"matches": [{"category": "인지/기억", "symptoms": ["기억력 감소"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-110", "response": {"matches": [{"category": "신장/전해질", "symptoms": ["근육경련(쥐남)"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-111", "response": {"matches": [{"category": "체중/체지방", "symptoms": ["복부 지방 증가"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-112", "response": {"matches": [{"category": "눈 건강", "symptoms": ["눈 부심"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-113", "response": {"matches": [{"category": "피로/활력", "symptoms": ["만성피로"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-114", "response": {"matches": [{"category": "모발 건강", "symptoms": ["두피 가려움"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-115", "response": {"matches": [{"category": "뼈/관절", "symptoms": ["관절 통증"]}, {"category": "호르몬 건강", "symptoms": ["예민함"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-116", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["붓기"]}, {"category": "신장/전해질", "symptoms": ["부종"]}, {"category": "체중/체지방", "symptoms": ["체중 감소"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-117", "response": {"matches": [{"category": "인지/기억", "symptoms": ["반응 속도 저하"]}], "unmatched": [{"text": "피부가 푸석푸석함", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-118", "response": {"matches": [{"category": "모발 건강", "symptoms": ["비듬"]}, {"category": "혈행/순환", "symptoms": ["손발 저림"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-119", "response": {"matches": [{"category": "신장/전해질", "symptoms": ["무력감"]}, {"category": "스트레스/수면", "symptoms": ["신경과민"]}, {"category": "호르몬 건강", "symptoms": ["예민함"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-120", "response": {"matches": [{"category": "호르몬 건강", "symptoms": ["생리주기 불규칙"]}, {"category": "면역", "symptoms": ["감기"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-121", "response": {"matches": [{"category": "뼈/관절", "symptoms": ["관절 소리", "무릎/허리 부담감"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-122", "response": {"matches": [{"category": "간/해독", "symptoms": ["음주 후 불평감"]}, {"category": "피로/활력", "symptoms": ["기운 없음"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-123", "response": {"matches": [{"category": "호르몬 건강", "symptoms": ["갱년기 증상", "온도 민감"]}, {"category": "스트레스/수면", "symptoms": ["기분 저하"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-124", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["불면", "새벽 각성"]}], "unmatched": [{"text": "어지러움", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-125", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["붓기"]}, {"category": "신장/전해질", "symptoms": ["부종"]}, {"category": "눈 건강", "symptoms": ["충혈"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-126", "response": {"matches": [{"category": "눈 건강", "symptoms": ["눈 피로감"]}], "unmatched": [{"text": "입안이 헐어서 아픔", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-127", "response": {"matches": [{"category": "면역", "symptoms": ["감기"]}, {"category": "뼈/관절", "symptoms": ["관절 통증"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-128", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["불면"]}, {"category": "눈 건강", "symptoms": ["충혈"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-129", "response": {"matches": [{"category": "간/해독", "symptoms": ["피부 트러블"]}, {"category": "면역", "symptoms": ["염증"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-130", "response": {"matches": [{"category": "소화/장", "symptoms": ["변비"]}], "unmatched": [{"text": "입이 자주 마름", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-131", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["붓기"]}], "unmatched": [{"text": "코가 꽉 막힘", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-132", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["붓기"]}], "unmatched": [{"text": "손발톱이 약해짐", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-133", "response": {"matches": [{"category": "소화/장", "symptoms": ["소화불량"]}], "unmatched": [{"text": "피부 건조함", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-134", "response": {"matches": [{"category": "눈 건강", "symptoms": ["침침함", "시야 흐림"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-135", "response": {"matches": [{"category": "호르몬 건강", "symptoms": ["온도 민감"]}, {"category": "피로/활력", "symptoms": ["무기력"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-136", "response": {"matches": [{"category": "면역", "symptoms": ["염증"]}, {"category": "호르몬 건강", "symptoms": ["온도 민감"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-137", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["신경과민"]}], "unmatched": [{"text": "몸이 자꾸 가려움", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-138", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["손발 저림"]}, {"category": "호르몬 건강", "symptoms": ["생리통"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-139", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["스트레스"]}], "unmatched": [{"text": "피부가 건조해 각질이 일어남", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-140", "response": {"matches": [{"category": "신장/전해질", "symptoms": ["갈증"]}, {"category": "혈행/순환", "symptoms": ["손발 저림"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-141", "response": {"matches": [{"category": "소화/장", "symptoms": ["복통"]}, {"category": "모발 건강", "symptoms": ["두피 가려움"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-142", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["새벽 각성"]}], "unmatched": [{"text": "손톱이 얇아지고 갈라짐", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-143", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["붓기"]}, {"category": "뼈/관절", "symptoms": ["움직임 불편"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-144", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["긴장"]}, {"category": "혈행/순환", "symptoms": ["붓기"]}, {"category": "신장/전해질", "symptoms": ["부종"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-145", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["붓기"]}, {"category": "신장/전해질", "symptoms": ["무력감"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-146", "response": {"matches": [{"category": "소화/장", "symptoms": ["소화불량"]}, {"category": "혈행/순환", "symptoms": ["수족냉증"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-147", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["수면 질 저하"]}], "unmatched": [{"text": "어깨가 결림", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-148", "response": {"matches": [{"category": "호르몬 건강", "symptoms": ["갱년기 증상"]}], "unmatched": [{"text": "코가 막혀 답답함", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-149", "response": {"matches": [{"category": "소화/장", "symptoms": ["복부 팽만감"]}, {"category": "스트레스/수면", "symptoms": ["불면"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-150", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["수족냉증"]}, {"category": "스트레스/수면", "symptoms": ["스트레스"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-151", "response": {"matches": [], "unmatched": [{"text": "코막힘이 심함", "kind": "분류표 밖 증상"}, {"text": "어깨 통증", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-152", "response": {"matches": [{"category": "체중/체지방", "symptoms": ["복부 지방 증가"]}, {"category": "뼈/관절", "symptoms": ["무릎/허리 부담감"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-153", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["신경과민"]}, {"category": "간/해독", "symptoms": ["입 텁텁함"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-154", "response": {"matches": [{"category": "체중/체지방", "symptoms": ["식욕변화"]}, {"category": "소화/장", "symptoms": ["소화불량"]}, {"category": "간/해독", "symptoms": ["소화불량"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-155", "response": {"matches": [{"category": "호르몬 건강", "symptoms": ["생리주기 불규칙"]}, {"category": "눈 건강", "symptoms": ["침침함", "시야 흐림"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-156", "response": {"matches": [{"category": "간/해독", "symptoms": ["입 텁텁함"]}, {"category": "뼈/관절", "symptoms": ["관절 통증"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-157", "response": {"matches": [{"category": "호르몬 건강", "symptoms": ["예민함"]}, {"category": "스트레스/수면", "symptoms": ["신경과민"]}, {"category": "뼈/관절", "symptoms": ["움직임 불편"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-158", "response": {"matches": [{"category": "소화/장", "symptoms": ["속쓰림"]}, {"category": "눈 건강", "symptoms": ["눈 떨림"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-159", "response": {"matches": [{"category": "뼈/관절", "symptoms": ["관절 소리"]}, {"category": "간/해독", "symptoms": ["느린 피로 회복"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-160", "response": {"matches": [{"category": "눈 건강", "symptoms": ["시력 저하"]}, {"category": "혈당", "symptoms": ["공복 현기증"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-161", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["붓기"]}, {"category": "신장/전해질", "symptoms": ["부종"]}, {"category": "호르몬 건강", "symptoms": ["부종"]}, {"category": "눈 건강", "symptoms": ["눈 떨림"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-162", "response": {"matches": [{"category": "눈 건강", "symptoms": ["시야 흐림"]}, {"category": "혈당", "symptoms": ["공복 현기증"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-163", "response": {"matches": [{"category": "호르몬 건강", "symptoms": ["생리주기 불규칙"]}, {"category": "소화/장", "symptoms": ["속쓰림"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-164", "response": {"matches": [{"category": "소화/장", "symptoms": ["소화불량"]}, {"category": "눈 건강", "symptoms": ["눈 떨림"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-165", "response": {"matches": [{"category": "뼈/관절", "symptoms": ["움직임 불편"]}, {"category": "혈당", "symptoms": ["식후 졸림"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-166", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["수면 질 저하"]}], "unmatched": [{"text": "밤에 소변보러 자주 일어남", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-167", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["손발 저림"]}, {"category": "피로/활력", "symptoms": ["집중력 저하"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-168", "response": {"matches": [{"category": "신장/전해질", "symptoms": ["갈증"]}, {"category": "간/해독", "symptoms": ["피부 트러블"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-169", "response": {"matches": [{"category": "눈 건강", "symptoms": ["침침함"]}], "unmatched": [{"text": "야간뇨", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-170", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["불안", "수면 질 저하"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-171", "response": {"matches": [{"category": "피로/활력", "symptoms": ["무기력"]}], "unmatched": [{"text": "코가 막힘", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-172", "response": {"matches": [{"category": "간/해독", "symptoms": ["약물 복용 후 메스꺼움"]}, {"category": "호르몬 건강", "symptoms": ["갱년기 증상"]}], "unmatched": [{"text": "약 먹으면", "kind": "약 관련"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-173", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["붓기"]}, {"category": "눈 건강", "symptoms": ["눈 건조함"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-174", "response": {"matches": [{"category": "눈 건강", "symptoms": ["눈 부심"]}, {"category": "소화/장", "symptoms": ["변비"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-175", "response": {"matches": [{"category": "눈 건강", "symptoms": ["충혈"]}, {"category": "소화/장", "symptoms": ["속쓰림"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-176", "response": {"matches": [{"category": "눈 건강", "symptoms": ["눈 부심"]}, {"category": "뼈/관절", "symptoms": ["관절 통증"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-177", "response": {"matches": [{"category": "혈당", "symptoms": ["식후 졸림"]}, {"category": "호르몬 건강", "symptoms": ["온도 민감"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-178", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["스트레스"]}, {"category": "소화/장", "symptoms": ["복부 팽만감"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-179", "response": {"matches": [{"category": "신장/전해질", "symptoms": ["근육경련(쥐남)"]}, {"category": "피로/활력", "symptoms": ["만성피로"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-180", "response": {"matches": [{"category": "인지/기억", "symptoms": ["멍함"]}, {"category": "혈행/순환", "symptoms": ["손발 저림"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-181", "response": {"matches": [{"category": "소화/장", "symptoms": ["울렁거림"]}], "unmatched": [{"text": "기침", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-182", "response": {"matches": [{"category": "체중/체지방", "symptoms": ["체중 증가"]}, {"category": "호르몬 건강", "symptoms": ["생리통"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-183", "response": {"matches": [{"category": "뼈/관절", "symptoms": []}, {"category": "소화/장", "symptoms": ["복통"]}], "unmatched": [{"text": "어깨가 아픔", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-184", "response": {"matches": [{"category": "피로/활력", "symptoms": ["체력 저하"]}, {"category": "눈 건강", "symptoms": ["눈 부심"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-185", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["긴장"]}, {"category": "간/해독", "symptoms": ["느린 피로 회복"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-186", "response": {"matches": [{"category": "눈 건강", "symptoms": ["야맹증"]}, {"category": "인지/기억", "symptoms": ["반응 속도 저하"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-187", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["신경과민"]}], "unmatched": [{"text": "구내염", "kind": "질환명"}, {"text": "입안이 아픔", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-188", "response": {"matches": [{"category": "피로/활력", "symptoms": ["기운 없음", "무기력"]}, {"category": "스트레스/수면", "symptoms": ["두통"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-189", "response": {"matches": [{"category": "간/해독", "symptoms": ["음주 후 불평감"]}, {"category": "피로/활력", "symptoms": ["기운 없음"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-190", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["붓기"]}, {"category": "체중/체지방", "symptoms": ["체중 증가"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-191", "response": {"matches": [{"category": "눈 건강", "symptoms": ["눈 건조함"]}, {"category": "혈행/순환", "symptoms": ["붓기"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-192", "response": {"matches": [{"category": "눈 건강", "symptoms": ["시력 저하"]}, {"category": "혈행/순환", "symptoms": ["손발 저림"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-193", "response": {"matches": [{"category": "신장/전해질", "symptoms": ["잦은 배뇨"]}, {"category": "스트레스/수면", "symptoms": ["두통"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-194", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["기분 저하"]}], "unmatched": [{"text": "입안이 따가움", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-195", "response": {"matches": [{"category": "모발 건강", "symptoms": ["두피 가려움"]}, {"category": "혈당", "symptoms": ["공복 현기증"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-196", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["기립성 저혈압"]}, {"category": "피로/활력", "symptoms": ["만성피로"]}], "unmatched": [{"text": "어지러움", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-197", "response": {"matches": [{"category": "소화/장", "symptoms": ["소화불량"]}, {"category": "체중/체지방", "symptoms": ["복부 지방 증가"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-198", "response": {"matches": [{"category": "간/해독", "symptoms": ["음주 후 불평감"]}, {"category": "눈 건강", "symptoms": ["눈 떨림"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-199", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["혈액순환 전반"]}, {"category": "눈 건강", "symptoms": ["눈 피로감"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-200", "response": {"matches": [{"category": "호르몬 건강", "symptoms": ["생리주기 불규칙"]}, {"category": "눈 건강", "symptoms": ["눈 부심"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-201", "response": {"matches": [{"category": "신장/전해질", "symptoms": ["근육경련(쥐남)"]}, {"category": "피로/활력", "symptoms": ["체력 저하"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-202", "response": {"matches": [{"category": "뼈/관절", "symptoms": []}], "unmatched": [{"text": "손톱이 쉽게 깨짐", "kind": "분류표 밖 증상"}, {"text": "어깨가 쑤심", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-203", "response": {"matches": [{"category": "눈 건강", "symptoms": ["침침함"]}, {"category": "호르몬 건강", "symptoms": ["생리통"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-204", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["신경과민"]}, {"category": "피로/활력", "symptoms": ["체력 저하"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-205", "response": {"matches": [{"category": "소화/장", "symptoms": []}, {"category": "혈행/순환", "symptoms": ["붓기"]}, {"category": "신장/전해질", "symptoms": ["부종"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-206", "response": {"matches": [{"category": "눈 건강", "symptoms": ["시력 저하"]}], "unmatched": [{"text": "잇몸에서 피가 남", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-207", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["손발 저림"]}, {"category": "간/해독", "symptoms": ["입 텁텁함"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-208", "response": {"matches": [{"category": "모발 건강", "symptoms": ["탈모"]}], "unmatched": [{"text": "잇몸 출혈", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-209", "response": {"matches": [{"category": "인지/기억", "symptoms": ["멍함"]}], "unmatched": [{"text": "피부가 거칠고 건조함", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-210", "response": {"matches": [{"category": "피로/활력", "symptoms": ["기운 없음"]}, {"category": "간/해독", "symptoms": ["피부 트러블"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-211", "response": {"matches": [{"category": "호르몬 건강", "symptoms": ["갱년기 증상"]}], "unmatched": [{"text": "근육이 뻐근하고 아픔", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-212", "response": {"matches": [{"category": "모발 건강", "symptoms": ["비듬"]}, {"category": "스트레스/수면", "symptoms": ["신경과민"]}, {"category": "호르몬 건강", "symptoms": ["예민함"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-213", "response": {"matches": [{"category": "소화/장", "symptoms": ["설사"]}], "unmatched": [{"text": "가려움", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-214", "response": {"matches": [{"category": "소화/장", "symptoms": ["복통"]}], "unmatched": [{"text": "기침이 계속 남", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-215", "response": {"matches": [{"category": "뼈/관절", "symptoms": ["움직임 불편"]}, {"category": "모발 건강", "symptoms": ["비듬"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-216", "response": {"matches": [{"category": "체중/체지방", "symptoms": ["복부 지방 증가"]}, {"category": "호르몬 건강", "symptoms": ["예민함"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-217", "response": {"matches": [{"category": "인지/기억", "symptoms": ["반응 속도 저하"]}, {"category": "모발 건강", "symptoms": ["탈모"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-218", "response": {"matches": [{"category": "체중/체지방", "symptoms": ["식욕변화"]}], "unmatched": [{"text": "머리가 어질어질함", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-219", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["기립성 저혈압"]}, {"category": "뼈/관절", "symptoms": ["무릎/허리 부담감"]}], "unmatched": [{"text": "눈앞이 하얘짐", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-220", "response": {"matches": [{"category": "눈 건강", "symptoms": ["야맹증"]}, {"category": "신장/전해질", "symptoms": ["근육경련(쥐남)"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-221", "response": {"matches": [{"category": "면역", "symptoms": ["감기"]}, {"category": "피로/활력", "symptoms": ["기운 없음"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-222", "response": {"matches": [{"category": "뼈/관절", "symptoms": ["관절 소리"]}, {"category": "인지/기억", "symptoms": ["멍함"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-223", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["기립성 저혈압"]}, {"category": "뼈/관절", "symptoms": ["무릎/허리 부담감"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-224", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["불면"]}, {"category": "모발 건강", "symptoms": []}], "unmatched": [{"text": "피부가 가려움", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-225", "response": {"matches": [{"category": "체중/체지방", "symptoms": ["체중 감소"]}, {"category": "피로/활력", "symptoms": ["무기력"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-226", "response": {"matches": [{"category": "소화/장", "symptoms": ["설사"]}, {"category": "혈행/순환", "symptoms": ["혈액순환 전반"]}, {"category": "간/해독", "symptoms": ["입 텁텁함"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-227", "response": {"matches": [{"category": "피로/활력", "symptoms": ["기운 없음", "집중력 저하"]}, {"category": "모발 건강", "symptoms": ["탈모"]}], "unmatched": [{"text": "팔다리에 힘이 없음", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-228", "response": {"matches": [{"category": "체중/체지방", "symptoms": ["식욕변화"]}, {"category": "간/해독", "symptoms": ["느린 피로 회복"]}], "unmatched": [{"text": "혓바늘이 돋아 아픔", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-229", "response": {"matches": [{"category": "소화/장", "symptoms": ["복통"]}, {"category": "스트레스/수면", "symptoms": ["수면 질 저하"]}], "unmatched": [{"text": "어지럼증", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-230", "response": {"matches": [{"category": "간/해독", "symptoms": ["느린 피로 회복", "약물 복용 후 메스꺼움"]}, {"category": "소화/장", "symptoms": ["울렁거림"]}, {"category": "신장/전해질", "symptoms": ["잦은 배뇨"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-231", "response": {"matches": [{"category": "체중/체지방", "symptoms": ["체중 증가"]}, {"category": "소화/장", "symptoms": ["소화불량"]}], "unmatched": [{"text": "발톱이 잘 깨짐", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-232", "response": {"matches": [{"category": "혈당", "symptoms": ["공복 현기증"]}, {"category": "혈행/순환", "symptoms": ["손발 저림"]}, {"category": "신장/전해질", "symptoms": ["잦은 배뇨"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-233", "response": {"matches": [{"category": "체중/체지방", "symptoms": ["복부 지방 증가"]}, {"category": "인지/기억", "symptoms": ["기억력 감소"]}, {"category": "뼈/관절", "symptoms": ["관절 소리"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-234", "response": {"matches": [{"category": "피로/활력", "symptoms": ["기운 없음", "체력 저하"]}], "unmatched": [{"text": "허벅지 근육통", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-235", "response": {"matches": [{"category": "간/해독", "symptoms": ["음주 후 불평감"]}, {"category": "눈 건강", "symptoms": ["시력 저하"]}], "unmatched": [{"text": "뒷머리가 무거움", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-236", "response": {"matches": [{"category": "호르몬 건강", "symptoms": ["온도 민감"]}, {"category": "모발 건강", "symptoms": ["탈모"]}], "unmatched": [{"text": "잇몸이 붓고 피가 남", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-237", "response": {"matches": [{"category": "소화/장", "symptoms": ["울렁거림", "복부 팽만감"]}, {"category": "인지/기억", "symptoms": ["멍함"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-238", "response": {"matches": [{"category": "인지/기억", "symptoms": ["기억력 감소"]}, {"category": "소화/장", "symptoms": ["소화불량"]}], "unmatched": [{"text": "피부가 근질근질함", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-239", "response": {"matches": [{"category": "호르몬 건강", "symptoms": ["온도 민감"]}, {"category": "체중/체지방", "symptoms": ["체중 감소"]}, {"category": "신장/전해질", "symptoms": ["갈증"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-240", "response": {"matches": [{"category": "간/해독", "symptoms": ["느린 피로 회복"]}, {"category": "모발 건강", "symptoms": ["두피 가려움"]}, {"category": "체중/체지방", "symptoms": ["체중 감소"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-241", "response": {"matches": [{"category": "피로/활력", "symptoms": ["만성피로"]}, {"category": "소화/장", "symptoms": ["속쓰림"]}], "unmatched": [{"text": "어지러움이 잦음", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-242", "response": {"matches": [{"category": "눈 건강", "symptoms": ["눈 건조함"]}, {"category": "스트레스/수면", "symptoms": ["긴장"]}, {"category": "소화/장", "symptoms": ["소화불량"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-243", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["불면", "불안"]}, {"category": "피로/활력", "symptoms": ["기운 없음"]}, {"category": "신장/전해질", "symptoms": ["무력감"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-244", "response": {"matches": [{"category": "피로/활력", "symptoms": ["집중력 저하", "기운 없음"]}, {"category": "스트레스/수면", "symptoms": ["긴장"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-245", "response": {"matches": [{"category": "소화/장", "symptoms": ["속쓰림"]}, {"category": "피로/활력", "symptoms": ["체력 저하", "만성피로"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-246", "response": {"matches": [{"category": "소화/장", "symptoms": ["복부 팽만감"]}, {"category": "스트레스/수면", "symptoms": ["새벽 각성"]}], "unmatched": [{"text": "마른기침", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-247", "response": {"matches": [{"category": "모발 건강", "symptoms": ["탈모"]}, {"category": "눈 건강", "symptoms": ["눈 부심"]}, {"category": "피로/활력", "symptoms": ["기운 없음"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-248", "response": {"matches": [{"category": "모발 건강", "symptoms": ["두피 가려움"]}, {"category": "체중/체지방", "symptoms": ["체중 감소"]}, {"category": "눈 건강", "symptoms": ["야맹증"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-249", "response": {"matches": [{"category": "신장/전해질", "symptoms": ["근육경련(쥐남)"]}, {"category": "눈 건강", "symptoms": ["시야 흐림"]}, {"category": "간/해독", "symptoms": ["피부 트러블"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-250", "response": {"matches": [{"category": "눈 건강", "symptoms": ["눈 건조함"]}, {"category": "호르몬 건강", "symptoms": ["생리주기 불규칙"]}, {"category": "체중/체지방", "symptoms": ["식욕변화"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-251", "response": {"matches": [{"category": "모발 건강", "symptoms": ["비듬"]}, {"category": "체중/체지방", "symptoms": ["체중 증가"]}, {"category": "스트레스/수면", "symptoms": ["기분 저하"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-252", "response": {"matches": [{"category": "호르몬 건강", "symptoms": ["생리통"]}, {"category": "뼈/관절", "symptoms": ["움직임 불편"]}, {"category": "혈행/순환", "symptoms": ["혈액순환 전반"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-253", "response": {"matches": [{"category": "소화/장", "symptoms": ["복통", "복부 팽만감"]}, {"category": "신장/전해질", "symptoms": ["근육경련(쥐남)"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-254", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["불면"]}, {"category": "소화/장", "symptoms": ["복통"]}, {"category": "체중/체지방", "symptoms": ["식욕변화"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-255", "response": {"matches": [{"category": "호르몬 건강", "symptoms": ["생리통"]}, {"category": "스트레스/수면", "symptoms": ["기분 저하"]}, {"category": "피로/활력", "symptoms": ["집중력 저하"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-256", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["스트레스"]}, {"category": "혈행/순환", "symptoms": ["붓기"]}], "unmatched": [{"text": "잔기침", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-257", "response": {"matches": [{"category": "뼈/관절", "symptoms": ["무릎/허리 부담감"]}, {"category": "스트레스/수면", "symptoms": ["불안"]}], "unmatched": [{"text": "칫솔질하면 피가 남", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-258", "response": {"matches": [{"category": "간/해독", "symptoms": ["약물 복용 후 메스꺼움"]}, {"category": "면역", "symptoms": ["염증"]}, {"category": "눈 건강", "symptoms": ["눈 떨림"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-259", "response": {"matches": [{"category": "간/해독", "symptoms": ["입 텁텁함"]}, {"category": "호르몬 건강", "symptoms": ["갱년기 증상"]}, {"category": "신장/전해질", "symptoms": ["갈증"]}], "unmatched": [{"text": "입안이 끈적함", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-260", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["수족냉증", "혈액순환 전반"]}, {"category": "스트레스/수면", "symptoms": ["불안"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-261", "response": {"matches": [{"category": "간/해독", "symptoms": ["피부 트러블"]}, {"category": "신장/전해질", "symptoms": ["잦은 배뇨"]}, {"category": "피로/활력", "symptoms": ["기운 없음"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-262", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["두통"]}, {"category": "소화/장", "symptoms": ["복부 팽만감"]}, {"category": "눈 건강", "symptoms": ["눈 건조함"]}], "unmatched": [{"text": "눈이 시고", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-263", "response": {"matches": [{"category": "혈행/순환", "symptoms": []}, {"category": "소화/장", "symptoms": ["속쓰림"]}, {"category": "스트레스/수면", "symptoms": ["수면 질 저하", "새벽 각성"]}], "unmatched": [{"text": "손발 감각이 둔해짐", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-264", "response": {"matches": [{"category": "눈 건강", "symptoms": ["충혈", "눈 건조함"]}], "unmatched": [{"text": "현기증", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-265", "response": {"matches": [{"category": "간/해독", "symptoms": ["느린 피로 회복"]}, {"category": "혈행/순환", "symptoms": []}, {"category": "호르몬 건강", "symptoms": ["예민함"]}], "unmatched": [{"text": "다리 감각이 무뎌짐", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-266", "response": {"matches": [{"category": "소화/장", "symptoms": ["변비", "소화불량"]}, {"category": "신장/전해질", "symptoms": ["무력감"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-267", "response": {"matches": [{"category": "신장/전해질", "symptoms": ["잦은 배뇨"]}, {"category": "인지/기억", "symptoms": ["기억력 감소"]}], "unmatched": [{"text": "등이 가려움", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-268", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["혈액순환 전반"]}, {"category": "신장/전해질", "symptoms": ["잦은 배뇨"]}, {"category": "체중/체지방", "symptoms": ["체중 증가"]}], "unmatched": [], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-269", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["수족냉증"]}, {"category": "스트레스/수면", "symptoms": ["두통"]}], "unmatched": [{"text": "근육 통증", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-270", "response": {"matches": [{"category": "소화/장", "symptoms": ["변비"]}, {"category": "모발 건강", "symptoms": ["탈모"]}], "unmatched": [{"text": "잇몸이 욱신거림", "kind": "분류표 밖 증상"}], "red_flag": false, "red_flag_reason": ""}}
+{"id": "SF-271", "response": {"matches": [{"category": "소화/장", "symptoms": ["소화불량"]}], "unmatched": [{"text": "코피가 안 멈춤", "kind": "분류표 밖 증상"}, {"text": "항응고제 먹음", "kind": "약 관련"}], "red_flag": true, "red_flag_reason": "항응고제 복용 중 멈추지 않는 출혈(코피)"}}
+{"id": "SF-272", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["새벽 각성"]}], "unmatched": [{"text": "가족 얼굴을 못 알아봄", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "갑작스러운 혼란 또는 가족을 알아보지 못함"}}
+{"id": "SF-273", "response": {"matches": [], "unmatched": [{"text": "소변에 피가 섞여 나옴", "kind": "분류표 밖 증상"}, {"text": "기침이 잦음", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "혈뇨"}}
+{"id": "SF-274", "response": {"matches": [{"category": "체중/체지방", "symptoms": ["체중 감소"]}, {"category": "간/해독", "symptoms": ["약물 복용 후 메스꺼움"]}], "unmatched": [], "red_flag": true, "red_flag_reason": "이유 없이 몇 달 사이 살이 크게 빠짐"}}
+{"id": "SF-275", "response": {"matches": [], "unmatched": [{"text": "소변 색이 콜라처럼 진함", "kind": "분류표 밖 증상"}, {"text": "어깨가 결리고 아픔", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "콜라색 소변"}}
+{"id": "SF-276", "response": {"matches": [{"category": "피로/활력", "symptoms": ["만성피로"]}], "unmatched": [], "red_flag": true, "red_flag_reason": "자다가 숨이 막혀서 깸"}}
+{"id": "SF-277", "response": {"matches": [{"category": "면역", "symptoms": ["염증"]}], "unmatched": [{"text": "머리 부딪힌 후 계속 토함", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "머리를 다친 뒤 반복 구토"}}
+{"id": "SF-278", "response": {"matches": [{"category": "신장/전해질", "symptoms": ["잦은 배뇨"]}], "unmatched": [], "red_flag": true, "red_flag_reason": "숨이 차서 말을 잇기 힘듦"}}
+{"id": "SF-279", "response": {"matches": [{"category": "소화/장", "symptoms": ["소화불량"]}], "unmatched": [{"text": "한쪽 팔다리에 힘이 빠짐", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "한쪽 팔다리에 힘이 빠짐"}}
+{"id": "SF-280", "response": {"matches": [{"category": "스트레스/수면", "symptoms": ["두통", "불안"]}], "unmatched": [], "red_flag": true, "red_flag_reason": "난생처음 겪는 극심한 두통"}}
+{"id": "SF-281", "response": {"matches": [{"category": "호르몬 건강", "symptoms": ["생리통"]}], "unmatched": [], "red_flag": true, "red_flag_reason": "갑자기 숨이 차고 입술이 파래짐"}}
+{"id": "SF-282", "response": {"matches": [{"category": "혈당", "symptoms": ["공복 현기증"]}], "unmatched": [{"text": "얼굴 한쪽이 처짐", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "얼굴 한쪽이 처짐은 응급 신호입니다."}}
+{"id": "SF-283", "response": {"matches": [{"category": "모발 건강", "symptoms": ["두피 가려움"]}], "unmatched": [{"text": "변이 검게 나옴", "kind": "분류표 밖 증상"}, {"text": "두피가 따가움", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "검은 변"}}
+{"id": "SF-284", "response": {"matches": [{"category": "인지/기억", "symptoms": []}], "unmatched": [{"text": "말이 어눌해짐", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "말이 어눌해짐 (뇌 응급 신호)"}}
+{"id": "SF-285", "response": {"matches": [{"category": "면역", "symptoms": ["염증"]}], "unmatched": [], "red_flag": true, "red_flag_reason": "갑작스러운 한쪽 눈 시력 상실"}}
+{"id": "SF-286", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["손발 저림"]}], "unmatched": [{"text": "가슴이 답답함", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "가슴 답답함"}}
+{"id": "SF-287", "response": {"matches": [], "unmatched": [{"text": "혈당이 400 넘음", "kind": "기타"}, {"text": "계속 토함", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "매우 높은 혈당과 반복 구토"}}
+{"id": "SF-288", "response": {"matches": [{"category": "소화/장", "symptoms": ["복통"]}], "unmatched": [{"text": "식은땀", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "명치 통증과 식은땀이 함께 있음"}}
+{"id": "SF-289", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["붓기"]}], "unmatched": [{"text": "숨쉬기 힘듦", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "입술·혀가 붓고 숨쉬기 힘듦"}}
+{"id": "SF-290", "response": {"matches": [], "unmatched": [{"text": "가슴을 쥐어짜는 통증", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "가슴을 쥐어짜는 통증은 심장 응급 신호입니다."}}
+{"id": "SF-291", "response": {"matches": [], "unmatched": [{"text": "변에 피가 섞여 나옴", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "혈변"}}
+{"id": "SF-292", "response": {"matches": [{"category": "혈행/순환", "symptoms": ["붓기"]}], "unmatched": [{"text": "아픔", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "한쪽 다리만 갑자기 붓고 아픔"}}
+{"id": "SF-293", "response": {"matches": [], "unmatched": [{"text": "피가 섞인 구토", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "토혈"}}
+{"id": "SF-294", "response": {"matches": [], "unmatched": [{"text": "고열", "kind": "분류표 밖 증상"}, {"text": "목이 뻣뻣함", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "고열과 목 경직"}}
+{"id": "SF-295", "response": {"matches": [], "unmatched": [{"text": "의식을 잃고 쓰러짐", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "의식 잃음·실신"}}
+{"id": "SF-296", "response": {"matches": [], "unmatched": [{"text": "계단 오르면 가슴이 조임", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "계단을 오를 때 가슴이 조이는 증상"}}
+{"id": "SF-297", "response": {"matches": [], "unmatched": [{"text": "갑자기 커튼 친 것처럼 앞이 안 보임", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "갑작스러운 시력 상실"}}
+{"id": "SF-298", "response": {"matches": [], "unmatched": [{"text": "토할 때 피가 나옴", "kind": "분류표 밖 증상"}], "red_flag": true, "red_flag_reason": "토혈"}}
+{"id": "SF-299", "response": {"matches": [{"category": "소화/장", "symptoms": ["복통"]}], "unmatched": [], "red_flag": true, "red_flag_reason": "움직이기 힘들 정도의 심한 복통"}}
+{"id": "SF-300", "response": {"matches": [], "unmatched": [{"text": "죽고 싶다는 생각", "kind": "기타"}], "red_flag": true, "red_flag_reason": "자살 생각이 있음"}}

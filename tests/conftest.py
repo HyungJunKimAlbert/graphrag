@@ -18,6 +18,11 @@ def block_external(request, monkeypatch):
         monkeypatch.setattr(openai.OpenAI, "__init__", refuse)
     except ImportError:
         pass
+    try:
+        import anthropic
+        monkeypatch.setattr(anthropic.Anthropic, "__init__", refuse)
+    except ImportError:
+        pass
     if request.node.get_closest_marker("graph") is None:
         monkeypatch.setattr(socket, "create_connection", refuse)
 

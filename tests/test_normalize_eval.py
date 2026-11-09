@@ -68,3 +68,53 @@ def test_testset_option_reads_other_file(tmp_path, monkeypatch):
     monkeypatch.setattr(ne, "export", lambda cases, cats, root: seen.setdefault("ids", [c["id"] for c in cases]) and 0)
     ne.main(["export", "--tag", "t", "--testset", str(path), "--session", str(tmp_path)])
     assert seen["ids"] == ["x"]
+
+
+def test_score_with_client_parallel_keeps_order_and_records_usage():
+    """운영 GPT처럼 클라이언트를 직접 주면 병렬로 부르고, 케이스 순서·원응답·호출별 시간을 남긴다."""
+    from rxrag.llm import FakeLLM
+    cats = taxonomy.load()
+
+    def answer(task, system, user, schema):
+        sym = "속쓰림" if "속쓰림" in user else "불면"
+        cat = "소화/장" if sym == "속쓰림" else "스트레스/수면"
+        return {"matches": [{"category": cat, "symptoms": [sym]}], "unmatched": [], "red_flag": False, "red_flag_reason": ""}
+    cases = [case(str(i), utterance=("속쓰림" if i % 2 else "잠이 안 옴"), required=[["속쓰림" if i % 2 else "불면"]])
+             for i in range(8)]
+    scored, m, raw, calls = ne.score(cases, cats, {}, client=FakeLLM(answer), workers=4)
+    assert [s["id"] for s in scored] == [str(i) for i in range(8)] and m["required"]["met"] == 8
+    assert [r["id"] for r in raw] == [str(i) for i in range(8)] and raw[1]["response"]["matches"][0]["symptoms"] == ["속쓰림"]
+    assert len(calls) == 8 and all(c["latency_ms"] >= 0 for c in calls)
+
+
+def test_score_cli_openai_option(tmp_path, monkeypatch):
+    path = tmp_path / "t.json"
+    path.write_text(json.dumps({"equivalents": {}, "cases": [case("x", utterance="속쓰림", required=[["속쓰림"]])]},
+                               ensure_ascii=False))
+    from rxrag import llm
+    from rxrag.llm import FakeLLM
+    made = {}
+    monkeypatch.setattr(llm, "OpenAILLM", lambda **kw: made.update(kw) or FakeLLM(lambda *a: {"matches": [{"category": "소화/장", "symptoms": ["속쓰림"]}],
+                                                                     "unmatched": [], "red_flag": False, "red_flag_reason": ""}))
+    monkeypatch.setattr(ne, "OUT", tmp_path)
+    ne.main(["score", "--tag", "t", "--testset", str(path), "--llm", "openai", "--effort", "medium"])
+    assert made == {"effort": "medium"}
+    out = json.loads((tmp_path / "normalize-t.json").read_text(encoding="utf-8"))
+    assert out["metrics"]["required"]["met"] == 1 and out["usage"]["calls"] == 1 and out["effort"] == "medium"
+    assert (tmp_path / "normalize-t-raw.jsonl").exists()
+
+
+def test_score_cli_anthropic_option(tmp_path, monkeypatch):
+    path = tmp_path / "t.json"
+    path.write_text(json.dumps({"equivalents": {}, "cases": [case("x", utterance="속쓰림", required=[["속쓰림"]])]},
+                               ensure_ascii=False))
+    from rxrag import llm
+    from rxrag.llm import FakeLLM
+    made = {}
+    monkeypatch.setattr(llm, "AnthropicLLM", lambda **kw: made.update(kw) or FakeLLM(lambda *a: {"matches": [{"category": "소화/장", "symptoms": ["속쓰림"]}],
+                                                                        "unmatched": [], "red_flag": False, "red_flag_reason": ""}))
+    monkeypatch.setattr(ne, "OUT", tmp_path)
+    ne.main(["score", "--tag", "t", "--testset", str(path), "--llm", "anthropic"])
+    assert made == {"effort": "low"}
+    out = json.loads((tmp_path / "normalize-t.json").read_text(encoding="utf-8"))
+    assert out["llm"] == "anthropic" and out["effort"] == "low" and out["usage"]["calls"] == 1

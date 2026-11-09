@@ -9,7 +9,10 @@ import sys
 from pathlib import Path
 
 from rxrag import config, normalize, taxonomy
-from rxrag.llm import MissingResponse, SessionLLM
+from concurrent.futures import ThreadPoolExecutor
+
+from rxrag import llm
+from rxrag.llm import Meter, MissingResponse, SessionLLM
 
 TESTSET = config.GRAPHDB / "data" / "eval" / "complaint_testset.json"
 OUT = config.ROOT / "out" / "eval"
@@ -81,12 +84,26 @@ def export(cases, cats, root=config.SESSION_DIR):
                if not (root / "responses" / normalize.TASK / p.name).exists())
 
 
-def score(cases, cats, canon, root=config.SESSION_DIR):
-    client = SessionLLM(root, mode="run")
+def score(cases, cats, canon, root=config.SESSION_DIR, client=None, workers=1):
+    """(채점, 지표, 원응답, 호출별 시간·토큰). client가 없으면 세션 응답 파일을 읽는다. 운영 GPT는 workers로 병렬 호출."""
+    meter = Meter(client or SessionLLM(root, mode="run"))
     schema = normalize.schema(cats)
-    scored = [score_case(c, normalize.flatten(client.complete_json(normalize.TASK, *prompt_for(c, cats), schema), cats),
-                         canon) for c in cases]
-    return scored, metrics(scored)
+    ask = lambda c: meter.complete_json(normalize.TASK, *prompt_for(c, cats), schema)
+    with ThreadPoolExecutor(max_workers=max(1, workers)) as pool:
+        responses = list(pool.map(ask, cases))  # map은 입력 순서를 지킨다
+    scored = [score_case(c, normalize.flatten(r, cats), canon) for c, r in zip(cases, responses)]
+    raw = [{"id": c["id"], "response": r} for c, r in zip(cases, responses)]
+    return scored, metrics(scored), raw, meter.calls
+
+
+def usage_summary(calls):
+    """호출 수, 시간 평균·p95(초), 토큰 합계. 세션 응답은 토큰이 None이다."""
+    lat = sorted(c["latency_ms"] for c in calls)
+    tok = lambda k: sum(c[k] for c in calls) if calls and all(c.get(k) is not None for c in calls) else None
+    return {"calls": len(calls), "latency_avg_s": round(sum(lat) / len(lat) / 1000, 2) if lat else None,
+            "latency_p95_s": round(lat[int(0.95 * (len(lat) - 1))] / 1000, 2) if lat else None,
+            "input_tokens": tok("input"), "cached_tokens": tok("cached"), "output_tokens": tok("output"),
+            "reasoning_tokens": tok("reasoning"), "cache_write_tokens": tok("cache_write")}
 
 
 def write_xlsx(path, cases, scored, m):
@@ -114,6 +131,9 @@ def main(argv=None):
     parser.add_argument("--tag", required=True)
     parser.add_argument("--session", type=Path, default=config.SESSION_DIR)
     parser.add_argument("--testset", type=Path, default=TESTSET)
+    parser.add_argument("--llm", choices=["session", "openai", "anthropic"], default="session")
+    parser.add_argument("--workers", type=int, default=8)
+    parser.add_argument("--effort", choices=["low", "medium", "high"], default="low")  # GPT·Claude effort
     args = parser.parse_args(argv)
     cases, canon = load_testset(args.testset)
     cats = taxonomy.load()
@@ -121,12 +141,19 @@ def main(argv=None):
         print(f"남은 정규화 요청 {export(cases, cats, args.session)}개")
         return
     try:
-        scored, m = score(cases, cats, canon, args.session)
+        client = {"openai": lambda: llm.OpenAILLM(effort=args.effort),  # 과금: GPT
+                  "anthropic": lambda: llm.AnthropicLLM(effort=args.effort),  # 과금: Claude Haiku
+                  }.get(args.llm, lambda: None)()
+        scored, m, raw, calls = score(cases, cats, canon, args.session, client, args.workers if client else 1)
     except MissingResponse as e:
         sys.exit(f"세션 응답이 없습니다({e.task}/{e.key}). export 후 응답을 작성하세요.")
     out = OUT / f"normalize-{args.tag}.json"
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(json.dumps({"metrics": m, "cases": scored}, ensure_ascii=False, indent=1), encoding="utf-8")
+    out.write_text(json.dumps({"metrics": m, "usage": usage_summary(calls), "llm": args.llm,
+                              "effort": args.effort if client else None, "cases": scored},
+                              ensure_ascii=False, indent=1), encoding="utf-8")
+    (OUT / f"normalize-{args.tag}-raw.jsonl").write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in raw),
+                                                        encoding="utf-8")
     write_xlsx(OUT / f"normalize-{args.tag}.xlsx", cases, scored, m)
     print(json.dumps(m, ensure_ascii=False))
 

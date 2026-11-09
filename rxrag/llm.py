@@ -4,6 +4,7 @@ SessionLLM이 답하는 프롬프트는 운영 GPT에 보낼 문자열과 같다
 """
 import hashlib
 import json
+import threading
 import time
 from pathlib import Path
 from typing import Callable, Protocol
@@ -75,7 +76,15 @@ class OpenAILLM:
         self.model = model
         self.effort = effort
         self._client = None
-        self.last_usage = None
+        self._local = threading.local()  # 병렬 호출 때 스레드마다 자기 호출의 토큰만 본다
+
+    @property
+    def last_usage(self):
+        return getattr(self._local, "usage", None)
+
+    @last_usage.setter
+    def last_usage(self, value):
+        self._local.usage = value
 
     def _get(self):
         if self._client is None:
@@ -91,6 +100,54 @@ class OpenAILLM:
             text={"format": {"type": "json_schema", "name": task, "strict": True, "schema": schema}})
         self.last_usage = usage_of(res)
         return json.loads(res.output_text)
+
+
+class AnthropicLLM:
+    """Claude(Haiku) 비교용. 구조화 출력(json_schema), system 프롬프트 캐시. 키는 config.OPENAI_ENV(.env)의 ANTHROPIC_API_KEY."""
+
+    def __init__(self, model="claude-haiku-5-5", effort="low", max_tokens=16000):
+        self.model = model
+        self.effort = effort
+        self.max_tokens = max_tokens
+        self._client = None
+        self._local = threading.local()
+
+    @property
+    def last_usage(self):
+        return getattr(self._local, "usage", None)
+
+    @last_usage.setter
+    def last_usage(self, value):
+        self._local.usage = value
+
+    def _get(self):
+        if self._client is None:
+            import anthropic
+            key = dotenv_values(config.OPENAI_ENV).get("ANTHROPIC_API_KEY") if config.OPENAI_ENV.exists() else None
+            self._client = anthropic.Anthropic(api_key=key) if key else anthropic.Anthropic()
+        return self._client
+
+    def complete_json(self, task, system, user, schema):
+        res = self._get().messages.create(
+            model=self.model, max_tokens=self.max_tokens,
+            system=[{"type": "text", "text": system, "cache_control": {"type": "ephemeral"}}],
+            messages=[{"role": "user", "content": user}],
+            output_config={"effort": self.effort, "format": {"type": "json_schema", "schema": schema}})
+        self.last_usage = anthropic_usage_of(res)
+        if res.stop_reason in ("max_tokens", "refusal"):
+            raise RuntimeError(f"Claude 응답이 완결되지 않았습니다: {task}/{res.stop_reason}")
+        return json.loads(next(b.text for b in res.content if b.type == "text"))
+
+
+def anthropic_usage_of(res):
+    """Messages API usage → OpenAI와 같은 키. input은 캐시 읽기·쓰기를 포함한 입력 합계, output은 thinking 포함."""
+    u = getattr(res, "usage", None)
+    if u is None:
+        return None
+    read = getattr(u, "cache_read_input_tokens", None) or 0
+    write = getattr(u, "cache_creation_input_tokens", None) or 0
+    return {"input": u.input_tokens + read + write, "output": u.output_tokens, "reasoning": None,
+            "cached": read, "cache_write": write}
 
 
 def usage_of(res):
@@ -117,5 +174,5 @@ class Meter:
         out = self.client.complete_json(task, system, user, schema)
         usage = getattr(self.client, "last_usage", None) or {}
         self.calls.append({"task": task, "latency_ms": round((time.perf_counter() - start) * 1000, 1),
-                           **{k: usage.get(k) for k in ("input", "output", "reasoning", "cached")}})
+                           **{k: usage.get(k) for k in ("input", "output", "reasoning", "cached", "cache_write")}})
         return out
