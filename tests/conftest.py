@@ -20,3 +20,21 @@ def block_external(request, monkeypatch):
         pass
     if request.node.get_closest_marker("graph") is None:
         monkeypatch.setattr(socket, "create_connection", refuse)
+
+
+FIXTURE_80M = "/Users/user/Documents/projects/wellcheck/graphdb/tests/fixtures/patient_80m.json"
+
+
+@pytest.fixture
+def patient_80m():
+    import json
+    with open(FIXTURE_80M, encoding="utf-8") as f:
+        return json.load(f)
+
+
+@pytest.fixture
+def patient_80m_ctx(patient_80m):
+    """주호소 없이 symptoms만 쓴다(merge → None → 엔진 기본 경로). graph 마크 테스트에서만 쓴다."""
+    from rxrag import graph, legacy, normalize
+    db = graph.connect()
+    return db, legacy.build_context(db, patient_80m, normalize.merge(patient_80m, None))
