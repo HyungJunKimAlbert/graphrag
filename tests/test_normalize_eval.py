@@ -58,3 +58,13 @@ def test_export_writes_one_request_per_unique_prompt(tmp_path):
     assert ne.export(cases, cats, tmp_path) == 2
     body = json.loads(next((tmp_path / "requests" / "normalize").glob("*.json")).read_text(encoding="utf-8"))
     assert body["task"] == "normalize" and "주호소:" in body["user"]
+
+
+def test_testset_option_reads_other_file(tmp_path, monkeypatch):
+    """--testset으로 다른 테스트셋(샘플 형식 셋 등)을 읽는다. 기본값은 엔진 테스트셋."""
+    path = tmp_path / "t.json"
+    path.write_text(json.dumps({"equivalents": {"만성피로": ["피로감"]}, "cases": [case("x")]}, ensure_ascii=False))
+    seen = {}
+    monkeypatch.setattr(ne, "export", lambda cases, cats, root: seen.setdefault("ids", [c["id"] for c in cases]) and 0)
+    ne.main(["export", "--tag", "t", "--testset", str(path), "--session", str(tmp_path)])
+    assert seen["ids"] == ["x"]

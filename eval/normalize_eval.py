@@ -113,8 +113,9 @@ def main(argv=None):
     parser.add_argument("cmd", choices=["export", "score"])
     parser.add_argument("--tag", required=True)
     parser.add_argument("--session", type=Path, default=config.SESSION_DIR)
+    parser.add_argument("--testset", type=Path, default=TESTSET)
     args = parser.parse_args(argv)
-    cases, canon = load_testset()
+    cases, canon = load_testset(args.testset)
     cats = taxonomy.load()
     if args.cmd == "export":
         print(f"남은 정규화 요청 {export(cases, cats, args.session)}개")
