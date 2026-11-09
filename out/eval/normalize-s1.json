@@ -1,0 +1,7614 @@
+{
+ "metrics": {
+  "cases": 472,
+  "observed": 15,
+  "required": {
+   "cases": 334,
+   "met": 238,
+   "rate": 0.7126
+  },
+  "forbid_violations": 0,
+  "red_flag": {
+   "tp": 36,
+   "fp": 1,
+   "fn": 2,
+   "recall": 0.9474,
+   "precision": 0.973
+  },
+  "no_match": {
+   "cases": 10,
+   "correct": 10,
+   "accuracy": 1.0
+  }
+ },
+ "cases": [
+  {
+   "id": "샘플-001",
+   "group": "샘플",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "수면 질 저하"
+   ],
+   "categories": [],
+   "outside": [
+    "다리 근육통"
+   ]
+  },
+  {
+   "id": "샘플-002",
+   "group": "샘플",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "수면 질 저하"
+   ],
+   "categories": [],
+   "outside": [
+    "다리 근육통"
+   ]
+  },
+  {
+   "id": "샘플-003",
+   "group": "샘플",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "수면 질 저하"
+   ],
+   "categories": [],
+   "outside": [
+    "다리 근육통"
+   ]
+  },
+  {
+   "id": "샘플-004",
+   "group": "샘플",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "수면 질 저하"
+   ],
+   "categories": [],
+   "outside": [
+    "다리 근육통"
+   ]
+  },
+  {
+   "id": "샘플-005",
+   "group": "샘플",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "수면 질 저하"
+   ],
+   "categories": [],
+   "outside": [
+    "다리 근육통"
+   ]
+  },
+  {
+   "id": "샘플-006",
+   "group": "샘플",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "수면 질 저하"
+   ],
+   "categories": [],
+   "outside": [
+    "다리 근육통"
+   ]
+  },
+  {
+   "id": "샘플-007",
+   "group": "샘플",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "수면 질 저하"
+   ],
+   "categories": [],
+   "outside": [
+    "다리 근육통"
+   ]
+  },
+  {
+   "id": "샘플-008",
+   "group": "샘플",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "수면 질 저하"
+   ],
+   "categories": [],
+   "outside": [
+    "다리 근육통"
+   ]
+  },
+  {
+   "id": "샘플-009",
+   "group": "샘플",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "수면 질 저하"
+   ],
+   "categories": [],
+   "outside": [
+    "다리 근육통"
+   ]
+  },
+  {
+   "id": "샘플-010",
+   "group": "샘플",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "수면 질 저하"
+   ],
+   "categories": [],
+   "outside": [
+    "다리 근육통"
+   ]
+  },
+  {
+   "id": "샘플-011",
+   "group": "샘플",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "다리 근육통"
+   ]
+  },
+  {
+   "id": "샘플-012",
+   "group": "샘플",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "수면 질 저하"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-001",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "무릎/허리 부담감",
+    "붓기"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-002",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "불면"
+   ],
+   "categories": [],
+   "outside": [
+    "어깨 결림"
+   ]
+  },
+  {
+   "id": "메모체-003",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "무릎/허리 부담감",
+    "움직임 불편"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-004",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "눈 건조함",
+    "시야 흐림"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-005",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "복부 팽만감",
+    "소화불량"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-006",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "변비",
+    "복부 팽만감"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-007",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "갈증"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-008",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "근육경련(쥐남)",
+    "손발 저림"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-009",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "손발 저림",
+    "수족냉증"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-010",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "두통"
+   ],
+   "categories": [],
+   "outside": [
+    "뒷목 뻣뻣"
+   ]
+  },
+  {
+   "id": "메모체-011",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "기립성 저혈압"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-012",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "기운 없음",
+    "식욕변화"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-013",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "만성피로"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-014",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "두피 가려움",
+    "탈모"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-015",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "기억력 감소"
+   ],
+   "categories": [],
+   "outside": [
+    "말이 안 떠오름"
+   ]
+  },
+  {
+   "id": "메모체-016",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "식욕변화",
+    "식후 졸림"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-017",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "온도 민감"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-018",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "생리주기 불규칙",
+    "생리통"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-019",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "잦은 배뇨"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-020",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "복부 지방 증가",
+    "체중 증가"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-021",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "속쓰림"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-022",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "감기"
+   ],
+   "categories": [],
+   "outside": [
+    "입 헒(입안 헐음)"
+   ]
+  },
+  {
+   "id": "메모체-023",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "코 막힘, 콧물"
+   ]
+  },
+  {
+   "id": "메모체-024",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "피부 건조, 가려움"
+   ]
+  },
+  {
+   "id": "메모체-025",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "음주 후 불평감"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-026",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "붓기"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-027",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "불안"
+   ],
+   "categories": [],
+   "outside": [
+    "가슴 두근거림"
+   ]
+  },
+  {
+   "id": "메모체-028",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "예민함"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-029",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "기분 저하",
+    "무기력"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-030",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "멍함",
+    "집중력 저하"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-031",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "눈 떨림",
+    "충혈"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-032",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "야맹증"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-033",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "관절 소리"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-034",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "관절 통증",
+    "움직임 불편"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-035",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "귀에서 삐 소리"
+   ]
+  },
+  {
+   "id": "메모체-036",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "잇몸 피남",
+    "입 냄새"
+   ]
+  },
+  {
+   "id": "메모체-037",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "입 텁텁함"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-038",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "복통",
+    "설사"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-039",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "약물 복용 후 메스꺼움"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-040",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "만성피로",
+    "불면"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-041",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "새벽 각성"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-042",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "수면 질 저하"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-043",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [
+    "혈행/순환"
+   ],
+   "outside": []
+  },
+  {
+   "id": "메모체-044",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "걷다 보면 종아리 아픔"
+   ]
+  },
+  {
+   "id": "메모체-045",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "온도 민감"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-046",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "손톱 잘 깨짐"
+   ]
+  },
+  {
+   "id": "메모체-047",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "탈모"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-048",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "비듬"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-049",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "식욕변화",
+    "체중 감소"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-050",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "목 칼칼함, 기침"
+   ]
+  },
+  {
+   "id": "메모체-051",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "몸살 기운"
+   ]
+  },
+  {
+   "id": "메모체-052",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "무릎/허리 부담감"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-053",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "손발 저림"
+   ],
+   "categories": [],
+   "outside": [
+    "어깨 통증"
+   ]
+  },
+  {
+   "id": "메모체-054",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [
+    "호르몬 건강"
+   ],
+   "outside": []
+  },
+  {
+   "id": "메모체-055",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "소변 줄기 약함"
+   ]
+  },
+  {
+   "id": "메모체-056",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [
+    "호르몬 건강"
+   ],
+   "outside": []
+  },
+  {
+   "id": "메모체-057",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "시력 저하"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-058",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "눈 부심"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "메모체-059",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "상처 잘 안 아묾"
+   ]
+  },
+  {
+   "id": "메모체-060",
+   "group": "메모체",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "멍이 잘 듦"
+   ]
+  },
+  {
+   "id": "복합-001",
+   "group": "복합",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "관절 통증",
+    "만성피로",
+    "소화불량",
+    "잦은 배뇨"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "복합-002",
+   "group": "복합",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "두통",
+    "변비",
+    "불면",
+    "소화불량"
+   ],
+   "categories": [],
+   "outside": [
+    "어지러움"
+   ]
+  },
+  {
+   "id": "복합-003",
+   "group": "복합",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "기억력 감소",
+    "손발 저림",
+    "수족냉증",
+    "침침함"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "복합-004",
+   "group": "복합",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "멍함",
+    "불면",
+    "신경과민",
+    "집중력 저하"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "복합-005",
+   "group": "복합",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "갱년기 증상",
+    "관절 통증"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "복합-006",
+   "group": "복합",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "갈증",
+    "잦은 배뇨",
+    "체중 감소"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "복합-007",
+   "group": "복합",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "관절 통증",
+    "두통",
+    "무릎/허리 부담감"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "복합-008",
+   "group": "복합",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "만성피로",
+    "붓기",
+    "움직임 불편"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "복합-009",
+   "group": "복합",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "복통",
+    "설사",
+    "스트레스"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "복합-010",
+   "group": "복합",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "복부 팽만감",
+    "설사",
+    "소화불량"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "복합-011",
+   "group": "복합",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "눈 피로감",
+    "손발 저림"
+   ],
+   "categories": [],
+   "outside": [
+    "목 통증"
+   ]
+  },
+  {
+   "id": "복합-012",
+   "group": "복합",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "느린 피로 회복",
+    "입 텁텁함"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "복합-013",
+   "group": "복합",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "기억력 감소",
+    "불면"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "복합-014",
+   "group": "복합",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "부종",
+    "식욕변화",
+    "예민함"
+   ],
+   "categories": [],
+   "outside": [
+    "가슴 땡김"
+   ]
+  },
+  {
+   "id": "복합-015",
+   "group": "복합",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "변비",
+    "생리주기 불규칙",
+    "체중 증가",
+    "피부 트러블"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "복합-016",
+   "group": "복합",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "근육경련(쥐남)",
+    "눈 떨림",
+    "만성피로"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "복합-017",
+   "group": "복합",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "기운 없음",
+    "탈모"
+   ],
+   "categories": [],
+   "outside": [
+    "손톱 약해짐",
+    "어지러움"
+   ]
+  },
+  {
+   "id": "복합-018",
+   "group": "복합",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "멍함",
+    "체력 저하"
+   ],
+   "categories": [],
+   "outside": [
+    "기침이 오래 감"
+   ]
+  },
+  {
+   "id": "복합-019",
+   "group": "복합",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "무기력",
+    "불면",
+    "식욕변화"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "복합-020",
+   "group": "복합",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "어지럼",
+    "숨 약간 참",
+    "손톱 창백"
+   ]
+  },
+  {
+   "id": "오타-001",
+   "group": "오타",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "수면 질 저하"
+   ],
+   "categories": [],
+   "outside": [
+    "다리 근육통"
+   ]
+  },
+  {
+   "id": "오타-002",
+   "group": "오타",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "수면 질 저하"
+   ],
+   "categories": [],
+   "outside": [
+    "다리 근육통"
+   ]
+  },
+  {
+   "id": "오타-003",
+   "group": "오타",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "복부 팽만감",
+    "소화불량"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "오타-004",
+   "group": "오타",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "두통"
+   ],
+   "categories": [],
+   "outside": [
+    "어지러움"
+   ]
+  },
+  {
+   "id": "오타-005",
+   "group": "오타",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "불면"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "오타-006",
+   "group": "오타",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "관절 통증"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "오타-007",
+   "group": "오타",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "변비"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "오타-008",
+   "group": "오타",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "침침함"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "오타-009",
+   "group": "오타",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "두통"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "오타-010",
+   "group": "오타",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "손발 저림"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "오타-011",
+   "group": "오타",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "복부 팽만감",
+    "소화불량"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "오타-012",
+   "group": "오타",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "기운 없음"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "오타-013",
+   "group": "오타",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "만성피로"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "오타-014",
+   "group": "오타",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "탈모"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "오타-015",
+   "group": "오타",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "어지러움"
+   ]
+  },
+  {
+   "id": "오타-016",
+   "group": "오타",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "근육경련(쥐남)"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "오타-017",
+   "group": "오타",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "수족냉증"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "오타-018",
+   "group": "오타",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "속쓰림"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "오타-019",
+   "group": "오타",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "불안"
+   ],
+   "categories": [],
+   "outside": [
+    "심장 벌렁벌렁"
+   ]
+  },
+  {
+   "id": "오타-020",
+   "group": "오타",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "잦은 배뇨"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "오타-021",
+   "group": "오타",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "복부 지방 증가",
+    "체중 증가"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "오타-022",
+   "group": "오타",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "생리통"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "오타-023",
+   "group": "오타",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "눈 건조함",
+    "눈 피로감"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "오타-024",
+   "group": "오타",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "불면"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "오타-025",
+   "group": "오타",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "관절 통증",
+    "무릎/허리 부담감"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "약어-001",
+   "group": "약어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "두통"
+   ],
+   "categories": [],
+   "outside": [
+    "dizziness(어지러움)"
+   ]
+  },
+  {
+   "id": "약어-002",
+   "group": "약어",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "만성피로",
+    "불면"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "약어-003",
+   "group": "약어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "복부 팽만감",
+    "소화불량"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "약어-004",
+   "group": "약어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "변비"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "약어-005",
+   "group": "약어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "무릎/허리 부담감"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "약어-006",
+   "group": "약어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "관절 통증"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "약어-007",
+   "group": "약어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "근육통"
+   ]
+  },
+  {
+   "id": "약어-008",
+   "group": "약어",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "잦은 배뇨"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "약어-009",
+   "group": "약어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "기립성 저혈압"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "약어-010",
+   "group": "약어",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "약어-011",
+   "group": "약어",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [
+    "호르몬 건강"
+   ],
+   "outside": []
+  },
+  {
+   "id": "약어-012",
+   "group": "약어",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "약어-013",
+   "group": "약어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "탈모"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "약어-014",
+   "group": "약어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "소화불량"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "약어-015",
+   "group": "약어",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "palpitation(두근거림)"
+   ]
+  },
+  {
+   "id": "약어-016",
+   "group": "약어",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "붓기"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "약어-017",
+   "group": "약어",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "tinnitus(이명)"
+   ]
+  },
+  {
+   "id": "약어-018",
+   "group": "약어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "손발 저림"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "약어-019",
+   "group": "약어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "눈 건조함"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "약어-020",
+   "group": "약어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "갈증",
+    "잦은 배뇨"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "약어-021",
+   "group": "약어",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "근력 약화"
+   ]
+  },
+  {
+   "id": "약어-022",
+   "group": "약어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "이명",
+    "난청"
+   ]
+  },
+  {
+   "id": "약어-023",
+   "group": "약어",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [
+    "인지/기억"
+   ],
+   "outside": []
+  },
+  {
+   "id": "약어-024",
+   "group": "약어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "만성피로"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "약어-025",
+   "group": "약어",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "수면 질 저하"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "구어-001",
+   "group": "구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "관절 통증"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "구어-002",
+   "group": "구어",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "불면",
+    "손발 저림"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "구어-003",
+   "group": "구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "두통"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "구어-004",
+   "group": "구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "소화불량"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "구어-005",
+   "group": "구어",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "무기력"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "구어-006",
+   "group": "구어",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [
+    "눈 건강"
+   ],
+   "outside": [
+    "눈앞에 날파리가 떠다님"
+   ]
+  },
+  {
+   "id": "구어-007",
+   "group": "구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "기억력 감소"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "구어-008",
+   "group": "구어",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [
+    "혈행/순환"
+   ],
+   "outside": []
+  },
+  {
+   "id": "구어-009",
+   "group": "구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "두통"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "구어-010",
+   "group": "구어",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "발바닥이 불난 것 같음"
+   ]
+  },
+  {
+   "id": "구어-011",
+   "group": "구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "변비"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "구어-012",
+   "group": "구어",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "잦은 배뇨"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "구어-013",
+   "group": "구어",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "가슴이 벌렁거림"
+   ]
+  },
+  {
+   "id": "구어-014",
+   "group": "구어",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "입이 씀"
+   ]
+  },
+  {
+   "id": "구어-015",
+   "group": "구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "식욕변화"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "구어-016",
+   "group": "구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "무릎/허리 부담감"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "구어-017",
+   "group": "구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "눈 건조함"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "구어-018",
+   "group": "구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "수족냉증"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "구어-019",
+   "group": "구어",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "어깨가 무겁게 짓눌리는 느낌"
+   ]
+  },
+  {
+   "id": "구어-020",
+   "group": "구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "멍함"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "구어-021",
+   "group": "구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "수면 질 저하"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "구어-022",
+   "group": "구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "복부 팽만감"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "구어-023",
+   "group": "구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "관절 소리"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "구어-024",
+   "group": "구어",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [
+    "피로/활력"
+   ],
+   "outside": [
+    "낮에도 꾸벅꾸벅 졺"
+   ]
+  },
+  {
+   "id": "구어-025",
+   "group": "구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "식후 졸림"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "구어-026",
+   "group": "구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "기립성 저혈압"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "구어-027",
+   "group": "구어",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "붓기"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "구어-028",
+   "group": "구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "탈모"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "구어-029",
+   "group": "구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "체중 증가"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "구어-030",
+   "group": "구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "멍함"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "부정-001",
+   "group": "부정",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "부정-002",
+   "group": "부정",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "부정-003",
+   "group": "부정",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "어지러움"
+   ]
+  },
+  {
+   "id": "부정-004",
+   "group": "부정",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "부정-005",
+   "group": "부정",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "부정-006",
+   "group": "부정",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "수면 질 저하"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "부정-007",
+   "group": "부정",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "만성피로"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "부정-008",
+   "group": "부정",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "부정-009",
+   "group": "부정",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "부정-010",
+   "group": "부정",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "부정-011",
+   "group": "부정",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "수족냉증"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "부정-012",
+   "group": "부정",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "부정-013",
+   "group": "부정",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "만성피로"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "부정-014",
+   "group": "부정",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "잦은 배뇨"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "부정-015",
+   "group": "부정",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "설사"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "부정-016",
+   "group": "부정",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "부정-017",
+   "group": "부정",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "부정-018",
+   "group": "부정",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "귀 문제"
+   ]
+  },
+  {
+   "id": "부정-019",
+   "group": "부정",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "부정-020",
+   "group": "부정",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "부정-021",
+   "group": "부정",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "부정-022",
+   "group": "부정",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "부정-023",
+   "group": "부정",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "관절 통증"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "부정-024",
+   "group": "부정",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "부정-025",
+   "group": "부정",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "타인행정-001",
+   "group": "타인행정",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "타인행정-002",
+   "group": "타인행정",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "타인행정-003",
+   "group": "타인행정",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "타인행정-004",
+   "group": "타인행정",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "두통"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "타인행정-005",
+   "group": "타인행정",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "타인행정-006",
+   "group": "타인행정",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "타인행정-007",
+   "group": "타인행정",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "다리 근육통"
+   ]
+  },
+  {
+   "id": "타인행정-008",
+   "group": "타인행정",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "타인행정-009",
+   "group": "타인행정",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "타인행정-010",
+   "group": "타인행정",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "타인행정-011",
+   "group": "타인행정",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "타인행정-012",
+   "group": "타인행정",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "타인행정-013",
+   "group": "타인행정",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "타인행정-014",
+   "group": "타인행정",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [
+    "뼈/관절"
+   ],
+   "outside": []
+  },
+  {
+   "id": "타인행정-015",
+   "group": "타인행정",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "타인행정-016",
+   "group": "타인행정",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "수면 질 저하"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "타인행정-017",
+   "group": "타인행정",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "타인행정-018",
+   "group": "타인행정",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "타인행정-019",
+   "group": "타인행정",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "기억력 감소"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "타인행정-020",
+   "group": "타인행정",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [
+    "피로/활력"
+   ],
+   "outside": []
+  },
+  {
+   "id": "약맥락-001",
+   "group": "약맥락",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "다리 근육통"
+   ]
+  },
+  {
+   "id": "약맥락-002",
+   "group": "약맥락",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "마른기침"
+   ]
+  },
+  {
+   "id": "약맥락-003",
+   "group": "약맥락",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "설사"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "약맥락-004",
+   "group": "약맥락",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "새벽 각성"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "약맥락-005",
+   "group": "약맥락",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "변비"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "약맥락-006",
+   "group": "약맥락",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "근육경련(쥐남)"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "약맥락-007",
+   "group": "약맥락",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "속쓰림"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "약맥락-008",
+   "group": "약맥락",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "복통",
+    "설사"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "약맥락-009",
+   "group": "약맥락",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "약물 복용 후 메스꺼움"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "약맥락-010",
+   "group": "약맥락",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "기운 없음"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "약맥락-011",
+   "group": "약맥락",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "어지러움"
+   ]
+  },
+  {
+   "id": "약맥락-012",
+   "group": "약맥락",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "붓기"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "약맥락-013",
+   "group": "약맥락",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [
+    "소화/장"
+   ],
+   "outside": []
+  },
+  {
+   "id": "약맥락-014",
+   "group": "약맥락",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "약맥락-015",
+   "group": "약맥락",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "식욕변화"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "위험-001",
+   "group": "위험",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "가슴 쥐어짜는 통증",
+    "식은땀"
+   ]
+  },
+  {
+   "id": "위험-002",
+   "group": "위험",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "손발 저림"
+   ],
+   "categories": [],
+   "outside": [
+    "가슴 답답함"
+   ]
+  },
+  {
+   "id": "위험-003",
+   "group": "위험",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "갑자기 말이 어눌해짐"
+   ]
+  },
+  {
+   "id": "위험-004",
+   "group": "위험",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "오른쪽 팔다리 힘 빠짐"
+   ]
+  },
+  {
+   "id": "위험-005",
+   "group": "위험",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "자다가 숨 막혀서 깸"
+   ]
+  },
+  {
+   "id": "위험-006",
+   "group": "위험",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "검은 변 3일째"
+   ]
+  },
+  {
+   "id": "위험-007",
+   "group": "위험",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "토할 때 피 섞임"
+   ]
+  },
+  {
+   "id": "위험-008",
+   "group": "위험",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "소변에 피"
+   ]
+  },
+  {
+   "id": "위험-009",
+   "group": "위험",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [
+    "눈 건강"
+   ],
+   "outside": []
+  },
+  {
+   "id": "위험-010",
+   "group": "위험",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "두통"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "위험-011",
+   "group": "위험",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "어제 의식 잃고 쓰러짐"
+   ]
+  },
+  {
+   "id": "위험-012",
+   "group": "위험",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "위험-013",
+   "group": "위험",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "입술·혀 붓기",
+    "숨쉬기 힘듦"
+   ]
+  },
+  {
+   "id": "위험-014",
+   "group": "위험",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "고열 39도",
+    "목 뻣뻣"
+   ]
+  },
+  {
+   "id": "위험-015",
+   "group": "위험",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "체중 감소"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "위험-016",
+   "group": "위험",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "붓기"
+   ],
+   "categories": [],
+   "outside": [
+    "한쪽 다리 통증"
+   ]
+  },
+  {
+   "id": "위험-017",
+   "group": "위험",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "복통",
+    "울렁거림"
+   ],
+   "categories": [],
+   "outside": [
+    "식은땀"
+   ]
+  },
+  {
+   "id": "위험-018",
+   "group": "위험",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "변비",
+    "소화불량"
+   ],
+   "categories": [],
+   "outside": [
+    "어제부터 오른손에 힘이 없음"
+   ]
+  },
+  {
+   "id": "위험-019",
+   "group": "위험",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "코피가 멈추지 않음"
+   ]
+  },
+  {
+   "id": "위험-020",
+   "group": "위험",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "관절 통증",
+    "만성피로"
+   ],
+   "categories": [],
+   "outside": [
+    "가슴 조이는 느낌, 계단에서 심해짐"
+   ]
+  },
+  {
+   "id": "위험-021",
+   "group": "위험",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "혈변"
+   ]
+  },
+  {
+   "id": "위험-022",
+   "group": "위험",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "복통"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "위험-023",
+   "group": "위험",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "얼굴 한쪽이 처짐"
+   ]
+  },
+  {
+   "id": "위험-024",
+   "group": "위험",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "숨이 차서 말을 못 이어감"
+   ]
+  },
+  {
+   "id": "위험-025",
+   "group": "위험",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "머리 부딪힌 뒤 계속 토함"
+   ]
+  },
+  {
+   "id": "위험-026",
+   "group": "위험",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "다리 근육통",
+    "소변이 콜라색"
+   ]
+  },
+  {
+   "id": "위험-027",
+   "group": "위험",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "시야 흐림"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "위험-028",
+   "group": "위험",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "수면 질 저하"
+   ],
+   "categories": [],
+   "outside": [
+    "잘 때 가슴 눌리는 느낌"
+   ]
+  },
+  {
+   "id": "위험-029",
+   "group": "위험",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [
+    "혈당"
+   ],
+   "outside": [
+    "계속 토함"
+   ]
+  },
+  {
+   "id": "위험-030",
+   "group": "위험",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "기억력 감소"
+   ],
+   "categories": [],
+   "outside": [
+    "정신이 오락가락"
+   ]
+  },
+  {
+   "id": "위험대조-001",
+   "group": "위험대조",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "위험대조-002",
+   "group": "위험대조",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "기립성 저혈압"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "위험대조-003",
+   "group": "위험대조",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "손발 저림"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "위험대조-004",
+   "group": "위험대조",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "두통"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "위험대조-005",
+   "group": "위험대조",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "위험대조-006",
+   "group": "위험대조",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "커피 마시면 두근거림"
+   ]
+  },
+  {
+   "id": "위험대조-007",
+   "group": "위험대조",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "침침함"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "위험대조-008",
+   "group": "위험대조",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "변비"
+   ],
+   "categories": [],
+   "outside": [
+    "항문 불편"
+   ]
+  },
+  {
+   "id": "위험대조-009",
+   "group": "위험대조",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "관절 통증",
+    "무릎/허리 부담감"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "위험대조-010",
+   "group": "위험대조",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "감기"
+   ],
+   "categories": [],
+   "outside": [
+    "코 막힘"
+   ]
+  },
+  {
+   "id": "위험대조-011",
+   "group": "위험대조",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "만성피로"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "위험대조-012",
+   "group": "위험대조",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "두통"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "위험대조-013",
+   "group": "위험대조",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "복통"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "위험대조-014",
+   "group": "위험대조",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "근육경련(쥐남)",
+    "수면 질 저하"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "위험대조-015",
+   "group": "위험대조",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [
+    "호르몬 건강"
+   ],
+   "outside": []
+  },
+  {
+   "id": "모호-001",
+   "group": "모호",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "모호-002",
+   "group": "모호",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "모호-003",
+   "group": "모호",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "모호-004",
+   "group": "모호",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "모호-005",
+   "group": "모호",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "모호-006",
+   "group": "모호",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "모호-007",
+   "group": "모호",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "모호-008",
+   "group": "모호",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [
+    "소화/장"
+   ],
+   "outside": []
+  },
+  {
+   "id": "모호-009",
+   "group": "모호",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "모호-010",
+   "group": "모호",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "모호-011",
+   "group": "모호",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "모호-012",
+   "group": "모호",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "모호-013",
+   "group": "모호",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "모호-014",
+   "group": "모호",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [
+    "스트레스/수면"
+   ],
+   "outside": []
+  },
+  {
+   "id": "모호-015",
+   "group": "모호",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "빈값-001",
+   "group": "빈값",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": true,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "빈값-002",
+   "group": "빈값",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": true,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "빈값-003",
+   "group": "빈값",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": true,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "빈값-004",
+   "group": "빈값",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": true,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "빈값-005",
+   "group": "빈값",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": true,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "빈값-006",
+   "group": "빈값",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": true,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "빈값-007",
+   "group": "빈값",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": true,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "빈값-008",
+   "group": "빈값",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": true,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "빈값-009",
+   "group": "빈값",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": true,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "빈값-010",
+   "group": "빈값",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": true,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-001",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "기운 없음",
+    "만성피로"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-002",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "무기력",
+    "수면 질 저하"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-003",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "집중력 저하"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-004",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "무기력"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-005",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "무기력"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-006",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "체력 저하"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-007",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "불면"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-008",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "불면"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-009",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "두통",
+    "스트레스",
+    "신경과민"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-010",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "긴장"
+   ],
+   "categories": [],
+   "outside": [
+    "손에 땀",
+    "어깨가 돌처럼 굳음"
+   ]
+  },
+  {
+   "id": "이전구어-011",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "새벽 각성"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-012",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "불안"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-013",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "기분 저하"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-014",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "수면 질 저하"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-015",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "감기"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-016",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "환절기 콧물, 목 칼칼함"
+   ]
+  },
+  {
+   "id": "이전구어-017",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "입안이 자주 헐고 혓바늘"
+   ]
+  },
+  {
+   "id": "이전구어-018",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [
+    "면역"
+   ],
+   "outside": []
+  },
+  {
+   "id": "이전구어-019",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [
+    "면역"
+   ],
+   "outside": []
+  },
+  {
+   "id": "이전구어-020",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "염증"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-021",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "변비"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-022",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "변비"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-023",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "복부 팽만감"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-024",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "울렁거림"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-025",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "소화불량"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-026",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "속쓰림"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-027",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "설사",
+    "스트레스"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-028",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "소화불량",
+    "속쓰림"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-029",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "소화불량",
+    "속쓰림"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-030",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "식후 졸림"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-031",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "식후 졸림"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-032",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "공복 현기증"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-033",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "공복 현기증"
+   ],
+   "categories": [],
+   "outside": [
+    "손 떨림"
+   ]
+  },
+  {
+   "id": "이전구어-034",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "식후 졸림"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-035",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "손발 저림",
+    "수족냉증"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-036",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "손발 저림"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-037",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "붓기"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-038",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "수족냉증"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-039",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "기립성 저혈압"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-040",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "수족냉증"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-041",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "갈증",
+    "근육경련(쥐남)"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-042",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "근육경련(쥐남)"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-043",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "붓기"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-044",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "갈증"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-045",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "잦은 배뇨"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-046",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "갈증",
+    "부종",
+    "잦은 배뇨"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-047",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "약물 복용 후 메스꺼움"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-048",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "입 텁텁함"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-049",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "음주 후 불평감"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-050",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "울렁거림"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-051",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "피부 트러블"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-052",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "음주 후 불평감"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-053",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "비듬",
+    "탈모"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-054",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "탈모"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-055",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "두피 가려움"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-056",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "탈모"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-057",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "비듬"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-058",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "두피 가려움",
+    "비듬"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-059",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "관절 소리",
+    "관절 통증"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-060",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "관절 통증"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-061",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "무릎/허리 부담감"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-062",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "움직임 불편"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-063",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "관절 소리"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-064",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "움직임 불편"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-065",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "생리주기 불규칙",
+    "생리통"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-066",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "생리통"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-067",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "생리주기 불규칙"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-068",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "온도 민감"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-069",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "예민함"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-070",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "온도 민감"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-071",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "체중 증가"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-072",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "체중 증가"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-073",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "식욕변화"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-074",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "복부 지방 증가"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-075",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "체중 감소"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-076",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "식욕변화"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-077",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "눈 건조함",
+    "충혈"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-078",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "눈 건조함"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-079",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "시야 흐림"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-080",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "눈 피로감"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-081",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "야맹증"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-082",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "눈 떨림"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-083",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "눈 부심"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-084",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "충혈"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-085",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "기억력 감소"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-086",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "기억력 감소"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-087",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "멍함",
+    "반응 속도 저하"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-088",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "기억력 감소"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-089",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "반응 속도 저하"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-090",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "멍함"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-091",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "기억력 감소"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-092",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "근육경련(쥐남)",
+    "침침함"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-093",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "체중 증가",
+    "탈모"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-094",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "관절 통증",
+    "소화불량"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-095",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "기억력 감소",
+    "식후 졸림"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-096",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "기운 없음",
+    "불면"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-097",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "생리통",
+    "수족냉증"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전구어-098",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "식욕변화"
+   ],
+   "categories": [],
+   "outside": [
+    "철마다 코를 훌쩍임"
+   ]
+  },
+  {
+   "id": "이전구어-099",
+   "group": "이전구어",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "눈 건조함",
+    "붓기"
+   ],
+   "categories": [],
+   "outside": [
+    "뒷목 뻣뻣함"
+   ]
+  },
+  {
+   "id": "이전범위밖-001",
+   "group": "이전범위밖",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전범위밖-002",
+   "group": "이전범위밖",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전범위밖-003",
+   "group": "이전범위밖",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전범위밖-004",
+   "group": "이전범위밖",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전범위밖-005",
+   "group": "이전범위밖",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전범위밖-006",
+   "group": "이전범위밖",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전범위밖-007",
+   "group": "이전범위밖",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전범위밖-008",
+   "group": "이전범위밖",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전범위밖-009",
+   "group": "이전범위밖",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전범위밖-010",
+   "group": "이전범위밖",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전범위밖-011",
+   "group": "이전범위밖",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전범위밖-012",
+   "group": "이전범위밖",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전범위밖-013",
+   "group": "이전범위밖",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전범위밖-014",
+   "group": "이전범위밖",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "귀에서 삐 소리(이명)"
+   ]
+  },
+  {
+   "id": "이전범위밖-015",
+   "group": "이전범위밖",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "귀 먹먹함, 말소리 잘 안 들림"
+   ]
+  },
+  {
+   "id": "이전범위밖-016",
+   "group": "이전범위밖",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "발톱이 두꺼워지고 누렇게 변함"
+   ]
+  },
+  {
+   "id": "이전범위밖-017",
+   "group": "이전범위밖",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "손톱 갈라지고 부러짐"
+   ]
+  },
+  {
+   "id": "이전범위밖-018",
+   "group": "이전범위밖",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "찬물에 이가 시림"
+   ]
+  },
+  {
+   "id": "이전범위밖-019",
+   "group": "이전범위밖",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "목소리 쉼"
+   ]
+  },
+  {
+   "id": "이전범위밖-020",
+   "group": "이전범위밖",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "입 냄새"
+   ]
+  },
+  {
+   "id": "이전범위밖-021",
+   "group": "이전범위밖",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "딸꾹질이 며칠째 지속"
+   ]
+  },
+  {
+   "id": "이전범위밖-022",
+   "group": "이전범위밖",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "발바닥 티눈, 걸을 때 통증"
+   ]
+  },
+  {
+   "id": "이전범위밖-023",
+   "group": "이전범위밖",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "코피가 자주 남"
+   ]
+  },
+  {
+   "id": "이전범위밖-024",
+   "group": "이전범위밖",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "살짝 부딪혀도 멍이 심하게 듦"
+   ]
+  },
+  {
+   "id": "이전범위밖-025",
+   "group": "이전범위밖",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "음식 맛을 모름"
+   ]
+  },
+  {
+   "id": "이전범위밖-026",
+   "group": "이전범위밖",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "물만 마셔도 사레가 자주 듦"
+   ]
+  },
+  {
+   "id": "이전관찰-001",
+   "group": "이전관찰",
+   "observe": true,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "수면 질 저하"
+   ],
+   "categories": [],
+   "outside": [
+    "다리 근육통"
+   ]
+  },
+  {
+   "id": "이전관찰-002",
+   "group": "이전관찰",
+   "observe": true,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "만성피로"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전관찰-003",
+   "group": "이전관찰",
+   "observe": true,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "기운 없음"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전관찰-004",
+   "group": "이전관찰",
+   "observe": true,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "갈증",
+    "잦은 배뇨"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전관찰-005",
+   "group": "이전관찰",
+   "observe": true,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "기침 3주째"
+   ]
+  },
+  {
+   "id": "이전관찰-006",
+   "group": "이전관찰",
+   "observe": true,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "코막힘, 입으로 숨 쉼"
+   ]
+  },
+  {
+   "id": "이전관찰-007",
+   "group": "이전관찰",
+   "observe": true,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "온몸 가려움, 긁으면 벌겋게 부풀어 오름"
+   ]
+  },
+  {
+   "id": "이전관찰-008",
+   "group": "이전관찰",
+   "observe": true,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전관찰-009",
+   "group": "이전관찰",
+   "observe": true,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전관찰-010",
+   "group": "이전관찰",
+   "observe": true,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전관찰-011",
+   "group": "이전관찰",
+   "observe": true,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전관찰-012",
+   "group": "이전관찰",
+   "observe": true,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전관찰-013",
+   "group": "이전관찰",
+   "observe": true,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전관찰-014",
+   "group": "이전관찰",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "가슴이 쥐어짜듯 아픔",
+    "식은땀"
+   ]
+  },
+  {
+   "id": "이전관찰-015",
+   "group": "이전관찰",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "한쪽 팔에 힘이 빠짐",
+    "말이 어눌해짐"
+   ]
+  },
+  {
+   "id": "이전관찰-016",
+   "group": "이전관찰",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "두통"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "이전관찰-017",
+   "group": "이전관찰",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "대변이 새까맣게 나옴"
+   ]
+  },
+  {
+   "id": "이전관찰-018",
+   "group": "이전관찰",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [
+    "눈 건강"
+   ],
+   "outside": []
+  },
+  {
+   "id": "이전관찰-019",
+   "group": "이전관찰",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "숨이 차서 누워 있지 못하고 앉아서 잠"
+   ]
+  },
+  {
+   "id": "H-01",
+   "group": "이전홀드아웃",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "체중 증가"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "H-02",
+   "group": "이전홀드아웃",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "탈모"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "H-03",
+   "group": "이전홀드아웃",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "관절 통증",
+    "움직임 불편"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "H-04",
+   "group": "이전홀드아웃",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "불안"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "H-05",
+   "group": "이전홀드아웃",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "두통",
+    "불면",
+    "스트레스"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "H-06",
+   "group": "이전홀드아웃",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "이가 시림"
+   ]
+  },
+  {
+   "id": "H-07",
+   "group": "이전홀드아웃",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "발톱이 살을 파고듦"
+   ]
+  },
+  {
+   "id": "H-08",
+   "group": "이전홀드아웃",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "H-09",
+   "group": "이전홀드아웃",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "H-10",
+   "group": "이전홀드아웃",
+   "observe": true,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "식욕변화"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "H-11",
+   "group": "이전홀드아웃",
+   "observe": true,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "현관에 나갔다 들어왔다 반복"
+   ]
+  },
+  {
+   "id": "H-12",
+   "group": "이전홀드아웃",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "H-13",
+   "group": "이전홀드아웃",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "H-14",
+   "group": "이전홀드아웃",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "코막힘, 훌쩍거림"
+   ]
+  },
+  {
+   "id": "H-15",
+   "group": "이전홀드아웃",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "혀끝 따끔거림",
+    "입 안이 자꾸 헐음"
+   ]
+  },
+  {
+   "id": "H-16",
+   "group": "이전홀드아웃",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "잇몸 붓고 욱신거림"
+   ]
+  },
+  {
+   "id": "H-17",
+   "group": "이전홀드아웃",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "귀에서 매미 소리가 계속 남"
+   ]
+  },
+  {
+   "id": "H-18",
+   "group": "이전홀드아웃",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "한쪽 귀 욱신거림, 먹먹함"
+   ]
+  },
+  {
+   "id": "H-19",
+   "group": "이전홀드아웃",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "왼쪽 가슴 찌르는 통증, 턱으로 방사"
+   ]
+  },
+  {
+   "id": "H-20",
+   "group": "이전홀드아웃",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "계단 조금만 올라도 숨이 참",
+    "가슴 조임"
+   ]
+  },
+  {
+   "id": "H-21",
+   "group": "이전홀드아웃",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "온도 민감"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "H-22",
+   "group": "이전홀드아웃",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "갱년기 증상"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "H-23",
+   "group": "이전홀드아웃",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "생리통"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "H-24",
+   "group": "이전홀드아웃",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "생리통"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "H-25",
+   "group": "이전홀드아웃",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "불면"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "H-26",
+   "group": "이전홀드아웃",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": null,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "복통",
+    "설사"
+   ],
+   "categories": [],
+   "outside": []
+  }
+ ]
+}
