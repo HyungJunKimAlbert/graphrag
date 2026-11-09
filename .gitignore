@@ -18,3 +18,10 @@ out/pip_install.log
 # 개인 설정
 .claude/settings.local.json
 .DS_Store
+
+# 플랜 실행 작업 공간
+.superpowers/
+
+# 세션 응답·캐시
+out/session/
+out/cache/
