@@ -1,0 +1,738 @@
+{
+ "aggregate": {
+  "win": 19,
+  "tie": 8,
+  "loss": 2,
+  "total": 29,
+  "ratio": 0.931,
+  "new_clearly_worse": 0,
+  "pass": true
+ },
+ "verdicts": [
+  {
+   "id": "V-01",
+   "new_side": "A",
+   "verdict": {
+    "winner": "A",
+    "clearly_worse": null,
+    "scores": {
+     "A": {
+      "fit": 4,
+      "coverage": 4,
+      "spread": 4,
+      "caution": 5
+     },
+     "B": {
+      "fit": 3,
+      "coverage": 3,
+      "spread": 2,
+      "caution": 4
+     }
+    },
+    "why": "A는 메트포르민 B12 결핍, 새벽 각성, 근육통을 하나씩 나눠 맡았다. B는 수면에 두 개를 썼는데, 그중 홍경천은 수면 개선 성분으로 보기 어렵다."
+   },
+   "new_side_result": "win",
+   "new_clearly_worse": false
+  },
+  {
+   "id": "V-02",
+   "new_side": "A",
+   "verdict": {
+    "winner": "tie",
+    "clearly_worse": null,
+    "scores": {
+     "A": {
+      "fit": 4,
+      "coverage": 4,
+      "spread": 3,
+      "caution": 5
+     },
+     "B": {
+      "fit": 4,
+      "coverage": 4,
+      "spread": 3,
+      "caution": 5
+     }
+    },
+    "why": "둘 다 마그네슘과 메트포르민에 따른 B12를 골랐다. 셋째 성분인 단백질(고령 근육량)과 엽산(메트포르민 고갈)은 비슷하게 타당하다."
+   },
+   "new_side_result": "tie",
+   "new_clearly_worse": false
+  },
+  {
+   "id": "V-03",
+   "new_side": "A",
+   "verdict": {
+    "winner": "A",
+    "clearly_worse": "B",
+    "scores": {
+     "A": {
+      "fit": 3,
+      "coverage": 3,
+      "spread": 3,
+      "caution": 3
+     },
+     "B": {
+      "fit": 2,
+      "coverage": 2,
+      "spread": 1,
+      "caution": 1
+     }
+    },
+    "why": "임신부 피로에 A는 철·마그네슘처럼 임신 중 필요한 성분을 앞에 두었다. B는 임신 중 권하지 않는 인삼·홍삼을 겹쳐 앞에 두어 내놓기 어렵다."
+   },
+   "new_side_result": "win",
+   "new_clearly_worse": false
+  },
+  {
+   "id": "V-04",
+   "new_side": "B",
+   "verdict": {
+    "winner": "B",
+    "clearly_worse": null,
+    "scores": {
+     "A": {
+      "fit": 3,
+      "coverage": 2,
+      "spread": 2,
+      "caution": 5
+     },
+     "B": {
+      "fit": 3,
+      "coverage": 3,
+      "spread": 3,
+      "caution": 5
+     }
+    },
+    "why": "둘 다 스타틴 근육통에 맞게 코엔자임Q10을 1순위에 두었다. A는 나머지 두 개를 모두 전립선 쪽으로 골랐고, B의 마그네슘은 근육 증상에도 조금 닿는다."
+   },
+   "new_side_result": "win",
+   "new_clearly_worse": false
+  },
+  {
+   "id": "V-05",
+   "new_side": "B",
+   "verdict": {
+    "winner": "tie",
+    "clearly_worse": null,
+    "scores": {
+     "A": {
+      "fit": 4,
+      "coverage": 4,
+      "spread": 2,
+      "caution": 4
+     },
+     "B": {
+      "fit": 4,
+      "coverage": 4,
+      "spread": 2,
+      "caution": 5
+     }
+    },
+    "why": "둘 다 변비에 집중한 무난한 구성이다. B의 차전자피가 표준 선택에 가깝지만, 차이는 작다."
+   },
+   "new_side_result": "tie",
+   "new_clearly_worse": false
+  },
+  {
+   "id": "V-06",
+   "new_side": "B",
+   "verdict": {
+    "winner": "B",
+    "clearly_worse": null,
+    "scores": {
+     "A": {
+      "fit": 3,
+      "coverage": 3,
+      "spread": 2,
+      "caution": 5
+     },
+     "B": {
+      "fit": 4,
+      "coverage": 4,
+      "spread": 3,
+      "caution": 5
+     }
+    },
+    "why": "A는 비타민 A와 베타카로틴이 사실상 겹친다. B는 눈 피로 개선 기능성이 있는 빌베리를 넣어 더 적합하다."
+   },
+   "new_side_result": "win",
+   "new_clearly_worse": false
+  },
+  {
+   "id": "V-07",
+   "new_side": "B",
+   "verdict": {
+    "winner": "B",
+    "clearly_worse": null,
+    "scores": {
+     "A": {
+      "fit": 3,
+      "coverage": 3,
+      "spread": 1,
+      "caution": 5
+     },
+     "B": {
+      "fit": 4,
+      "coverage": 4,
+      "spread": 4,
+      "caution": 4
+     }
+    },
+    "why": "10대 여성의 피로에 B는 철 결핍 가능성까지 다뤄 분산이 좋다. A는 B군 세 개가 한 기전에 몰렸다."
+   },
+   "new_side_result": "win",
+   "new_clearly_worse": false
+  },
+  {
+   "id": "V-08",
+   "new_side": "B",
+   "verdict": {
+    "winner": "B",
+    "clearly_worse": null,
+    "scores": {
+     "A": {
+      "fit": 3,
+      "coverage": 3,
+      "spread": 3,
+      "caution": 5
+     },
+     "B": {
+      "fit": 4,
+      "coverage": 4,
+      "spread": 3,
+      "caution": 4
+     }
+    },
+    "why": "수족냉증·혈행에 B의 L-아르기닌·칸탈로프멜론추출물이 직접적인 혈행 기능성을 가진다. A의 B6·엽산은 연결이 간접적이다."
+   },
+   "new_side_result": "win",
+   "new_clearly_worse": false
+  },
+  {
+   "id": "V-09",
+   "new_side": "B",
+   "verdict": {
+    "winner": "B",
+    "clearly_worse": null,
+    "scores": {
+     "A": {
+      "fit": 3,
+      "coverage": 2,
+      "spread": 3,
+      "caution": 5
+     },
+     "B": {
+      "fit": 4,
+      "coverage": 4,
+      "spread": 3,
+      "caution": 5
+     }
+    },
+    "why": "B는 메트포르민 장기 복용에 따른 B12 결핍(말초신경 저림의 주요 원인)을 비타민 B군으로 다뤘고, A는 이 점을 놓치고 혈행 쪽으로만 골랐다."
+   },
+   "new_side_result": "win",
+   "new_clearly_worse": false
+  },
+  {
+   "id": "V-10",
+   "new_side": "A",
+   "verdict": {
+    "winner": "A",
+    "clearly_worse": null,
+    "scores": {
+     "A": {
+      "fit": 4,
+      "coverage": 4,
+      "spread": 4,
+      "caution": 4
+     },
+     "B": {
+      "fit": 2,
+      "coverage": 2,
+      "spread": 1,
+      "caution": 5
+     }
+    },
+    "why": "A는 철·아연 결핍과 레보티록신 관련 철 고갈까지 다뤘다(철은 레보티록신과 시간 간격이 필요하다). B는 같은 LB-P9 균주를 두 번 넣어 사실상 두 성분뿐이다."
+   },
+   "new_side_result": "win",
+   "new_clearly_worse": false
+  },
+  {
+   "id": "V-11",
+   "new_side": "B",
+   "verdict": {
+    "winner": "tie",
+    "clearly_worse": null,
+    "scores": {
+     "A": {
+      "fit": 5,
+      "coverage": 4,
+      "spread": 3,
+      "caution": 5
+     },
+     "B": {
+      "fit": 5,
+      "coverage": 4,
+      "spread": 3,
+      "caution": 5
+     }
+    },
+    "why": "성분이 같다. 둘 다 스테로이드에 따른 칼슘·비타민 D 고갈과 골 건강을 다룬다."
+   },
+   "new_side_result": "tie",
+   "new_clearly_worse": false
+  },
+  {
+   "id": "V-12",
+   "new_side": "A",
+   "verdict": {
+    "winner": "A",
+    "clearly_worse": null,
+    "scores": {
+     "A": {
+      "fit": 4,
+      "coverage": 4,
+      "spread": 3,
+      "caution": 4
+     },
+     "B": {
+      "fit": 3,
+      "coverage": 3,
+      "spread": 3,
+      "caution": 5
+     }
+    },
+    "why": "A는 테아닌·감태·아쉬아간다로 모두 수면 근거가 있는 성분을 골랐다. B는 수면 효과가 분명하지 않은 홍경천을 2순위에 두었다."
+   },
+   "new_side_result": "win",
+   "new_clearly_worse": false
+  },
+  {
+   "id": "V-13",
+   "new_side": "A",
+   "verdict": {
+    "winner": "B",
+    "clearly_worse": null,
+    "scores": {
+     "A": {
+      "fit": 4,
+      "coverage": 3,
+      "spread": 2,
+      "caution": 3
+     },
+     "B": {
+      "fit": 4,
+      "coverage": 3,
+      "spread": 2,
+      "caution": 5
+     }
+    },
+    "why": "A의 빌베리는 와파린과 출혈 위험 상호작용 우려가 있는데 주의 없이 들어가 있어, 상호작용 부담이 적은 B가 조금 낫다."
+   },
+   "new_side_result": "loss",
+   "new_clearly_worse": false
+  },
+  {
+   "id": "V-14",
+   "new_side": "B",
+   "verdict": {
+    "winner": "B",
+    "clearly_worse": "A",
+    "scores": {
+     "A": {
+      "fit": 2,
+      "coverage": 2,
+      "spread": 1,
+      "caution": 1
+     },
+     "B": {
+      "fit": 3,
+      "coverage": 3,
+      "spread": 2,
+      "caution": 5
+     }
+    },
+    "why": "A는 메트포르민 복용자에게 당뇨약 주의 문구가 붙은 인삼과 홍삼을 중복으로 앞에 두었다. 주의 문구가 없는 피로 성분 대안이 있는데도 그랬다. B는 주의 없는 피로 성분 세 개를 골랐다."
+   },
+   "new_side_result": "win",
+   "new_clearly_worse": false
+  },
+  {
+   "id": "V-15",
+   "new_side": "B",
+   "verdict": {
+    "winner": "tie",
+    "clearly_worse": null,
+    "scores": {
+     "A": {
+      "fit": 4,
+      "coverage": 3,
+      "spread": 2,
+      "caution": 5
+     },
+     "B": {
+      "fit": 4,
+      "coverage": 3,
+      "spread": 2,
+      "caution": 5
+     }
+    },
+    "why": "둘 다 칼슘·비타민 D에 연골 성분 하나로 관절 통증만 다루는 구성이 거의 같다. NAG와 UC-II의 차이는 작다."
+   },
+   "new_side_result": "tie",
+   "new_clearly_worse": false
+  },
+  {
+   "id": "V-16",
+   "new_side": "B",
+   "verdict": {
+    "winner": "B",
+    "clearly_worse": null,
+    "scores": {
+     "A": {
+      "fit": 3,
+      "coverage": 3,
+      "spread": 1,
+      "caution": 5
+     },
+     "B": {
+      "fit": 4,
+      "coverage": 4,
+      "spread": 4,
+      "caution": 5
+     }
+    },
+    "why": "B는 고령자의 B12 결핍과 스트레스성 피로까지 기전을 나눴다. A는 B군 세 개가 한 기전에 몰렸다."
+   },
+   "new_side_result": "win",
+   "new_clearly_worse": false
+  },
+  {
+   "id": "V-17",
+   "new_side": "A",
+   "verdict": {
+    "winner": "A",
+    "clearly_worse": "B",
+    "scores": {
+     "A": {
+      "fit": 3,
+      "coverage": 3,
+      "spread": 2,
+      "caution": 3
+     },
+     "B": {
+      "fit": 1,
+      "coverage": 1,
+      "spread": 1,
+      "caution": 5
+     }
+    },
+    "why": "B는 요로 건강 성분만 세 개로 밤 다리 쥐라는 주호소를 전혀 다루지 않는다. A는 주호소를 다루지만 eGFR 40에서 칼슘은 주의가 필요하다."
+   },
+   "new_side_result": "win",
+   "new_clearly_worse": false
+  },
+  {
+   "id": "V-18",
+   "new_side": "B",
+   "verdict": {
+    "winner": "tie",
+    "clearly_worse": null,
+    "scores": {
+     "A": {
+      "fit": 4,
+      "coverage": 3,
+      "spread": 3,
+      "caution": 5
+     },
+     "B": {
+      "fit": 4,
+      "coverage": 3,
+      "spread": 3,
+      "caution": 5
+     }
+    },
+    "why": "둘 다 메트포르민 관련 B군·코엔자임Q10에 전립선 성분 하나를 더했다. 아연과 셀레늄의 차이는 작다."
+   },
+   "new_side_result": "tie",
+   "new_clearly_worse": false
+  },
+  {
+   "id": "V-19",
+   "new_side": "B",
+   "verdict": {
+    "winner": "tie",
+    "clearly_worse": null,
+    "scores": {
+     "A": {
+      "fit": 3,
+      "coverage": 3,
+      "spread": 3,
+      "caution": 5
+     },
+     "B": {
+      "fit": 3,
+      "coverage": 3,
+      "spread": 3,
+      "caution": 5
+     }
+    },
+    "why": "둘 다 마그네슘·비타민 C 중심이다. 스타틴 복용자의 근육통에 맞는 코엔자임Q10은 두 쪽 모두 빠졌고, 셋째 성분(단백질 대 B1)의 차이도 작다."
+   },
+   "new_side_result": "tie",
+   "new_clearly_worse": false
+  },
+  {
+   "id": "V-20",
+   "new_side": "A",
+   "verdict": {
+    "winner": "A",
+    "clearly_worse": null,
+    "scores": {
+     "A": {
+      "fit": 3,
+      "coverage": 4,
+      "spread": 4,
+      "caution": 3
+     },
+     "B": {
+      "fit": 3,
+      "coverage": 2,
+      "spread": 1,
+      "caution": 5
+     }
+    },
+    "why": "A는 수면과 피로를 모두 다루고 임신 중 필요한 철도 넣었지만, 임신 중 안전 근거가 부족한 홍경천을 1순위에 두었다. B는 피로만 다루고 B군 세 개가 한 문제에 몰렸다."
+   },
+   "new_side_result": "win",
+   "new_clearly_worse": false
+  },
+  {
+   "id": "V-21",
+   "new_side": "A",
+   "verdict": {
+    "winner": "A",
+    "clearly_worse": null,
+    "scores": {
+     "A": {
+      "fit": 3,
+      "coverage": 3,
+      "spread": 3,
+      "caution": 4
+     },
+     "B": {
+      "fit": 2,
+      "coverage": 1,
+      "spread": 1,
+      "caution": 5
+     }
+    },
+    "why": "B는 크랜베리 두 개를 겹쳐 골랐고, 둘 다 다리 쥐와 무관하다. A는 근거가 약하지만 셋 모두 근육 쪽을 겨냥했다."
+   },
+   "new_side_result": "win",
+   "new_clearly_worse": false
+  },
+  {
+   "id": "V-22",
+   "new_side": "B",
+   "verdict": {
+    "winner": "tie",
+    "clearly_worse": null,
+    "scores": {
+     "A": {
+      "fit": 3,
+      "coverage": 3,
+      "spread": 2,
+      "caution": 5
+     },
+     "B": {
+      "fit": 3,
+      "coverage": 3,
+      "spread": 2,
+      "caution": 5
+     }
+    },
+    "why": "둘 다 프로바이오틱스에 식이섬유·프리바이오틱스를 더해 장 쪽에 몰린 비슷한 구성이다. 소화불량 자체를 겨냥한 성분은 양쪽 모두 없다."
+   },
+   "new_side_result": "tie",
+   "new_clearly_worse": false
+  },
+  {
+   "id": "V-23",
+   "new_side": "A",
+   "verdict": {
+    "winner": "tie",
+    "clearly_worse": null,
+    "scores": {
+     "A": {
+      "fit": 4,
+      "coverage": 4,
+      "spread": 4,
+      "caution": 5
+     },
+     "B": {
+      "fit": 4,
+      "coverage": 4,
+      "spread": 4,
+      "caution": 5
+     }
+    },
+    "why": "같은 성분 세 개를 순서만 바꿔 골랐다."
+   },
+   "new_side_result": "tie",
+   "new_clearly_worse": false
+  },
+  {
+   "id": "V-24",
+   "new_side": "B",
+   "verdict": {
+    "winner": "B",
+    "clearly_worse": null,
+    "scores": {
+     "A": {
+      "fit": 3,
+      "coverage": 2,
+      "spread": 2,
+      "caution": 5
+     },
+     "B": {
+      "fit": 4,
+      "coverage": 4,
+      "spread": 4,
+      "caution": 5
+     }
+    },
+    "why": "B는 LDL·중성지방에 더해 공복혈당 경계(115)까지 바나바잎으로 다뤘다. A는 지질에만 몰렸다."
+   },
+   "new_side_result": "win",
+   "new_clearly_worse": false
+  },
+  {
+   "id": "V-25",
+   "new_side": "B",
+   "verdict": {
+    "winner": "B",
+    "clearly_worse": null,
+    "scores": {
+     "A": {
+      "fit": 3,
+      "coverage": 3,
+      "spread": 1,
+      "caution": 5
+     },
+     "B": {
+      "fit": 3,
+      "coverage": 3,
+      "spread": 3,
+      "caution": 5
+     }
+    },
+    "why": "주호소가 없는 40대 남성이다. A는 면역 3개로 몰렸고, B는 면역과 복부지방 관리를 나눠 맡는다."
+   },
+   "new_side_result": "win",
+   "new_clearly_worse": false
+  },
+  {
+   "id": "V-26",
+   "new_side": "B",
+   "verdict": {
+    "winner": "A",
+    "clearly_worse": null,
+    "scores": {
+     "A": {
+      "fit": 3,
+      "coverage": 3,
+      "spread": 3,
+      "caution": 5
+     },
+     "B": {
+      "fit": 3,
+      "coverage": 2,
+      "spread": 3,
+      "caution": 5
+     }
+    },
+    "why": "건선에는 비타민 D와 오메가3가 관련 근거가 있어 A가 질환에 더 맞다. B의 칼슘은 건선과 관련이 적다."
+   },
+   "new_side_result": "loss",
+   "new_clearly_worse": false
+  },
+  {
+   "id": "V-28",
+   "new_side": "A",
+   "verdict": {
+    "winner": "A",
+    "clearly_worse": null,
+    "scores": {
+     "A": {
+      "fit": 4,
+      "coverage": 4,
+      "spread": 3,
+      "caution": 5
+     },
+     "B": {
+      "fit": 3,
+      "coverage": 3,
+      "spread": 1,
+      "caution": 5
+     }
+    },
+    "why": "A는 에너지 대사와 스트레스성 피로를 나눠 맡았다. B는 B군 세 개가 한 기전에 몰렸다."
+   },
+   "new_side_result": "win",
+   "new_clearly_worse": false
+  },
+  {
+   "id": "V-29",
+   "new_side": "B",
+   "verdict": {
+    "winner": "B",
+    "clearly_worse": null,
+    "scores": {
+     "A": {
+      "fit": 2,
+      "coverage": 2,
+      "spread": 1,
+      "caution": 5
+     },
+     "B": {
+      "fit": 4,
+      "coverage": 5,
+      "spread": 4,
+      "caution": 5
+     }
+    },
+    "why": "주호소가 피로와 수면인데 A는 수면을 전혀 다루지 않는다. B는 테아닌·아쉬아간다로 수면, B1로 피로를 함께 다뤘다."
+   },
+   "new_side_result": "win",
+   "new_clearly_worse": false
+  },
+  {
+   "id": "V-30",
+   "new_side": "A",
+   "verdict": {
+    "winner": "A",
+    "clearly_worse": null,
+    "scores": {
+     "A": {
+      "fit": 4,
+      "coverage": 4,
+      "spread": 4,
+      "caution": 5
+     },
+     "B": {
+      "fit": 3,
+      "coverage": 3,
+      "spread": 1,
+      "caution": 5
+     }
+    },
+    "why": "A는 에너지 대사, 스트레스성 피로, B12 결핍으로 기전을 나눴다. B는 B군 세 개가 한 기전에 몰렸다."
+   },
+   "new_side_result": "win",
+   "new_clearly_worse": false
+  }
+ ]
+}
