@@ -166,20 +166,21 @@ def describe_patient(patient):
     return "\n".join(f"- {x}" for x in parts)
 
 
+# 이유 문장(새 시스템)과 단계명(엔진)은 어느 쪽인지 드러내므로 채점 문구에 넣지 않는다. 선택 자체만 비교한다
 def side_new(result):
-    return [{"name": x["name"], "reason": x["reason"], "evidence": [e["text"] for e in x["evidence"]],
+    return [{"name": x["name"], "evidence": [e["text"] for e in x["evidence"]],
              "cautions": [c["text"] for c in x["cautions"]]} for x in result["recommendations"]]
 
 
 def side_engine(result):
-    return [{"name": x["name"], "reason": x.get("tier", ""), "evidence": x.get("paths", []),
+    return [{"name": x["name"], "evidence": x.get("paths", []),
              "cautions": [c["text"] for c in x.get("cautions", [])]} for x in result["recommendations"]]
 
 
 def render_side(items):
     lines = []
     for i, x in enumerate(items, 1):
-        lines.append(f"{i}. {x['name']} — {x['reason']}\n   근거: {' / '.join(x['evidence']) or '-'}"
+        lines.append(f"{i}. {x['name']}\n   근거: {' / '.join(x['evidence']) or '-'}"
                      f"\n   주의: {' / '.join(c for c in x['cautions'] if c) or '-'}")
     return "\n".join(lines) or "(추천 없음)"
 

@@ -98,3 +98,15 @@ def test_judge_sides_deterministic_and_mapped():
     assert harness.unblind({"winner": "A", "clearly_worse": "B"}, new="B") == {"new_side_result": "loss",
                                                                              "new_clearly_worse": True}
     assert harness.unblind({"winner": "tie", "clearly_worse": None}, new="B")["new_side_result"] == "tie"
+
+
+def test_judge_text_hides_system_tells():
+    """새 시스템의 이유 문장과 엔진의 단계명은 어느 쪽인지 드러내므로 채점 문구에 넣지 않는다."""
+    new = {"status": "ok", "recommendations": [{"ingredient_id": "A", "name": "테아닌", "reason": "LLM이 쓴 이유 문장",
+           "evidence": [{"text": "새벽 각성 → 근거"}], "cautions": []}]}
+    old = {"recommendations": [{"ingredient_id": "B", "name": "마그네슘", "tier": "1-1 증상 직접 근거",
+           "paths": ["근육통 → 근거"], "cautions": []}]}
+    patients = [{"id": "X", "patient": {"age": 50, "sex": "M"}}]
+    (_, user), = harness.judge_requests(patients, [{"id": "X", "result": new}], [{"id": "X", "engine": old}])
+    assert "LLM이 쓴 이유 문장" not in user and "1-1 증상 직접 근거" not in user
+    assert "테아닌" in user and "마그네슘" in user and "새벽 각성 → 근거" in user and "근육통 → 근거" in user
