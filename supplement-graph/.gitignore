@@ -1,0 +1,13 @@
+# 비밀
+.env
+*.env
+.neo4j.env
+
+# 캐시·개인 설정
+__pycache__/
+*.pyc
+.DS_Store
+.claude/
+
+# 실행 결과(샘플 사용자 입력·LLM 응답·검토용 엑셀). 재생성 가능하므로 올리지 않는다
+out/

@@ -1,0 +1,2225 @@
+{
+ "_about": "국내 공공기관 출처 조사 결과(2026-11-10, wellcheck/v3/data/graph_kr.json 에서 추림). 생애주기 표의 질환 연령·성별 검증(심평원), 질환→증상(질병청 등), 시너지·길항(복지부·질병청·식약처).",
+ "common_disease": [
+  {
+   "stage": "10대미만 · 아동기",
+   "disease": "약시",
+   "sex": "A",
+   "stat": "0-9세 19,306명 · 0-9세 10세 구간 9개 중 1위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 질병 세분류(4단 상병) 통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olap4thDsInfoTab3.do"
+  },
+  {
+   "stage": "10대미만 · 아동기",
+   "disease": "아토피",
+   "sex": "A",
+   "stat": "0-9세 231,335명 · 0-9세 10세 구간 9개 중 1위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "10대미만 · 아동기",
+   "disease": "근시",
+   "sex": "A",
+   "stat": "0-9세 231,844명 · 0-9세 10세 구간 9개 중 2위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "10대미만 · 아동기",
+   "disease": "비염",
+   "sex": "A",
+   "stat": "0-9세 1,830,917명 · 0-9세 10세 구간 9개 중 1위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "10대미만 · 아동기",
+   "disease": "중이염",
+   "sex": "A",
+   "stat": "0-9세 661,453명 · 0-9세 10세 구간 9개 중 1위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "10대 · 청소년기",
+   "disease": "아토피",
+   "sex": "A",
+   "stat": "10-19세 156,100명 · 10-19세 10세 구간 9개 중 3위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "10대 · 청소년기",
+   "disease": "근시",
+   "sex": "A",
+   "stat": "10-19세 428,794명 · 10-19세 10세 구간 9개 중 1위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "20대 · 취업 준비기",
+   "disease": "콜린성두드러기",
+   "sex": "A",
+   "stat": "20-29세 2,811명 · 20-29세 10세 구간 9개 중 1위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 질병 세분류(4단 상병) 통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olap4thDsInfoTab3.do"
+  },
+  {
+   "stage": "20대 · 취업 준비기",
+   "disease": "크론병",
+   "sex": "A",
+   "stat": "20-29세 9,689명 · 20-29세 10세 구간 9개 중 1위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "30대 · 임신•출산",
+   "disease": "탈모증",
+   "sex": "A",
+   "stat": "30-39세 50,712명 · 30-39세 10세 구간 9개 중 2위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "30대 · 임신•출산",
+   "disease": "비만",
+   "sex": "A",
+   "stat": "30-39세 8,375명 · 30-39세 10세 구간 9개 중 1위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "30대 · 임신•출산",
+   "disease": "비염",
+   "sex": "A",
+   "stat": "30-39세 1,372,744명 · 30-39세 10세 구간 9개 중 3위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "40대 · 사회활동",
+   "disease": "알코올성간질환",
+   "sex": "A",
+   "stat": "40-49세 16,211명 · 40-49세 10세 구간 9개 중 3위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "40대 · 사회활동",
+   "disease": "치질",
+   "sex": "A",
+   "stat": "40-49세 107,372명 · 40-49세 10세 구간 9개 중 3위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "40대 · 사회활동",
+   "disease": "비만",
+   "sex": "A",
+   "stat": "40-49세 8,193명 · 40-49세 10세 구간 9개 중 2위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "40대 · 사회활동",
+   "disease": "빈혈",
+   "sex": "A",
+   "stat": "40-49세 117,593명 · 40-49세 10세 구간 9개 중 1위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "40대 · 사회활동",
+   "disease": "접촉성피부염",
+   "sex": "A",
+   "stat": "40-49세 726,596명 · 40-49세 10세 구간 9개 중 3위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "40대 · 사회활동",
+   "disease": "각막염",
+   "sex": "A",
+   "stat": "40-49세 235,115명 · 40-49세 10세 구간 9개 중 3위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "40대 · 사회활동",
+   "disease": "공황장애",
+   "sex": "A",
+   "stat": "40-49세 58,842명 · 40-49세 10세 구간 9개 중 1위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "50대 · 남성갱년기/여성갱년기",
+   "disease": "고혈압",
+   "sex": "A",
+   "stat": "50-59세 1,858,261명 / 60-69세 2,484,045명 · 50-59세 10세 구간 9개 중 2위 / 60-69세 10세 구간 9개 중 1위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "50대 · 남성갱년기/여성갱년기",
+   "disease": "알코올성간질환",
+   "sex": "A",
+   "stat": "50-59세 25,594명 / 60-69세 28,038명 · 50-59세 10세 구간 9개 중 2위 / 60-69세 10세 구간 9개 중 1위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "50대 · 남성갱년기/여성갱년기",
+   "disease": "위식도역류질환",
+   "sex": "A",
+   "stat": "50-59세 874,759명 / 60-69세 1,016,673명 · 50-59세 10세 구간 9개 중 2위 / 60-69세 10세 구간 9개 중 1위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "50대 · 남성갱년기/여성갱년기",
+   "disease": "지방간",
+   "sex": "A",
+   "stat": "50-59세 96,718명 / 60-69세 99,667명 · 50-59세 10세 구간 9개 중 2위 / 60-69세 10세 구간 9개 중 1위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "50대 · 남성갱년기/여성갱년기",
+   "disease": "목디스크",
+   "sex": "A",
+   "stat": "50-59세 243,340명 / 60-69세 247,275명 · 50-59세 10세 구간 9개 중 2위 / 60-69세 10세 구간 9개 중 1위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "50대 · 남성갱년기/여성갱년기",
+   "disease": "류마티스관절염",
+   "sex": "A",
+   "stat": "50-59세 59,306명 / 60-69세 76,400명 · 50-59세 10세 구간 9개 중 2위 / 60-69세 10세 구간 9개 중 1위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "50대 · 남성갱년기/여성갱년기",
+   "disease": "골절",
+   "sex": "A",
+   "stat": "50-59세 478,108명 / 60-69세 579,019명 · 50-59세 10세 구간 9개 중 2위 / 60-69세 10세 구간 9개 중 1위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "50대 · 남성갱년기/여성갱년기",
+   "disease": "오십견",
+   "sex": "A",
+   "stat": "50-59세 222,890명 / 60-69세 231,562명 · 50-59세 10세 구간 9개 중 2위 / 60-69세 10세 구간 9개 중 1위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "50대 · 남성갱년기/여성갱년기",
+   "disease": "통풍",
+   "sex": "A",
+   "stat": "50-59세 118,314명 / 60-69세 96,574명 · 50-59세 10세 구간 9개 중 2위 / 60-69세 10세 구간 9개 중 4위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "50대 · 남성갱년기/여성갱년기",
+   "disease": "건선",
+   "sex": "A",
+   "stat": "50-59세 32,578명 / 60-69세 28,240명 · 50-59세 10세 구간 9개 중 1위 / 60-69세 10세 구간 9개 중 3위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "50대 · 남성갱년기/여성갱년기",
+   "disease": "방광염",
+   "sex": "A",
+   "stat": "50-59세 348,782명 / 60-69세 344,860명 · 50-59세 10세 구간 9개 중 1위 / 60-69세 10세 구간 9개 중 2위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "50대 · 남성갱년기/여성갱년기",
+   "disease": "요실금",
+   "sex": "A",
+   "stat": "50-59세 21,201명 / 60-69세 30,645명 · 50-59세 10세 구간 9개 중 4위 / 60-69세 10세 구간 9개 중 2위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "50대 · 남성갱년기/여성갱년기",
+   "disease": "안구건조증",
+   "sex": "A",
+   "stat": "50-59세 445,962명 / 60-69세 478,689명 · 50-59세 10세 구간 9개 중 2위 / 60-69세 10세 구간 9개 중 1위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "50대 · 남성갱년기/여성갱년기",
+   "disease": "각막염",
+   "sex": "A",
+   "stat": "50-59세 289,170명 / 60-69세 321,630명 · 50-59세 10세 구간 9개 중 2위 / 60-69세 10세 구간 9개 중 1위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "50대 · 남성갱년기/여성갱년기",
+   "disease": "불면증",
+   "sex": "A",
+   "stat": "50-59세 148,646명 / 60-69세 197,618명 · 50-59세 10세 구간 9개 중 3위 / 60-69세 10세 구간 9개 중 1위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "50대 · 남성갱년기/여성갱년기",
+   "disease": "요로결석",
+   "sex": "A",
+   "stat": "50-59세 78,603명 / 60-69세 76,611명 · 50-59세 10세 구간 9개 중 1위 / 60-69세 10세 구간 9개 중 2위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "60대 이상 · 노년기",
+   "disease": "퇴행성관절염",
+   "sex": "A",
+   "stat": "60-69세 1,508,329명 / 70-79세 1,176,496명 / 80세이상 546,608명 · 60-69세 10세 구간 9개 중 1위 / 70-79세 10세 구간 9개 중 2위 / 80세이상 10세 구간 9개 중 4위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "60대 이상 · 노년기",
+   "disease": "불면증",
+   "sex": "A",
+   "stat": "60-69세 197,618명 / 70-79세 157,200명 / 80세이상 99,402명 · 60-69세 10세 구간 9개 중 1위 / 70-79세 10세 구간 9개 중 2위 / 80세이상 10세 구간 9개 중 5위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "60대 이상 · 노년기",
+   "disease": "고혈압",
+   "sex": "A",
+   "stat": "60-69세 2,484,045명 / 70-79세 1,734,280명 / 80세이상 1,025,371명 · 60-69세 10세 구간 9개 중 1위 / 70-79세 10세 구간 9개 중 3위 / 80세이상 10세 구간 9개 중 4위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "60대 이상 · 노년기",
+   "disease": "협심증",
+   "sex": "A",
+   "stat": "60-69세 231,278명 / 70-79세 235,500명 / 80세이상 134,082명 · 60-69세 10세 구간 9개 중 2위 / 70-79세 10세 구간 9개 중 1위 / 80세이상 10세 구간 9개 중 3위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "60대 이상 · 노년기",
+   "disease": "심근경색증",
+   "sex": "A",
+   "stat": "60-69세 48,186명 / 70-79세 38,262명 / 80세이상 25,189명 · 60-69세 10세 구간 9개 중 1위 / 70-79세 10세 구간 9개 중 2위 / 80세이상 10세 구간 9개 중 4위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "60대 이상 · 노년기",
+   "disease": "당뇨병",
+   "sex": "A",
+   "stat": "60-69세 1,341,359명 / 70-79세 975,276명 / 80세이상 484,722명 · 60-69세 10세 구간 9개 중 1위 / 70-79세 10세 구간 9개 중 2위 / 80세이상 10세 구간 9개 중 4위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "60대 이상 · 노년기",
+   "disease": "골다공증",
+   "sex": "A",
+   "stat": "60-69세 524,135명 / 70-79세 443,244명 / 80세이상 223,749명 · 60-69세 10세 구간 9개 중 1위 / 70-79세 10세 구간 9개 중 2위 / 80세이상 10세 구간 9개 중 3위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "60대 이상 · 노년기",
+   "disease": "요실금",
+   "sex": "A",
+   "stat": "60-69세 30,645명 / 70-79세 32,336명 / 80세이상 26,492명 · 60-69세 10세 구간 9개 중 2위 / 70-79세 10세 구간 9개 중 1위 / 80세이상 10세 구간 9개 중 3위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "60대 이상 · 노년기",
+   "disease": "안구건조증",
+   "sex": "A",
+   "stat": "60-69세 478,689명 / 70-79세 315,673명 / 80세이상 155,933명 · 60-69세 10세 구간 9개 중 1위 / 70-79세 10세 구간 9개 중 4위 / 80세이상 10세 구간 9개 중 7위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "60대 이상 · 노년기",
+   "disease": "백내장",
+   "sex": "A",
+   "stat": "60-69세 585,483명 / 70-79세 554,424명 / 80세이상 200,467명 · 60-69세 10세 구간 9개 중 1위 / 70-79세 10세 구간 9개 중 2위 / 80세이상 10세 구간 9개 중 3위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  },
+  {
+   "stage": "60대 이상 · 노년기",
+   "disease": "치매",
+   "sex": "A",
+   "stat": "60-69세 40,949명 / 70-79세 177,494명 / 80세이상 545,912명 · 60-69세 10세 구간 9개 중 3위 / 70-79세 10세 구간 9개 중 2위 / 80세이상 10세 구간 9개 중 1위",
+   "org": "건강보험심사평가원",
+   "doc": "보건의료빅데이터개방시스템 국민관심질병통계 - 성별/연령10세구간별 (2025 심사년도)",
+   "url": "https://opendata.hira.or.kr/op/opc/olapMfrnIntrsIlnsInfoTab3.do"
+  }
+ ],
+ "has_symptom": [
+  {
+   "disease": "각막염",
+   "symptom": "눈 부심",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "유행각결막염",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5270",
+   "quote": "환자는 안구의 이물감, 불편감, 따가움, 눈부심, 시력저하 및 과다한 눈물흘림 등의 증상을 느낍니다."
+  },
+  {
+   "disease": "각막염",
+   "symptom": "시력 저하",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "유행각결막염",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5270",
+   "quote": "각막을 침범하면 환자의 눈부심과 이물감은 보다 심해지고 시력저하를 호소하기도 합니다."
+  },
+  {
+   "disease": "각막염",
+   "symptom": "충혈",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "유행각결막염",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5270",
+   "quote": "눈 검사에서는 급성 여포결막염(acute follicular conjunctivitis) 형태로, 결막의 충혈과 부종, 결막밑출혈, 삼출성 분비물, 눈꺼풀부종 등이 나타납니다."
+  },
+  {
+   "disease": "각막염",
+   "symptom": "두통",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "유행각결막염",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5270",
+   "quote": "바이러스에 감염된 눈 쪽의 귀앞 림프절이 붓고, 발열, 두통, 피로감 등 전신증상이 나타날 수 있으며"
+  },
+  {
+   "disease": "건선",
+   "symptom": "피부 트러블",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "건선",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=1344",
+   "quote": "건선은 피부가 붉어지는 증상인 홍반 과 하얀 각질이 일어나는 증상인 인설이 주증상이며"
+  },
+  {
+   "disease": "고혈압",
+   "symptom": "두통",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "고혈압",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6765",
+   "quote": "일부 환자에서는 두통, 두근거림, 어지러움, 호흡곤란 같은 비특이적 증상이 나타날 수 있습니다."
+  },
+  {
+   "disease": "골절",
+   "symptom": "부종",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "골절",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5463",
+   "quote": "부종: 체액과 혈액이 손상 부위로 스며들어 팔, 다리가 붓습니다."
+  },
+  {
+   "disease": "골절",
+   "symptom": "붓기",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "골절",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5463",
+   "quote": "부종: 체액과 혈액이 손상 부위로 스며들어 팔, 다리가 붓습니다."
+  },
+  {
+   "disease": "골절",
+   "symptom": "움직임 불편",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "골절",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5463",
+   "quote": "정상 기능의 상실: 골절된 부위가 비정상적으로 흔들리고 주위 관절이 아파서 움직이지 못합니다."
+  },
+  {
+   "disease": "골절",
+   "symptom": "근육경련(쥐남)",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "골절",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5463",
+   "quote": "그 외에 감각 손상, 근육 경련, 마비 등이 올 수 있습니다."
+  },
+  {
+   "disease": "공황장애",
+   "symptom": "울렁거림",
+   "org": "국립정신건강센터 국가정신건강정보포털",
+   "doc": "공황장애",
+   "url": "https://www.mentalhealth.go.kr/portal/disease/diseaseDetail.do?dissId=33",
+   "quote": "7. 메스꺼움 또는 복부 불편감"
+  },
+  {
+   "disease": "공황장애",
+   "symptom": "멍함",
+   "org": "국립정신건강센터 국가정신건강정보포털",
+   "doc": "공황장애",
+   "url": "https://www.mentalhealth.go.kr/portal/disease/diseaseDetail.do?dissId=33",
+   "quote": "8. 어지럽거나 불안정하거나 멍한 느낌이 들거나 쓰러질 것 같음"
+  },
+  {
+   "disease": "공황장애",
+   "symptom": "불안",
+   "org": "국립정신건강센터 국가정신건강정보포털",
+   "doc": "공황장애",
+   "url": "https://www.mentalhealth.go.kr/portal/disease/diseaseDetail.do?dissId=33",
+   "quote": "1. 추가적인 공황발작이나 공황발작에 대한 결과에 대한 지속적인 걱정"
+  },
+  {
+   "disease": "구내염",
+   "symptom": "두통",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "구내염",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5485",
+   "quote": "구강 외 증상으로는 발열, 무기력, 식욕 감퇴, 과다 침 분비, 짜증, 두통 및 양측성 경부 림프절병이 나타날 수 있습니다."
+  },
+  {
+   "disease": "구내염",
+   "symptom": "무기력",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "구내염",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5485",
+   "quote": "구강 외 증상으로는 발열, 무기력, 식욕 감퇴, 과다 침 분비, 짜증, 두통 및 양측성 경부 림프절병이 나타날 수 있습니다."
+  },
+  {
+   "disease": "구내염",
+   "symptom": "식욕변화",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "구내염",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5485",
+   "quote": "구강 외 증상으로는 발열, 무기력, 식욕 감퇴, 과다 침 분비, 짜증, 두통 및 양측성 경부 림프절병이 나타날 수 있습니다."
+  },
+  {
+   "disease": "궤양성대장염",
+   "symptom": "설사",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "궤양대장염(궤양결장염)",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5800",
+   "quote": "가장 흔한 증상은 혈변과 설사이며, 그 외 심한 경우에는 식욕부진, 오심, 구역, 구토, 발열, 부종, 전신 쇠약감, 체중 감소 등이 발생할 수 있습니다."
+  },
+  {
+   "disease": "궤양성대장염",
+   "symptom": "복통",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "궤양대장염(궤양결장염)",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5800",
+   "quote": "그 외 뒤무직, 점액질 대변, 야간설사(설사로 인해 자다 깸), 경련성 하복부 통증 및 불쾌감 등이 발생할 수 있습니다."
+  },
+  {
+   "disease": "궤양성대장염",
+   "symptom": "울렁거림",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "궤양대장염(궤양결장염)",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5800",
+   "quote": "가장 흔한 증상은 혈변과 설사이며, 그 외 심한 경우에는 식욕부진, 오심, 구역, 구토, 발열, 부종, 전신 쇠약감, 체중 감소 등이 발생할 수 있습니다."
+  },
+  {
+   "disease": "궤양성대장염",
+   "symptom": "식욕변화",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "궤양대장염(궤양결장염)",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5800",
+   "quote": "가장 흔한 증상은 혈변과 설사이며, 그 외 심한 경우에는 식욕부진, 오심, 구역, 구토, 발열, 부종, 전신 쇠약감, 체중 감소 등이 발생할 수 있습니다."
+  },
+  {
+   "disease": "궤양성대장염",
+   "symptom": "부종",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "궤양대장염(궤양결장염)",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5800",
+   "quote": "가장 흔한 증상은 혈변과 설사이며, 그 외 심한 경우에는 식욕부진, 오심, 구역, 구토, 발열, 부종, 전신 쇠약감, 체중 감소 등이 발생할 수 있습니다."
+  },
+  {
+   "disease": "궤양성대장염",
+   "symptom": "체중 감소",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "궤양대장염(궤양결장염)",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5800",
+   "quote": "가장 흔한 증상은 혈변과 설사이며, 그 외 심한 경우에는 식욕부진, 오심, 구역, 구토, 발열, 부종, 전신 쇠약감, 체중 감소 등이 발생할 수 있습니다."
+  },
+  {
+   "disease": "궤양성대장염",
+   "symptom": "관절 통증",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "궤양대장염(궤양결장염)",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5800",
+   "quote": "관절 질환은 가장 흔히 관찰되는 장외 증상으로, 관절통, 요통, 말초관절염, 천장골염(골반뼈 염증), 강직척추염 등이 있고"
+  },
+  {
+   "disease": "근시",
+   "symptom": "시력 저하",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "굴절이상(근시, 원시, 난시)",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5217",
+   "quote": "근시의 가장 흔한 증상은 먼 거리의 시력장애입니다."
+  },
+  {
+   "disease": "근시",
+   "symptom": "시야 흐림",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "굴절이상(근시, 원시, 난시)",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5217",
+   "quote": "아이들의 경우 칠판 글씨가 흐릿하게 보인다고 호소하기도 하며"
+  },
+  {
+   "disease": "근시",
+   "symptom": "두통",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "굴절이상(근시, 원시, 난시)",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5217",
+   "quote": "멀리 있는 사물을 볼 때 눈을 찡그리고 보거나 고개를 돌려서 보고, 자주 두통을 호소한다면 안과 의사의 진찰을 받는 것이 좋습니다."
+  },
+  {
+   "disease": "녹내장",
+   "symptom": "시력 저하",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "녹내장",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6690",
+   "quote": "이른 아침이나 늦은 밤 안압이 올라가면 시력 저하, 두통, 안통을 경험할 수 있습니다."
+  },
+  {
+   "disease": "녹내장",
+   "symptom": "두통",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "녹내장",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6690",
+   "quote": "이른 아침이나 늦은 밤 안압이 올라가면 시력 저하, 두통, 안통을 경험할 수 있습니다."
+  },
+  {
+   "disease": "녹내장",
+   "symptom": "충혈",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "녹내장",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6690",
+   "quote": "불빛 주위에 달무리가 보이고 눈 충혈도 심하게 나타납니다."
+  },
+  {
+   "disease": "녹내장",
+   "symptom": "울렁거림",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "녹내장",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6690",
+   "quote": "안압이 갑자기 크게 올라 심한 눈통증, 두통, 시력 저하가 생기며, 구토·오심이 동반되기도 합니다."
+  },
+  {
+   "disease": "녹내장",
+   "symptom": "눈 부심",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "녹내장",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6690",
+   "quote": "눈물이 많아지거나 눈부심, 눈꺼풀연축(눈꺼풀 떨림)이 나타날 수 있고"
+  },
+  {
+   "disease": "녹내장",
+   "symptom": "눈 떨림",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "녹내장",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6690",
+   "quote": "눈물이 많아지거나 눈부심, 눈꺼풀연축(눈꺼풀 떨림)이 나타날 수 있고"
+  },
+  {
+   "disease": "당뇨병",
+   "symptom": "갈증",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "당뇨병",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5305",
+   "quote": "몸 안에서는 수분이 모자라 갈증이 심하며 물을 많이 마시게 됩니다."
+  },
+  {
+   "disease": "당뇨병",
+   "symptom": "잦은 배뇨",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "당뇨병",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5305",
+   "quote": "이때 포도당이 신장을 통해 다량의 물을 끌고 나가기 때문에 소변을 많이 보게 됩니다."
+  },
+  {
+   "disease": "당뇨병",
+   "symptom": "체중 감소",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "당뇨병",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5305",
+   "quote": "체중감소, 시력 저하, 피로감 및 무기력이 동반되기도 합니다."
+  },
+  {
+   "disease": "당뇨병",
+   "symptom": "시력 저하",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "당뇨병",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5305",
+   "quote": "체중감소, 시력 저하, 피로감 및 무기력이 동반되기도 합니다."
+  },
+  {
+   "disease": "당뇨병",
+   "symptom": "무기력",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "당뇨병",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5305",
+   "quote": "체중감소, 시력 저하, 피로감 및 무기력이 동반되기도 합니다."
+  },
+  {
+   "disease": "당뇨병",
+   "symptom": "체력 저하",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "당뇨병",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5305",
+   "quote": "체력저하, 피로, 무기력, 졸음 등을 호소하며 충분히 잠을 자거나 쉬어도 피로가 가시지 않는 경우가 많습니다."
+  },
+  {
+   "disease": "당뇨병",
+   "symptom": "느린 피로 회복",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "당뇨병",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5305",
+   "quote": "체력저하, 피로, 무기력, 졸음 등을 호소하며 충분히 잠을 자거나 쉬어도 피로가 가시지 않는 경우가 많습니다."
+  },
+  {
+   "disease": "당뇨병",
+   "symptom": "식욕변화",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "당뇨병",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5305",
+   "quote": "섭취한 음식물이 에너지로 이용되지 못하므로 공복감이 심해지고 점점 더 먹으려 합니다."
+  },
+  {
+   "disease": "류마티스관절염",
+   "symptom": "관절 통증",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "류마티스관절염",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6556",
+   "quote": "증상은 수주 또는 수개월에 걸쳐 천천히 나타나며 주로 여러 관절의 통증, 뻣뻣함, 붓기 등으로 나타납니다."
+  },
+  {
+   "disease": "류마티스관절염",
+   "symptom": "붓기",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "류마티스관절염",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6556",
+   "quote": "증상은 수주 또는 수개월에 걸쳐 천천히 나타나며 주로 여러 관절의 통증, 뻣뻣함, 붓기 등으로 나타납니다."
+  },
+  {
+   "disease": "류마티스관절염",
+   "symptom": "움직임 불편",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "류마티스관절염",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6556",
+   "quote": "조조강직 증상은 아침에 일어나서 또는 한 자세로 오래 있은 후 관절이 뻣뻣해 움직이기 힘들고 다시 움직여줄수록 뻣뻣함이 좋아지는 현상입니다."
+  },
+  {
+   "disease": "류마티스관절염",
+   "symptom": "체중 감소",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "류마티스관절염",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6556",
+   "quote": "초기 관절 외 증상으로는 전신 통증, 뻣뻣함, 체중 감소, 피로감, 우울감 등이 함께 발생할 수 있습니다."
+  },
+  {
+   "disease": "류마티스관절염",
+   "symptom": "기분 저하",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "류마티스관절염",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6556",
+   "quote": "초기 관절 외 증상으로는 전신 통증, 뻣뻣함, 체중 감소, 피로감, 우울감 등이 함께 발생할 수 있습니다."
+  },
+  {
+   "disease": "목디스크",
+   "symptom": "손발 저림",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "추간판탈출증(디스크)",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=3348",
+   "quote": "여섯 번째 경추신경(C6)을 압박하면 팔 바깥쪽과 엄지손가락 부위에 통증이나 저린 감각을 느끼게 됩니다."
+  },
+  {
+   "disease": "목디스크",
+   "symptom": "움직임 불편",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "추간판탈출증(디스크)",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=3348",
+   "quote": "특히 손의 세밀한 운동에 장애가 생겨서 젓가락질이 힘들고 물건을 잘 떨어뜨리거나, 글씨체가 변하거나, 와이셔츠 단추 채우기가 힘들어집니다."
+  },
+  {
+   "disease": "방광염",
+   "symptom": "잦은 배뇨",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "방광염",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5968",
+   "quote": "빈뇨: 소변을 매우 자주 본다"
+  },
+  {
+   "disease": "방광염",
+   "symptom": "복통",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "방광염",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5968",
+   "quote": "하복부 통증: 방광이 위치한 치골 상부(불두덩) 부위에 통증이나 불편감이 있다"
+  },
+  {
+   "disease": "백내장",
+   "symptom": "시력 저하",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "백내장",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6689",
+   "quote": "대부분 통증은 없고 시력 저하나 시야가 흐려보이는 증상이 나타납니다."
+  },
+  {
+   "disease": "백내장",
+   "symptom": "시야 흐림",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "백내장",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6689",
+   "quote": "대부분 통증은 없고 시력 저하나 시야가 흐려보이는 증상이 나타납니다."
+  },
+  {
+   "disease": "백내장",
+   "symptom": "눈 부심",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "백내장",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6689",
+   "quote": "혼탁한 수정체를 통과한 빛이 산란되면서 빛이 퍼져 보이거나 눈부심이 나타날 수 있습니다."
+  },
+  {
+   "disease": "백내장",
+   "symptom": "침침함",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "백내장",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6689",
+   "quote": "4) 눈이 침침하거나 어두운 곳에서 잘 보이지 않을 수 있습니다."
+  },
+  {
+   "disease": "백내장",
+   "symptom": "야맹증",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "백내장",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6689",
+   "quote": "4) 눈이 침침하거나 어두운 곳에서 잘 보이지 않을 수 있습니다."
+  },
+  {
+   "disease": "불면증",
+   "symptom": "불면",
+   "org": "국립정신건강센터 국가정신건강정보포털",
+   "doc": "불면장애",
+   "url": "https://www.mentalhealth.go.kr/portal/disease/diseaseDetail.do?dissId=31",
+   "quote": "a.잠들기 어렵다"
+  },
+  {
+   "disease": "비만",
+   "symptom": "관절 통증",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "소아 비만",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6886",
+   "quote": "조금만 걸어도 무릎, 발목, 허리 등의 성장판과 관절 부위에 통증을 호소하게 됩니다."
+  },
+  {
+   "disease": "비염",
+   "symptom": "집중력 저하",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "만성비염",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5703",
+   "quote": "머리가 무겁고, 주의가 산만해져 집중력이 저하되므로 업무와 학업에 지장을 주기도 합니다."
+  },
+  {
+   "disease": "빈혈",
+   "symptom": "만성피로",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "빈혈",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=1104",
+   "quote": "대부분 빈혈의 주된 증상은 피로입니다."
+  },
+  {
+   "disease": "빈혈",
+   "symptom": "무력감",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "빈혈",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=1104",
+   "quote": "• 쇠약감"
+  },
+  {
+   "disease": "빈혈",
+   "symptom": "손발 저림",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "빈혈",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=1104",
+   "quote": "• 팔다리의 저린 감각이나 차가움"
+  },
+  {
+   "disease": "빈혈",
+   "symptom": "수족냉증",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "빈혈",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=1104",
+   "quote": "• 팔다리의 저린 감각이나 차가움"
+  },
+  {
+   "disease": "빈혈",
+   "symptom": "두통",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "빈혈",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=1104",
+   "quote": "• 두통"
+  },
+  {
+   "disease": "심근경색증",
+   "symptom": "기운 없음",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "급성 심근경색증",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6770",
+   "quote": "노인이나 당뇨 환자인 경우에는 기운이 없는 정도로 증상이 없을 수 있습니다."
+  },
+  {
+   "disease": "아토피",
+   "symptom": "피부 트러블",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "아토피피부염",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6582",
+   "quote": "급성기에는 가려움증이 심한 붉은 반점, 물집, 긁은 자국, 진물이 나타나며 이차 감염이 동반될 수 있습니다."
+  },
+  {
+   "disease": "아토피",
+   "symptom": "수면 질 저하",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "아토피피부염",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6582",
+   "quote": "특히 밤에 심해져서 수면을 방해하고 삶의 질을 떨어뜨립니다."
+  },
+  {
+   "disease": "안구건조증",
+   "symptom": "충혈",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "안구건조증",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6306",
+   "quote": "이는 이물감, 작열감, 콕콕 찌르는 통증, 가려움, 뻑뻑함, 쓰라림, 충혈, 눈꺼풀이 무거운 느낌, 눈부심, 안구 피로감 등 다양한 형태로 나타납니다."
+  },
+  {
+   "disease": "안구건조증",
+   "symptom": "눈 부심",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "안구건조증",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6306",
+   "quote": "이는 이물감, 작열감, 콕콕 찌르는 통증, 가려움, 뻑뻑함, 쓰라림, 충혈, 눈꺼풀이 무거운 느낌, 눈부심, 안구 피로감 등 다양한 형태로 나타납니다."
+  },
+  {
+   "disease": "안구건조증",
+   "symptom": "눈 피로감",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "안구건조증",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6306",
+   "quote": "이는 이물감, 작열감, 콕콕 찌르는 통증, 가려움, 뻑뻑함, 쓰라림, 충혈, 눈꺼풀이 무거운 느낌, 눈부심, 안구 피로감 등 다양한 형태로 나타납니다."
+  },
+  {
+   "disease": "안구건조증",
+   "symptom": "눈 건조함",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "안구건조증",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6306",
+   "quote": "어떤 환자는 눈물이 부족한 것 같다고 직접 표현하기도 합니다."
+  },
+  {
+   "disease": "안구건조증",
+   "symptom": "침침함",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "안구건조증",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6306",
+   "quote": "눈앞에 뭐가 낀 것처럼 침침하다"
+  },
+  {
+   "disease": "안구건조증",
+   "symptom": "두통",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "안구건조증",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6306",
+   "quote": "눈이 빠질 것처럼 아프고, 머리까지 아프다"
+  },
+  {
+   "disease": "안구건조증",
+   "symptom": "시력 저하",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "안구건조증",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6306",
+   "quote": "바람이 불면 오히려 눈물이 더 흐르기도 하며, 시력이 떨어지거나 사물이 퍼져 보일 수 있습니다."
+  },
+  {
+   "disease": "안구건조증",
+   "symptom": "시야 흐림",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "안구건조증",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6306",
+   "quote": "바람이 불면 오히려 눈물이 더 흐르기도 하며, 시력이 떨어지거나 사물이 퍼져 보일 수 있습니다."
+  },
+  {
+   "disease": "알코올성간질환",
+   "symptom": "만성피로",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "알코올 간질환",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5310",
+   "quote": "쉽게 피로하거나 소화불량, 우상복부 불편감 또는 통증이 있을 수도 있습니다."
+  },
+  {
+   "disease": "알코올성간질환",
+   "symptom": "소화불량",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "알코올 간질환",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5310",
+   "quote": "쉽게 피로하거나 소화불량, 우상복부 불편감 또는 통증이 있을 수도 있습니다."
+  },
+  {
+   "disease": "알코올성간질환",
+   "symptom": "복통",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "알코올 간질환",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5310",
+   "quote": "하지만 간손상이 심한 경우에는 우상복부 통증, 고열, 심한 황달이 나타날 수 있으며"
+  },
+  {
+   "disease": "오십견",
+   "symptom": "관절 통증",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "오십견(동결견, 유착관절낭염)",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=1567",
+   "quote": "환자들은 심한 통증, 야간 통증 및 능동적, 수동적 관절운동제한을 보이는데"
+  },
+  {
+   "disease": "오십견",
+   "symptom": "움직임 불편",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "오십견(동결견, 유착관절낭염)",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=1567",
+   "quote": "예를 들면, 세수할 때나 머리를 감을 때 뒷목을 만지지 못하거나, 머리 빗기가 어렵고, 여자들은 블라우스 뒷 단추를 끼우기 등이 힘들다고 합니다."
+  },
+  {
+   "disease": "오십견",
+   "symptom": "수면 질 저하",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "오십견(동결견, 유착관절낭염)",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=1567",
+   "quote": "일반적으로 동결견은 밤에 통증으로 잠을 제대로 못 자게 되는데"
+  },
+  {
+   "disease": "요로결석",
+   "symptom": "울렁거림",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "신장결석",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6861",
+   "quote": "발작적인 심한 통증이 20~60분 정도 지속되면서 오심(메스꺼움, 구역)과 구토가 동반되기도 합니다."
+  },
+  {
+   "disease": "요로결석",
+   "symptom": "소화불량",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "신장결석",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6861",
+   "quote": "신장결석이 오래 지속되면 대체로 소화불량이나 만성 식욕 부진을 호소할 때가 많으며,"
+  },
+  {
+   "disease": "요로결석",
+   "symptom": "식욕변화",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "신장결석",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6861",
+   "quote": "신장결석이 오래 지속되면 대체로 소화불량이나 만성 식욕 부진을 호소할 때가 많으며,"
+  },
+  {
+   "disease": "요로결석",
+   "symptom": "복부 팽만감",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "신장결석",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6861",
+   "quote": "염증이 발생한 경우에는 발열과 오한, 탁한 소변, 복부 팽만 등의 증상이 동반될 수 있습니다."
+  },
+  {
+   "disease": "우울증",
+   "symptom": "기분 저하",
+   "org": "국립정신건강센터 국가정신건강정보포털",
+   "doc": "우울과 우울장애",
+   "url": "https://www.mentalhealth.go.kr/portal/disease/diseaseDetail.do?dissId=2",
+   "quote": "· 슬픔, 눈물, 공허함 또는 절망감"
+  },
+  {
+   "disease": "우울증",
+   "symptom": "예민함",
+   "org": "국립정신건강센터 국가정신건강정보포털",
+   "doc": "우울과 우울장애",
+   "url": "https://www.mentalhealth.go.kr/portal/disease/diseaseDetail.do?dissId=2",
+   "quote": "· 작은 문제에 대해서도 화가 나고 폭발함, 과민성 또는 좌절"
+  },
+  {
+   "disease": "우울증",
+   "symptom": "불면",
+   "org": "국립정신건강센터 국가정신건강정보포털",
+   "doc": "우울과 우울장애",
+   "url": "https://www.mentalhealth.go.kr/portal/disease/diseaseDetail.do?dissId=2",
+   "quote": "· 불면증이나 과도한 수면을 포함한 수면 장애"
+  },
+  {
+   "disease": "우울증",
+   "symptom": "기운 없음",
+   "org": "국립정신건강센터 국가정신건강정보포털",
+   "doc": "우울과 우울장애",
+   "url": "https://www.mentalhealth.go.kr/portal/disease/diseaseDetail.do?dissId=2",
+   "quote": "· 피곤함과 에너지 부족으로 작은 작업이라도 상당한 노력이 필요"
+  },
+  {
+   "disease": "우울증",
+   "symptom": "식욕변화",
+   "org": "국립정신건강센터 국가정신건강정보포털",
+   "doc": "우울과 우울장애",
+   "url": "https://www.mentalhealth.go.kr/portal/disease/diseaseDetail.do?dissId=2",
+   "quote": "· 식욕이 줄어 체중이 줄기도 하지만 식욕이 늘어 체중이 늘기도 함."
+  },
+  {
+   "disease": "우울증",
+   "symptom": "체중 감소",
+   "org": "국립정신건강센터 국가정신건강정보포털",
+   "doc": "우울과 우울장애",
+   "url": "https://www.mentalhealth.go.kr/portal/disease/diseaseDetail.do?dissId=2",
+   "quote": "· 식욕이 줄어 체중이 줄기도 하지만 식욕이 늘어 체중이 늘기도 함."
+  },
+  {
+   "disease": "우울증",
+   "symptom": "체중 증가",
+   "org": "국립정신건강센터 국가정신건강정보포털",
+   "doc": "우울과 우울장애",
+   "url": "https://www.mentalhealth.go.kr/portal/disease/diseaseDetail.do?dissId=2",
+   "quote": "· 식욕이 줄어 체중이 줄기도 하지만 식욕이 늘어 체중이 늘기도 함."
+  },
+  {
+   "disease": "우울증",
+   "symptom": "불안",
+   "org": "국립정신건강센터 국가정신건강정보포털",
+   "doc": "우울과 우울장애",
+   "url": "https://www.mentalhealth.go.kr/portal/disease/diseaseDetail.do?dissId=2",
+   "quote": "· 불안, 안절부절못함."
+  },
+  {
+   "disease": "우울증",
+   "symptom": "반응 속도 저하",
+   "org": "국립정신건강센터 국가정신건강정보포털",
+   "doc": "우울과 우울장애",
+   "url": "https://www.mentalhealth.go.kr/portal/disease/diseaseDetail.do?dissId=2",
+   "quote": "· 생각, 말하기, 신체 움직임이 느려짐"
+  },
+  {
+   "disease": "우울증",
+   "symptom": "집중력 저하",
+   "org": "국립정신건강센터 국가정신건강정보포털",
+   "doc": "우울과 우울장애",
+   "url": "https://www.mentalhealth.go.kr/portal/disease/diseaseDetail.do?dissId=2",
+   "quote": "· 생각, 집중, 판단, 기억하는데 어려움이 있음."
+  },
+  {
+   "disease": "우울증",
+   "symptom": "기억력 감소",
+   "org": "국립정신건강센터 국가정신건강정보포털",
+   "doc": "우울과 우울장애",
+   "url": "https://www.mentalhealth.go.kr/portal/disease/diseaseDetail.do?dissId=2",
+   "quote": "· 생각, 집중, 판단, 기억하는데 어려움이 있음."
+  },
+  {
+   "disease": "우울증",
+   "symptom": "두통",
+   "org": "국립정신건강센터 국가정신건강정보포털",
+   "doc": "우울과 우울장애",
+   "url": "https://www.mentalhealth.go.kr/portal/disease/diseaseDetail.do?dissId=2",
+   "quote": "· 병원 검사에서 설명되지 않는 허리 통증이나 두통과 같은 지속되는 통증"
+  },
+  {
+   "disease": "위식도역류질환",
+   "symptom": "속쓰림",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "위식도역류질환",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=2057",
+   "quote": "특징적인 증상인 흉부 작열감(가슴쓰림)은 명치끝이나 흉골 뒤쪽에서 입 쪽으로 치밀어 오르는 타는 듯한 또는 쓰린 증상을 말합니다."
+  },
+  {
+   "disease": "자궁근종",
+   "symptom": "생리통",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "자궁근종",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6190",
+   "quote": "1) 월경통이나 생리불순"
+  },
+  {
+   "disease": "자궁근종",
+   "symptom": "생리주기 불규칙",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "자궁근종",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6190",
+   "quote": "1) 월경통이나 생리불순"
+  },
+  {
+   "disease": "자궁근종",
+   "symptom": "변비",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "자궁근종",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6190",
+   "quote": "자궁근종이 장을 압박하면 변비나 배가 팽창된 느낌을 줄 수 있습니다."
+  },
+  {
+   "disease": "자궁근종",
+   "symptom": "복부 팽만감",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "자궁근종",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6190",
+   "quote": "자궁근종이 장을 압박하면 변비나 배가 팽창된 느낌을 줄 수 있습니다."
+  },
+  {
+   "disease": "자궁근종",
+   "symptom": "잦은 배뇨",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "자궁근종",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6190",
+   "quote": "2) 잦은 배뇨: 자궁근종으로 인해 방광 용량이 감소하거나 방광 근육의 조절이 어려워지면 화장실에 자주 갈 수 있습니다."
+  },
+  {
+   "disease": "접촉성피부염",
+   "symptom": "피부 트러블",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "자극접촉피부염",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5689",
+   "quote": "자극물질이 닿은 부분이 붉어집니다. 갈라지거나, 진물이 나거나, 통증이 있기도 합니다."
+  },
+  {
+   "disease": "중이염",
+   "symptom": "울렁거림",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "중이염",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=3568",
+   "quote": "그 밖에 발열, 구역 및 구토, 어지럼 등을 호소할 수 있습니다."
+  },
+  {
+   "disease": "중이염",
+   "symptom": "감기",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "중이염",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=3568",
+   "quote": "또한 중이염은 코와 목구멍 감염이 함께 발생하는 경우가 많아 콧물, 코막힘 등의 감기 증상이 동반될 수 있습니다."
+  },
+  {
+   "disease": "중이염",
+   "symptom": "집중력 저하",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "중이염",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=3568",
+   "quote": "• 학교에서 주의 집중을 하지 못한다."
+  },
+  {
+   "disease": "치매",
+   "symptom": "기억력 감소",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "치매환자의 가족을 위한 정보",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6858",
+   "quote": "알츠하이머병은 치매의 가장 흔한 원인 질환이며, 대표적인 증상은 기억장애입니다."
+  },
+  {
+   "disease": "치매",
+   "symptom": "집중력 저하",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "치매환자의 가족을 위한 정보",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6858",
+   "quote": "병이 진행됨에 따라 기억장애 이외의 다른 인지기능 저하도 나타나는데, 계산능력, 집중력, 판단력, 언어능력 등 다양한 인지기능이 점차 저하되며, 결국 전반적인 인지기능 장애가 나타납니다."
+  },
+  {
+   "disease": "치매",
+   "symptom": "기분 저하",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "치매환자의 가족을 위한 정보",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6858",
+   "quote": "신경정신증상에는 우울, 불안, 공격성, 배회, 반복행동, 환각, 망상 등이 있습니다."
+  },
+  {
+   "disease": "치매",
+   "symptom": "불안",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "치매환자의 가족을 위한 정보",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6858",
+   "quote": "신경정신증상에는 우울, 불안, 공격성, 배회, 반복행동, 환각, 망상 등이 있습니다."
+  },
+  {
+   "disease": "콜린성두드러기",
+   "symptom": "피부 트러블",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "두드러기",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6581",
+   "quote": "팽진은 대개 가려우며 전신 피부 어디든 생길 수 있습니다."
+  },
+  {
+   "disease": "콜린성두드러기",
+   "symptom": "붓기",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "두드러기",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6581",
+   "quote": "두드러기 환자는 팽진 외에도 혈관부종이 동반되어 눈 주위나 입술이 퉁퉁 붓기도 합니다."
+  },
+  {
+   "disease": "콜린성두드러기",
+   "symptom": "복통",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "두드러기",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6581",
+   "quote": "쉰 목소리나 호흡곤란 등의 호흡기 증상이나 배가 아프고 메스껍거나 토하는 등의 소화기 증상이 같이 올 수 있습니다."
+  },
+  {
+   "disease": "콜린성두드러기",
+   "symptom": "울렁거림",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "두드러기",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6581",
+   "quote": "쉰 목소리나 호흡곤란 등의 호흡기 증상이나 배가 아프고 메스껍거나 토하는 등의 소화기 증상이 같이 올 수 있습니다."
+  },
+  {
+   "disease": "크론병",
+   "symptom": "복통",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "설사",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=1667",
+   "quote": "궤양성 대장염은 설사와 함께 혈변이 동반되고 크론병과 베체트장염은 복통이 함께 나타나는 경우가 많습니다."
+  },
+  {
+   "disease": "크론병",
+   "symptom": "설사",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "설사",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=1667",
+   "quote": "크론병과 궤양성 대장염 및 베체트장염은 염증성 장질환에 속하며, 설사가 첫 증상으로 나타날 수 있습니다."
+  },
+  {
+   "disease": "크론병",
+   "symptom": "체중 감소",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "소아 청소년의 혈변 및 흑혈변",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5721",
+   "quote": "소화기 증상 외에도 체중 감소, 입 안 궤양, 관절의 통증과 염증, 눈의 병변, 특히 소아청소년은 성장 장애, 심리적 위축이 올 수 있습니다."
+  },
+  {
+   "disease": "크론병",
+   "symptom": "관절 통증",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "소아 청소년의 혈변 및 흑혈변",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5721",
+   "quote": "소화기 증상 외에도 체중 감소, 입 안 궤양, 관절의 통증과 염증, 눈의 병변, 특히 소아청소년은 성장 장애, 심리적 위축이 올 수 있습니다."
+  },
+  {
+   "disease": "탈모증",
+   "symptom": "탈모",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "원형탈모",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6700",
+   "quote": "원형탈모의 가장 전형적인 증상은 두피에 갑자기 발생하는 1~5 cm 크기의 원형 또는 타원형 탈모반(탈모 부위)입니다."
+  },
+  {
+   "disease": "탈모증",
+   "symptom": "두피 가려움",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "원형탈모",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6700",
+   "quote": "그러나 일부 환자에서는 탈모 부위에 약간의 홍반(붉어짐)이나 가려움 등 이상감각이 동반되기도 합니다."
+  },
+  {
+   "disease": "통풍",
+   "symptom": "관절 통증",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "통풍",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6732",
+   "quote": "몇 시간 이내에 해당 관절은 뜨겁고 붉어지며 부어 오르고, 매우 심한 통증이 동반됩니다."
+  },
+  {
+   "disease": "통풍",
+   "symptom": "붓기",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "통풍",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6732",
+   "quote": "몇 시간 이내에 해당 관절은 뜨겁고 붉어지며 부어 오르고, 매우 심한 통증이 동반됩니다."
+  },
+  {
+   "disease": "퇴행성관절염",
+   "symptom": "관절 소리",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "골관절염",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=1988",
+   "quote": "• 걸을 때 관절에서 소리가 나는 경우"
+  },
+  {
+   "disease": "퇴행성관절염",
+   "symptom": "관절 통증",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "골관절염",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=1988",
+   "quote": "골관절염에서 가장 흔하고 초기에 호소하는 증상은 관절 부위의 국소적 통증입니다."
+  },
+  {
+   "disease": "퇴행성관절염",
+   "symptom": "움직임 불편",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "골관절염",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=1988",
+   "quote": "관절 운동 범위 감소, 종창(부종, 부기), 관절 주위 압통(누를 때 발생하는 통증)이 나타납니다."
+  },
+  {
+   "disease": "퇴행성관절염",
+   "symptom": "붓기",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "골관절염",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=1988",
+   "quote": "관절 운동 범위 감소, 종창(부종, 부기), 관절 주위 압통(누를 때 발생하는 통증)이 나타납니다."
+  },
+  {
+   "disease": "협심증",
+   "symptom": "소화불량",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "협심증",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6566",
+   "quote": "여성이나 노인, 당뇨병 환자 등에서는 호흡곤란, 상복부 불편감, 소화 불량 등 비심장성 증상도 자주 관찰됩니다."
+  },
+  {
+   "disease": "말초신경병증(손발 감각 이상)",
+   "symptom": "손발 저림",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "당뇨병 합병증(만성 합병증)",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6899",
+   "quote": "3) 당뇨병신경병증: 손발이 저리거나 화끈거리고, 감각이 둔해지며, 통증이 생길 수 있습니다."
+  },
+  {
+   "disease": "말초신경병증(손발 감각 이상)",
+   "symptom": "소화불량",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "당뇨병 합병증(만성 합병증)",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6899",
+   "quote": "자율신경이 손상되면 어지럼, 소화불량, 변비나 설사 등이 나타날 수 있습니다."
+  },
+  {
+   "disease": "말초신경병증(손발 감각 이상)",
+   "symptom": "변비",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "당뇨병 합병증(만성 합병증)",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6899",
+   "quote": "자율신경이 손상되면 어지럼, 소화불량, 변비나 설사 등이 나타날 수 있습니다."
+  },
+  {
+   "disease": "말초신경병증(손발 감각 이상)",
+   "symptom": "설사",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "당뇨병 합병증(만성 합병증)",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6899",
+   "quote": "자율신경이 손상되면 어지럼, 소화불량, 변비나 설사 등이 나타날 수 있습니다."
+  },
+  {
+   "disease": "부정맥",
+   "symptom": "만성피로",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "부정맥",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=1102",
+   "quote": "이때 머리나 몸 전체로 혈액공급이 원활하지 못해 어지럽거나 실신할 수 있으며, 이러한 상태가 반복되면 피로감을 느끼기도 합니다."
+  },
+  {
+   "disease": "척추관 협착증",
+   "symptom": "무릎/허리 부담감",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "척추관 협착증",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=4047",
+   "quote": "• 허리에 막연한 무지근한 통증과 뻣뻣함이 나타납니다."
+  },
+  {
+   "disease": "척추관 협착증",
+   "symptom": "손발 저림",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "척추관 협착증",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=4047",
+   "quote": "이 시기에는 증상이 신경성 간헐적 파행의 양상에 가까워지고, 통증, 마비, 경련, 저림, 근력 약화 등이 나타납니다."
+  },
+  {
+   "disease": "척추관 협착증",
+   "symptom": "근육경련(쥐남)",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "척추관 협착증",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=4047",
+   "quote": "환자의 85%는 둔한 쑤시는 통증을, 57%는 감각 이상을, 47%는 하지 근력의 약화를, 15%는 쥐가 나는 감각을 느낍니다."
+  },
+  {
+   "disease": "척추관 협착증",
+   "symptom": "움직임 불편",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "척추관 협착증",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=4047",
+   "quote": "또한 많은 환자는 수개월에 걸쳐 쉬지 않고 걸을 수 있는 거리가 점차 감소하는 것을 경험합니다."
+  },
+  {
+   "disease": "위염",
+   "symptom": "복통",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "위염",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6777",
+   "quote": "위염이 발생하면 복통(주로 배의 위쪽 부위 통증), 소화불량, 헛배부름, 구역감 등 다양한 증상이 나타날 수 있지만, 증상이 없는 경우도 많습니다."
+  },
+  {
+   "disease": "위염",
+   "symptom": "소화불량",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "위염",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6777",
+   "quote": "위염이 발생하면 복통(주로 배의 위쪽 부위 통증), 소화불량, 헛배부름, 구역감 등 다양한 증상이 나타날 수 있지만, 증상이 없는 경우도 많습니다."
+  },
+  {
+   "disease": "위염",
+   "symptom": "복부 팽만감",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "위염",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6777",
+   "quote": "위염이 발생하면 복통(주로 배의 위쪽 부위 통증), 소화불량, 헛배부름, 구역감 등 다양한 증상이 나타날 수 있지만, 증상이 없는 경우도 많습니다."
+  },
+  {
+   "disease": "위염",
+   "symptom": "울렁거림",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "위염",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6777",
+   "quote": "위염이 발생하면 복통(주로 배의 위쪽 부위 통증), 소화불량, 헛배부름, 구역감 등 다양한 증상이 나타날 수 있지만, 증상이 없는 경우도 많습니다."
+  },
+  {
+   "disease": "간기능 이상(간수치 상승)",
+   "symptom": "만성피로",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "알코올 간질환",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5310",
+   "quote": "쉽게 피로하거나 소화불량, 우상복부 불편감 또는 통증이 있을 수도 있습니다."
+  },
+  {
+   "disease": "간기능 이상(간수치 상승)",
+   "symptom": "소화불량",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "알코올 간질환",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5310",
+   "quote": "쉽게 피로하거나 소화불량, 우상복부 불편감 또는 통증이 있을 수도 있습니다."
+  },
+  {
+   "disease": "만성신장질환",
+   "symptom": "부종",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "만성콩팥병",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5457",
+   "quote": "먼저 콩팥을 통해 우리 몸의 염분을 적절히 배출해야 하는데, 그렇지 못하게 되면서 염분 및 수분이 쌓이고, 이로 인해 부종과 고혈압이 나타납니다."
+  },
+  {
+   "disease": "만성신장질환",
+   "symptom": "붓기",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "만성콩팥병",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5457",
+   "quote": "만성콩팥병 환자의 부종은 대개 자고 일어나면 얼굴이나 손발이 붓고, 오후가 되면 중력의 영향을 받아 체액이 몸의 아래쪽으로 몰리면서 다리가 붓는 증상으로 나타납니다."
+  },
+  {
+   "disease": "만성신장질환",
+   "symptom": "무력감",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "만성콩팥병",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5457",
+   "quote": "요독증은 무력감, 기운 없음, 구역감, 입맛 없음, 구토 등과 같은 비특이적인 증상부터 가려움증, 저림 증상, 경련, 의식 변화, 심낭 삼출과 같은 중증의 증상까지 다양하게 나타날 수 있습니다."
+  },
+  {
+   "disease": "만성신장질환",
+   "symptom": "기운 없음",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "만성콩팥병",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5457",
+   "quote": "요독증은 무력감, 기운 없음, 구역감, 입맛 없음, 구토 등과 같은 비특이적인 증상부터 가려움증, 저림 증상, 경련, 의식 변화, 심낭 삼출과 같은 중증의 증상까지 다양하게 나타날 수 있습니다."
+  },
+  {
+   "disease": "만성신장질환",
+   "symptom": "울렁거림",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "만성콩팥병",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5457",
+   "quote": "요독증은 무력감, 기운 없음, 구역감, 입맛 없음, 구토 등과 같은 비특이적인 증상부터 가려움증, 저림 증상, 경련, 의식 변화, 심낭 삼출과 같은 중증의 증상까지 다양하게 나타날 수 있습니다."
+  },
+  {
+   "disease": "만성신장질환",
+   "symptom": "식욕변화",
+   "org": "질병관리청 국가건강정보포털",
+   "doc": "만성콩팥병",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5457",
+   "quote": "요독증은 무력감, 기운 없음, 구역감, 입맛 없음, 구토 등과 같은 비특이적인 증상부터 가려움증, 저림 증상, 경련, 의식 변화, 심낭 삼출과 같은 중증의 증상까지 다양하게 나타날 수 있습니다."
+  }
+ ],
+ "synergy": [
+  {
+   "key": "비타민 D+칼슘",
+   "name": "비타민 D + 칼슘",
+   "effect": "칼슘 흡수 촉진·골다공증 예방(함께 섭취 권고)",
+   "verdict": "일치",
+   "org": "질병관리청",
+   "doc": "국가건강정보포털 - 골다공증",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5833",
+   "quote": "골다공증과 골절을 예방하기 위해서 칼슘과 비타민 D 섭취, 운동, 낙상 예방, 금연, 절주를 실천합니다."
+  },
+  {
+   "key": "비타민 C+철",
+   "name": "비타민 C + 철",
+   "effect": "비헴철(철 보충제) 흡수 증가",
+   "verdict": "일치",
+   "org": "질병관리청",
+   "doc": "국가건강정보포털 - 빈혈",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=1104",
+   "quote": "철분제는 식전에 비타민 C(예: 과일주스)와 함께 복용하면 흡수가 더 잘 됩니다(속이 불편해서 식전에 먹기 부담스러우면 식후에 바로 복용)."
+  },
+  {
+   "key": "비타민 A+철",
+   "name": "비타민 A + 철",
+   "effect": "철 결핍 시 함께 섭취하면 헤모글로빈 농도 증가 효과가 큼",
+   "verdict": "일치",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 비타민",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=2",
+   "quote": "따라서 철 결핍 시 비타민 A를 함께 섭취하면 철을 단독으로 섭취하는 경우에 비해 헤모글로빈 농도를 효과적으로 증가시킨다 [23]."
+  },
+  {
+   "key": "비타민 C+칼슘",
+   "name": "비타민 C + 칼슘",
+   "effect": "장내 산성화로 칼슘 용해도·흡수율 증가",
+   "verdict": "부분 일치",
+   "org": "식품의약품안전처",
+   "doc": "식품안전나라 건강기능식품 기능성 정보 - 칼슘 흡수",
+   "url": "https://www.foodsafetykorea.go.kr/portal/healthyfoodlife/functionalityView.do?viewNo=18",
+   "quote": "그 밖에 단백질, 젖당, 비타민 C의 적절한 섭취 등도 칼슘의 흡수율을 높이는 작용을 합니다."
+  },
+  {
+   "key": "단백질+칼슘",
+   "name": "단백질 + 칼슘",
+   "effect": "칼슘 흡수 도움",
+   "verdict": "부분 일치",
+   "org": "질병관리청",
+   "doc": "국가건강정보포털 - 골다공증",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5833",
+   "quote": "단백질 음식을 적당하게 섭취하는 것은 칼슘 흡수에 도움이 됩니다."
+  },
+  {
+   "key": "폴리감마글루탐산+칼슘",
+   "name": "폴리감마글루탐산 + 칼슘",
+   "effect": "체내 칼슘 흡수 촉진(식약처 고시형 기능성 원료)",
+   "verdict": "부분 일치",
+   "org": "식품의약품안전처",
+   "doc": "식품안전나라 건강기능식품 기능성 정보 - 칼슘 흡수",
+   "url": "https://www.foodsafetykorea.go.kr/portal/healthyfoodlife/functionalityView.do?viewNo=18",
+   "quote": "칼슘 흡수 촉진과 관련된 건강기능식품의 기능성 내용은 어떤것이 있나요? 체내 칼슘 흡수 촉진에 도움을 줄 수 있음 / 칼슘 흡수의 도움을 주는 건강기능식품 기능성 원료는 무엇일까요? … 고시형 기능성원료 폴리감마글루탐산"
+  },
+  {
+   "key": "비타민 K+칼슘",
+   "name": "비타민 K + 칼슘",
+   "effect": "칼슘이 뼈 속에서 안정적으로 유지되는 데 필요",
+   "verdict": "부분 일치",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 비타민",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=2",
+   "quote": "또한 비타민 K는 칼슘이 뼈 속에서 안정적으로 유지되는데 필요하다."
+  },
+  {
+   "key": "비타민 D+마그네슘",
+   "name": "비타민 D + 마그네슘",
+   "effect": "마그네슘 흡수 증가",
+   "verdict": "부분 일치",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 무기질",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=3",
+   "quote": "부갑상선호르몬은 장에서 마그네슘 흡수를 조절하고 비타민 D와 25(OH)D3, 1,25(OH)2D3 등 비타민 D의 대사물질은 마그네슘의 흡수를 높이는 것으로 보고되었다 [5]."
+  },
+  {
+   "key": "비타민 C+비타민 E",
+   "name": "비타민 C + 비타민 E",
+   "effect": "산화된 비타민 E를 재생(항산화 이용)",
+   "verdict": "부분 일치",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 비타민",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=2",
+   "quote": "비타민 E가 글루타티온(glutathione)과 비타민 C의 도움으로 라디칼 형태에서 원래상태로 빠르게 돌아올 수 있는 재생기전 때문이며, 비타민 E의 turnover 또한 매우 느리기 때문이다 [15]."
+  },
+  {
+   "key": "셀레늄+비타민 E",
+   "name": "셀레늄 + 비타민 E",
+   "effect": "비타민 E 재생에 관여",
+   "verdict": "부분 일치",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 비타민",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=2",
+   "quote": "비타민 E의 재생에 관여하는 그 외 항산화 영양소인 비타민 C, 셀레늄 등과의 정량적인 관계는 고려되지 않았다."
+  },
+  {
+   "key": "EPA 및 DHA 함유 유지+비타민 E",
+   "name": "EPA 및 DHA 함유 유지 + 비타민 E",
+   "effect": "EPA·DHA 등 다불포화지방 섭취가 많으면 비타민 E 필요량 증가(산화 방지)",
+   "verdict": "부분 일치",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 비타민",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=2",
+   "quote": "그러나 우리나라에서는 서구에 비해 불포화도가 높은 n-3계 리놀렌산(linolenic acid), 에이코사펜타에노산(eicosapentaenoic acid, EPA) 도코사헥사엔산(docosahexaenoic acid, DHA)의 섭취가 더 높을 수 있으므로 총 다불포화지방 섭취에 대한 비타민 E 비율의 상향조절을 고려할 필요가 있다 하겠다."
+  },
+  {
+   "key": "비타민 B2+비타민 B6",
+   "name": "비타민 B2 + 비타민 B6",
+   "effect": "리보플라빈 조효소(FMN)가 비타민 B6의 활성형(PLP) 생성에 관여",
+   "verdict": "부분 일치",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 비타민",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=2",
+   "quote": "리보플라빈의 조효소인 플라빈 모노뉴클레오티드(flavin mononucleotide, FMN)는 비타민 B6로부터 피리독살 5-인산을 생성하는 반응에 관여한다 [9]."
+  },
+  {
+   "key": "엽산+비타민 B12",
+   "name": "엽산 + 비타민 B12",
+   "effect": "엽산·메티오닌 사이클이 돌려면 둘 다 충분히 공급돼야 함",
+   "verdict": "부분 일치",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 비타민",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=2",
+   "quote": "이 과정은 엽산 사이클(folate cycle)과 메티오닌 사이클(methionine cycle)이 겹쳐지는 공통부분이기 때문에 이 두 사이클이 원활하게 돌아가기 위해서는 엽산과 비타민 B12의 충분한 공급이 필요하다."
+  },
+  {
+   "key": "아연+비타민 A",
+   "name": "아연 + 비타민 A",
+   "effect": "아연이 레티놀결합단백질 합성에 관여해 비타민 A 상태를 개선",
+   "verdict": "부분 일치",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 비타민",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=2",
+   "quote": "아연 섭취가 결핍되면 비타민 A가 간에서 순환계로 이동되는데 영향을 미친다. 아연은 레티놀결합단백질의 생합성에 중요한 영향을 미치므로, 단백질-에너지 결핍상태에서는 아연섭취가 비타민 A 상태에 긍정적인 효과를 나타낸다 [24]."
+  },
+  {
+   "key": "구리+철",
+   "name": "구리 + 철",
+   "effect": "철의 운반에 관여",
+   "verdict": "부분 일치",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 무기질",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=3",
+   "quote": "전이 금속원소인 구리는 Cu+나 Cu2+로 전환될 수 있어 여러 효소의 구성성분으로 산화환원반응에 관여한다. 이 외에도 철의 운반, 결합조직의 가교결합 형성, 항산화 작용을 비롯한 다양한 체내 기능을 수행한다 [2]."
+  },
+  {
+   "key": "비타민 C+크롬",
+   "name": "비타민 C + 크롬",
+   "effect": "크롬 흡수율 증가",
+   "verdict": "부분 일치",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 무기질",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=3",
+   "quote": "식사 요인으로 비타민 C는 크롬의 흡수율을 높여주며, 아연은 상호 경쟁관계에 있어 아연부족 쥐에서 크롬의 흡수율이 증가하였다는 보고가 있었다."
+  },
+  {
+   "key": "셀레늄+요오드",
+   "name": "셀레늄 + 요오드",
+   "effect": "셀레늄 결핍 시 요오드의 갑상선 호르몬 생성 억제",
+   "verdict": "부분 일치",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 무기질",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=3",
+   "quote": "요오드의 대사는 다른 영양소에도 크게 영향을 받는데, 특히 셀레늄과 철분, 비타민 A의 결핍은 요오드의 갑상선 호르몬 생성을 억제하기도 한다 [8]."
+  },
+  {
+   "key": "철+요오드",
+   "name": "철 + 요오드",
+   "effect": "철 결핍 시 요오드의 갑상선 호르몬 생성 억제",
+   "verdict": "부분 일치",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 무기질",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=3",
+   "quote": "요오드의 대사는 다른 영양소에도 크게 영향을 받는데, 특히 셀레늄과 철분, 비타민 A의 결핍은 요오드의 갑상선 호르몬 생성을 억제하기도 한다 [8]."
+  },
+  {
+   "key": "비타민 A+요오드",
+   "name": "비타민 A + 요오드",
+   "effect": "비타민 A 결핍 시 요오드의 갑상선 호르몬 생성 억제",
+   "verdict": "부분 일치",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 무기질",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=3",
+   "quote": "요오드의 대사는 다른 영양소에도 크게 영향을 받는데, 특히 셀레늄과 철분, 비타민 A의 결핍은 요오드의 갑상선 호르몬 생성을 억제하기도 한다 [8]."
+  }
+ ],
+ "in_synergy": [
+  {
+   "ingredient_id": "NUT-45660",
+   "synergy": "비타민 D+칼슘",
+   "page": "웹페이지",
+   "org": "질병관리청",
+   "doc": "국가건강정보포털 - 골다공증",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5833",
+   "quote": "골다공증과 골절을 예방하기 위해서 칼슘과 비타민 D 섭취, 운동, 낙상 예방, 금연, 절주를 실천합니다."
+  },
+  {
+   "ingredient_id": "NUT-45672",
+   "synergy": "비타민 D+칼슘",
+   "page": "웹페이지",
+   "org": "질병관리청",
+   "doc": "국가건강정보포털 - 골다공증",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5833",
+   "quote": "골다공증과 골절을 예방하기 위해서 칼슘과 비타민 D 섭취, 운동, 낙상 예방, 금연, 절주를 실천합니다."
+  },
+  {
+   "ingredient_id": "NUT-45671",
+   "synergy": "비타민 C+철",
+   "page": "웹페이지",
+   "org": "질병관리청",
+   "doc": "국가건강정보포털 - 빈혈",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=1104",
+   "quote": "철분제는 식전에 비타민 C(예: 과일주스)와 함께 복용하면 흡수가 더 잘 됩니다(속이 불편해서 식전에 먹기 부담스러우면 식후에 바로 복용)."
+  },
+  {
+   "ingredient_id": "NUT-45674",
+   "synergy": "비타민 C+철",
+   "page": "웹페이지",
+   "org": "질병관리청",
+   "doc": "국가건강정보포털 - 빈혈",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=1104",
+   "quote": "철분제는 식전에 비타민 C(예: 과일주스)와 함께 복용하면 흡수가 더 잘 됩니다(속이 불편해서 식전에 먹기 부담스러우면 식후에 바로 복용)."
+  },
+  {
+   "ingredient_id": "NUT-45658",
+   "synergy": "비타민 A+철",
+   "page": "p.3 (PDF 41쪽)",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 비타민",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=2",
+   "quote": "따라서 철 결핍 시 비타민 A를 함께 섭취하면 철을 단독으로 섭취하는 경우에 비해 헤모글로빈 농도를 효과적으로 증가시킨다 [23]."
+  },
+  {
+   "ingredient_id": "NUT-45674",
+   "synergy": "비타민 A+철",
+   "page": "p.3 (PDF 41쪽)",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 비타민",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=2",
+   "quote": "따라서 철 결핍 시 비타민 A를 함께 섭취하면 철을 단독으로 섭취하는 경우에 비해 헤모글로빈 농도를 효과적으로 증가시킨다 [23]."
+  },
+  {
+   "ingredient_id": "NUT-45671",
+   "synergy": "비타민 C+칼슘",
+   "page": "웹페이지",
+   "org": "식품의약품안전처",
+   "doc": "식품안전나라 건강기능식품 기능성 정보 - 칼슘 흡수",
+   "url": "https://www.foodsafetykorea.go.kr/portal/healthyfoodlife/functionalityView.do?viewNo=18",
+   "quote": "그 밖에 단백질, 젖당, 비타민 C의 적절한 섭취 등도 칼슘의 흡수율을 높이는 작용을 합니다."
+  },
+  {
+   "ingredient_id": "NUT-45672",
+   "synergy": "비타민 C+칼슘",
+   "page": "웹페이지",
+   "org": "식품의약품안전처",
+   "doc": "식품안전나라 건강기능식품 기능성 정보 - 칼슘 흡수",
+   "url": "https://www.foodsafetykorea.go.kr/portal/healthyfoodlife/functionalityView.do?viewNo=18",
+   "quote": "그 밖에 단백질, 젖당, 비타민 C의 적절한 섭취 등도 칼슘의 흡수율을 높이는 작용을 합니다."
+  },
+  {
+   "ingredient_id": "NUT-45684",
+   "synergy": "단백질+칼슘",
+   "page": "웹페이지",
+   "org": "질병관리청",
+   "doc": "국가건강정보포털 - 골다공증",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5833",
+   "quote": "단백질 음식을 적당하게 섭취하는 것은 칼슘 흡수에 도움이 됩니다."
+  },
+  {
+   "ingredient_id": "NUT-45672",
+   "synergy": "단백질+칼슘",
+   "page": "웹페이지",
+   "org": "질병관리청",
+   "doc": "국가건강정보포털 - 골다공증",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5833",
+   "quote": "단백질 음식을 적당하게 섭취하는 것은 칼슘 흡수에 도움이 됩니다."
+  },
+  {
+   "ingredient_id": "NTC-2-56",
+   "synergy": "폴리감마글루탐산+칼슘",
+   "page": "웹페이지",
+   "org": "식품의약품안전처",
+   "doc": "식품안전나라 건강기능식품 기능성 정보 - 칼슘 흡수",
+   "url": "https://www.foodsafetykorea.go.kr/portal/healthyfoodlife/functionalityView.do?viewNo=18",
+   "quote": "칼슘 흡수 촉진과 관련된 건강기능식품의 기능성 내용은 어떤것이 있나요? 체내 칼슘 흡수 촉진에 도움을 줄 수 있음 / 칼슘 흡수의 도움을 주는 건강기능식품 기능성 원료는 무엇일까요? … 고시형 기능성원료 폴리감마글루탐산"
+  },
+  {
+   "ingredient_id": "NUT-45672",
+   "synergy": "폴리감마글루탐산+칼슘",
+   "page": "웹페이지",
+   "org": "식품의약품안전처",
+   "doc": "식품안전나라 건강기능식품 기능성 정보 - 칼슘 흡수",
+   "url": "https://www.foodsafetykorea.go.kr/portal/healthyfoodlife/functionalityView.do?viewNo=18",
+   "quote": "칼슘 흡수 촉진과 관련된 건강기능식품의 기능성 내용은 어떤것이 있나요? 체내 칼슘 흡수 촉진에 도움을 줄 수 있음 / 칼슘 흡수의 도움을 주는 건강기능식품 기능성 원료는 무엇일까요? … 고시형 기능성원료 폴리감마글루탐산"
+  },
+  {
+   "ingredient_id": "NUT-45662",
+   "synergy": "비타민 K+칼슘",
+   "page": "p.115 (PDF 153쪽)",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 비타민",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=2",
+   "quote": "또한 비타민 K는 칼슘이 뼈 속에서 안정적으로 유지되는데 필요하다."
+  },
+  {
+   "ingredient_id": "NUT-45672",
+   "synergy": "비타민 K+칼슘",
+   "page": "p.115 (PDF 153쪽)",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 비타민",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=2",
+   "quote": "또한 비타민 K는 칼슘이 뼈 속에서 안정적으로 유지되는데 필요하다."
+  },
+  {
+   "ingredient_id": "NUT-45660",
+   "synergy": "비타민 D+마그네슘",
+   "page": "p.112 (PDF 150쪽)",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 무기질",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=3",
+   "quote": "부갑상선호르몬은 장에서 마그네슘 흡수를 조절하고 비타민 D와 25(OH)D3, 1,25(OH)2D3 등 비타민 D의 대사물질은 마그네슘의 흡수를 높이는 것으로 보고되었다 [5]."
+  },
+  {
+   "ingredient_id": "NUT-45673",
+   "synergy": "비타민 D+마그네슘",
+   "page": "p.112 (PDF 150쪽)",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 무기질",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=3",
+   "quote": "부갑상선호르몬은 장에서 마그네슘 흡수를 조절하고 비타민 D와 25(OH)D3, 1,25(OH)2D3 등 비타민 D의 대사물질은 마그네슘의 흡수를 높이는 것으로 보고되었다 [5]."
+  },
+  {
+   "ingredient_id": "NUT-45671",
+   "synergy": "비타민 C+비타민 E",
+   "page": "p.76 (PDF 114쪽)",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 비타민",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=2",
+   "quote": "비타민 E가 글루타티온(glutathione)과 비타민 C의 도움으로 라디칼 형태에서 원래상태로 빠르게 돌아올 수 있는 재생기전 때문이며, 비타민 E의 turnover 또한 매우 느리기 때문이다 [15]."
+  },
+  {
+   "ingredient_id": "NUT-45661",
+   "synergy": "비타민 C+비타민 E",
+   "page": "p.76 (PDF 114쪽)",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 비타민",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=2",
+   "quote": "비타민 E가 글루타티온(glutathione)과 비타민 C의 도움으로 라디칼 형태에서 원래상태로 빠르게 돌아올 수 있는 재생기전 때문이며, 비타민 E의 turnover 또한 매우 느리기 때문이다 [15]."
+  },
+  {
+   "ingredient_id": "NUT-45677",
+   "synergy": "셀레늄+비타민 E",
+   "page": "p.79 (PDF 117쪽)",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 비타민",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=2",
+   "quote": "비타민 E의 재생에 관여하는 그 외 항산화 영양소인 비타민 C, 셀레늄 등과의 정량적인 관계는 고려되지 않았다."
+  },
+  {
+   "ingredient_id": "NUT-45661",
+   "synergy": "셀레늄+비타민 E",
+   "page": "p.79 (PDF 117쪽)",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 비타민",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=2",
+   "quote": "비타민 E의 재생에 관여하는 그 외 항산화 영양소인 비타민 C, 셀레늄 등과의 정량적인 관계는 고려되지 않았다."
+  },
+  {
+   "ingredient_id": "NTC-2-16",
+   "synergy": "EPA 및 DHA 함유 유지+비타민 E",
+   "page": "p.79 (PDF 117쪽)",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 비타민",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=2",
+   "quote": "그러나 우리나라에서는 서구에 비해 불포화도가 높은 n-3계 리놀렌산(linolenic acid), 에이코사펜타에노산(eicosapentaenoic acid, EPA) 도코사헥사엔산(docosahexaenoic acid, DHA)의 섭취가 더 높을 수 있으므로 총 다불포화지방 섭취에 대한 비타민 E 비율의 상향조절을 고려할 필요가 있다 하겠다."
+  },
+  {
+   "ingredient_id": "NUT-45661",
+   "synergy": "EPA 및 DHA 함유 유지+비타민 E",
+   "page": "p.79 (PDF 117쪽)",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 비타민",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=2",
+   "quote": "그러나 우리나라에서는 서구에 비해 불포화도가 높은 n-3계 리놀렌산(linolenic acid), 에이코사펜타에노산(eicosapentaenoic acid, EPA) 도코사헥사엔산(docosahexaenoic acid, DHA)의 섭취가 더 높을 수 있으므로 총 다불포화지방 섭취에 대한 비타민 E 비율의 상향조절을 고려할 필요가 있다 하겠다."
+  },
+  {
+   "ingredient_id": "NUT-45664",
+   "synergy": "비타민 B2+비타민 B6",
+   "page": "p.208 (PDF 246쪽)",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 비타민",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=2",
+   "quote": "리보플라빈의 조효소인 플라빈 모노뉴클레오티드(flavin mononucleotide, FMN)는 비타민 B6로부터 피리독살 5-인산을 생성하는 반응에 관여한다 [9]."
+  },
+  {
+   "ingredient_id": "NUT-45667",
+   "synergy": "비타민 B2+비타민 B6",
+   "page": "p.208 (PDF 246쪽)",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 비타민",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=2",
+   "quote": "리보플라빈의 조효소인 플라빈 모노뉴클레오티드(flavin mononucleotide, FMN)는 비타민 B6로부터 피리독살 5-인산을 생성하는 반응에 관여한다 [9]."
+  },
+  {
+   "ingredient_id": "NUT-45668",
+   "synergy": "엽산+비타민 B12",
+   "page": "p.292 (PDF 330쪽)",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 비타민",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=2",
+   "quote": "이 과정은 엽산 사이클(folate cycle)과 메티오닌 사이클(methionine cycle)이 겹쳐지는 공통부분이기 때문에 이 두 사이클이 원활하게 돌아가기 위해서는 엽산과 비타민 B12의 충분한 공급이 필요하다."
+  },
+  {
+   "ingredient_id": "NUT-45669",
+   "synergy": "엽산+비타민 B12",
+   "page": "p.292 (PDF 330쪽)",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 비타민",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=2",
+   "quote": "이 과정은 엽산 사이클(folate cycle)과 메티오닌 사이클(methionine cycle)이 겹쳐지는 공통부분이기 때문에 이 두 사이클이 원활하게 돌아가기 위해서는 엽산과 비타민 B12의 충분한 공급이 필요하다."
+  },
+  {
+   "ingredient_id": "NUT-45675",
+   "synergy": "아연+비타민 A",
+   "page": "p.3–4 (PDF 41–42쪽)",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 비타민",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=2",
+   "quote": "아연 섭취가 결핍되면 비타민 A가 간에서 순환계로 이동되는데 영향을 미친다. 아연은 레티놀결합단백질의 생합성에 중요한 영향을 미치므로, 단백질-에너지 결핍상태에서는 아연섭취가 비타민 A 상태에 긍정적인 효과를 나타낸다 [24]."
+  },
+  {
+   "ingredient_id": "NUT-45658",
+   "synergy": "아연+비타민 A",
+   "page": "p.3–4 (PDF 41–42쪽)",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 비타민",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=2",
+   "quote": "아연 섭취가 결핍되면 비타민 A가 간에서 순환계로 이동되는데 영향을 미친다. 아연은 레티놀결합단백질의 생합성에 중요한 영향을 미치므로, 단백질-에너지 결핍상태에서는 아연섭취가 비타민 A 상태에 긍정적인 효과를 나타낸다 [24]."
+  },
+  {
+   "ingredient_id": "NUT-45676",
+   "synergy": "구리+철",
+   "page": "p.193 (PDF 231쪽)",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 무기질",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=3",
+   "quote": "전이 금속원소인 구리는 Cu+나 Cu2+로 전환될 수 있어 여러 효소의 구성성분으로 산화환원반응에 관여한다. 이 외에도 철의 운반, 결합조직의 가교결합 형성, 항산화 작용을 비롯한 다양한 체내 기능을 수행한다 [2]."
+  },
+  {
+   "ingredient_id": "NUT-45674",
+   "synergy": "구리+철",
+   "page": "p.193 (PDF 231쪽)",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 무기질",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=3",
+   "quote": "전이 금속원소인 구리는 Cu+나 Cu2+로 전환될 수 있어 여러 효소의 구성성분으로 산화환원반응에 관여한다. 이 외에도 철의 운반, 결합조직의 가교결합 형성, 항산화 작용을 비롯한 다양한 체내 기능을 수행한다 [2]."
+  },
+  {
+   "ingredient_id": "NUT-45671",
+   "synergy": "비타민 C+크롬",
+   "page": "p.338 (PDF 376쪽)",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 무기질",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=3",
+   "quote": "식사 요인으로 비타민 C는 크롬의 흡수율을 높여주며, 아연은 상호 경쟁관계에 있어 아연부족 쥐에서 크롬의 흡수율이 증가하였다는 보고가 있었다."
+  },
+  {
+   "ingredient_id": "NUT-45682",
+   "synergy": "비타민 C+크롬",
+   "page": "p.338 (PDF 376쪽)",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 무기질",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=3",
+   "quote": "식사 요인으로 비타민 C는 크롬의 흡수율을 높여주며, 아연은 상호 경쟁관계에 있어 아연부족 쥐에서 크롬의 흡수율이 증가하였다는 보고가 있었다."
+  },
+  {
+   "ingredient_id": "NUT-45677",
+   "synergy": "셀레늄+요오드",
+   "page": "p.271 (PDF 309쪽)",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 무기질",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=3",
+   "quote": "요오드의 대사는 다른 영양소에도 크게 영향을 받는데, 특히 셀레늄과 철분, 비타민 A의 결핍은 요오드의 갑상선 호르몬 생성을 억제하기도 한다 [8]."
+  },
+  {
+   "ingredient_id": "NUT-45678",
+   "synergy": "셀레늄+요오드",
+   "page": "p.271 (PDF 309쪽)",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 무기질",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=3",
+   "quote": "요오드의 대사는 다른 영양소에도 크게 영향을 받는데, 특히 셀레늄과 철분, 비타민 A의 결핍은 요오드의 갑상선 호르몬 생성을 억제하기도 한다 [8]."
+  },
+  {
+   "ingredient_id": "NUT-45674",
+   "synergy": "철+요오드",
+   "page": "p.271 (PDF 309쪽)",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 무기질",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=3",
+   "quote": "요오드의 대사는 다른 영양소에도 크게 영향을 받는데, 특히 셀레늄과 철분, 비타민 A의 결핍은 요오드의 갑상선 호르몬 생성을 억제하기도 한다 [8]."
+  },
+  {
+   "ingredient_id": "NUT-45678",
+   "synergy": "철+요오드",
+   "page": "p.271 (PDF 309쪽)",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 무기질",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=3",
+   "quote": "요오드의 대사는 다른 영양소에도 크게 영향을 받는데, 특히 셀레늄과 철분, 비타민 A의 결핍은 요오드의 갑상선 호르몬 생성을 억제하기도 한다 [8]."
+  },
+  {
+   "ingredient_id": "NUT-45658",
+   "synergy": "비타민 A+요오드",
+   "page": "p.271 (PDF 309쪽)",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 무기질",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=3",
+   "quote": "요오드의 대사는 다른 영양소에도 크게 영향을 받는데, 특히 셀레늄과 철분, 비타민 A의 결핍은 요오드의 갑상선 호르몬 생성을 억제하기도 한다 [8]."
+  },
+  {
+   "ingredient_id": "NUT-45678",
+   "synergy": "비타민 A+요오드",
+   "page": "p.271 (PDF 309쪽)",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 무기질",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=3",
+   "quote": "요오드의 대사는 다른 영양소에도 크게 영향을 받는데, 특히 셀레늄과 철분, 비타민 A의 결핍은 요오드의 갑상선 호르몬 생성을 억제하기도 한다 [8]."
+  }
+ ],
+ "antagonizes": [
+  {
+   "a": "NUT-45672",
+   "b": "NUT-45674",
+   "effect": "과량 칼슘이 철 흡수 방해",
+   "org": "질병관리청",
+   "doc": "국가건강정보포털 - 영양제",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6762",
+   "quote": "칼슘의 과잉 섭취 시 변비가 생길 수 있지만, 이외에는 대부분 심각한 부작용을 나타내지는 않으나, 아연과 철분의 흡수를 방해하고 신장 기능에 장애를 일으킬 수 있습니다."
+  },
+  {
+   "a": "NUT-45672",
+   "b": "NUT-45675",
+   "effect": "칼슘이 아연 흡수 저해",
+   "org": "질병관리청",
+   "doc": "국가건강정보포털 - 영양제",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6762",
+   "quote": "칼슘의 과잉 섭취 시 변비가 생길 수 있지만, 이외에는 대부분 심각한 부작용을 나타내지는 않으나, 아연과 철분의 흡수를 방해하고 신장 기능에 장애를 일으킬 수 있습니다."
+  },
+  {
+   "a": "NUT-45674",
+   "b": "NUT-45675",
+   "effect": "과량 철 보충을 빈속에 아연과 함께 먹으면 아연 흡수 감소(식사와 함께면 영향 없음)",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 무기질",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=3",
+   "quote": "과량의 철 보충은 철과 아연을 둘 다 빈 속에 섭취할 경우 아연 흡수를 감소시킬 수 있지만 식사와 함께 섭취할 때에는 아연 흡수에 영향을 주지 않는다 [50, 51]."
+  },
+  {
+   "a": "NUT-45675",
+   "b": "NUT-45676",
+   "effect": "장기간 과량 아연이 구리 흡수 저하",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 무기질",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=3",
+   "quote": "식품으로 섭취한 아연은 인체에 유해한 영향이 잘 나타나지 않으나 아연 강화식품 또는 보충제의 장기간 과량의 아연 섭취로 인해 구리 흡수 저하, 면역능력 감소, 혈중 고밀도 지단백 콜레스테롤의 감소 [88-90] 등이 나타나며, 적혈구 superoxide dismutase(ESOD) 효소의 활성이 저하된다 [91]."
+  },
+  {
+   "a": "NUT-45675",
+   "b": "NUT-45682",
+   "effect": "흡수 경쟁",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 무기질",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=3",
+   "quote": "식사 요인으로 비타민 C는 크롬의 흡수율을 높여주며, 아연은 상호 경쟁관계에 있어 아연부족 쥐에서 크롬의 흡수율이 증가하였다는 보고가 있었다."
+  },
+  {
+   "a": "NUT-45674",
+   "b": "NUT-45679",
+   "effect": "철 운반 단백질 공유 — 철 섭취·저장 상태가 망간 흡수에 영향",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 무기질",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=3",
+   "quote": "망간이 흡수된 후에 혈액에서 이동하고 조직으로 전달되는 과정에서 철 운반 단백질을 공유하기 때문에 망간의 흡수와 세포내 함량은 철 섭취와 체내 저장 상태에 의해 영향을 받게 된다 [18, 19]."
+  },
+  {
+   "a": "NUT-45659",
+   "b": "NTC-2-26",
+   "effect": "함께 섭취 시 베타카로틴이 루테인 흡수를 유의하게 감소",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 비타민",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=2",
+   "quote": "베타-카로틴과 루테인을 함께 섭취하면 루테인만 섭취했을 때 보다 베타-카로틴에 의하여 루테인의 흡수가 유의하게 감소되었다. 그러나 베타-카로틴만 섭취했을 때 보다 루테인과 베타-카로틴을 함께 섭취했을 때 혈청 내 베타-카로틴 농도는 증가한 것으로 나타났다 [25]."
+  },
+  {
+   "a": "NUT-45661",
+   "b": "NUT-45662",
+   "effect": "과량 비타민 E의 비타민 K 길항작용(출혈 경향)",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 비타민",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=2",
+   "quote": "비타민 E 과잉섭취의 독성종말점으로 그동안 보고되었던 다양한 유해현상 중 출혈독성에 관한 지표가 주로 적용되고 있으며 관련된 지표로는 혈액응고 저해, 프로트롬빈 감마-카르복시화 저하, 오스테오칼신의 카르복시화 저하 등과 같은 비타민 K 길항작용 등을 들 수 있다."
+  },
+  {
+   "a": "NUT-45683",
+   "b": "NUT-45673",
+   "effect": "셀룰로오스 등 식이섬유가 마그네슘 흡수 저해",
+   "org": "보건복지부·한국영양학회",
+   "doc": "2020 한국인 영양소 섭취기준 - 무기질",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=3",
+   "quote": "반면, 인산은 마그네슘과 불용성 염을 형성하여 마그네슘의 흡수를 저해하며, 피틴산 및 셀룰로오스와 같은 식이섬유도 마그네슘의 흡수를 저해하는 것으로 보고되었다 [7]."
+  },
+  {
+   "a": "NUT-45683",
+   "b": "NUT-45672",
+   "effect": "섬유소 과잉 섭취가 칼슘 흡수율 저하",
+   "org": "식품의약품안전처",
+   "doc": "식품안전나라 건강기능식품 기능성 정보 - 칼슘 흡수",
+   "url": "https://www.foodsafetykorea.go.kr/portal/healthyfoodlife/functionalityView.do?viewNo=18",
+   "quote": "그 밖에 칼슘의 흡수율을 저하시키는 요인으로 지방, 수산, 섬유소의 과잉 섭취와 장내의 알칼리 환경, 폐경기로 인한 성호르몬 감소, 스트레스, 술과 담배 등이 있습니다."
+  }
+ ]
+}

@@ -1,0 +1,349 @@
+{
+ "_about": "복용약 → 영양소. 식약처 의약품안전나라 품목 허가사항에서 확인한 문장만 담는다(2026-11-11 조회, 성분마다 품목 1건). grade A = 결핍·저하와 함께 보충이나 모니터링 권고가 있다, B = 결핍·저하가 이상반응으로만 적혀 있다. A 만 추천 후보가 되고 B 는 참고 표시다. 등급은 약사 검토 전 초안이다. match 는 사용자 약 이름·분류에 거는 정규식이다. 드럭머거 번역서(드럭 머거, 2014)의 내용은 쓰지 않는다.",
+ "checked_at": "2026-11-11",
+ "drugs": [
+  {
+   "drug_id": "CLS-statin",
+   "name": "스타틴계 고지혈증약",
+   "level": "class",
+   "class_id": null,
+   "match": "스타틴"
+  },
+  {
+   "drug_id": "CLS-ppi",
+   "name": "프로톤펌프억제제(PPI)",
+   "level": "class",
+   "class_id": null,
+   "match": "프로톤\\s?펌프|PPI|프라졸"
+  },
+  {
+   "drug_id": "CLS-loop-diuretic",
+   "name": "루프 이뇨제",
+   "level": "class",
+   "class_id": null,
+   "match": "루프\\s?이뇨|푸로세미드|토르세미드|토라세미드"
+  },
+  {
+   "drug_id": "CLS-thiazide",
+   "name": "티아지드계 이뇨제",
+   "level": "class",
+   "class_id": null,
+   "match": "티아지드|치아지드|클로로티아지드|클로르탈리돈|인다파미드"
+  },
+  {
+   "drug_id": "CLS-corticosteroid",
+   "name": "부신피질 스테로이드",
+   "level": "class",
+   "class_id": null,
+   "match": "스테로이드|프레드니솔론|프레드니손|덱사메타손|메틸프레드니솔론"
+  },
+  {
+   "drug_id": "CLS-antibiotic",
+   "name": "항생제",
+   "level": "class",
+   "class_id": null,
+   "match": "항생제|아목시실린"
+  },
+  {
+   "drug_id": "CLS-arb",
+   "name": "안지오텐신 수용체 차단제(ARB)",
+   "level": "class",
+   "class_id": "CLS-antihypertensive",
+   "match": "ARB|사르탄"
+  },
+  {
+   "drug_id": "DRUG-metformin",
+   "name": "메트포르민",
+   "level": "ingredient",
+   "class_id": "CLS-antidiabetic",
+   "match": "메트포르민"
+  },
+  {
+   "drug_id": "DRUG-alendronate",
+   "name": "알렌드론산",
+   "level": "ingredient",
+   "class_id": null,
+   "match": "알렌드로네이트|알렌드론"
+  },
+  {
+   "drug_id": "DRUG-phenytoin",
+   "name": "페니토인",
+   "level": "ingredient",
+   "class_id": null,
+   "match": "페니토인"
+  },
+  {
+   "drug_id": "DRUG-warfarin",
+   "name": "와파린",
+   "level": "ingredient",
+   "class_id": "CLS-anticoagulant",
+   "match": "와파린|쿠마딘"
+  },
+  {
+   "drug_id": "DRUG-methotrexate",
+   "name": "메토트렉세이트",
+   "level": "ingredient",
+   "class_id": null,
+   "match": "메토트렉세이트"
+  },
+  {
+   "drug_id": "DRUG-levothyroxine",
+   "name": "레보티록신",
+   "level": "ingredient",
+   "class_id": null,
+   "match": "레보티록신|씬지로이드|신지로이드"
+  }
+ ],
+ "depletes": [
+  {
+   "drug_id": "DRUG-metformin",
+   "ingredient_id": "NUT-45669",
+   "grade": "A",
+   "effect": "비타민 B12 결핍",
+   "quote": "흔하게 비타민 B12 결핍이 나타날 수 있다.",
+   "product": "그리코민정(메트포르민염산염)",
+   "item_seq": "199301512",
+   "url": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=199301512",
+   "org": "식약처 의약품안전나라 허가사항",
+   "note": "같은 허가사항에 혈청 비타민 B12 수치를 매년 모니터링하라는 권고가 있다"
+  },
+  {
+   "drug_id": "DRUG-alendronate",
+   "ingredient_id": "NUT-45672",
+   "grade": "A",
+   "effect": "혈청 칼슘 감소",
+   "quote": "혈청 칼슘 및 인산염의 농도가 무증상적으로 경미하게 감소될 수 있으며",
+   "product": "라이트알렌드론정70mg(알렌드론산나트륨수화물)",
+   "item_seq": "201902246",
+   "url": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201902246",
+   "org": "식약처 의약품안전나라 허가사항"
+  },
+  {
+   "drug_id": "DRUG-alendronate",
+   "ingredient_id": "NUT-45660",
+   "grade": "A",
+   "effect": "칼슘·비타민 D 보충 권고",
+   "quote": "환자가 음식물로부터의 칼슘 및 비타민D 섭취가 불충분할 경우 보충제를 복용해야 한다.",
+   "product": "라이트알렌드론정70mg(알렌드론산나트륨수화물)",
+   "item_seq": "201902246",
+   "url": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201902246",
+   "org": "식약처 의약품안전나라 허가사항",
+   "note": "결핍이 아니라 보충 권고 문장이다"
+  },
+  {
+   "drug_id": "CLS-ppi",
+   "ingredient_id": "NUT-45673",
+   "grade": "A",
+   "effect": "저마그네슘혈증",
+   "quote": "대부분의 환자들에게 저마그네슘혈증의 치료로서 마그네슘보충 및 프로톤펌프억제제(Proton Pump Inhibitor) 투여 중단이 필요하다.",
+   "product": "네메올정20밀리그램(에스오메프라졸마그네슘삼수화물)",
+   "item_seq": "201403414",
+   "url": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201403414",
+   "org": "식약처 의약품안전나라 허가사항",
+   "note": "3개월 이상 복용 시"
+  },
+  {
+   "drug_id": "CLS-ppi",
+   "ingredient_id": "NUT-45669",
+   "grade": "A",
+   "effect": "비타민 B12 흡수장애",
+   "quote": "저염산증 또는 무위산증에 의해 시아노코발라민 (비타민 B12)흡수장애가 나타날 수 있다.",
+   "product": "뉴란소캡슐15밀리그램(란소프라졸과립)",
+   "item_seq": "201308978",
+   "url": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201308978",
+   "org": "식약처 의약품안전나라 허가사항",
+   "note": "장기간(예, 3년 이상) 복용 시"
+  },
+  {
+   "drug_id": "DRUG-phenytoin",
+   "ingredient_id": "NUT-45660",
+   "grade": "A",
+   "effect": "혈청 칼슘 저하 시 비타민 D 투여",
+   "quote": "혈청 칼슘 저하 및 무기인 저하 등)이 나타나는 경우에는 감량 또는 비타민D를 투여하는 등 적절히 조치한다.",
+   "product": "명인페니토인정100밀리그램",
+   "item_seq": "198500605",
+   "url": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=198500605",
+   "org": "식약처 의약품안전나라 허가사항"
+  },
+  {
+   "drug_id": "DRUG-phenytoin",
+   "ingredient_id": "NUT-45672",
+   "grade": "B",
+   "effect": "구루병·골연화증",
+   "quote": "연용에 의해 구루병, 골연화증, 치아형성부전 등이 나타날 수 있으므로",
+   "product": "명인페니토인정100밀리그램",
+   "item_seq": "198500605",
+   "url": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=198500605",
+   "org": "식약처 의약품안전나라 허가사항"
+  },
+  {
+   "drug_id": "DRUG-phenytoin",
+   "ingredient_id": "NUT-45668",
+   "grade": "B",
+   "effect": "혈청 엽산 저하",
+   "quote": "혈청엽산치 저하가 나타날 수 있다",
+   "product": "명인페니토인정100밀리그램",
+   "item_seq": "198500605",
+   "url": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=198500605",
+   "org": "식약처 의약품안전나라 허가사항"
+  },
+  {
+   "drug_id": "CLS-statin",
+   "ingredient_id": "NTC-2-9",
+   "grade": "B",
+   "effect": "혈장 CoQ10 감소",
+   "quote": "단기 임상시험에서 이 약 및 다른 스타틴계 약물로 치료받은 환자의 혈장 CoQ10수치가 상당히 감소한 것이 관찰되었다.",
+   "product": "로바로드정(로바스타틴)",
+   "item_seq": "199700176",
+   "url": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=199700176",
+   "org": "식약처 의약품안전나라 허가사항",
+   "note": "로바스타틴 허가사항에만 있는 문장이고 \"임상 중요성은 아직 확립되지 않았다\"가 이어진다. 계열 전체에 적용한 것은 문장이 \"다른 스타틴계 약물\"을 지목하기 때문이다"
+  },
+  {
+   "drug_id": "CLS-corticosteroid",
+   "ingredient_id": "NUT-45681",
+   "grade": "A",
+   "effect": "칼륨 배설 증가",
+   "quote": "음식물 섭취시 염제한과 칼륨보충이 필요할 수 있다.",
+   "product": "니소론엠정(메틸프레드니솔론)",
+   "item_seq": "201309846",
+   "url": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201309846",
+   "org": "식약처 의약품안전나라 허가사항"
+  },
+  {
+   "drug_id": "CLS-corticosteroid",
+   "ingredient_id": "NUT-45672",
+   "grade": "B",
+   "effect": "칼슘 배설 증가",
+   "quote": "모든 코르티코이드는 칼슘 배설을 증가시킨다.",
+   "product": "니소론엠정(메틸프레드니솔론)",
+   "item_seq": "201309846",
+   "url": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201309846",
+   "org": "식약처 의약품안전나라 허가사항"
+  },
+  {
+   "drug_id": "CLS-antibiotic",
+   "ingredient_id": "NUT-45662",
+   "grade": "B",
+   "effect": "비타민 K 결핍증상",
+   "quote": "드물게 비타민 K 결핍증상(저프로트롬빈혈증, 출혈경향 등), 비타민 B군 결핍증상(혀염, 구내염, 식욕부진, 신경염 등)이 나타날 수 있다.",
+   "product": "구멘틴정625밀리그램(아목시실린수화물·묽은클라불란산칼륨)",
+   "item_seq": "201308652",
+   "url": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201308652",
+   "org": "식약처 의약품안전나라 허가사항",
+   "note": "같은 문장의 비타민 B군은 어느 원료인지 정할 수 없어 넣지 않았다"
+  },
+  {
+   "drug_id": "CLS-loop-diuretic",
+   "ingredient_id": "NUT-45681",
+   "grade": "B",
+   "effect": "저칼륨혈증",
+   "quote": "저칼륨혈증, 저칼슘혈증, 저마그네슘혈증",
+   "product": "다이릭스정(푸로세미드)",
+   "item_seq": "197500450",
+   "url": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=197500450",
+   "org": "식약처 의약품안전나라 허가사항"
+  },
+  {
+   "drug_id": "CLS-loop-diuretic",
+   "ingredient_id": "NUT-45672",
+   "grade": "B",
+   "effect": "저칼슘혈증",
+   "quote": "저칼륨혈증, 저칼슘혈증, 저마그네슘혈증",
+   "product": "다이릭스정(푸로세미드)",
+   "item_seq": "197500450",
+   "url": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=197500450",
+   "org": "식약처 의약품안전나라 허가사항"
+  },
+  {
+   "drug_id": "CLS-loop-diuretic",
+   "ingredient_id": "NUT-45673",
+   "grade": "B",
+   "effect": "저마그네슘혈증",
+   "quote": "저칼륨혈증, 저칼슘혈증, 저마그네슘혈증",
+   "product": "다이릭스정(푸로세미드)",
+   "item_seq": "197500450",
+   "url": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=197500450",
+   "org": "식약처 의약품안전나라 허가사항"
+  },
+  {
+   "drug_id": "CLS-thiazide",
+   "ingredient_id": "NUT-45681",
+   "grade": "B",
+   "effect": "저칼륨혈증",
+   "quote": "저칼륨혈증, 저나트륨혈증, 저마그네슘혈증, 저염소혈증성 알칼리증, 고칼슘혈증 등의 전해질평형실조가 나타날 수 있으므로",
+   "product": "다이크로짇정(히드로클로로티아지드)",
+   "item_seq": "196000008",
+   "url": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=196000008",
+   "org": "식약처 의약품안전나라 허가사항"
+  },
+  {
+   "drug_id": "CLS-thiazide",
+   "ingredient_id": "NUT-45673",
+   "grade": "B",
+   "effect": "저마그네슘혈증",
+   "quote": "저칼륨혈증, 저나트륨혈증, 저마그네슘혈증, 저염소혈증성 알칼리증, 고칼슘혈증 등의 전해질평형실조가 나타날 수 있으므로",
+   "product": "다이크로짇정(히드로클로로티아지드)",
+   "item_seq": "196000008",
+   "url": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=196000008",
+   "org": "식약처 의약품안전나라 허가사항"
+  }
+ ],
+ "cautions": [
+  {
+   "drug_id": "CLS-arb",
+   "ingredient_id": "NUT-45681",
+   "severity": "caution",
+   "note": "ARB 계열 혈압약 복용 중에는 의사와 상의 없이 칼륨보충제를 복용하지 않는다",
+   "quote": "이 약을 복용하는 환자는 의사와 상의하지 않고 칼륨보충제 또는 칼륨을 함유하는 염분 대용제를 복용하지 않도록 한다",
+   "product": "국제로잘탄정50밀리그램(로사르탄칼륨)",
+   "item_seq": "200500391",
+   "url": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=200500391",
+   "org": "식약처 의약품안전나라 허가사항"
+  },
+  {
+   "drug_id": "DRUG-warfarin",
+   "ingredient_id": "NUT-45662",
+   "severity": "caution",
+   "note": "비타민 K는 와파린의 항응고 작용을 바꿀 수 있다",
+   "quote": "다음 인자에 의해 이 약의 항응고 작용이 변화될 수 있다. : 비타민 K, 지방, 야채류 섭취",
+   "product": "쿠파린정2밀리그램(와파린나트륨)",
+   "item_seq": "200600456",
+   "url": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=200600456",
+   "org": "식약처 의약품안전나라 허가사항"
+  },
+  {
+   "drug_id": "DRUG-alendronate",
+   "ingredient_id": "NUT-45672",
+   "severity": "caution",
+   "note": "칼슘보충제는 알렌드론산 흡수를 방해하므로 알렌드론산 복용 후 30분 이상 간격을 둔다",
+   "quote": "칼슘보충제나 제산제 및 일부 경구용 약물들은 이 약의 흡수를 방해하는 것으로 알려져 있다.",
+   "product": "라이트알렌드론정70mg(알렌드론산나트륨수화물)",
+   "item_seq": "201902246",
+   "url": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201902246",
+   "org": "식약처 의약품안전나라 허가사항"
+  },
+  {
+   "drug_id": "DRUG-methotrexate",
+   "ingredient_id": "NUT-45668",
+   "severity": "caution",
+   "note": "엽산을 함유한 제제는 메토트렉세이트의 효능을 감소시킬 수 있다",
+   "quote": "엽산을 함유하는 비타민 제제 또는 엽산 유도체는 이 약의 효능을 감소시킬 수 있다.",
+   "product": "유한메토트렉세이트정",
+   "item_seq": "197900145",
+   "url": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=197900145",
+   "org": "식약처 의약품안전나라 허가사항"
+  },
+  {
+   "drug_id": "DRUG-levothyroxine",
+   "ingredient_id": "NUT-45674",
+   "severity": "caution",
+   "note": "철분제제는 레보티록신 흡수를 지연·감소시킬 수 있어 복용 간격에 주의한다",
+   "quote": "콜레스티라민, 철분제제, 알루미늄 함유 제산제와 병용투여시 이 약의 흡수가 지연 또는 감소될 수 있으므로",
+   "product": "씬지로이드정0.025밀리그램(레보티록신나트륨수화물)",
+   "item_seq": "201903264",
+   "url": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201903264",
+   "org": "식약처 의약품안전나라 허가사항"
+  }
+ ]
+}

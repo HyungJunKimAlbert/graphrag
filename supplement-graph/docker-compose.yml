@@ -1,0 +1,22 @@
+# supplement-graph 실데이터용 Neo4j. 기존 운영(7474/7687)·V1 개발(7475/7688)과 분리한다
+# 실행: docker compose --env-file .neo4j.env up -d
+name: supplement-graph
+services:
+  neo4j:
+    image: neo4j:5.26-community
+    container_name: supplement-graph-neo4j
+    restart: unless-stopped
+    ports:
+      - "7476:7474"   # HTTP·브라우저
+      - "7689:7687"   # Bolt
+    environment:
+      NEO4J_AUTH: "neo4j/${NEO4J_PASSWORD:?.neo4j.env 의 NEO4J_PASSWORD 가 필요합니다}"
+      NEO4J_server_memory_heap_initial__size: 512m
+      NEO4J_server_memory_heap_max__size: 1G
+      NEO4J_server_memory_pagecache_size: 512m
+    volumes:
+      - data:/data
+      - logs:/logs
+volumes:
+  data:
+  logs:
