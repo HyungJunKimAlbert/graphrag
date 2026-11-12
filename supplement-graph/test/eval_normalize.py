@@ -13,39 +13,58 @@ from reco.llm import LLM  # noqa: E402
 from reco.pipeline import normalize, patient_view  # noqa: E402
 
 
+VISIT = {"choi", "jung", "yoon", "kang", "oh"}
+EITHER = {"seo"}   # seo: 시력 저하 + 검진 시력 0.4, 어느 쪽도 틀리지 않다
+
+
+def case_view(c):
+    return {"age": c.get("age", 70), "sex": c.get("sex", "F"), "chief_complaint": c["text"],
+            "managed_conditions": [], "comorbidities": [], "abnormal_checkup": [], "medications": []}
+
+
+def case_problems(c, n, names):
+    """평가 케이스 하나에 대한 정규화 결과의 문제 목록. 비어 있으면 통과."""
+    got = {s["symptom_id"] for s in n["symptoms"]}
+    ok_ids = set(c.get("must", [])) | set(c.get("allow", [])) | {x for g in c.get("any", []) for x in g}
+    problems = [f"빠짐 {names[i]}" for i in c.get("must", []) if i not in got]
+    problems += [f"빠짐 {'/'.join(names[i] for i in g)} 중 하나" for g in c.get("any", []) if not got & set(g)]
+    problems += [f"잘못 고름 {names[i]}" for i in sorted(got - ok_ids)] if "must" in c or "any" in c else []
+    problems += [f"미대응에 없음 '{u}'" for u in c.get("unmatched", []) if not any(u in x for x in n["unmatched"])]
+    problems += [f"맥락에 없음 '{u}'" for u in c.get("context", []) if not any(u in x for x in n["context"])]
+    if c.get("care") and n["care_level"] != c["care"]:
+        problems.append(f"판정 {n['care_level']} (기대 {c['care']})")
+    if "care" not in c and n["care_level"] != "none":
+        problems.append(f"판정 {n['care_level']} (기대 none)")
+    return problems
+
+
+def sample_wrong(patient_id, care_level):
+    """샘플 사용자의 진료 판정이 기대와 다르면 True."""
+    want = "visit" if patient_id in VISIT else "none"
+    return care_level != want and patient_id not in EITHER
+
+
 def main():
     cases = json.loads((ROOT / "test" / "normalize_cases.json").read_text(encoding="utf-8"))
     symptoms = Graph().run("all_symptoms")
     names = {s["symptom_id"]: s["name"] for s in symptoms}
     llm, failed = LLM(), 0
     for c in cases:
-        view = {"age": c.get("age", 70), "sex": c.get("sex", "F"), "chief_complaint": c["text"],
-                "managed_conditions": [], "comorbidities": [], "abnormal_checkup": [], "medications": []}
-        n = normalize(llm, view, symptoms)
+        n = normalize(llm, case_view(c), symptoms)
         got = {s["symptom_id"] for s in n["symptoms"]}
-        ok_ids = set(c.get("must", [])) | set(c.get("allow", [])) | {x for g in c.get("any", []) for x in g}
-        problems = [f"빠짐 {names[i]}" for i in c.get("must", []) if i not in got]
-        problems += [f"빠짐 {'/'.join(names[i] for i in g)} 중 하나" for g in c.get("any", []) if not got & set(g)]
-        problems += [f"잘못 고름 {names[i]}" for i in sorted(got - ok_ids)] if "must" in c or "any" in c else []
-        problems += [f"미대응에 없음 '{u}'" for u in c.get("unmatched", []) if not any(u in x for x in n["unmatched"])]
-        problems += [f"맥락에 없음 '{u}'" for u in c.get("context", []) if not any(u in x for x in n["context"])]
-        if c.get("care") and n["care_level"] != c["care"]:
-            problems.append(f"판정 {n['care_level']} (기대 {c['care']})")
-        if "care" not in c and n["care_level"] != "none":
-            problems.append(f"판정 {n['care_level']} (기대 none)")
+        problems = case_problems(c, n, names)
         failed += bool(problems)
         print(f"{'실패' if problems else '통과'}  {c['text']}\n      → {', '.join(names[i] for i in sorted(got)) or '-'}"
               f" | 미대응 {n['unmatched']} | 맥락 {n['context']} | {n['care_level']}"
               + (f"\n      ! {'; '.join(problems)}" if problems else ""))
     # 샘플 사용자: 질환·복용약까지 본 진료 판정이 유지되는지
-    visit, either = {"choi", "jung", "yoon", "kang", "oh"}, {"seo"}   # seo: 시력 저하 + 검진 시력 0.4, 어느 쪽도 틀리지 않다
     for f in ("sample_patients.json", "sample_patients_normal.json"):
         for pt in json.loads((ROOT.parent / "data" / f).read_text(encoding="utf-8")):
             n = normalize(llm, patient_view(pt), symptoms)
-            want = "visit" if pt["patient_id"] in visit else "none"
-            bad = n["care_level"] != want and pt["patient_id"] not in either
+            bad = sample_wrong(pt["patient_id"], n["care_level"])
             failed += bad
             cases.append(pt)
+            want = "visit" if pt["patient_id"] in VISIT else "none"
             print(f"{'실패' if bad else '통과'}  [샘플 {pt['patient_id']}] 판정 {n['care_level']} (기대 {want}) · 사유 증상 {n['care_symptom_ids']} · {n['care_reason']}")
     print(f"\n결과: {len(cases) - failed}/{len(cases)} 통과 (LLM 호출 {llm.calls}회, 캐시 {llm.cached}회)")
     return 1 if failed else 0

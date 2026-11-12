@@ -136,7 +136,8 @@ ORDER BY ingredient_id;
 // ---------------------------------------------------------------
 
 // @query lifestage_symptoms
-// 나이·성별 → 생애주기 → 다빈도 질환 → 증상. 질환에 확인된 증상(HAS_SYMPTOM)이 없을 때만 증상 분류로 펼친다
+// 나이·성별 → 생애주기 → 다빈도 질환 → 증상(HAS_SYMPTOM). 질환 → 증상 분류 → 분류의 모든 증상으로 펼치지 않는다:
+// 분류는 묶음일 뿐 그 질환에 그 증상이 있다는 뜻이 아니다(예: 치주질환 → 면역 → 감기). 연결이 없는 질환은 우선 증상을 주지 않는다
 // $age, $sex ('M' | 'F')
 MATCH (l:LifeStage) WHERE l.age_min <= $age AND $age <= l.age_max
 MATCH (l)-[c:COMMON_DISEASE]->(d:Disease) WHERE c.sex IN ['A', $sex]
@@ -144,11 +145,6 @@ CALL {
   WITH d
   MATCH (d)-[h:HAS_SYMPTOM]->(s:Symptom)
   RETURN s, 'disease' AS basis, h.source AS ref
-  UNION
-  WITH d
-  WITH d WHERE NOT (d)-[:HAS_SYMPTOM]->()
-  MATCH (d)-[:CLASSIFIED_AS]->(:SymptomCategory)-[:INCLUDES]->(s:Symptom)
-  RETURN s, 'category' AS basis, null AS ref
 }
 RETURN s.symptom_id AS symptom_id, s.name AS name, l.name AS life_stage,
        collect(DISTINCT d.name) AS diseases, collect(DISTINCT basis) AS basis,
@@ -221,6 +217,12 @@ WHERE i.ingredient_id IN $ingredient_ids AND p <> i
 RETURN i.ingredient_id AS ingredient_id, p.ingredient_id AS partner_id, p.name AS partner,
        s.name AS synergy, s.effect AS effect, s.verdict AS verdict, s.source AS source, s.url AS url
 ORDER BY ingredient_id, partner_id;
+
+// @query ingredient_basics
+// 근거가 같은 원료 중 대표를 고를 때 보는 원문 유무(일일섭취량, 주의사항)
+// $ingredient_ids
+MATCH (i:Ingredient) WHERE i.ingredient_id IN $ingredient_ids
+RETURN i.ingredient_id AS ingredient_id, i.intake_raw AS intake_raw, i.precaution_text AS precaution_text;
 
 // @query antagonist_pairs
 // 4-2 후보 안에서 서로 흡수·작용을 방해하는 쌍

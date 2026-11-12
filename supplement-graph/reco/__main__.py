@@ -39,7 +39,7 @@ def markdown(results):
                   f"- 후보: 증상 {s2['symptom_candidates']}개, 복용약 {len(s2['drug_candidates'])}개"
                   f"{' (' + ', '.join(s2['drug_candidates']) + ')' if s2['drug_candidates'] else ''}, "
                   f"관심사 {s2['interest_candidates']}개 "
-                  f"→ 3점 {s3['score3']} / 2점 {s3['score2']} / 1점 {s3['score1']}",
+                  f"→ 4점 {s3['score4']} / 3점 {s3['score3']} / 2점 {s3['score2']} / 1점 {s3['score1']} / 0점 {s3['score0']}",
                   f"- 검증: 조건 {', '.join(s4['condition_codes']) or '없음'} · 약 {', '.join(s4['drug_classes']) or '없음'} "
                   f"→ 통과 {s4['kept']}개, 제외 {s4['excluded']}개", "",
                   "| 순위 | 점수 | 성분 | 유형 | 근거 | 주의 |", "|---|---|---|---|---|---|"]

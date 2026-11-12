@@ -10,6 +10,7 @@
   - 질환 연령·성별 확인, 질환 → 증상, 시너지·길항   (load/refs/public_refs_kr.json, 국내 공공 출처)
 
 통합 엑셀은 나건강 자료(기업 자료)다. 공공 출처로 확인된 부분은 관계의 ref_* / source 에 따로 적는다.
+public_refs_kr.json 의 내용은 원본 엑셀에 없는 추가 조사 결과라 origin(ref_origin) = "추가 조사" 로 표시한다.
 """
 import argparse
 import json
@@ -27,6 +28,7 @@ from build_graph import ROOT, load_blocks, run_block, shell, strip_comments  # n
 DEFAULT_XLSX = pathlib.Path(os.environ.get("CONTEXT_XLSX") or ROOT.parent / "data" / "생애주기별 질환 및 증상_통합.xlsx")
 REFS = ROOT / "load" / "refs" / "public_refs_kr.json"
 TABLE_SOURCE = "나건강 생애주기별 질환 및 증상_통합.xlsx"
+ORIGIN = "추가 조사"   # 원본 자료(엑셀)에 없고 국내 공공기관 자료에서 따로 찾은 근거. 화면에서 원본 근거와 구분해 보여준다
 
 # 생애주기 이름 앞부분 → 나이 범위
 STAGE_AGES = {"10대미만": (0, 9), "10대": (10, 19), "20대": (20, 29), "30대": (30, 39),
@@ -135,14 +137,14 @@ def main():
     for d in diseases:
         c = checked.get((d["stage"], d["disease"], d["sex"]))
         d["props"] = {"ref_org": c["org"], "ref_doc": c.get("doc"), "ref_url": c.get("url"),
-                      "ref_stat": c.get("stat")} if c else {}
+                      "ref_stat": c.get("stat"), "ref_origin": ORIGIN} if c else {}
         if not c:
             no_ref.append(f"{d['stage']} › {d['disease']}")
         d.pop("band")
     run_block(q, "link_common_disease", diseases)
     run_block(q, "link_disease_symptom", [
         {"disease": h["disease"], "symptom": h["symptom"], "source": h["org"],
-         "props": {k: h[k] for k in ("doc", "url", "quote") if h.get(k)}} for h in refs["has_symptom"]])
+         "props": {**{k: h[k] for k in ("doc", "url", "quote") if h.get(k)}, "origin": ORIGIN}} for h in refs["has_symptom"]])
 
     print("관심사")
     run_block(q, "upsert_segment_interest", interests)
@@ -152,13 +154,13 @@ def main():
     run_block(q, "upsert_synergy", [
         {"key": s["key"], "props": {"name": s["name"], "effect": s.get("effect"), "verdict": s.get("verdict"),
                                     "source": s.get("org"), "doc": s.get("doc"), "url": s.get("url"),
-                                    "quote": s.get("quote")}} for s in refs["synergy"]])
+                                    "quote": s.get("quote"), "origin": ORIGIN}} for s in refs["synergy"]])
     run_block(q, "link_in_synergy", [
         {"ingredient_id": e["ingredient_id"], "key": e["synergy"], "source": e.get("org"),
-         "props": {k: e[k] for k in ("doc", "url", "quote", "page") if e.get(k)}} for e in refs["in_synergy"]])
+         "props": {**{k: e[k] for k in ("doc", "url", "quote", "page") if e.get(k)}, "origin": ORIGIN}} for e in refs["in_synergy"]])
     run_block(q, "link_antagonizes", [
         {"a": e["a"], "b": e["b"], "effect": e.get("effect"), "source": e.get("org"),
-         "props": {k: e[k] for k in ("doc", "url", "quote") if e.get(k)}} for e in refs["antagonizes"]])
+         "props": {**{k: e[k] for k in ("doc", "url", "quote") if e.get(k)}, "origin": ORIGIN}} for e in refs["antagonizes"]])
 
     print("\n결과")
     for r in shell("MATCH (a)-[r]->(b) WHERE type(r) IN ['COMMON_DISEASE','CLASSIFIED_AS','INCLUDES','HAS_SYMPTOM',"

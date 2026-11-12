@@ -4,6 +4,7 @@
     python3 load/build_drugs.py
 
 올리는 것 (load/refs/drug_nutrient_kr.json, 식약처 의약품안전나라 허가사항에서 확인한 문장)
+원본 엑셀에 없는 추가 조사 결과라 관계·노드에 origin = "추가 조사" 를 붙여 화면에서 원본 근거와 구분한다.
   - 약 성분·계열 노드와 사용자 약 이름에 거는 정규식(match)
   - 약 → 영양소 DEPLETES (grade A = 추천 후보, B = 참고 표시)
   - 영양소 → 약 INTERACTS_WITH (허가사항이 병용을 조심하라고 한 것, severity = caution)
@@ -19,6 +20,7 @@ from build_graph import ROOT, load_blocks, run_block, shell  # noqa: E402
 
 REFS = ROOT / "load" / "refs" / "drug_nutrient_kr.json"
 PROP_KEYS = ("grade", "effect", "quote", "product", "item_seq", "url", "note")
+ORIGIN = "추가 조사"   # 원본 자료(엑셀)에 없고 국내 공공기관 자료에서 따로 찾은 근거. 화면에서 원본 근거와 구분해 보여준다
 
 
 def main():
@@ -34,16 +36,16 @@ def main():
     drugs = sorted(refs["drugs"], key=lambda d: d["level"] != "class")      # 계열을 먼저 넣어야 성분이 이어진다
     run_block(q, "upsert_drug", [
         {"drug_id": d["drug_id"], "class_id": d.get("class_id"), "source": "약효 분류",
-         "props": {"name": d["name"], "level": d["level"], "match": d["match"]}} for d in drugs])
+         "props": {"name": d["name"], "level": d["level"], "match": d["match"], "origin": ORIGIN}} for d in drugs])
 
     print("복용약 → 영양소")
     run_block(q, "link_drug_depletes", [
         {"drug_id": e["drug_id"], "ingredient_id": e["ingredient_id"], "source": e["org"],
-         "props": {**{k: e[k] for k in PROP_KEYS if e.get(k)}, "checked_at": checked}} for e in refs["depletes"]])
+         "props": {**{k: e[k] for k in PROP_KEYS if e.get(k)}, "checked_at": checked, "origin": ORIGIN}} for e in refs["depletes"]])
     run_block(q, "link_interacts_with", [
         {"ingredient_id": e["ingredient_id"], "drug_id": e["drug_id"], "severity": e["severity"], "note": e["note"],
          "source": e["org"], "props": {**{k: e[k] for k in ("quote", "product", "item_seq", "url")},
-                                       "evidence": "confirmed", "checked_at": checked}} for e in refs["cautions"]])
+                                       "evidence": "confirmed", "checked_at": checked, "origin": ORIGIN}} for e in refs["cautions"]])
 
     print("\n결과")
     n_dep = int(shell("MATCH ()-[r:DEPLETES]->() RETURN count(r)")[0])

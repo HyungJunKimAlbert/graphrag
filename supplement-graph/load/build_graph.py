@@ -27,7 +27,8 @@ sys.path.insert(0, str(ROOT / "test"))
 from run_tests import lit, load_blocks, strip_comments  # noqa: E402
 
 CONTAINER = "supplement-graph-neo4j"
-DEFAULT_XLSX = ROOT.parent / "data" / "건기식원료_통합_영양성분_고시형_개별인정형_261110.xlsx"
+# 기획 쪽 최종본([GraphDB용_최종] 건기식원료_통합_…_261110.xlsx)을 ../data 에 복사해 둔 것
+DEFAULT_XLSX = ROOT.parent / "data" / "GraphDB용_최종_건기식원료_통합_영양성분_고시형_개별인정형_261110.xlsx"
 ENV_FILE = ROOT / ".neo4j.env"
 SAFETY_SOURCE = "주의사항 문구(키워드 추출)"
 
@@ -130,6 +131,11 @@ DISEASE_RULES = [
     ("DIS-hypertension", "고혈압·혈압 이상", r"고혈압(?!\s?치료제)|혈압이 낮|, 혈압 등의 질환"),
     ("DIS-kidney", "신장 질환", r"신장|신부전"),
     ("DIS-liver", "간 질환", r"간\s?질환|간[･·,]\s?심장질환|위, 간 및"),
+    # 아래는 2026-11-11 추가. 부작용("위장장애가 발생할 수 있음")·약 이름("고지혈증 치료제")이 아니라 질환을 가진 사람을 가리키는 절만 잡는다
+    ("DIS-gi", "위장관 질환", r"위장관\s?질환|위장관\s?장애\s?(?:\(질환\)\s?)?등을 보유"),
+    ("DIS-heart", "심장·심혈관 질환", r"심장\s?질환|심장계\s?질환|심혈관계?\s?질환"),
+    ("DIS-dyslipidemia", "고지혈증·고콜레스테롤혈증", r"고콜레스테롤혈증|이상지질혈증|고지혈증(?!\s?치료제)"),
+    ("DIS-thyroid", "갑상선 질환", r"갑상선\s?질환"),
 ]
 # (drug_id, 이름, 정규식)
 DRUG_RULES = [
@@ -271,26 +277,29 @@ def build_edges(paths):
     def evidence_of(verdicts):
         return "confirmed" if any(v in ("일치", "근거 있음") for v in verdicts) else "hypothesis"
 
+    # 원료 → 기능성은 식약처 기능성 문구에서 구절을 찾은 연결이라 판정 열이 없다(확정).
+    # 경로 시트의 '판정' 열(14)은 '기능성→기전 근거' 묶음에 속하므로 기전 → 기능성 관계에 붙인다.
+    # 예전에는 이 열을 원료 → 기능성에 붙였다. verdict 를 None 으로 넘겨 남아 있는 값을 지운다
     has_function = []
     for (ing, tag), rs in it.items():
-        verdicts = uniq(r[14] for r in rs)
         has_function.append({
             "ingredient_id": ing, "tag_id": tag, "text": ", ".join(uniq(r[11] for r in rs)),
-            "source": "; ".join(uniq(r[12] for r in rs)), "evidence": evidence_of(verdicts),
-            "props": {"verdict": "일치" if "일치" in verdicts else (verdicts[0] if verdicts else None),
-                      "docs": uniq(r[13] for r in rs)}})
+            "source": "; ".join(uniq(r[12] for r in rs)), "evidence": "confirmed",
+            "props": {"verdict": None, "docs": uniq(r[13] for r in rs)}})
 
     def ev(rs, org, doc, url, quote, verdict=None):
         verdicts = uniq(r[verdict] for r in rs) if verdict is not None else []
         return ("; ".join(uniq(r[org] for r in rs)),
                 evidence_of(verdicts) if verdicts else "confirmed",
-                drop_none({"verdict": ("근거 있음" if "근거 있음" in verdicts else verdicts[0]) if verdicts else None,
+                # 한 관계에 문서가 여럿이면 판정이 섞일 수 있다. 확인된 문서가 하나라도 있으면 그 판정을 쓴다
+                drop_none({"verdict": next((v for v in verdicts if v in ("일치", "근거 있음")), verdicts[0]) if verdicts else None,
+                           "verdicts": verdicts or None,
                            "source_orgs": uniq(r[org] for r in rs), "docs": uniq(r[doc] for r in rs),
                            "urls": uniq(r[url] for r in rs), "quote": " / ".join(uniq(r[quote] for r in rs)[:3]) or None}))
 
     mech_tag, sym_mech, replenished = [], [], []
     for (mech, tag), rs in tm.items():
-        s, e, p = ev(rs, 15, 16, 17, 22)
+        s, e, p = ev(rs, 15, 16, 17, 22, verdict=14)
         mech_tag.append({"mechanism_id": mech, "tag_id": tag, "source": s, "evidence": e, "props": p})
     for (sym, mech), rs in ms.items():
         s, e, p = ev(rs, 19, 20, 21, 23, verdict=18)
@@ -340,6 +349,11 @@ def load(data, q):
     print("업체")
     run_block(q, "upsert_company_recognition", companies)
 
+    load_safety(curated, individual, q)
+    return notes
+
+
+def load_safety(curated, individual, q):
     print("안전 관계 (주의사항 문구에서 추출)")
     precautions = {row["ingredient_id"]: row["props"].get("precaution_text") for row in curated}
     precautions.update({row["ingredient_id"]: row["api"].get("precaution_text") for row in individual})
@@ -358,7 +372,6 @@ def load(data, q):
     run_block(q, "link_condition", excludes)
     run_block(q, "link_interacts_with", interacts)
     shell("CALL db.awaitIndexes(120)")
-    return notes
 
 
 def verify(data):
@@ -402,8 +415,14 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--xlsx", default=str(DEFAULT_XLSX))
     ap.add_argument("--verify-only", action="store_true")
+    ap.add_argument("--safety-only", action="store_true", help="주의사항 규칙이 바뀌었을 때 안전 관계만 다시 만든다")
     args = ap.parse_args()
     data = read(args.xlsx)
+    if args.safety_only:
+        notes = []
+        curated, individual, _ = build_ingredients(data["ing"], notes)
+        load_safety(curated, individual, load_blocks())
+        return
     notes = [] if args.verify_only else load(data, load_blocks())
     ok = verify(data)
     if notes:
