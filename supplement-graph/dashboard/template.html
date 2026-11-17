@@ -1,0 +1,833 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>건강기능식품 추천 시스템</title>
+<style>
+:root {
+  color-scheme: dark;
+  --bg: #050a0b; --glow-1: rgba(22, 120, 108, .30); --glow-2: rgba(24, 92, 118, .22); --grid: rgba(150, 230, 215, .028);
+  --panel: linear-gradient(155deg, rgba(24, 50, 50, .62), rgba(9, 18, 19, .78) 55%);
+  --panel-2: rgba(160, 235, 220, .055); --line: rgba(150, 225, 210, .15); --line-2: rgba(150, 225, 210, .30);
+  --text: #eef6f4; --text-2: #a7bcb7; --text-3: #6d8581; --halo: #08100f;
+  --ramp-lo: #1c5553; --ramp-hi: #92f6df; --link: #43c6b3; --blend: screen;
+  --hi: #ecd096; --hi-2: #b98846; --hi-soft: rgba(236, 208, 150, .14); --on-hi: #1b1407;
+  --warn: #f2b24c; --critical: #f58373;
+  --star: #bffff0; --star-o: .85; --sheen: rgba(190, 255, 240, .16); --spark: #7df5dd; --spark-core: #fff6dc;
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #edf2f0; --glow-1: rgba(60, 190, 170, .20); --glow-2: rgba(80, 150, 200, .12); --grid: rgba(10, 70, 62, .035);
+  --panel: linear-gradient(155deg, rgba(255, 255, 255, .92), rgba(248, 252, 251, .78));
+  --panel-2: rgba(10, 80, 70, .055); --line: rgba(10, 70, 62, .13); --line-2: rgba(10, 70, 62, .30);
+  --text: #0b1a18; --text-2: #46605a; --text-3: #7b918c; --halo: #f9fcfb;
+  --ramp-lo: #a5dbd0; --ramp-hi: #0a5e55; --link: #1f9c8c; --blend: multiply;
+  --hi: #b9791c; --hi-2: #8a560f; --hi-soft: rgba(185, 121, 28, .12); --on-hi: #fff;
+  --warn: #b97800; --critical: #c0392b;
+  --star: #1f9c8c; --star-o: .35; --sheen: rgba(255, 255, 255, .7); --spark: #18a892; --spark-core: #6b4208;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { height: 100%; }
+body { margin: 0; color: var(--text);
+  background:
+    radial-gradient(1100px 680px at 16% 18%, var(--glow-1), transparent 62%),
+    radial-gradient(900px 620px at 88% 92%, var(--glow-2), transparent 60%),
+    repeating-linear-gradient(0deg, var(--grid) 0 1px, transparent 1px 44px),
+    repeating-linear-gradient(90deg, var(--grid) 0 1px, transparent 1px 44px),
+    var(--bg);
+  background-attachment: fixed;
+  font: 13px/1.45 Pretendard, "Apple SD Gothic Neo", "Noto Sans KR", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased; display: flex; flex-direction: column; }
+button, input, select { font: inherit; color: inherit; }
+header { padding: 18px 24px 12px; display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: flex-end; }
+h1 { font-size: 22px; font-weight: 500; margin: 0; letter-spacing: -.02em; }
+h1 em { font-style: normal; color: var(--hi); }
+#home { cursor: pointer; display: inline-block; }
+#home:hover { opacity: .8; }
+.sub { color: var(--text-3); margin-top: 3px; font-size: 12px; }
+.kpis { display: flex; flex-wrap: wrap; gap: 8px; margin-left: auto; }
+.kpi { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 8px 14px 9px; min-width: 96px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .05), 0 10px 30px -18px rgba(0, 0, 0, .6); backdrop-filter: blur(14px); }
+.kpi b { display: block; font-size: 25px; font-weight: 300; font-variant-numeric: tabular-nums; line-height: 1.15; letter-spacing: -.02em; }
+.kpi span { color: var(--text-3); font-size: 11.5px; }
+.kpi.alert b { color: var(--critical); }
+.filters { padding: 0 24px 12px; display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; }
+.seg { display: inline-flex; background: var(--panel-2); border: 1px solid var(--line); border-radius: 11px; padding: 3px; }
+.seg button { border: 1px solid transparent; background: none; padding: 4px 12px; border-radius: 8px; cursor: pointer; color: var(--text-2); }
+.seg button[aria-pressed="true"] { color: var(--text); border-color: var(--line-2);
+  background: linear-gradient(180deg, color-mix(in oklab, var(--link) 34%, transparent), color-mix(in oklab, var(--link) 12%, transparent));
+  box-shadow: 0 0 18px -6px var(--link), inset 0 1px 0 rgba(255, 255, 255, .12); }
+.chk { display: inline-flex; gap: 6px; align-items: center; color: var(--text-2); cursor: pointer; }
+.chk input { accent-color: var(--link); }
+.filters label.f { color: var(--text-3); font-size: 10.5px; letter-spacing: .1em; margin-right: -6px; }
+select, input[type=search], .btn { background: var(--panel-2); border: 1px solid var(--line); border-radius: 10px; padding: 6px 10px; outline: none; }
+select:focus, input[type=search]:focus, .btn:hover { border-color: var(--line-2); }
+input[type=search] { width: 180px; }
+input::placeholder { color: var(--text-3); }
+.btn { cursor: pointer; }
+.chip { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--hi); border-radius: 999px; padding: 4px 12px; cursor: pointer;
+  color: var(--hi); background: var(--hi-soft); box-shadow: 0 0 18px -8px var(--hi); }
+main { flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) 330px; gap: 14px; padding: 0 24px 20px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 20px; min-height: 0;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .06), 0 30px 60px -40px rgba(0, 0, 0, .8); backdrop-filter: blur(18px); }
+.flow { display: flex; flex-direction: column; padding: 14px 18px 12px; min-width: 0; }
+.heads { position: relative; height: 38px; flex: none; }
+.head { position: absolute; top: 0; white-space: nowrap; }
+.head b { font-size: 10.5px; letter-spacing: .14em; color: var(--text-2); font-weight: 600; }
+.head span { display: block; font-size: 11px; color: var(--text-3); }
+.plot { position: relative; flex: 1; min-height: 420px; overflow: hidden; }
+.plot svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+#gBase { mix-blend-mode: var(--blend); transition: opacity .15s; }
+#gBase path { fill: url(#lg); }
+#gBase path:hover { stroke: var(--link); stroke-width: 1; }
+#gHi { filter: drop-shadow(0 0 7px color-mix(in oklab, var(--hi) 55%, transparent)); }
+#gHi path { fill: url(#lgHi); stroke: var(--hi); stroke-width: .7; stroke-opacity: .9; pointer-events: none; }
+.plot.hl #gBase { opacity: .22; }
+.col { position: absolute; top: 0; bottom: 0; overflow-y: auto; overflow-x: hidden; scrollbar-width: thin; scrollbar-color: var(--line-2) transparent; }
+.col .inner { position: relative; }
+.node { position: absolute; left: 0; right: 8px; display: flex; align-items: center; gap: 8px; cursor: pointer;
+  border-radius: 7px; border: 1px solid transparent; transition: opacity .15s, background .15s, border-color .15s; }
+.node .bar { flex: none; width: 8px; align-self: stretch; border-radius: 4px;
+  background: linear-gradient(180deg, color-mix(in oklab, var(--ramp-hi) calc(var(--t) * 100%), var(--ramp-lo)), color-mix(in oklab, var(--ramp-hi) calc(var(--t) * 62%), var(--ramp-lo)));
+  opacity: calc(.4 + .6 * var(--t));
+  box-shadow: 0 0 calc(var(--t) * 16px) color-mix(in oklab, var(--ramp-hi) calc(var(--t) * 55%), transparent); }
+.node .nm { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 500;
+  opacity: calc(.6 + .4 * var(--t)); text-shadow: 0 0 3px var(--halo), 0 0 4px var(--halo), 0 0 8px var(--halo); }
+.node .ct { flex: none; font-variant-numeric: tabular-nums; font-size: 11px; color: var(--text-2); padding: 0 6px; border-radius: 999px;
+  background: color-mix(in oklab, var(--halo) 78%, transparent); border: 1px solid var(--line); }
+.node .tag { font-size: 10px; font-weight: 600; letter-spacing: .02em; border: 1px solid var(--line-2); color: var(--text-2); border-radius: 5px;
+  padding: 0 4px; margin-right: 6px; background: var(--halo); }
+.node .cau { flex: none; font-size: 10.5px; color: var(--warn); padding: 0 6px; border-radius: 999px;
+  background: color-mix(in oklab, var(--halo) 78%, transparent); border: 1px solid color-mix(in oklab, var(--warn) 40%, transparent); }
+.node .cau::before { content: "▲ "; font-size: 8px; vertical-align: 1px; }
+.node:hover { border-color: var(--line-2); background: var(--panel-2); }
+.node:hover .nm, .node.on .nm { opacity: 1; }
+.node.on .bar { opacity: 1; background: linear-gradient(180deg, var(--hi), var(--hi-2)); box-shadow: 0 0 14px color-mix(in oklab, var(--hi) 60%, transparent); }
+.node.on .ct { color: var(--hi); border-color: color-mix(in oklab, var(--hi) 45%, transparent); }
+.node.src { border-color: var(--hi); background: linear-gradient(90deg, var(--hi-soft), transparent 85%); box-shadow: 0 0 22px -8px var(--hi); }
+.plot.hl .node:not(.on) { opacity: .22; }
+.empty { position: absolute; inset: 0; display: grid; place-items: center; color: var(--text-3); }
+.foot { flex: none; display: flex; flex-wrap: wrap; gap: 6px 20px; color: var(--text-3); font-size: 11.5px; padding-top: 10px; align-items: center; border-top: 1px solid var(--line); margin-top: 8px; }
+.legend { display: inline-flex; align-items: center; gap: 7px; }
+.legend i { width: 90px; height: 6px; border-radius: 3px; background: linear-gradient(90deg, color-mix(in oklab, var(--ramp-lo) 45%, transparent), var(--ramp-hi)); }
+.legend u { width: 26px; height: 6px; border-radius: 3px; background: linear-gradient(90deg, var(--hi), var(--hi-2)); }
+aside { padding: 18px; overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--line-2) transparent; }
+aside .eyebrow { font-size: 10.5px; letter-spacing: .14em; color: var(--hi); font-weight: 600; margin-bottom: 4px; }
+aside h2 { font-size: 19px; margin: 0 0 3px; font-weight: 400; letter-spacing: -.01em; line-height: 1.3; }
+aside h3 { font-size: 10.5px; letter-spacing: .12em; color: var(--text-3); font-weight: 600; margin: 20px 0 8px; }
+.meta { color: var(--text-2); font-size: 12px; }
+.stat3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 12px; }
+.stat3 div { background: var(--panel-2); border: 1px solid var(--line); border-radius: 12px; padding: 8px 10px; }
+.stat3 b { display: block; font-size: 22px; font-weight: 300; font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
+.stat3 span { font-size: 11px; color: var(--text-3); }
+.rows { display: grid; gap: 5px; }
+.row { display: grid; grid-template-columns: minmax(0, 1fr) 72px 30px; gap: 9px; align-items: center; }
+.row .n { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.row .b { height: 5px; background: var(--panel-2); border-radius: 3px; }
+.row .b i { display: block; height: 100%; border-radius: 3px; background: linear-gradient(90deg, var(--ramp-lo), var(--ramp-hi)); box-shadow: 0 0 8px -1px color-mix(in oklab, var(--ramp-hi) 55%, transparent); }
+.row .v { text-align: right; font-variant-numeric: tabular-nums; color: var(--text-2); }
+.row[data-id] { cursor: pointer; }
+.row[data-id]:hover .n { color: var(--hi); }
+.pt { display: block; width: 100%; text-align: left; background: var(--panel-2); border: 1px solid var(--line); border-radius: 12px; padding: 8px 11px; margin-bottom: 6px; cursor: pointer; }
+.pt:hover { border-color: var(--line-2); }
+.pt[aria-pressed="true"] { border-color: var(--hi); background: var(--hi-soft); }
+.pt small { color: var(--text-3); display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-top: 1px; }
+.pt small + small { color: var(--text-2); }
+.pt .visit { color: var(--critical); font-size: 11px; border: 1px solid color-mix(in oklab, var(--critical) 45%, transparent); border-radius: 999px; padding: 0 6px; margin-left: 4px; }
+.note { background: var(--panel-2); border: 1px solid var(--line); border-left: 2px solid var(--warn); border-radius: 8px; padding: 7px 10px; color: var(--text-2); margin-bottom: 5px; font-size: 12px; }
+#tip { position: fixed; z-index: 9; pointer-events: none; background: var(--halo); color: var(--text); border: 1px solid var(--line-2); border-radius: 10px;
+  padding: 6px 10px; font-size: 12px; display: none; max-width: 320px; box-shadow: 0 12px 30px -10px rgba(0, 0, 0, .6); }
+#tip b { color: var(--hi); font-weight: 500; }
+.tablewrap { flex: 1; overflow: auto; min-height: 420px; scrollbar-width: thin; scrollbar-color: var(--line-2) transparent; }
+table { border-collapse: collapse; width: 100%; }
+th, td { text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+th { position: sticky; top: 0; background: var(--halo); color: var(--text-3); font-weight: 600; font-size: 10.5px; letter-spacing: .1em; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+@media (max-width: 1000px) { body { height: auto; } main { grid-template-columns: 1fr; } .plot { min-height: 560px; } }
+
+/* ── 차분한 선형 표현 (위 규칙을 덮어쓴다) ─────────── */
+body { background: radial-gradient(1100px 680px at 16% 14%, color-mix(in oklab, var(--glow-1) 50%, transparent), transparent 62%), var(--bg); background-attachment: fixed; }
+.seg.tabs button { padding: 5px 16px; font-weight: 500; }
+.seg.tabs button[aria-pressed="true"] { border-color: var(--hi); color: var(--hi); background: var(--hi-soft); box-shadow: none; }
+.seg button[aria-pressed="true"] { box-shadow: none; }
+.kpi, .card { box-shadow: none; }
+.col { border: 1px solid var(--line); border-radius: 14px; background: color-mix(in oklab, var(--halo) 55%, transparent); }
+.node { left: 6px; right: 6px; gap: 8px; padding-right: 5px; border-radius: 8px;
+  transition: top .28s cubic-bezier(.2, .7, .2, 1), opacity .18s, background .15s, border-color .15s; }
+.node .bar { width: 4px; align-self: center; height: 14px; border-radius: 2px; box-shadow: none;
+  background: color-mix(in oklab, var(--ramp-hi) calc(var(--t) * 100%), var(--ramp-lo)); opacity: calc(.45 + .55 * var(--t)); }
+.node .nm { flex: 1; text-shadow: none; opacity: calc(.66 + .34 * var(--t)); }
+.node .ct { background: none; border-color: transparent; padding: 0 2px; }
+.node .cau { background: none; }
+.node.on .bar { background: var(--hi); box-shadow: none; }
+.node.on .ct { border-color: transparent; }
+.node.src { background: var(--hi-soft); border-color: var(--hi); box-shadow: none; }
+.node.off { opacity: 0 !important; pointer-events: none; }
+.plot.hl .node:not(.on) { opacity: .28; }
+.more { position: absolute; left: 14px; right: 8px; color: var(--text-3); font-size: 11.5px; line-height: 24px; }
+#gBase { mix-blend-mode: normal; }
+.plot.hl #gBase { opacity: 1; }
+#gBase path { fill: none; stroke: var(--link); stroke-linecap: round; pointer-events: stroke; }
+#gBase path:hover { stroke: var(--hi); stroke-opacity: 1; stroke-width: 3; }
+#gHi { filter: none; }
+#gHi path { fill: none; stroke: var(--hi); stroke-opacity: .8; stroke-linecap: round; }
+#gHi circle { fill: var(--hi); }
+#gSpark { pointer-events: none; }
+#gSpark path { fill: none; stroke: var(--spark-core); stroke-width: 2.4; stroke-linecap: round; stroke-opacity: .9;
+  stroke-dasharray: .1 139.9; animation: flow 4.2s linear infinite; }
+@keyframes flow { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -140px; } }
+.row .b i { box-shadow: none; }
+/* 표의 열 선택 */
+th { vertical-align: top; text-transform: none; }
+th select, th input { display: block; margin-top: 5px; width: 100%; min-width: 110px; max-width: 220px; padding: 4px 8px; border-radius: 8px; font-size: 12px; letter-spacing: 0; font-weight: 400; color: var(--text); }
+th select:has(option:checked:not([value=""])), th input:not(:placeholder-shown) { border-color: var(--hi); background: var(--hi-soft); }
+/* 같은 이름 원료 구분 */
+.node .sub { margin-left: 6px; font-size: 10.5px; color: var(--text-3); font-weight: 400; }
+/* 진료 사유 */
+.pt { cursor: default; }
+.pt:hover { border-color: var(--line); }
+.pt .why { display: block; margin-top: 5px; padding-top: 5px; border-top: 1px dashed var(--line); color: var(--text-2); font-size: 11.5px; line-height: 1.45; white-space: normal; }
+.pt .why b { color: var(--critical); font-weight: 500; margin-right: 4px; }
+.note[data-held] { cursor: pointer; }
+.note[data-held]:hover { border-color: var(--line-2); }
+.kv { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 6px 10px; font-size: 12.5px; }
+.kv b { color: var(--text-3); font-weight: 500; }
+.kv span { color: var(--text); line-height: 1.5; }
+/* 강조 상태 가독성 */
+.note b { color: var(--text); font-weight: 500; }
+.note small { display: block; color: var(--text-3); margin-top: 2px; line-height: 1.4; }
+main { grid-template-columns: minmax(0, 1fr) 310px; }
+.node { font-size: 13.5px; }
+.node .ct { font-size: 12px; white-space: nowrap; }
+.node .ct b { font-size: 13.5px; font-weight: 600; color: var(--hi); }
+.node .ct i { font-style: normal; font-size: 10.5px; color: var(--text-3); margin-left: 1px; }
+.node.on { background: var(--panel-2); border-color: var(--line); }
+.node.on .nm { opacity: 1; font-weight: 560; }
+.node.src { background: var(--hi-soft); border-color: var(--hi); }
+.plot.hl .node:not(.on) { opacity: .16; }
+/* 열 검색 · 사용자 통계 · 세로 배치 */
+body { height: auto; min-height: 100%; }
+main { align-items: start; }
+.plot, .tablewrap { flex: none; height: clamp(440px, calc(100vh - 330px), 900px); min-height: 0; }
+aside.card { position: sticky; top: 12px; max-height: calc(100vh - 24px); }
+.heads { height: 66px; }
+.head { display: grid; grid-template-columns: 1fr auto; gap: 2px 8px; align-items: baseline; }
+.head span { display: inline; text-align: right; }
+.head input { grid-column: 1 / -1; width: 100%; padding: 4px 9px; border-radius: 8px; font-size: 12px; }
+.head input:not(:placeholder-shown) { border-color: var(--hi); background: var(--hi-soft); }
+.ustats { margin-top: 16px; }
+.ustats h4 { margin: 0 0 2px; font-size: 14px; font-weight: 500; }
+.ustats .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 10px; }
+.ustats .box { border: 1px solid var(--line); border-radius: 14px; padding: 10px 12px; background: color-mix(in oklab, var(--halo) 55%, transparent); }
+.ustats .box h3 { font-size: 10.5px; letter-spacing: .12em; color: var(--text-3); font-weight: 600; margin: 0 0 8px; }
+.ustats .scroll { max-height: 186px; overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--line-2) transparent; padding-right: 4px; }
+.ustats .row { grid-template-columns: minmax(0, 1fr) 90px 44px; }
+@media (max-width: 1000px) { .ustats .grid { grid-template-columns: 1fr; } aside.card { position: static; max-height: none; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } #gSpark { display: none; } }
+/* 좌우 여백을 줄여 한 화면에 다 보이게 */
+html, body { max-width: 100%; overflow-x: hidden; }
+header { padding: 14px 14px 10px; }
+.filters { padding: 0 14px 10px; }
+main { grid-template-columns: minmax(0, 1fr) 286px; gap: 10px; padding: 0 14px 16px; }
+.flow { padding: 12px 10px 10px; }
+.node { right: 4px; gap: 6px; }
+.node .ct { padding: 0 5px; }
+/* 창이 좁으면 요약 패널을 아래로 내려 흐름이 폭을 다 쓴다 */
+@media (max-width: 1280px) { main { grid-template-columns: 1fr; } aside.card { position: static; max-height: none; } }
+/* 주의 내용 팝업 */
+.node .cau { cursor: help; }
+#tip.wide { max-width: 420px; padding: 10px 12px; line-height: 1.5; }
+#tip .cl { margin: 6px 0; max-height: 260px; overflow: hidden; }
+#tip .cl div { border-left: 2px solid var(--warn); padding: 2px 0 2px 8px; margin-bottom: 6px; }
+#tip .ct { margin: 8px 0 4px; font-size: 10.5px; letter-spacing: .1em; color: var(--text-3); }
+#tip .ct.ban { color: var(--critical); }
+#tip .cl { margin: 0; }
+#tip .cl i { font-style: normal; color: var(--text-3); font-size: 11px; margin-left: 8px; white-space: nowrap; }
+#tip .cl.ban div { border-left-color: var(--critical); }
+#tip small { display: block; color: var(--text-3); font-size: 11px; }
+.kpi.main { border-color: var(--hi); }
+.kpi.main b { color: var(--hi); }
+/* 금지로 제외된 후보: 붉은 선 */
+.plot.ban { --ramp-hi: #ff8f80; --ramp-lo: #6b2a26; --link: #f0685a; --hi: #ffb3a8; --hi-soft: color-mix(in oklab, #f0685a 16%, transparent); }
+:root[data-theme="light"] .plot.ban { --ramp-hi: #b3261e; --ramp-lo: #f0b8b2; --link: #c0392b; --hi: #a3221a; }
+.plot.ban .node .cau { color: var(--critical); border-color: color-mix(in oklab, var(--critical) 50%, transparent); }
+.plot.ban #gHi path { stroke: var(--critical); } .plot.ban #gHi circle { fill: var(--critical); }
+.seg .banbtn[aria-pressed="true"] { background: color-mix(in oklab, var(--critical) 22%, transparent); color: var(--critical); border-color: color-mix(in oklab, var(--critical) 55%, transparent); }
+.kpi.banned b { color: var(--critical); }
+.seg .banbtn { color: var(--critical); }
+/* 질환 · 관심사 · 복용약 구분색 (표식과 왼쪽 막대) */
+:root { --c-dis: #7fb2ff; --c-int: #f0b86a; --c-drug: #c9a2f5; }
+:root[data-theme="light"] { --c-dis: #2f6fd0; --c-int: #b06f00; --c-drug: #7b3fc4; }
+.node .tag.tZ { color: var(--c-dis); border-color: color-mix(in oklab, var(--c-dis) 55%, transparent); background: color-mix(in oklab, var(--c-dis) 14%, transparent); }
+.node .tag.tI { color: var(--c-int); border-color: color-mix(in oklab, var(--c-int) 55%, transparent); background: color-mix(in oklab, var(--c-int) 14%, transparent); }
+.node .tag.tD { color: var(--c-drug); border-color: color-mix(in oklab, var(--c-drug) 55%, transparent); background: color-mix(in oklab, var(--c-drug) 14%, transparent); }
+.plot:not(.ban) .node.kZ .bar { background: var(--c-dis); box-shadow: none; }
+.plot:not(.ban) .node.kI .bar { background: var(--c-int); box-shadow: none; }
+.plot:not(.ban) .node.kD .bar { background: var(--c-drug); box-shadow: none; }
+/* 성분 유형: 영양성분 · 고시형 · 개별인정형 */
+:root { --c-nut: #8fd98a; --c-ntc: #6fc7e8; --c-ind: #b9a7f0; }
+:root[data-theme="light"] { --c-nut: #2e8b3a; --c-ntc: #1b7fa6; --c-ind: #6a4fc0; }
+.node .tag.gN { color: var(--c-nut); border-color: color-mix(in oklab, var(--c-nut) 50%, transparent); background: color-mix(in oklab, var(--c-nut) 12%, transparent); }
+.node .tag.gT { color: var(--c-ntc); border-color: color-mix(in oklab, var(--c-ntc) 50%, transparent); background: color-mix(in oklab, var(--c-ntc) 12%, transparent); }
+.node .tag.gI { color: var(--c-ind); border-color: color-mix(in oklab, var(--c-ind) 50%, transparent); background: color-mix(in oklab, var(--c-ind) 12%, transparent); }
+.plot.ban .node .tag { opacity: .85; }
+/* 빈 화면 안내: 열 카드보다 앞에, 잘 보이게 */
+.empty { z-index: 20; pointer-events: none; }
+.empty > div { pointer-events: auto; display: grid; gap: 10px; justify-items: center; text-align: center; padding: 20px 28px; border-radius: 14px;
+  background: var(--halo); border: 1px solid var(--line-2); box-shadow: 0 10px 40px rgba(0,0,0,.35); }
+.empty b { color: var(--text); font-size: 15px; font-weight: 600; }
+.empty span { color: var(--text-2); font-size: 13px; }
+.empty button { font: inherit; font-size: 13px; font-weight: 600; padding: 7px 14px; border-radius: 8px; cursor: pointer; color: var(--hi, var(--text)); background: transparent; border: 1px solid currentColor; }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1 id="home" role="button" tabindex="0" title="첫 화면으로">건강기능식품 <em>추천 시스템</em></h1>
+    <div class="sub" id="updated"></div>
+  </div>
+  <div class="kpis" id="kpis"></div>
+</header>
+<div class="filters">
+  <div class="seg tabs" id="view">
+    <button data-v="sym" aria-pressed="true">증상 경로</button>
+    <button data-v="life" aria-pressed="false">생애주기 · 관심사</button>
+  </div>
+  <label class="f">범위</label>
+  <div class="seg" id="scope">
+    <button data-v="pick" aria-pressed="true" title="사용자에게 실제로 추천된 성분 (결과마다 3개)">최종 추천</button>
+    <button data-v="top" aria-pressed="false" title="결과마다 상위 10개 후보에 가장 자주 든 성분 10개">TOP-10</button>
+    <button data-v="all" aria-pressed="false" title="안전 검증을 통과한 전체 후보">전체 후보</button>
+    <button data-v="ban" class="banbtn" aria-pressed="false" title="사용자 나이·질환·복용약 때문에 금지로 빠진 후보">금지 제외</button>
+  </div>
+  <label class="f">근거</label>
+  <span id="entries" style="display:inline-flex; gap:14px"></span>
+  <label class="f">성별</label>
+  <span id="sexes" style="display:inline-flex; gap:14px"><label class="chk"><input type="checkbox" data-sex="M" checked>남성</label><label class="chk"><input type="checkbox" data-sex="F" checked>여성</label></span>
+  <label class="f">환자명</label>
+  <input type="search" id="user" list="users" placeholder="전체 (환자명으로 검색)" style="width:170px"><datalist id="users"></datalist>
+  <span id="runBox" style="display:inline-flex; gap:14px; align-items:center" hidden>
+    <label class="f">실행</label>
+    <select id="run"></select>
+    <label class="chk" title="같은 환자의 결과가 여러 번 쌓였으면 가장 나중 것만 센다"><input type="checkbox" id="latest">환자별 최신만</label>
+  </span>
+  <button class="chip" id="focusChip" hidden></button>
+  <span style="margin-left:auto; display:inline-flex; gap:8px">
+    <button class="btn" id="viewBtn">표로 보기</button>
+    <button class="btn" id="themeBtn" title="밝게/어둡게">◐</button>
+  </span>
+</div>
+<main>
+  <section class="card flow">
+    <div class="heads" id="heads"></div>
+    <div class="plot" id="plot">
+      <svg><g id="gBase"></g><g id="gHi"></g><g id="gSpark"></g></svg>
+    </div>
+    <div class="tablewrap" id="tablewrap" hidden></div>
+    <div class="foot">
+      <span class="legend">적음 <i></i> 많음 (위에서 아래로 추천 건수 순)</span>
+      <span class="legend"><u></u> 선택한 항목과 이어진 경로</span>
+      <span>숫자 = 그 항목을 거친 추천 건수(결과 × 성분)</span>
+      <span>열 제목 아래 검색으로 원하는 항목만 조회 · 올리면 연결된 항목만 위로 모아 표시(열마다 최대 10개) · 누르면 고정</span>
+    </div>
+    <div class="ustats" id="ustats"></div>
+  </section>
+  <aside class="card" id="side"></aside>
+</main>
+<div id="tip"></div>
+<script id="data" type="application/json">__DATA__</script>
+<script>
+// 데이터는 CSV 여섯 개(build_stats.py 가 넣는다). 사전(경로·성분·문구)을 풀어 결과 목록으로 되돌린다
+const RAW = JSON.parse(document.getElementById('data').textContent);
+const parseCsv = text => {
+  const rows = []; let row = [], f = '', q = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (q) { if (c === '"') { if (text[i + 1] === '"') { f += '"'; i++; } else q = false; } else f += c; }
+    else if (c === '"') q = true;
+    else if (c === ',') { row.push(f); f = ''; }
+    else if (c === '\n') { row.push(f); rows.push(row); row = []; f = ''; }
+    else if (c !== '\r') f += c;
+  }
+  if (f || row.length) { row.push(f); rows.push(row); }
+  const head = rows.shift();
+  return rows.map(r => Object.fromEntries(head.map((k, i) => [k, r[i]])));
+};
+const DATA = (() => {
+  const T = Object.fromEntries(Object.entries(RAW.csv).map(([k, v]) => [k, parseCsv(v)]));
+  const cut = (s, sep = ' | ') => s ? s.split(sep) : [];
+  const paths = new Map(T.paths.map(p => [p.path_id, [p.type, p.p1, p.p2, p.p3].filter(v => v !== '')]));
+  const ings = new Map(T.ingredients.map(i => [i.ingredient_id, i])), notes = new Map(T.notes.map(n => [n.note_id, n.text]));
+  const records = T.results.map(r => {
+    const names = cut(r.symptom_names);
+    return { ...r, age: +r.age, held_removed: +r.held_removed || 0, life_stage: r.life_stage || null,
+      symptoms: cut(r.symptom_phrases).map((phrase, i) => ({ phrase, name: names[i] })), unmatched: cut(r.unmatched), held: cut(r.held), items: [] };
+  });
+  T.candidates.forEach(c => {
+    const g = ings.get(c.ingredient_id);
+    records[+c.result].items.push({ id: g.ingredient_id, name: g.name, kind: g.kind, tier: +c.tier, rank: c.rank ? +c.rank : null,
+      caution: cut(c.cautions, ';').map(i => notes.get(i)), block: cut(c.blocks, ';').map(i => notes.get(i)), strands: cut(c.paths, ';').map(i => paths.get(i)) });
+  });
+  return { records, runs: T.runs.map(r => ({ ...r, records: +r.records })), updated_at: RAW.updated_at, categories: RAW.categories };
+})();
+const R = DATA.records, CAT = DATA.categories || {};
+const VIEWS = {
+  sym: { cols: ['대분류', '증상', '기전', '기능성 태그', '성분'], entries: [['S', '증상'], ['D', '복용약']],
+    desc: '대분류 → 증상(정규화) → 기전 → 기능성 태그 → 성분' },
+  life: { cols: ['생애주기', '질환 · 관심사', '증상', '성분'], entries: [['L', '질환·증상'], ['I', '관심사']],
+    desc: '생애주기 → 다빈도 질환 · 관심사 → 증상 → 성분' },
+};
+const TAG = { D: '약', I: '관심', Z: '질환' };
+const KSHORT = { '영양성분': '영양', '고시형': '고시', '개별인정형': '개별' }, KCLS = { '영양성분': 'gN', '고시형': 'gT', '개별인정형': 'gI' };   // 성분 유형 표식
+const TYPE = { C: '대분류', S: '증상', D: '복용약', M: '기전', F: '기능성 태그', G: '성분', A: '생애주기', Z: '질환', I: '관심사', Y: '증상' };
+const ROW = 30, GAP = 4, PAD = 6; let GAPX = 64;   // 항목 높이는 모두 같다. 건수는 순서·색·숫자로 읽는다
+const CAP = 10;                                // 강조 중 다른 열에 보여 줄 연결 항목 수
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const sexK = s => s === 'M' ? '남' : '여';
+
+// 결과 × 성분 × 근거 가닥을 한 번만 펼친다. 화면(탭)마다 노드 id 를 따로 쓴다
+const info = new Map();   // 노드 id → {label, col, type}
+// 이름이 같아도 인정 건이 다르면 다른 원료다. 이름이 겹치는 것만 인정번호를 붙여 구분한다
+const DUP = (() => { const m = new Map(); R.forEach(r => r.items.forEach(it => { let s = m.get(it.name); if (!s) m.set(it.name, s = new Set()); s.add(it.id); })); return new Set([...m].filter(([, s]) => s.size > 1).map(([n]) => n)); })();
+const regNo = id => { const m = id.match(/^IND-(?:NEW-)?(\d{4})-(\d+)$/); return m ? `제${m[1]}-${m[2]}호` : id.startsWith('NTC') ? '고시형' : id.startsWith('NUT') ? '영양성분' : id; };
+const reg = (id, label, col, type) => { if (!info.has(id)) info.set(id, { label, col, type, low: label.toLowerCase() }); return id; };
+const flat = [];
+R.forEach((r, ri) => r.items.forEach(it => {
+  const g = reg('G:' + it.id, it.name, 4, 'G'), h = reg('H:' + it.id, it.name, 3, 'G');
+  info.get(g).kind = info.get(h).kind = it.kind;
+  if (DUP.has(it.name) && it.id.startsWith('IND')) info.get(g).sub = info.get(h).sub = regNo(it.id);     // 이름이 겹치는 개별인정형만 인정번호를 붙인다
+  const push = (view, type, ids) => flat.push({ ri, gid: it.id, tier: it.tier, view, type, ids, key: ids.join('>') });
+  const tail = s => [reg('M:' + s[2], s[2], 2, 'M'), reg('F:' + s[3], s[3], 3, 'F'), g];
+  it.strands.forEach(s => {
+    if (s[0] === 'S') (CAT[s[1]] || ['미분류']).forEach(c => push('sym', 'S', [reg('C:' + c, c, 0, 'C'), reg('S:' + s[1], s[1], 1, 'S'), ...tail(s)]));
+    else if (s[0] === 'D') push('sym', 'D', [reg('C:복용약', '복용약', 0, 'C'), reg('D:' + s[1], s[1], 1, 'D'), ...tail(s)]);
+    else if (s[0] === 'L') push('life', 'L', [reg('A:' + s[1], s[1], 0, 'A'), reg('Z:' + s[2], s[2], 1, 'Z'), reg('Y:' + s[3], s[3], 2, 'Y'), h]);
+    else if (s[0] === 'I') { const a = r.life_stage || '생애주기 미상'; push('life', 'I', [reg('A:' + a, a, 0, 'A'), reg('I:' + s[1], s[1], 1, 'I'), h]); }
+  });
+}));
+
+const fresh = () => ({ view: 'sym', scope: 'pick', entry: { S: true, D: true, L: true, I: true }, sex: { M: true, F: true }, user: '', run: '', latest: false, patients: new Set(), focus: null, cq: {}, table: false });
+let state = fresh();
+let nodes, links, chains, cols, colX = [], colW = [], colEls = [], active, hl = null, hover = null;
+const last = () => cols.length - 1;
+
+function activeRecords() {
+  const uq = state.user.trim().toLowerCase();
+  let idx = R.map((_, i) => i).filter(i => (!state.run || R[i].run === state.run) && state.sex[R[i].sex] !== false && (!uq || R[i].patient_id.toLowerCase().includes(uq)));
+  if (state.latest) {
+    const m = new Map();
+    idx.forEach(i => m.set(R[i].patient_id, i));
+    idx = [...m.values()];
+  }
+  return idx;
+}
+
+function compute() {
+  const base = activeRecords();
+  active = { base, recs: new Set(base.filter(i => !state.patients.size || state.patients.has(i))) };
+  const minTier = active.minTier = { pick: 3, top: 2, all: 1, ban: 0 }[state.scope];
+  const build = (only, noSearch) => {
+    nodes = new Map(); links = new Map(); chains = new Map();
+    const qs = VIEWS[state.view].cols.map((_, i) => (state.cq[state.view + ':' + i] || '').trim().toLowerCase());   // 열 검색
+    const hit = f => qs.every((q, ci) => !q || f.ids.some(id => { const x = info.get(id); return x.col === ci && x.low.includes(q); }));
+    const searching = !noSearch && qs.some(Boolean);
+    for (const f of flat) {
+      if (f.view !== state.view || !active.recs.has(f.ri) || !inScope(f.tier) || !state.entry[f.type]) continue;
+      if (searching && !hit(f)) continue;
+      if (only && !only.has(f.gid)) continue;
+      const rk = f.ri + '#' + f.gid;
+      f.ids.forEach((id, k) => {
+        let n = nodes.get(id);
+        if (!n) nodes.set(id, n = { id, ...info.get(id), recs: new Set() });
+        n.recs.add(rk);
+        if (k) {
+          const lk = f.ids[k - 1] + '>' + id;
+          let l = links.get(lk);
+          if (!l) links.set(lk, l = { key: lk, a: f.ids[k - 1], b: id, recs: new Set() });
+          l.recs.add(rk);
+        }
+      });
+      let c = chains.get(f.key);
+      if (!c) chains.set(f.key, c = { ids: f.ids, recs: new Set() });
+      c.recs.add(rk);
+    }
+  };
+  build();
+  if (state.scope === 'top') {      // TOP-10 범위: 상위 10개 후보에 가장 자주 든 성분 10개만 남긴다 (열 검색과 무관하게 같은 10개)
+    build(null, true);
+    const top = [...nodes.values()].filter(n => n.type === 'G').sort((a, b) => b.recs.size - a.recs.size || a.label.localeCompare(b.label, 'ko')).slice(0, 10);
+    build(new Set(top.map(n => n.id.slice(2))));
+  }
+  if (state.focus && !nodes.has(state.focus)) state.focus = null;
+}
+
+function layout() {
+  const W = $('plot').clientWidth, N = VIEWS[state.view].cols.length;
+  GAPX = Math.round(Math.max(22, Math.min(64, W * .045)));     // 좁은 화면에서는 열 사이를 줄여 이름·숫자 자리를 확보한다
+  const wts = Array.from({ length: N }, (_, i) => i === N - 1 ? 1.35 : 1), unit = (W - GAPX * (N - 1)) / wts.reduce((a, b) => a + b, 0);
+  colW = wts.map(w => w * unit); colX = [];
+  let x = 0;
+  colW.forEach(w => { colX.push(x); x += w + GAPX; });
+  cols = Array.from({ length: N }, () => []);
+  nodes.forEach(n => { n.v = n.recs.size; cols[n.col].push(n); });
+  cols.forEach(c => {
+    c.sort((a, b) => b.v - a.v || a.label.localeCompare(b.label, 'ko'));
+    const max = c.length ? c[0].v : 1;
+    c.forEach((n, i) => { n.i = n.slot = i; n.vis = true; n.t = n.v / max; });
+  });
+  let maxL = 1;
+  links.forEach(l => { l.s = nodes.get(l.a); l.t = nodes.get(l.b); l.v = l.recs.size; maxL = Math.max(maxL, l.v); });
+  links.forEach(l => { const r = Math.sqrt(l.v / maxL); l.w = (.7 + 3.3 * r).toFixed(2); l.op = (.05 + .4 * r).toFixed(3); });
+}
+const yOf = n => PAD + n.slot * (ROW + GAP);            // 항목의 현재 위치 (강조 중에는 위로 당겨진다)
+const colHeight = count => PAD * 2 + count * (ROW + GAP) - GAP;
+
+function renderNodes() {
+  const plot = $('plot');
+  plot.querySelectorAll('.col, .empty').forEach(e => e.remove());
+  colEls = [];
+  const heads = $('heads');
+  if (heads.dataset.view !== state.view) {     // 검색 칸은 탭이 바뀔 때만 새로 만든다 (입력 중 포커스 유지)
+    heads.dataset.view = state.view;
+    heads.innerHTML = VIEWS[state.view].cols.map((t, c) => `<div class="head"><b>${t}</b><span></span><input type="search" data-col="${c}" placeholder="${t} 검색" value="${esc(state.cq[state.view + ':' + c] || '')}"></div>`).join('');
+  }
+  [...heads.children].forEach((h, c) => { h.style.left = (colX[c] + 4) + 'px'; h.style.width = (colW[c] - 8) + 'px'; h.querySelector('span').textContent = cols[c].length + '개'; });
+  if (!nodes.size) {
+    // 다른 탭에는 경로가 있는 경우(예: 증상이 모두 진료 사유로 빠지고 관심사로만 추천됨) 그쪽으로 안내한다
+    const other = state.view === 'sym' ? 'life' : 'sym', want = other === 'life' ? ['I', 'L'] : ['S', 'D'];
+    const n = [...active.recs].reduce((a, ri) => a + R[ri].items.filter(it => inScope(it.tier) && it.strands.some(s => want.includes(s[0]))).length, 0);
+    plot.insertAdjacentHTML('beforeend', `<div class="empty"><div><b>이 조건에 해당하는 ${state.view === 'sym' ? '증상' : '생애주기 · 관심사'} 경로가 없습니다</b>`
+      + (n ? `<span>${other === 'life' ? '증상·복용약이 아니라 관심사·생애주기로' : '증상·복용약으로'} 이어진 성분이 ${n}건 있습니다</span><button type="button" onclick="document.querySelector('#view [data-v=${other}]').click()">${other === 'life' ? '생애주기 · 관심사' : '증상 경로'} 탭에서 보기</button>` : '') + '</div></div>');
+  }
+  cols.forEach((c, ci) => {
+    const el = document.createElement('div');
+    el.className = 'col'; el.style.left = colX[ci] + 'px'; el.style.width = colW[ci] + 'px';
+    el.innerHTML = `<div class="inner" style="height:${colHeight(c.length)}px">` + c.map(n => {
+      const cau = n.type === 'G' ? cautionCount(n.id) : 0;
+      return `<div class="node k${n.type}" data-id="${esc(n.id)}" style="top:${yOf(n)}px;height:${ROW}px;--t:${n.t.toFixed(3)}" title="${esc(n.label)}">`
+        + `<span class="bar"></span><span class="nm">${TAG[n.type] ? `<span class="tag t${n.type}">${TAG[n.type]}</span>` : n.type === 'G' ? `<span class="tag ${KCLS[info.get(n.id).kind] || ''}" title="${info.get(n.id).kind}">${KSHORT[info.get(n.id).kind] || '기타'}</span>` : ''}${esc(n.label)}${info.get(n.id).sub ? `<small class="sub">${info.get(n.id).sub}</small>` : ''}</span>`
+        + `${cau ? `<span class="cau">${state.scope === 'ban' ? '금지' : '주의'} ${cau}건</span>` : ''}<span class="ct">${n.v}</span></div>`;
+    }).join('') + '<div class="more" hidden></div></div>';
+    el.querySelectorAll('.node').forEach(e => { nodes.get(e.dataset.id).el = e; });
+    el.addEventListener('scroll', schedule, { passive: true });
+    plot.appendChild(el); colEls.push(el);
+  });
+}
+
+const f1 = v => v.toFixed(1);
+const midline = (x0, a, x1, b) => { const m = (x0 + x1) / 2; return `M${f1(x0)},${f1(a)}C${f1(m)},${f1(a)} ${f1(m)},${f1(b)} ${f1(x1)},${f1(b)}`; };
+let pending = false;
+function schedule() { if (!pending) { pending = true; requestAnimationFrame(() => { pending = false; drawLinks(); }); } }
+function drawLinks() {
+  const H = $('plot').clientHeight, sc = colEls.map(e => e.scrollTop);
+  const yc = n => yOf(n) + ROW / 2 - sc[n.col];
+  let base = '', hi = '', spark = '';
+  const lit = [];
+  links.forEach(l => {
+    const a = l.s, b = l.t;
+    if (!a.vis || !b.vis) return;
+    const y0 = yc(a), y1 = yc(b);
+    if (y0 < 0 || y0 > H || y1 < 0 || y1 > H) return;       // 스크롤로 가려진 항목에는 선을 긋지 않는다
+    const x0 = colX[a.col] + colW[a.col] + 3, x1 = colX[b.col] - 3, d = midline(x0, y0, x1, y1);
+    if (!hl) base += `<path d="${d}" stroke-width="${l.w}" stroke-opacity="${l.op}" data-k="${esc(l.key)}"/>`;
+    else if (hl.links.has(l.key)) lit.push({ d, x0, y0, x1, y1, n: hl.links.get(l.key) });
+  });
+  // 강조 중에는 선택한 항목과 이어진 선만 그린다
+  const max = Math.max(1, ...lit.map(x => x.n));
+  lit.sort((p, q) => q.n - p.n).forEach((x, i) => {
+    hi += `<path d="${x.d}" style="stroke-width:${(1 + 2.2 * Math.sqrt(x.n / max)).toFixed(2)}px;stroke-opacity:${(.38 + .5 * Math.sqrt(x.n / max)).toFixed(2)}"/><circle cx="${f1(x.x0)}" cy="${f1(x.y0)}" r="2.2"/><circle cx="${f1(x.x1)}" cy="${f1(x.y1)}" r="2.2"/>`;
+    if (i < 6) spark += `<path d="${x.d}" style="animation-delay:${-(i * .47) % 4}s"/>`;
+  });
+  $('gBase').innerHTML = base; $('gHi').innerHTML = hi; $('gSpark').innerHTML = spark;
+}
+
+// 강조: 주어진 노드를 지나는 가닥만 모아, 노드·링크별로 그 가닥이 차지하는 추천 건수를 센다
+function connected(ids) {
+  const want = new Set(ids), nrec = new Map(), lrec = new Map();
+  const add = (m, k, recs) => { let s = m.get(k); if (!s) m.set(k, s = new Set()); recs.forEach(r => s.add(r)); };
+  chains.forEach(c => {
+    if (!c.ids.some(id => want.has(id))) return;
+    c.ids.forEach((id, k) => { add(nrec, id, c.recs); if (k) add(lrec, c.ids[k - 1] + '>' + id, c.recs); });
+  });
+  const lf = new Map();
+  lrec.forEach((s, k) => lf.set(k, s.size));
+  return { ids: want, nodes: nrec, links: lf };
+}
+// 강조 중에는 다른 열의 연결 항목을 건수 순으로 위로 당겨 최대 CAP 개만 보여 준다.
+// 강조의 출발점이 있는 열은 지금 배치를 그대로 둔다(마우스 밑의 항목이 움직이지 않게).
+function arrange() {
+  cols.forEach((c, ci) => {
+    const el = colEls[ci], more = el.querySelector('.more');
+    let count = null;
+    if (!hl) { c.forEach(n => { n.slot = n.i; n.vis = true; }); count = c.length; more.hidden = true; }
+    else if (!c.some(n => hl.ids.has(n.id))) {
+      const on = c.filter(n => hl.nodes.has(n.id)).sort((a, b) => hl.nodes.get(b.id).size - hl.nodes.get(a.id).size || a.i - b.i);
+      c.forEach(n => { n.vis = false; });
+      on.slice(0, CAP).forEach((n, k) => { n.slot = k; n.vis = true; });
+      count = Math.min(on.length, CAP);
+      more.hidden = on.length <= CAP;
+      if (on.length > CAP) { more.textContent = `외 ${on.length - CAP}개 (건수 상위 ${CAP}개만 표시)`; more.style.top = (PAD + CAP * (ROW + GAP)) + 'px'; count++; }
+      el.scrollTop = 0;
+    }
+    if (count !== null) el.firstChild.style.height = colHeight(count) + 'px';
+    c.forEach(n => {
+      const s = hl && hl.nodes.get(n.id);
+      n.el.style.top = yOf(n) + 'px';
+      n.el.classList.toggle('off', !n.vis); n.el.classList.toggle('on', !!s); n.el.classList.toggle('src', !!hl && hl.ids.has(n.id));
+      n.el.querySelector('.ct').innerHTML = s && s.size !== n.v ? `<b>${s.size}</b><i>/${n.v}</i>` : hl && s ? `<b>${n.v}</b>` : n.v;
+    });
+  });
+}
+function applyHighlight() {
+  const one = state.focus || hover;
+  hl = one ? connected([one]) : null;
+  $('plot').classList.toggle('hl', !!hl);
+  arrange(); drawLinks(); renderSide();
+}
+
+// ── 옆 패널 ─────────────────────────────────────────
+// 금지 제외 범위는 안전 검증에서 빠진 후보(tier 0)만, 나머지 범위는 통과한 후보만 본다
+const inScope = t => state.scope === 'ban' ? t === 0 : t >= Math.max(1, active.minTier);
+const notes = it => state.scope === 'ban' ? (it.block || []) : it.caution;
+const itemsOf = gid => [...active.recs].flatMap(ri => R[ri].items.filter(it => it.id === gid.slice(2)).map(it => ({ ri, it })));
+const cautionCount = gid => itemsOf(gid).filter(x => inScope(x.it.tier) && notes(x.it).length).length;
+const bars = (list, max, clickable) => '<div class="rows">' + list.map(([id, label, v, tag]) =>
+  `<div class="row"${clickable ? ` data-id="${esc(id)}"` : ''}><span class="n" title="${esc(label)}">${tag ? `<span class="meta">${tag} · </span>` : ''}${esc(label)}</span><span class="b"><i style="width:${v / max * 100}%"></i></span><span class="v">${v}</span></div>`).join('') + '</div>';
+const ptBtn = (ri, why = true) => {
+  const r = R[ri];
+  return `<div class="pt"><b>${esc(r.patient_id)}</b> · ${r.age}세 ${sexK(r.sex)}`
+    + `${r.care_level !== 'none' ? `<span class="visit">진료 권고</span>` : ''}${DATA.runs.length > 1 ? ` <span class="meta">· ${esc(r.run)}</span>` : ''}`
+    + `<small title="${esc(r.chief)}">${esc(r.chief)}</small><small>→ ${r.symptoms.map(s => esc(s.name)).join(', ') || '정규화된 증상 없음'}</small>`
+    + (why && r.care_level !== 'none' ? `<span class="why"><b>진료 사유</b> ${esc(r.held.join(', '))}<br>${esc(r.care_reason)}</span>` : '') + `</div>`;
+};
+const SCOPE = { ban: '금지로 제외된 후보', pick: '최종 추천', top: '상위 10개 후보에 가장 자주 든 성분 10개', all: '안전 검증을 통과한 전체 후보' };
+
+function renderSide() {
+  const side = $('side');
+  const one = state.focus || hover;
+  if (one && nodes.has(one)) return void (side.innerHTML = nodePanel(nodes.get(one)));
+  if (heldView) return void (side.innerHTML = heldPanel(heldView));
+  const recs = [...active.recs];
+  const top = cols[last()].slice(0, 10), cats = cols[0].slice(0, 14);
+  const unmatched = [], care = recs.filter(ri => R[ri].care_level !== 'none');
+  recs.forEach(ri => R[ri].unmatched.forEach(u => unmatched.push(`${u} (${R[ri].patient_id})`)));
+  side.innerHTML = `<div class="eyebrow">OVERVIEW</div><h2>전체 요약</h2><div class="meta">${SCOPE[state.scope]} 기준 · 결과 ${recs.length}건</div>`
+    + `<h3>${VIEWS[state.view].cols[0]}별 추천 건수</h3>` + (cats.length ? bars(cats.map(n => [n.id, n.label, n.v]), cats[0].v, true) : '<div class="meta">없음</div>')
+    + `<h3>가장 많이 추천된 성분</h3>` + (top.length ? bars(top.map(n => [n.id, n.label, n.v]), top[0].v, true) : '<div class="meta">없음</div>')
+    + `<div class="meta" style="margin-top:4px">결과 ${recs.length}건 중 추천된 횟수</div>`
+    + (state.user.trim() && recs.length && recs.length <= 5 ? `<h3>검색한 환자 (${recs.length}건)</h3>` + recs.map(ri => ptBtn(ri, false)).join('') : '')
+    + (care.length ? `<h3>진료가 먼저라 추천 근거에서 뺀 증상 (${care.length}건)</h3>` + care.map(ri => ptBtn(ri)).join('') : '')
+    + (unmatched.length ? `<h3>정규화하지 못한 표현</h3>` + unmatched.map(u => `<div class="note">${esc(u)}</div>`).join('') : '');
+}
+
+// 진료가 먼저라 추천 근거에서 뺀 증상: 누가, 왜 걸렸는지
+let heldView = null;
+function heldPanel(name) {
+  const rs = [...active.recs].map(i => R[i]).filter(r => r.held.includes(name));
+  return `<div class="eyebrow">진료 사유 증상</div><h2>${esc(name)}</h2>`
+    + `<div class="meta">결과 ${rs.length}건에서 진료가 먼저라고 판정되어, 이 증상은 추천 근거에서 빠졌습니다. 그래서 위 흐름에는 나오지 않거나 일부만 나옵니다.</div>`
+    + rs.map(r => `<h3>${esc(r.patient_id)} · ${r.age}세 ${sexK(r.sex)} · ${esc(r.outcome)}</h3>`
+      + `<div class="kv"><b>주호소</b><span>${esc(r.chief)}</span><b>걸린 이유</b><span>${esc(r.care_reason)}</span>`
+      + (r.care_message ? `<b>안내 문구</b><span>${esc(r.care_message)}</span>` : '')
+      + `<b>함께 뺀 증상</b><span>${esc(r.held.join(', '))}</span><b>빠진 후보</b><span>성분 ${r.held_removed}개 (이 증상들에 걸린 성분은 다른 증상으로 올라와도 제외)</span></div>`).join('')
+    + `<button class="btn" data-close style="margin-top:14px">전체 요약으로</button>`;
+}
+
+function nodePanel(n) {
+  const c = connected([n.id]);
+  const pats = new Set([...n.recs].map(k => +k.split('#')[0]));
+  const totalRecs = new Set(cols[last()].flatMap(x => [...x.recs])).size || 1;
+  let h = `<div class="eyebrow">${TYPE[n.type]}${state.focus === n.id ? ' · 고정됨' : ''}</div><h2>${esc(n.label)}</h2>`
+    + `<div class="stat3"><div><b>${n.v}</b><span>추천 건수</span></div><div><b>${pats.size}</b><span>결과(환자)</span></div><div><b>${Math.round(n.v / totalRecs * 100)}%</b><span>전체 추천 대비</span></div></div>`;
+  if (n.type === 'G') {
+    const its = itemsOf(n.id), cnt = t => its.filter(x => x.it.tier >= t).length;
+    const ranks = its.filter(x => x.it.rank).map(x => x.it.rank);
+    const ban = state.scope === 'ban', cautions = [...new Set(its.filter(x => inScope(x.it.tier)).flatMap(x => notes(x.it)))];
+    h += `<h3>${esc(its[0] ? its[0].it.kind : '')} · 단계별 등장 (결과 ${active.recs.size}건 중)</h3>`
+      + bars([['', '전체 후보', cnt(1)], ['', 'TOP-10', cnt(2)], ['', '최종 추천', cnt(3)], ['', '금지 제외', its.filter(x => x.it.tier === 0).length]], Math.max(1, its.length))
+      + (ranks.length ? `<div class="meta" style="margin-top:4px">TOP-10 평균 순위 ${(ranks.reduce((a, b) => a + b, 0) / ranks.length).toFixed(1)}위</div>` : '')
+      + (cautions.length ? `<h3>${ban ? '금지 사유' : '사용자 약·질환에 걸린 주의'} (${its.filter(x => inScope(x.it.tier) && notes(x.it).length).length}건)</h3>` + cautions.slice(0, ban ? 8 : 4).map(t => `<div class="note">${esc(t)}</div>`).join('') : '');
+  }
+  cols.forEach((_, ci) => {
+    if (ci === n.col) return;
+    const list = [...c.nodes].map(([id, s]) => [id, nodes.get(id), s.size]).filter(x => x[1].col === ci).sort((a, b) => b[2] - a[2]);
+    if (!list.length) return;
+    h += `<h3>연결된 ${VIEWS[state.view].cols[ci]} ${list.length}개</h3>`
+      + bars(list.slice(0, 8).map(([id, x, v]) => [id, x.label, v, TAG[x.type] ? TYPE[x.type] : '']), list[0][2])
+      + (list.length > 8 ? `<div class="meta">외 ${list.length - 8}개</div>` : '');
+  });
+  h += `<h3>해당 결과</h3>` + [...pats].sort((a, b) => a - b).map(ptBtn).join('');
+  return h;
+}
+
+function renderKpis() {
+  const recs = [...active.recs].map(i => R[i]);
+  const count = tier => recs.reduce((s, r) => s + r.items.filter(i => i.tier >= tier).length, 0);   // tier 0(금지 제외)은 세지 않는다
+  const uniq = new Set(recs.flatMap(r => r.items.filter(i => i.tier === 3).map(i => i.id))).size;
+  const visit = recs.filter(r => r.care_level !== 'none').length, bad = recs.reduce((s, r) => s + r.unmatched.length, 0);
+  // 후보 건수 = 안전 검증을 통과한 전체 후보, 추천 건수 = 사용자에게 실제로 나간 최종 추천. 범위와 무관하게 고정
+  const tiles = [[recs.length, '누적 결과'], [new Set(recs.map(r => r.patient_id)).size, '환자'], [count(1), '후보 건수'], [count(3), '추천 건수', 'main'], [recs.reduce((s, r) => s + r.items.filter(i => i.tier === 0).length, 0), '금지 제외', 'banned'], [uniq, '추천된 성분 종류'],
+    [visit, '진료 권고 포함'], [bad, '정규화 실패 표현', bad ? 'alert' : '']];
+  $('kpis').innerHTML = tiles.map(([v, l, c], i) => `<div class="kpi${c ? ' ' + c : ''}" style="--d:${i * .5}s"><b>${v.toLocaleString()}</b><span>${l}</span></div>`).join('');
+}
+
+function renderTable() {
+  const names = VIEWS[state.view].cols;
+  // 열마다 고를 수 있는 값: 다른 열의 조건은 지키고, 그 열 자신의 조건만 푼 상태에서 나오는 항목
+  const qs = names.map((_, i) => (state.cq[state.view + ':' + i] || '').trim().toLowerCase()), opts = names.map(() => new Set());
+  for (const f of flat) {
+    if (f.view !== state.view || !active.recs.has(f.ri) || !inScope(f.tier) || !state.entry[f.type]) continue;
+    const ok = qs.map((q, ci) => !q || f.ids.some(id => { const x = info.get(id); return x.col === ci && x.low.includes(q); }));
+    const bad = ok.filter(v => !v).length;
+    f.ids.forEach(id => { const x = info.get(id); if (!bad || (bad === 1 && !ok[x.col])) opts[x.col].add(x.label); });
+  }
+  const pick = (n, i) => {
+    if (i === names.length - 1) return `<input type="search" data-col="${i}" placeholder="${n} 검색 후 Enter" value="${esc(state.cq[state.view + ':' + i] || '')}">`;
+    const list = [...opts[i]].sort((a, b) => a.localeCompare(b, 'ko')), exact = list.some(l => l.toLowerCase() === qs[i]);
+    return `<select data-col="${i}"><option value="">전체 (${list.length})</option>`
+      + (qs[i] && !exact ? `<option selected value="${esc(state.cq[state.view + ':' + i])}">"${esc(state.cq[state.view + ':' + i])}" 포함</option>` : '')
+      + list.map(l => `<option${l.toLowerCase() === qs[i] ? ' selected' : ''}>${esc(l)}</option>`).join('') + `</select>`;
+  };
+  const rows = [...chains.values()].map(c => ({ c, v: c.recs.size, p: new Set([...c.recs].map(k => k.split('#')[0])).size })).sort((a, b) => b.v - a.v);
+  $('tablewrap').innerHTML = `<table><thead><tr>${names.map((n, i) => `<th>${n}${pick(n, i)}</th>`).join('')}<th class="num">추천 건수</th><th class="num">결과 수</th></tr></thead><tbody>`
+    + rows.slice(0, 1500).map(({ c, v, p }) => {
+      const cell = names.map(() => '–');
+      c.ids.forEach(id => { const x = info.get(id); cell[x.col] = (TAG[x.type] ? `<span class="meta">${TYPE[x.type]} · </span>` : '') + esc(x.label) + (x.sub ? ` <span class="meta">${x.sub}</span>` : ''); });
+      return `<tr>${cell.map(t => `<td>${t}</td>`).join('')}<td class="num">${v}</td><td class="num">${p}</td></tr>`;
+    }).join('') + `</tbody></table>` + (rows.length ? '' : '<div class="meta" style="padding:14px">조건에 맞는 경로가 없습니다</div>')
+    + (rows.length > 1500 ? `<div class="meta" style="padding:8px">상위 1,500개만 표시 (전체 ${rows.length.toLocaleString()}개)</div>` : '');
+}
+
+// 사용자 기준 통계: 결과(환자) 몇 건에서 그 증상·기전이 나왔는지. 범위·열 검색과 무관하다
+function renderUserStats() {
+  const recs = [...active.recs], cat = new Map(), sym = new Map(), mech = new Map(), held = new Set();
+  const add = (m, k, ri) => { let s = m.get(k); if (!s) m.set(k, s = new Set()); s.add(ri); };
+  recs.forEach(ri => {
+    const r = R[ri], names = new Set(r.symptoms.map(s => s.name));
+    names.forEach(n => { add(sym, n, ri); (CAT[n] || ['미분류']).forEach(c => add(cat, c, ri)); });
+    r.held.forEach(h => held.add(h));
+    r.items.forEach(it => it.strands.forEach(s => { if (s[0] === 'S' && names.has(s[1])) add(mech, s[2], ri); }));
+  });
+  const box = (title, m, pre, tag) => {
+    const list = [...m].map(([k, s]) => [pre + k, k, s.size, tag ? tag(k) : '']).sort((a, b) => b[2] - a[2] || a[1].localeCompare(b[1], 'ko'));
+    return `<div class="box"><h3>${title} ${list.length}개</h3><div class="scroll">${list.length ? bars(list, list[0][2], true) : '<div class="meta">없음</div>'}</div></div>`;
+  };
+  $('ustats').innerHTML = `<h4>사용자 호소 통계</h4><div class="meta">결과 ${recs.length}건 중 그 항목이 나온 결과 수 (사람 기준). 기전은 사용자 증상에서 그래프로 이어진 것이며, 진료 사유로 뺀 증상의 기전은 빠져 있습니다. 누르면 흐름에서 고정합니다.</div>`
+    + `<div class="grid">${box('대분류', cat, 'C:')}${box('증상', sym, 'S:', k => held.has(k) ? '진료 사유 포함' : '')}${box('기전', mech, 'M:')}</div>`;
+}
+
+function syncControls() {
+  const press = (id, v) => $(id).querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', b.dataset.v === v));
+  press('view', state.view); press('scope', state.scope);
+  $('entries').innerHTML = VIEWS[state.view].entries.map(([k, l]) => `<label class="chk"><input type="checkbox" data-entry="${k}"${state.entry[k] ? ' checked' : ''}>${l}</label>`).join('');
+  $('run').value = state.run; $('latest').checked = state.latest; if (document.activeElement !== $('user')) $('user').value = state.user;
+  document.querySelectorAll('#sexes input').forEach(i => { i.checked = state.sex[i.dataset.sex]; });
+  $('updated').textContent = `${VIEWS[state.view].desc} · 누적 ${R.length}건 · ${DATA.runs.length}회 실행 · 갱신 ${(DATA.updated_at || '').replace('T', ' ')}`;
+}
+
+function render() {
+  compute(); $('plot').classList.toggle('ban', state.scope === 'ban'); layout(); syncControls(); renderKpis(); hl = null; heldView = null; renderNodes();
+  const chip = $('focusChip');
+  chip.hidden = !state.focus;
+  if (state.focus) chip.textContent = `${info.get(state.focus).label} 고정 ✕`;
+  $('plot').hidden = $('heads').hidden = state.table; $('tablewrap').hidden = !state.table;
+  $('viewBtn').textContent = state.table ? '흐름으로 보기' : '표로 보기';
+  if (state.table) renderTable();
+  renderUserStats();
+  hover = null; applyHighlight();
+}
+
+// ── 이벤트 ─────────────────────────────────────────
+const plot = $('plot'), tip = $('tip');
+// 올리면 강조, 누르면 고정. 강조는 다른 항목에 올리거나 흐름 영역을 벗어날 때까지 유지한다
+plot.addEventListener('mouseover', e => { const n = e.target.closest('.node'); if (n && !state.focus && hover !== n.dataset.id) { hover = n.dataset.id; applyHighlight(); } });
+plot.addEventListener('mouseleave', () => { if (hover) { hover = null; applyHighlight(); } });
+const pin = id => {
+  state.focus = id; hover = null; if (id) heldView = null;
+  $('focusChip').hidden = !id; if (id) $('focusChip').textContent = `${info.get(id).label} 고정 ✕`;
+  applyHighlight();
+};
+plot.addEventListener('click', e => { const n = e.target.closest('.node'); if (n) pin(state.focus === n.dataset.id ? null : n.dataset.id); });
+// 주의 표시에 올리면 어떤 결과에서 무슨 주의가 걸렸는지 띄운다
+const cauTip = el => {
+  const id = el.closest('.node').dataset.id, its = itemsOf(id);
+  const raw = s => s.replace(/ \(해당: [^)]*\)$/, '');                      // 원문만. 누가 걸렸는지는 옆 패널에서 본다
+  const tally = (list, f) => { const m = new Map(); list.forEach(x => new Set(f(x.it)).forEach(c => m.set(c, (m.get(c) || 0) + 1))); return [...m].sort((a, b) => b[1] - a[1]); };   // 문구 → 걸린 결과 수
+  const sc = x => state.scope === 'ban' || inScope(x.it.tier);
+  const cau = tally(its.filter(x => x.it.tier >= 1 && sc(x)), it => it.caution), ban = tally(its.filter(x => x.it.tier === 0), it => (it.block || []).map(raw));
+  const sec = (title, list, cls) => list.length ? `<div class="ct ${cls}">${title}</div><div class="cl ${cls}">` + list.map(([c, n]) => `<div>${esc(c)}<i>결과 ${n}건</i></div>`).join('') + `</div>` : '';
+  const r = el.getBoundingClientRect();
+  tip.innerHTML = `<b>${esc(info.get(id).label)}</b>` + (state.scope === 'ban' ? sec('금지사항', ban, 'ban') + sec('주의사항', cau, '') : sec('주의사항', cau, '') + sec('금지사항', ban, 'ban'));
+  tip.classList.add('wide'); tip.style.display = 'block';
+  tip.style.left = Math.max(8, Math.min(r.right - tip.offsetWidth, innerWidth - tip.offsetWidth - 8)) + 'px';
+  tip.style.top = (r.bottom + tip.offsetHeight + 8 > innerHeight ? r.top - tip.offsetHeight - 6 : r.bottom + 6) + 'px';
+};
+plot.addEventListener('mouseover', e => { const c = e.target.closest('.cau'); if (c) cauTip(c); });
+plot.addEventListener('mouseout', e => { if (e.target.closest('.cau')) { tip.style.display = 'none'; tip.classList.remove('wide'); } });
+$('gBase').addEventListener('mousemove', e => {
+  const l = links.get(e.target.dataset.k); if (!l) return;
+  const p = new Set([...l.recs].map(k => k.split('#')[0])).size;
+  tip.innerHTML = `${esc(l.s.label)} → ${esc(l.t.label)}<br><b>${l.v}건</b> · 결과 ${p}건`;
+  tip.style.display = 'block'; tip.style.left = Math.min(e.clientX + 12, innerWidth - 330) + 'px'; tip.style.top = e.clientY + 14 + 'px';
+});
+$('gBase').addEventListener('mouseleave', () => { tip.style.display = 'none'; });
+$('view').addEventListener('click', e => { const b = e.target.closest('button'); if (!b || b.dataset.v === state.view) return; state.view = b.dataset.v; state.focus = null; render(); });
+$('scope').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; state.scope = b.dataset.v; render(); });
+$('sexes').addEventListener('change', e => { const k = e.target.dataset.sex; if (k) { state.sex[k] = e.target.checked; render(); } });
+$('entries').addEventListener('change', e => { const k = e.target.dataset.entry; if (k) { state.entry[k] = e.target.checked; render(); } });
+$('runBox').hidden = DATA.runs.length < 2;      // 실행이 하나뿐이면 고를 것이 없다
+$('users').innerHTML = [...new Set(R.map(r => r.patient_id))].sort().map(u => `<option value="${esc(u)}">`).join('');
+let ut; $('user').addEventListener('input', e => { state.user = e.target.value; clearTimeout(ut); ut = setTimeout(render, 160); });
+$('run').innerHTML = `<option value="">전체 누적 (${R.length}건)</option>` + DATA.runs.map(r => `<option value="${esc(r.id)}">${esc(r.label)} (${r.records}건)</option>`).join('');
+$('run').addEventListener('change', e => { state.run = e.target.value; state.patients.clear(); render(); });
+$('latest').addEventListener('change', e => { state.latest = e.target.checked; state.patients.clear(); render(); });
+$('tablewrap').addEventListener('change', e => {     // 표의 열 선택은 열 검색과 같은 조건을 쓴다
+  const c = e.target.dataset.col; if (c === undefined) return;
+  state.cq[state.view + ':' + c] = e.target.value; $('heads').dataset.view = ''; render();
+});
+let qt; $('heads').addEventListener('input', e => {
+  const c = e.target.dataset.col; if (c === undefined) return;
+  state.cq[state.view + ':' + c] = e.target.value;
+  clearTimeout(qt); qt = setTimeout(render, 140);
+});
+$('focusChip').addEventListener('click', () => pin(null));
+$('viewBtn').addEventListener('click', () => { state.table = !state.table; render(); });
+$('themeBtn').addEventListener('click', () => {
+  const el = document.documentElement;
+  el.dataset.theme = el.dataset.theme === 'light' ? 'dark' : 'light';
+  try { localStorage.setItem('reco-theme', el.dataset.theme); } catch (e) {}
+});
+$('side').addEventListener('click', e => {
+  const row = e.target.closest('.row[data-id]'), note = e.target.closest('[data-held]');
+  if (e.target.closest('[data-close]')) { heldView = null; return renderSide(); }
+  if (note) { pin(null); heldView = note.dataset.held; renderSide(); $('side').scrollTop = 0; return; }
+  if (row) jump(row.dataset.id);
+});
+function jump(id) {      // 목록에서 고른 항목을 흐름에서 고정하고 보이게 한다
+  const n = nodes.get(id); if (!n) return;
+  pin(null); pin(id); colEls[n.col].scrollTop = Math.max(0, yOf(n) - 90); drawLinks();
+}
+$('ustats').addEventListener('click', e => {
+  const row = e.target.closest('.row[data-id]'); if (!row) return;
+  if (state.view !== 'sym' || state.table) { state.view = 'sym'; state.table = false; state.focus = null; render(); }
+  if (!nodes.has(row.dataset.id)) { state.cq = {}; $('heads').dataset.view = ''; render(); }
+  const id = row.dataset.id, name = id.slice(2);
+  if (nodes.has(id)) jump(id);
+  if (id[0] === 'S' && [...active.recs].some(i => R[i].held.includes(name))) { if (!nodes.has(id)) pin(null); heldView = name; if (!nodes.has(id)) renderSide(); else $('side').insertAdjacentHTML('afterbegin', `<div class="note" data-held="${esc(name)}" role="button"><b>진료 사유로 빠진 결과가 있습니다</b><small>눌러서 걸린 이유 보기</small></div>`); }
+  scrollTo({ top: 0, behavior: 'smooth' });
+});
+function goHome() { state = fresh(); $('heads').dataset.view = ''; render(); $('side').scrollTop = 0; }   // 필터·선택을 모두 풀고 첫 화면으로
+$('home').addEventListener('click', goHome);
+$('home').addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); goHome(); } });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && state.focus) pin(null); });
+let rz, lastW = 0; const refit = () => { clearTimeout(rz); rz = setTimeout(() => { lastW = $('plot').clientWidth; render(); }, 120); };
+addEventListener('resize', refit);
+if (window.ResizeObserver) new ResizeObserver(() => { if (!state.table && Math.abs($('plot').clientWidth - lastW) > 2) refit(); }).observe($('plot'));   // 창 크기 말고 확대·패널 폭이 바뀔 때도 다시 맞춘다
+try { if (localStorage.getItem('reco-theme') === 'light') document.documentElement.dataset.theme = 'light'; } catch (e) {}
+render();
+</script>
+</body>
+</html>
