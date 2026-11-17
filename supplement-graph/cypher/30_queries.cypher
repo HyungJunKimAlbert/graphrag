@@ -94,7 +94,7 @@ OPTIONAL MATCH (i)-[y:INTERACTS_WITH]->(dx:Drug)
   WHERE dx.drug_id IN user_drugs
 WITH i, by_condition,
      collect(DISTINCT CASE WHEN dx IS NOT NULL
-       THEN {kind: 'drug', drug: dx.name, severity: y.severity, note: y.note} END) AS by_drug
+       THEN {kind: 'drug', drug_id: dx.drug_id, drug: dx.name, severity: y.severity, note: y.note} END) AS by_drug
 RETURN i.ingredient_id AS ingredient_id, i.name AS name,
        by_condition + by_drug AS blocks,
        i.status = 'active' AND size(by_condition) + size(by_drug) = 0 AS allowed
@@ -238,3 +238,10 @@ ORDER BY a_id, b_id;
 MATCH (s:Symptom)
 RETURN s.symptom_id AS symptom_id, s.name AS name
 ORDER BY symptom_id;
+
+// @query drug_expand
+// 약 ID → 그 약과 상위 계열 ID (안전 검증 근거에서 사용자 약 이름을 찾을 때 쓴다)
+// $drug_ids
+MATCH (d:Drug) WHERE d.drug_id IN $drug_ids
+MATCH (d)-[:IN_CLASS*0..2]->(x:Drug)
+RETURN DISTINCT x.drug_id AS drug_id;

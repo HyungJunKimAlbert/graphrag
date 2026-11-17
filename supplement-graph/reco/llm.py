@@ -12,7 +12,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 ENV = ROOT.parent / ".env"
 CACHE = ROOT / "out" / "llm_cache"
 MODEL = "gpt-6-luna"
-EFFORT = "low"
+EFFORT = "none"               # 5단계 선정. 2026-11-17 비교(13명×2회): none 3.8초·low 5.2초, 현재 결과와 일치 none 12~13/13·low 11~12/13
 NORMALIZE_EFFORT = "low"      # 2026-11-11 비교: low 는 medium 보다 1.6초 빠르고 정규화 결과는 같았다. none 은 '약물 복용 후 메스꺼움' 구분을 놓쳤다.
                               # 진료 판정은 low·medium 모두 실행마다 흔들려(kang 5회 중 low 4회·medium 1회 누락) 약-증상 조합은 규칙(pipeline.apply_care_rules)으로 고정한다
 

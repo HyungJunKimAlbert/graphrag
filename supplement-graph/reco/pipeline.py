@@ -11,6 +11,8 @@
 
 어떤 성분을 후보로 올릴지는 서버(이 파일)가 그래프 조회로 정한다. LLM 은 후보 밖 성분을 고를 수 없다.
 """
+import json
+import pathlib
 import re
 
 TOP_N = 10
@@ -225,8 +227,10 @@ def verify(graph, candidates, codes, drugs):
         hits = blocks[c["ingredient_id"]]
         avoid = [b for b in hits if b.get("severity") == "avoid"]
         if avoid:
-            dropped.append({**_brief(c), "why": "금지: " + "; ".join(b.get("reason") or b.get("note") or "" for b in avoid)})
+            dropped.append({**_brief(c), "why": "금지: " + "; ".join(b.get("reason") or b.get("note") or "" for b in avoid),
+                            "hits": hits})
             continue
+        c["safety_hits"] = hits
         c["cautions"] = sorted({b.get("reason") or b.get("note") for b in hits if b.get("reason") or b.get("note")})
         # 4-3: 증상 후보는 경로 출처(2-1), 복용약 후보는 허가사항 문장(2-3)이 근거다. 관심사만 있는 후보는 식약처 기능성 문구가 근거다
         if c["routes"] == ["관심사"] and not c.get("function_text"):
@@ -234,6 +238,39 @@ def verify(graph, candidates, codes, drugs):
             continue
         kept.append(c)
     return kept, dropped
+
+
+CONDITION_LABEL = {"DIS-diabetes": "당뇨", "DIS-hypertension": "고혈압", "DIS-kidney": "신장 질환", "DIS-liver": "간 질환",
+                   "DIS-gi": "위장 질환", "DIS-heart": "심장 질환", "DIS-dyslipidemia": "이상지질혈증", "DIS-thyroid": "갑상선 질환",
+                   "POP-infant": "영유아", "POP-child": "어린이", "POP-pregnant": "임산부", "POP-lactating": "수유부", "POP-allergy": "알레르기"}
+
+
+def safety_report(graph, patient, matchers, kept, dropped):
+    """화면용 안전 검증 결과: 사용자 질환·복용약과 원료 금지/주의가 겹친 후보와 그 근거.
+    근거 한 건 = 사용자 쪽(질환명·약 이름) ↔ 그래프 쪽(질환 코드·약 계열) + 원문 문구."""
+    diseases = list(patient.get("managed_conditions") or []) + list(patient.get("comorbidities") or [])
+    diseases += [i["category"] for i in (patient.get("checkup") or {}).get("items", []) if i.get("status") == "질환의심"]
+    by_code = {code: [d for d in diseases if re.search(pat, d)] for code, pat in DISEASE_KEYWORDS}
+    meds = patient.get("medications") or []
+    med_ids = {}
+    for m in meds:
+        ids = [d for d in safety_inputs({"age": 99, "medications": [m]}, matchers)[1] if d != "CLS-any"]
+        med_ids[m["name"]] = {r["drug_id"] for r in graph.run("drug_expand", drug_ids=ids)} | set(ids) | {"CLS-any"}
+
+    def basis(h):
+        if h["kind"] == "condition":
+            user = by_code.get(h["code"]) or ([f'{patient["age"]}세'] if h["code"].startswith("POP-") else [])
+            return {"user": ", ".join(user), "match": CONDITION_LABEL.get(h["code"], h["code"]), "severity": h.get("severity"), "text": h.get("reason") or ""}
+        user = [n for n, ids in med_ids.items() if h.get("drug_id") in ids]
+        return {"user": ", ".join(user), "match": h.get("drug") or "", "severity": h.get("severity"), "text": h.get("note") or ""}
+
+    rows = [{**{k: d[k] for k in ("ingredient_id", "name", "routes")}, "action": "제외", "basis": [basis(h) for h in d.get("hits", [])]}
+            for d in dropped if d.get("hits")]
+    rows += [{**_brief(c), "action": "주의", "basis": [basis(h) for h in c["safety_hits"]]}
+             for c in kept if c.get("safety_hits")]
+    for r in rows:
+        r.pop("score", None)
+    return rows
 
 
 def _brief(c):
@@ -305,6 +342,56 @@ def top_n(candidates, n=TOP_N, synergy=None, basics=None, min_n=PICKS):
     return out
 
 
+def _together(c):
+    """함께 섭취(시너지) 짝. 안전 검증을 통과한 짝만, 최대 2개."""
+    return [{"partner_id": s["partner_id"], "name": s["partner"], "effect": s["effect"], "source": s["source"], "url": s["url"]}
+            for s in c.get("synergy", []) if s["passed_safety"]][:2]
+
+
+def _num(v):
+    return v if isinstance(v, str) else f"{v:,.1f}".rstrip("0").rstrip(".")
+
+
+_KDRI = None
+KDRI_SOURCE = "보건복지부, 2025 한국인 영양소 섭취기준(KDRIs)"
+_BANDS = ((30, "19-29"), (50, "30-49"), (65, "50-64"), (75, "65-74"), (999, "75+"))
+
+
+def kdri(name, age, sex):
+    """2025 한국인 영양소 섭취기준(성인)에서 이 나이·성별의 권장(없으면 충분)섭취량과 상한섭취량. 없으면 None.
+    음식을 포함한 하루 총섭취량 기준이라 제품 1회 분량과 같은 값이 아니다."""
+    global _KDRI
+    if _KDRI is None:
+        _KDRI = json.loads((pathlib.Path(__file__).resolve().parent.parent / "load" / "refs" / "kdri_2025_adult.json").read_text())
+    if age < 19 or name not in _KDRI["data"]:
+        return None
+    band = next(b for limit, b in _BANDS if age < limit)
+    e = _KDRI["data"][name][f"{sex}|{band}"]
+    items = []
+    for sub in sorted({k.split("|")[0] for k in e if "|" in k and k != "_unit"}) or [None]:
+        pre = f"{sub}|" if sub else ""
+        for metric, label in (("rni", "권장섭취량"), ("ai", "충분섭취량"), ("ul", "상한섭취량")):
+            if metric == "ai" and pre + "rni" in e:
+                continue
+            if pre + metric in e:
+                items.append({"label": (sub + " " if sub else "") + label, "value": _num(e[pre + metric]),
+                              "unit": e["_unit"][pre + metric], "note": _KDRI["notes"].get(name, {}).get(metric)})
+    return {"segment": f"{band.replace('+', '')}세{' 이상' if band.endswith('+') else ''} {'남' if sex == 'M' else '여'}성", "items": items,
+            "text": " · ".join(f"{i['label']} {i['value']} {i['unit']}" for i in items),
+            "basis": _KDRI["basis"], "source": KDRI_SOURCE, "source_detail": _KDRI["source"], "url": _KDRI["urls"][0],
+            "status": _KDRI["status"]}
+
+
+def with_kdri(d, age, sex):
+    """내보낸 후보 d 에 나이·성별 섭취기준을 붙이고, 있으면 출처 목록에도 넣는다."""
+    s = kdri(d["name"], age, sex)
+    d["segment_intake"] = s
+    if s:
+        d["references"] = d["references"] + [s["source"]]
+        d["reference_urls"] = d["reference_urls"] + [s["url"]]
+    return d
+
+
 def conflict(x, y):
     """함께 고르지 않는 쌍: 흡수·작용을 방해하는 관계(길항)이거나 같은 원료군."""
     return (any({a["a_id"], a["b_id"]} == {x["ingredient_id"], y["ingredient_id"]} for a in x.get("antagonists", []))
@@ -352,6 +439,17 @@ def split_fixed(top, want=PICKS):
     return fixed, pool, rule_why
 
 
+_CLAIM_LABEL = re.compile(r"^(\s*\(\s*[가-하]\s*\)\s*)?[^:：\n]*(?:도움을\s*줄\s*수\s*있음|기능성\s*내용의[^:：\n]*경우)\s*[:：]\s*")
+
+
+def intake_only(text):
+    """일일섭취량 원문에서 줄 머리의 기능성 문구('면역력 증진에 도움을 줄 수 있음 :', '기능성 내용의 1, 2의 경우 :')를 떼고
+    섭취량만 남긴다. 목록 표기((가) 등)와 형태별 구분('니코틴산의 경우:')은 남긴다. 원문은 daily_intake_raw 에 둔다."""
+    if not text:
+        return text
+    return "\n".join(_CLAIM_LABEL.sub(lambda m: m.group(1) or "", line) for line in text.split("\n"))
+
+
 def detail(pack):
     """영양제 탭에 보여줄 네 항목. 전부 식약처 원문 그대로이고, 없는 값은 None 으로 둔다(지어내지 않는다)."""
     intake = pack.get("intake_raw")
@@ -364,10 +462,10 @@ def detail(pack):
     elif pack.get("manufacturing_std") and not re.search(r"자료 누락|정보 없음", pack["manufacturing_std"]):
         raw, basis = pack["manufacturing_std"], "영양성분 제조기준(원료)"
     elif pack.get("kind") == "Individual":   # 개별인정형은 원재료 자료가 따로 없어 인정받은 원료명을 그대로 쓴다
-        raw, basis = pack.get("name_raw") or pack.get("name"), "개별인정 원료명(원재료 자료 없음)"
+        raw, basis = pack.get("name_raw") or pack.get("name"), "개별인정 원료명"
     else:
         raw, basis = None, "원본에 자료 없음"
-    return {"daily_intake": intake, "raw_material": raw, "raw_material_basis": basis,
+    return {"daily_intake": intake_only(intake), "daily_intake_raw": intake, "raw_material": raw, "raw_material_basis": basis,
             "precautions": pack.get("precaution"), "main_function": pack.get("function_text"),
             "source": pack.get("source")}
 
@@ -461,10 +559,26 @@ def recommend(patient, graph, llm, symptom_list):
     lifecycle_ids = [r["symptom_id"] for r in lifecycle]
     by_symptom = symptom_candidates(graph, symptom_ids, lifecycle_ids, patient["sex"]) if symptom_ids else {}
     by_interest = interest_candidates(graph, patient["age"], patient["sex"])
-    codes, drugs = safety_inputs(patient, graph.run("drug_matchers"))
+    matchers = graph.run("drug_matchers")
+    codes, drugs = safety_inputs(patient, matchers)
     by_drug, drug_notes = drug_candidates(graph, drugs)
     if held:    # 진료 사유 증상에 걸리는 원료는 다른 증상이나 관심사로 걸려도 뺀다 (예: 저혈당 의심인데 혈당 관리 원료)
-        held_hit = set(symptom_candidates(graph, [s["symptom_id"] for s in held], [], patient["sex"]))
+        held_cands = symptom_candidates(graph, [s["symptom_id"] for s in held], [], patient["sex"])
+        held_hit = set(held_cands)
+        # 화면에 보여줄 제외 목록: 원료 이름과, 빼지 않았으면 어느 기준(증상·관심사·드럭머거)으로 후보에 올라왔을지
+        def _paths(ps):
+            return ' / '.join(dict.fromkeys(
+                f'{p["symptom"]} → {p["mechanism"]}' + (f' → {p["function"]}' if p.get("function") else '') for p in ps))
+        _life = {r["symptom_id"]: r["diseases"] for r in lifecycle}
+        result["step1"]["held_removed"] = sorted(
+            ({"ingredient_id": k, "name": v["name"],
+              "routes": [r for r, src in (("증상", by_symptom), ("관심사", by_interest), ("복용약", by_drug)) if k in src],
+              "held_why": _paths(v["paths"]),                                          # 진료 사유 증상과 이어진 경로
+              "why": _paths(by_symptom[k]["paths"]) if k in by_symptom else '',        # 빼지 않았으면 올라왔을 증상 경로
+              "life": ' / '.join(dict.fromkeys(f'{p["symptom"]} ← {"·".join(_life[p["symptom_id"]])}'
+                                               for p in v["paths"] + (by_symptom.get(k) or {}).get("paths", [])
+                                               if p["symptom_id"] in _life))}
+             for k, v in held_cands.items()), key=lambda x: (not x["routes"], x["name"]))
         by_symptom = {k: v for k, v in by_symptom.items() if k not in held_hit}
         by_interest = {k: v for k, v in by_interest.items() if k not in held_hit}
         by_drug = {k: v for k, v in by_drug.items() if k not in held_hit}
@@ -486,15 +600,31 @@ def recommend(patient, graph, llm, symptom_list):
     result["step3"] = {f"score{n}": sum(1 for c in merged if c["score"] == n) for n in (4, 3, 2, 1, 0)}
     # 단계별 후보 목록(화면 하단 깔때기). 원료마다 어느 기준(증상/복용약/관심사)으로 올라왔는지 함께 남긴다
     by_name = lambda d: sorted(({"ingredient_id": k, "name": v["name"]} for k, v in d.items()), key=lambda x: x["name"])
-    funnel = {"held_removed": result["step1"].get("held_ingredients", 0),
-              "symptom": by_name(by_symptom), "interest": by_name(by_interest), "drug": by_name(by_drug),
+    life_dz = {r["symptom_id"]: r["diseases"] for r in lifecycle}
+    funnel = {"held_removed": result["step1"].get("held_removed", []),
+              # 증상: 사용자 증상 → 기전 → 기능성 경로, 생애주기 다빈도 질환과 겹치는 증상이면 그 질환
+              "symptom": [dict(x,
+                               why=' / '.join(dict.fromkeys(
+                                   f'{p["symptom"]} → {p["mechanism"]}' + (f' → {p["function"]}' if p.get("function") else '')
+                                   for p in by_symptom[x["ingredient_id"]]["paths"])),
+                               life=' / '.join(dict.fromkeys(
+                                   f'{p["symptom"]} ← {"·".join(life_dz[p["symptom_id"]])}'
+                                   for p in by_symptom[x["ingredient_id"]]["paths"] if p["symptom_id"] in life_dz)))
+                          for x in by_name(by_symptom)],
+              # 관심사: 어느 나이·성별 구간의 어떤 관심사에 걸렸는지 / 드럭머거: 어떤 약이 어떤 결핍을 일으키는지
+              "interest": [dict(x, why=f'{by_interest[x["ingredient_id"]]["segment"]} · 관심사 '
+                                     + ', '.join(dict.fromkeys(i["interest"] for i in by_interest[x["ingredient_id"]]["interests"])))
+                           for x in by_name(by_interest)],
+              "drug": [dict(x, why=', '.join(dict.fromkeys(f'{d["drug"]} 복용 → {d["effect"]}' for d in by_drug[x["ingredient_id"]]["depletions"])))
+                       for x in by_name(by_drug)],
               "merged": [_brief(c) for c in merged]}
     result["funnel"] = funnel
 
     # 4. 검증
     kept, dropped = verify(graph, merged, codes, drugs)
     funnel["kept"] = [_brief(c) for c in kept]
-    funnel["dropped"] = dropped
+    funnel["dropped"] = [{k: v for k, v in d.items() if k != "hits"} for d in dropped]
+    funnel["safety"] = safety_report(graph, patient, matchers, kept, dropped)
     kept_ids = [c["ingredient_id"] for c in kept]
     synergy = {}
     for r in graph.run("synergy_partners", ingredient_ids=kept_ids):
@@ -507,6 +637,8 @@ def recommend(patient, graph, llm, symptom_list):
     top = ranked[:TOP_N] + [c for c in slot_picks if c not in ranked[:TOP_N]]   # 증상 자리 원료는 TOP-10 밖이어도 싣는다
     funnel["groups"] = [{**_brief(c), "n_same": len(c.get("alternatives", []))} for c in ranked]
     funnel["top"] = [c["ingredient_id"] for c in top]
+    # 원료 종류별 3개(샘플). 묶음 대표가 아닌 원료도 고를 수 있어 나머지 통과 후보에도 근거 묶음을 붙인다
+    enrich(graph, [c for c in kept if "detail" not in c], set(kept_ids))
     result["step4"] = {"condition_codes": codes, "drug_classes": drugs, "kept": len(kept),
                        "excluded": len(dropped), "excluded_in_top_tiers": [d for d in dropped if d["routes"] != ["관심사"]][:10]}
     result["top10"] = [_export(c, n) for n, c in enumerate(top, 1)]
@@ -584,13 +716,12 @@ def recommend(patient, graph, llm, symptom_list):
     result["picks"] = []
     for p in picks:
         c = by_id[p["ingredient_id"]]
-        result["picks"].append({
+        result["picks"].append(with_kdri({
             **_export(c, top.index(c) + 1), "reason": p["reason"],
-            "take_together": [{"name": s["partner"], "effect": s["effect"], "source": s["source"], "url": s["url"],
-                               "already_picked": s["partner_id"] in picked_ids}
-                              for s in c["synergy"] if s["passed_safety"]][:2],
+            "take_together": [dict(t, already_picked=t["partner_id"] in picked_ids) for t in _together(c)],
             "picked_by": picked_by[c["ingredient_id"]],
-            "conflicts_with_picks": [a for a in c["antagonists"] if {a["a_id"], a["b_id"]} <= picked_ids]})
+            "conflicts_with_picks": [a for a in c["antagonists"] if {a["a_id"], a["b_id"]} <= picked_ids]},
+            patient["age"], patient["sex"]))
     return result
 
 
@@ -667,7 +798,7 @@ def card(c):
     한 줄 근거는 '사용자 증상 → 기전' 이다. 기전이 여럿이면 사용자 증상을 가장 많이 설명하는 기전을 쓴다.
     증상 근거가 없고 복용약 근거가 있으면 '약 복용 → 허가사항이 말하는 것' 을 쓴다.
     """
-    intake = (c.get("detail") or {}).get("daily_intake")
+    intake = (c.get("detail") or {}).get("daily_intake_raw")      # 기능성 줄을 골라야 해서 원문을 쓴다
     mech = None
     by_symptom = c["paths"] and ("증상" in c["routes"] or not (c["depletions"] or c["interests"]))
     if by_symptom:      # 간접 경로뿐이면 다른 기준 근거를 앞세운다
