@@ -1,0 +1,477 @@
+{
+ "group": "KR",
+ "sources": [
+  {
+   "source_id": "KR-KDCA-cfs",
+   "org": "질병관리청 국가건강정보포털",
+   "title": "만성피로증후군",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6549",
+   "accessed": "2026-11-09",
+   "fetch_method": "curl",
+   "file": "sources/KR-KDCA-cfs.txt"
+  },
+  {
+   "source_id": "KR-KDCA-anemia",
+   "org": "질병관리청 국가건강정보포털",
+   "title": "빈혈",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=1104",
+   "accessed": "2026-11-09",
+   "fetch_method": "curl",
+   "file": "sources/KR-KDCA-anemia.txt"
+  },
+  {
+   "source_id": "KR-KDCA-hypothyroid",
+   "org": "질병관리청 국가건강정보포털",
+   "title": "갑상선기능저하증",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5810",
+   "accessed": "2026-11-09",
+   "fetch_method": "curl",
+   "file": "sources/KR-KDCA-hypothyroid.txt"
+  },
+  {
+   "source_id": "KR-KDCA-supplements",
+   "org": "질병관리청 국가건강정보포털",
+   "title": "영양제",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6762",
+   "accessed": "2026-11-09",
+   "fetch_method": "curl",
+   "file": "sources/KR-KDCA-supplements.txt"
+  },
+  {
+   "source_id": "KR-KDCA-sleep-apnea",
+   "org": "질병관리청 국가건강정보포털",
+   "title": "수면무호흡증",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6308",
+   "accessed": "2026-11-09",
+   "fetch_method": "curl",
+   "file": "sources/KR-KDCA-sleep-apnea.txt"
+  },
+  {
+   "source_id": "KR-KDCA-depression",
+   "org": "질병관리청 국가건강정보포털",
+   "title": "우울감",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6788",
+   "accessed": "2026-11-09",
+   "fetch_method": "curl",
+   "file": "sources/KR-KDCA-depression.txt"
+  },
+  {
+   "source_id": "KR-KDCA-diabetes-drugs",
+   "org": "질병관리청 국가건강정보포털",
+   "title": "당뇨환자의 약물요법",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6471",
+   "accessed": "2026-11-09",
+   "fetch_method": "curl",
+   "file": "sources/KR-KDCA-diabetes-drugs.txt"
+  },
+  {
+   "source_id": "KR-KDCA-alcohol-liver",
+   "org": "질병관리청 국가건강정보포털",
+   "title": "알코올 간질환",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5310",
+   "accessed": "2026-11-09",
+   "fetch_method": "curl",
+   "file": "sources/KR-KDCA-alcohol-liver.txt"
+  },
+  {
+   "source_id": "KR-KDCA-viral-hepatitis",
+   "org": "질병관리청 국가건강정보포털",
+   "title": "바이러스성 간염",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6553",
+   "accessed": "2026-11-09",
+   "fetch_method": "curl",
+   "file": "sources/KR-KDCA-viral-hepatitis.txt"
+  },
+  {
+   "source_id": "KR-KDCA-ra",
+   "org": "질병관리청 국가건강정보포털",
+   "title": "류마티스관절염",
+   "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6556",
+   "accessed": "2026-11-09",
+   "fetch_method": "curl",
+   "file": "sources/KR-KDCA-ra.txt"
+  },
+  {
+   "source_id": "KR-MOHW-kdri2020-vitamins",
+   "org": "보건복지부·한국영양학회",
+   "title": "2020 한국인 영양소 섭취기준 - 비타민 (PDF; 엽산 p.261, 비타민 B12 p.293 / PDF 299·331쪽)",
+   "url": "https://www.mohw.go.kr/boardDownload.es?bid=0019&list_no=362385&seq=2",
+   "accessed": "2026-11-09",
+   "fetch_method": "curl",
+   "file": "sources/KR-MOHW-kdri2020-vitamins.txt",
+   "note": "보건복지부 게시물(list_no=362385) 첨부 PDF를 curl로 받아 pdftotext로 추출. 줄바꿈이 단어 중간에 있어 인용은 공백 제거 기준으로 대조."
+  }
+ ],
+ "links": [
+  {
+   "symptom": "만성피로",
+   "mech_id": "E1",
+   "mech": "E1 에너지 대사 저하",
+   "status": "partial",
+   "source_id": "KR-KDCA-hypothyroid",
+   "quote": "기초대사량이 감소하여 에너지 생산이 적어지므로 몹시 피로를 느끼며 추위를 잘 타게 되고 심하면 한여름에도 내복을 입어야 할 정도입니다.",
+   "quote_ko": "",
+   "note": "갑상선기능저하증에서 에너지 생산 감소→피로를 한 문장으로 연결. 만성 여부는 명시 안 됨."
+  },
+  {
+   "symptom": "만성피로",
+   "mech_id": "X6",
+   "mech": "X6 CoQ10 고갈",
+   "status": "not_found",
+   "source_id": "",
+   "quote": "",
+   "quote_ko": "",
+   "note": "국내 공식 출처에서 CoQ10 결핍·고갈과 피로 계열 증상을 잇는 문장 못 찾음. 식약처 건강기능식품 CoQ10 인정 기능성은 '항산화·높은 혈압 감소'(검색결과만 확인, 페이지 미저장). KR-KDCA-cfs 병태생리에 '미토콘드리아 기능 이상'만 언급되고 CoQ10은 없음."
+  },
+  {
+   "symptom": "만성피로",
+   "mech_id": "X1",
+   "mech": "X1 철 결핍",
+   "status": "partial",
+   "source_id": "KR-KDCA-supplements",
+   "quote": "철분이 결핍된 사람은 적혈구의 수가 정상인보다 적어지고 조직에 전달되는 산소의 양도 적어 쉽게 피곤하고 느리며 무기력해집니다.",
+   "quote_ko": "",
+   "note": "철 결핍→산소 전달 감소→쉽게 피곤. 만성 여부는 명시 안 됨."
+  },
+  {
+   "symptom": "만성피로",
+   "mech_id": "X2",
+   "mech": "X2 비타민B12·엽산 부족",
+   "status": "partial",
+   "source_id": "KR-MOHW-kdri2020-vitamins",
+   "quote": "비타민 B12 결핍으로 인한 거대적아구성 빈혈은 엽산결핍으로 인한 거대적아구성 빈혈과 구분하기가 어렵지만 창백함, 피로, 기운 없음, 두통, 숨가쁨, 운동능력 감소 등의 증세가 동반된다는 것이 특징이다.",
+   "quote_ko": "",
+   "note": "B12 결핍성 빈혈→피로. 만성 여부는 명시 안 됨. 엽산: 같은 PDF p.261 '엽산 결핍시 나타나는 빈혈은 … 허약감, 피로 … 증세를 수반한다'."
+  },
+  {
+   "symptom": "만성피로",
+   "mech_id": "N2",
+   "mech": "N2 수면-각성 리듬 불균형",
+   "status": "supported",
+   "source_id": "KR-KDCA-cfs",
+   "quote": "최근에는 피로 증상을 호소하는 젊은 여성이 늘고 있는데 심한 다이어트, 불규칙한 식사로 인한 영양상태의 불균형이나 출산 후 육아 등으로 인한 수면 장애 등이 만성 피로를 유발할 수 있습니다.",
+   "quote_ko": "",
+   "note": "수면 장애→만성 피로를 한 문장으로 연결. 같은 페이지에 '수면 무호흡증, 발작성 수면과 같은 수면 장애도 만성 피로를 유발할 수 있습니다'도 있음. 단, '수면-각성 리듬' 용어 자체는 쓰지 않음."
+  },
+  {
+   "symptom": "만성피로",
+   "mech_id": "N1",
+   "mech": "N1 HPA축 과활성(스트레스 호르몬)",
+   "status": "partial",
+   "source_id": "KR-KDCA-cfs",
+   "quote": "만성피로증후군의 기저 병태생리는 확실히 밝혀져 있지 않지만 바이러스 감염, 자율신경계 이상, 시상하부-뇌하수체-부신-축의 스트레스에 대한 이상 반응, 미토콘드리아 기능 이상, 면역계와 호르몬계의 이상 등이 제시되어 왔습니다.",
+   "quote_ko": "",
+   "note": "만성피로증후군 병태생리 후보로 HPA축의 '이상 반응'을 제시(가설 수준, 과활성 방향은 명시 안 됨). 과활성은 KR-KDCA-depression에 명시(우울증 맥락)."
+  },
+  {
+   "symptom": "만성피로",
+   "mech_id": "A1",
+   "mech": "A1 간 해독 부담",
+   "status": "partial",
+   "source_id": "KR-KDCA-viral-hepatitis",
+   "quote": "② 만성 피로: 가장 흔한 증상으로, 지속적인 피로감을 느껴 일상생활에 지장이 생길 수 있습니다.",
+   "quote_ko": "",
+   "note": "만성 B형·C형간염의 가장 흔한 증상이 '만성 피로'. 기전은 바이러스 간염(염증)이며 '간 해독 부담' 개념은 국내 공식 페이지에서 확인 못 함. 알코올 지방간 '쉽게 피로' 문장은 KR-KDCA-alcohol-liver."
+  },
+  {
+   "symptom": "만성피로",
+   "mech_id": "I2",
+   "mech": "I2 만성 저도 염증",
+   "status": "partial",
+   "source_id": "KR-KDCA-ra",
+   "quote": "류마티스관절염은 자가 면역 질환으로 림프구가 우리 몸의 일부인 관절을 공격하고 결국 관절과 관절 주위의 뼈를 파괴합니다. 이러한 반응은 피로감, 발열, 식욕 부진, 체중 감소 등 전신적인 증상의 원인이 됩니다.",
+   "quote_ko": "",
+   "note": "류마티스관절염(자가면역 염증 반응)→피로감. 고도 염증 질환이라 '만성 저도 염증'과 정확히 일치하지 않음. 만성 여부는 명시 안 됨."
+  },
+  {
+   "symptom": "무기력",
+   "mech_id": "E1",
+   "mech": "E1 에너지 대사 저하",
+   "status": "partial",
+   "source_id": "KR-KDCA-hypothyroid",
+   "quote": "또한 의욕이 없고 정신집중이 잘 안되며 기억력이 감퇴합니다.",
+   "quote_ko": "",
+   "note": "갑상선기능저하증 증상 문단. 바로 앞 문단이 '갑상선호르몬은 열과 에너지의 생성에 필수적… 에너지 생산이 적어지므로'. 증상은 '의욕이 없고'로 표현됨('무기력'이라는 단어는 없음)."
+  },
+  {
+   "symptom": "무기력",
+   "mech_id": "X6",
+   "mech": "X6 CoQ10 고갈",
+   "status": "not_found",
+   "source_id": "",
+   "quote": "",
+   "quote_ko": "",
+   "note": "국내 공식 출처에서 CoQ10 결핍·고갈과 피로 계열 증상을 잇는 문장 못 찾음. 식약처 건강기능식품 CoQ10 인정 기능성은 '항산화·높은 혈압 감소'(검색결과만 확인, 페이지 미저장). KR-KDCA-cfs 병태생리에 '미토콘드리아 기능 이상'만 언급되고 CoQ10은 없음."
+  },
+  {
+   "symptom": "무기력",
+   "mech_id": "X1",
+   "mech": "X1 철 결핍",
+   "status": "supported",
+   "source_id": "KR-KDCA-supplements",
+   "quote": "철분이 결핍된 사람은 적혈구의 수가 정상인보다 적어지고 조직에 전달되는 산소의 양도 적어 쉽게 피곤하고 느리며 무기력해집니다.",
+   "quote_ko": "",
+   "note": "철 결핍→산소 전달 감소→무기력을 한 문장으로 연결."
+  },
+  {
+   "symptom": "무기력",
+   "mech_id": "X2",
+   "mech": "X2 비타민B12·엽산 부족",
+   "status": "partial",
+   "source_id": "KR-KDCA-anemia",
+   "quote": "그것은 빈혈이 당신을 피로하고 무기력하게 만들기 때문입니다.",
+   "quote_ko": "",
+   "note": "빈혈 일반→피로·무기력. B12·엽산 결핍이 비타민결핍빈혈을 일으킨다는 문장은 같은 페이지 다른 문단('엽산과 비타민 B 12 가 부족한 음식을 섭취하거나 … 비타민결핍빈혈에 걸리기 쉽습니다')."
+  },
+  {
+   "symptom": "무기력",
+   "mech_id": "N2",
+   "mech": "N2 수면-각성 리듬 불균형",
+   "status": "partial",
+   "source_id": "KR-KDCA-cfs",
+   "quote": "최근에는 피로 증상을 호소하는 젊은 여성이 늘고 있는데 심한 다이어트, 불규칙한 식사로 인한 영양상태의 불균형이나 출산 후 육아 등으로 인한 수면 장애 등이 만성 피로를 유발할 수 있습니다.",
+   "quote_ko": "",
+   "note": "수면 장애→만성 피로. 증상은 '피로/피곤'으로만 나옴(국가건강정보포털 만성피로증후군 페이지는 피로를 '기운이 없어서… 일상적인 활동조차 수행할 수 없는 상태'로 정의 — 상위 범주). '무기력' 단어는 없음."
+  },
+  {
+   "symptom": "무기력",
+   "mech_id": "N1",
+   "mech": "N1 HPA축 과활성(스트레스 호르몬)",
+   "status": "partial",
+   "source_id": "KR-KDCA-depression",
+   "quote": "그러나 만성적인 스트레스나 우울증 상태에서는 이 조절 기능이 제대로 작동하지 않아 스트레스 호르몬(코르티솔)이 과도하게 분비됩니다.",
+   "quote_ko": "",
+   "note": "HPA축 과활성(코르티솔 과다분비)은 우울증 기전 문단에 명시. 증상은 같은 페이지 다른 문단: '산후 우울감은 피로, 무기력, 의욕 상실 … 등으로 나타날 수 있습니다', 계절성 우울장애 '무기력감과 함께 잠이 많아지는 과다 수면'. 피로 계열 증상과 HPA축을 직접 잇는 문장은 없음."
+  },
+  {
+   "symptom": "무기력",
+   "mech_id": "A1",
+   "mech": "A1 간 해독 부담",
+   "status": "partial",
+   "source_id": "KR-KDCA-alcohol-liver",
+   "quote": "쉽게 피로하거나 소화불량, 우상복부 불편감 또는 통증이 있을 수도 있습니다.",
+   "quote_ko": "",
+   "note": "알코올 지방간의 증상 문장. '간 해독 부담'이라는 기전 개념 자체는 국내 공식 페이지에서 확인 못 함(간질환 일반으로만 대응). 증상은 '피로/피곤'으로만 나옴(국가건강정보포털 만성피로증후군 페이지는 피로를 '기운이 없어서… 일상적인 활동조차 수행할 수 없는 상태'로 정의 — 상위 범주)."
+  },
+  {
+   "symptom": "무기력",
+   "mech_id": "I2",
+   "mech": "I2 만성 저도 염증",
+   "status": "partial",
+   "source_id": "KR-KDCA-ra",
+   "quote": "류마티스관절염은 자가 면역 질환으로 림프구가 우리 몸의 일부인 관절을 공격하고 결국 관절과 관절 주위의 뼈를 파괴합니다. 이러한 반응은 피로감, 발열, 식욕 부진, 체중 감소 등 전신적인 증상의 원인이 됩니다.",
+   "quote_ko": "",
+   "note": "류마티스관절염(자가면역 염증 반응)→피로감. 고도 염증 질환이라 '만성 저도 염증'과 정확히 일치하지 않음. 증상은 '피로/피곤'으로만 나옴(국가건강정보포털 만성피로증후군 페이지는 피로를 '기운이 없어서… 일상적인 활동조차 수행할 수 없는 상태'로 정의 — 상위 범주)."
+  },
+  {
+   "symptom": "기운 없음",
+   "mech_id": "E1",
+   "mech": "E1 에너지 대사 저하",
+   "status": "supported",
+   "source_id": "KR-KDCA-hypothyroid",
+   "quote": "초기에는 뚜렷한 증상이 없고 오랜 기간에 거쳐 서서히 진행되어 기운이 없고 쉽게 피곤하거나 추위를 타는 등 막연한 증상이 나타나므로 대다수의 환자는 갑상선질환이 있다고 자각하기가 쉽지 않습니다.",
+   "quote_ko": "",
+   "note": "갑상선기능저하증→'기운이 없고 쉽게 피곤'. 같은 페이지에서 갑상선호르몬 부족→기초대사량·에너지 생산 감소를 설명(E1 기존 근거와 같은 질환 경유)."
+  },
+  {
+   "symptom": "기운 없음",
+   "mech_id": "X6",
+   "mech": "X6 CoQ10 고갈",
+   "status": "not_found",
+   "source_id": "",
+   "quote": "",
+   "quote_ko": "",
+   "note": "국내 공식 출처에서 CoQ10 결핍·고갈과 피로 계열 증상을 잇는 문장 못 찾음. 식약처 건강기능식품 CoQ10 인정 기능성은 '항산화·높은 혈압 감소'(검색결과만 확인, 페이지 미저장). KR-KDCA-cfs 병태생리에 '미토콘드리아 기능 이상'만 언급되고 CoQ10은 없음."
+  },
+  {
+   "symptom": "기운 없음",
+   "mech_id": "X1",
+   "mech": "X1 철 결핍",
+   "status": "partial",
+   "source_id": "KR-KDCA-supplements",
+   "quote": "철분이 결핍된 사람은 적혈구의 수가 정상인보다 적어지고 조직에 전달되는 산소의 양도 적어 쉽게 피곤하고 느리며 무기력해집니다.",
+   "quote_ko": "",
+   "note": "철 결핍→'쉽게 피곤하고 느리며 무기력'. '기운 없음' 단어는 없음."
+  },
+  {
+   "symptom": "기운 없음",
+   "mech_id": "X2",
+   "mech": "X2 비타민B12·엽산 부족",
+   "status": "supported",
+   "source_id": "KR-MOHW-kdri2020-vitamins",
+   "quote": "비타민 B12 결핍으로 인한 거대적아구성 빈혈은 엽산결핍으로 인한 거대적아구성 빈혈과 구분하기가 어렵지만 창백함, 피로, 기운 없음, 두통, 숨가쁨, 운동능력 감소 등의 증세가 동반된다는 것이 특징이다.",
+   "quote_ko": "",
+   "note": "B12 결핍성 빈혈 증세에 '기운 없음'이 그대로 나열됨. 2020 KDRI 비타민편 p.293."
+  },
+  {
+   "symptom": "기운 없음",
+   "mech_id": "N2",
+   "mech": "N2 수면-각성 리듬 불균형",
+   "status": "partial",
+   "source_id": "KR-KDCA-cfs",
+   "quote": "최근에는 피로 증상을 호소하는 젊은 여성이 늘고 있는데 심한 다이어트, 불규칙한 식사로 인한 영양상태의 불균형이나 출산 후 육아 등으로 인한 수면 장애 등이 만성 피로를 유발할 수 있습니다.",
+   "quote_ko": "",
+   "note": "수면 장애→만성 피로. 증상은 '피로/피곤'으로만 나옴(국가건강정보포털 만성피로증후군 페이지는 피로를 '기운이 없어서… 일상적인 활동조차 수행할 수 없는 상태'로 정의 — 상위 범주)."
+  },
+  {
+   "symptom": "기운 없음",
+   "mech_id": "N1",
+   "mech": "N1 HPA축 과활성(스트레스 호르몬)",
+   "status": "partial",
+   "source_id": "KR-KDCA-depression",
+   "quote": "그러나 만성적인 스트레스나 우울증 상태에서는 이 조절 기능이 제대로 작동하지 않아 스트레스 호르몬(코르티솔)이 과도하게 분비됩니다.",
+   "quote_ko": "",
+   "note": "HPA축 과활성(코르티솔 과다분비)은 우울증 기전 문단에 명시. 증상은 같은 페이지 다른 문단: '노인이 우울증을 겪을 때, \"우울하다\"고 말하기보다 \"기운이 없다\" … 호소하는 경우가 많습니다'. 피로 계열 증상과 HPA축을 직접 잇는 문장은 없음."
+  },
+  {
+   "symptom": "기운 없음",
+   "mech_id": "A1",
+   "mech": "A1 간 해독 부담",
+   "status": "partial",
+   "source_id": "KR-KDCA-alcohol-liver",
+   "quote": "쉽게 피로하거나 소화불량, 우상복부 불편감 또는 통증이 있을 수도 있습니다.",
+   "quote_ko": "",
+   "note": "알코올 지방간의 증상 문장. '간 해독 부담'이라는 기전 개념 자체는 국내 공식 페이지에서 확인 못 함(간질환 일반으로만 대응). 증상은 '피로/피곤'으로만 나옴(국가건강정보포털 만성피로증후군 페이지는 피로를 '기운이 없어서… 일상적인 활동조차 수행할 수 없는 상태'로 정의 — 상위 범주)."
+  },
+  {
+   "symptom": "기운 없음",
+   "mech_id": "I2",
+   "mech": "I2 만성 저도 염증",
+   "status": "partial",
+   "source_id": "KR-KDCA-ra",
+   "quote": "류마티스관절염은 자가 면역 질환으로 림프구가 우리 몸의 일부인 관절을 공격하고 결국 관절과 관절 주위의 뼈를 파괴합니다. 이러한 반응은 피로감, 발열, 식욕 부진, 체중 감소 등 전신적인 증상의 원인이 됩니다.",
+   "quote_ko": "",
+   "note": "류마티스관절염(자가면역 염증 반응)→피로감. 고도 염증 질환이라 '만성 저도 염증'과 정확히 일치하지 않음. 증상은 '피로/피곤'으로만 나옴(국가건강정보포털 만성피로증후군 페이지는 피로를 '기운이 없어서… 일상적인 활동조차 수행할 수 없는 상태'로 정의 — 상위 범주)."
+  },
+  {
+   "symptom": "체력 저하",
+   "mech_id": "E1",
+   "mech": "E1 에너지 대사 저하",
+   "status": "partial",
+   "source_id": "KR-KDCA-supplements",
+   "quote": "따라서 부족한 경우에는 우리 몸이 에너지를 제대로 얻지 못하게 되어 자주 피곤해 하며, 식욕부진, 체중감소, 위장관 질환, 전신쇠약 등을 일으킬 수 있습니다.",
+   "quote_ko": "",
+   "note": "티아민(B1) 결핍→에너지를 제대로 얻지 못함→피곤·전신쇠약을 한 문장으로 연결. '체력 저하'는 '전신쇠약'으로 근접 표현."
+  },
+  {
+   "symptom": "체력 저하",
+   "mech_id": "X6",
+   "mech": "X6 CoQ10 고갈",
+   "status": "not_found",
+   "source_id": "",
+   "quote": "",
+   "quote_ko": "",
+   "note": "국내 공식 출처에서 CoQ10 결핍·고갈과 피로 계열 증상을 잇는 문장 못 찾음. 식약처 건강기능식품 CoQ10 인정 기능성은 '항산화·높은 혈압 감소'(검색결과만 확인, 페이지 미저장). KR-KDCA-cfs 병태생리에 '미토콘드리아 기능 이상'만 언급되고 CoQ10은 없음."
+  },
+  {
+   "symptom": "체력 저하",
+   "mech_id": "X1",
+   "mech": "X1 철 결핍",
+   "status": "partial",
+   "source_id": "KR-KDCA-supplements",
+   "quote": "철분이 결핍된 사람은 적혈구의 수가 정상인보다 적어지고 조직에 전달되는 산소의 양도 적어 쉽게 피곤하고 느리며 무기력해집니다.",
+   "quote_ko": "",
+   "note": "철 결핍→'쉽게 피곤하고 느리며 무기력'. '체력 저하' 단어는 없음."
+  },
+  {
+   "symptom": "체력 저하",
+   "mech_id": "X2",
+   "mech": "X2 비타민B12·엽산 부족",
+   "status": "supported",
+   "source_id": "KR-MOHW-kdri2020-vitamins",
+   "quote": "비타민 B12 결핍으로 인한 거대적아구성 빈혈은 엽산결핍으로 인한 거대적아구성 빈혈과 구분하기가 어렵지만 창백함, 피로, 기운 없음, 두통, 숨가쁨, 운동능력 감소 등의 증세가 동반된다는 것이 특징이다.",
+   "quote_ko": "",
+   "note": "B12 결핍성 빈혈 증세에 '운동능력 감소'가 나열됨(체력 저하에 대응). 2020 KDRI 비타민편 p.293."
+  },
+  {
+   "symptom": "체력 저하",
+   "mech_id": "N2",
+   "mech": "N2 수면-각성 리듬 불균형",
+   "status": "partial",
+   "source_id": "KR-KDCA-cfs",
+   "quote": "최근에는 피로 증상을 호소하는 젊은 여성이 늘고 있는데 심한 다이어트, 불규칙한 식사로 인한 영양상태의 불균형이나 출산 후 육아 등으로 인한 수면 장애 등이 만성 피로를 유발할 수 있습니다.",
+   "quote_ko": "",
+   "note": "수면 장애→만성 피로. 증상은 '피로/피곤'으로만 나옴(국가건강정보포털 만성피로증후군 페이지는 피로를 '기운이 없어서… 일상적인 활동조차 수행할 수 없는 상태'로 정의 — 상위 범주)."
+  },
+  {
+   "symptom": "체력 저하",
+   "mech_id": "N1",
+   "mech": "N1 HPA축 과활성(스트레스 호르몬)",
+   "status": "partial",
+   "source_id": "KR-KDCA-depression",
+   "quote": "그러나 만성적인 스트레스나 우울증 상태에서는 이 조절 기능이 제대로 작동하지 않아 스트레스 호르몬(코르티솔)이 과도하게 분비됩니다.",
+   "quote_ko": "",
+   "note": "HPA축 과활성(코르티솔 과다분비)은 우울증 기전 문단에 명시. 증상은 같은 페이지 다른 문단: 지속성 우울장애 '활력 저하 및 피로감'. 피로 계열 증상과 HPA축을 직접 잇는 문장은 없음."
+  },
+  {
+   "symptom": "체력 저하",
+   "mech_id": "A1",
+   "mech": "A1 간 해독 부담",
+   "status": "partial",
+   "source_id": "KR-KDCA-alcohol-liver",
+   "quote": "쉽게 피로하거나 소화불량, 우상복부 불편감 또는 통증이 있을 수도 있습니다.",
+   "quote_ko": "",
+   "note": "알코올 지방간의 증상 문장. '간 해독 부담'이라는 기전 개념 자체는 국내 공식 페이지에서 확인 못 함(간질환 일반으로만 대응). 증상은 '피로/피곤'으로만 나옴(국가건강정보포털 만성피로증후군 페이지는 피로를 '기운이 없어서… 일상적인 활동조차 수행할 수 없는 상태'로 정의 — 상위 범주)."
+  },
+  {
+   "symptom": "체력 저하",
+   "mech_id": "I2",
+   "mech": "I2 만성 저도 염증",
+   "status": "partial",
+   "source_id": "KR-KDCA-ra",
+   "quote": "류마티스관절염은 자가 면역 질환으로 림프구가 우리 몸의 일부인 관절을 공격하고 결국 관절과 관절 주위의 뼈를 파괴합니다. 이러한 반응은 피로감, 발열, 식욕 부진, 체중 감소 등 전신적인 증상의 원인이 됩니다.",
+   "quote_ko": "",
+   "note": "류마티스관절염(자가면역 염증 반응)→피로감. 고도 염증 질환이라 '만성 저도 염증'과 정확히 일치하지 않음. 증상은 '피로/피곤'으로만 나옴(국가건강정보포털 만성피로증후군 페이지는 피로를 '기운이 없어서… 일상적인 활동조차 수행할 수 없는 상태'로 정의 — 상위 범주)."
+  },
+  {
+   "symptom": "집중력 저하",
+   "mech_id": "N3",
+   "mech": "N3 신경전달 저하",
+   "status": "partial",
+   "source_id": "KR-MOHW-kdri2020-vitamins",
+   "quote": "비타민 B12가 결핍되면 신경세포의 미엘린 합성이 저해되며 신경전달물질의 부족으로 신경기능의 이상이 초래될 뿐 아니라",
+   "quote_ko": "",
+   "note": "B12 결핍→신경전달물질 부족→신경기능 이상. 집중력 저하는 바로 앞 문장(같은 문단)에 나옴. KR-KDCA-depression에도 신경전달물질 불균형(우울증 원인)과 집중력 저하(증상)가 다른 문단에 따로 나옴."
+  },
+  {
+   "symptom": "집중력 저하",
+   "mech_id": "N2",
+   "mech": "N2 수면-각성 리듬 불균형",
+   "status": "supported",
+   "source_id": "KR-KDCA-sleep-apnea",
+   "quote": "무호흡은 수면 중 각성을 일으키고 수면을 분절시켜 다양한 신경정신적 합병증을 유발합니다. 주간기면증, 피로감 외에도 성격변화, 인지능력 장애, 기억력 장애, 집중력 장애 등이 높은 빈도로 발생합니다.",
+   "quote_ko": "",
+   "note": "수면 분절(수면 중 각성)→신경정신적 합병증→집중력 장애로 바로 이어진 두 문장. 수면무호흡증 맥락."
+  },
+  {
+   "symptom": "집중력 저하",
+   "mech_id": "X2",
+   "mech": "X2 비타민B12·엽산 부족",
+   "status": "supported",
+   "source_id": "KR-MOHW-kdri2020-vitamins",
+   "quote": "비타민 B12 결핍환자의 약 75-90%에서 신경장애가 관찰되며 중추신경계와 말초신경계에 걸쳐 다양하게 서서히 진행된다. 척추관 경화 또는 감각신경 이상으로 인하여 발바닥이나 손바닥이 따끔거리거나 무감각해 지고 운동장애(절름발이), 시력저하 등이 나타나며, 집중력 저하와 기억력 감퇴, 인지기능 저하, 알쯔하이머, 뇌졸증, 치매, 파킨슨 질환, 감정의 변화, 우울증, 불면증, 불임, 장과 방광조절 이상 등이 나타나기도 한다",
+   "quote_ko": "",
+   "note": "B12 결핍 신경장애 증상에 '집중력 저하'가 나열됨. 2020 KDRI 비타민편 p.293. 엽산 단독으로 집중력과 잇는 국내 문장은 못 찾음."
+  },
+  {
+   "symptom": "집중력 저하",
+   "mech_id": "E2",
+   "mech": "E2 혈당 변동",
+   "status": "supported",
+   "source_id": "KR-KDCA-diabetes-drugs",
+   "quote": "저혈당이 생기면 땀이 나고, 손이 떨리며, 맥박이 빨라지고, 공복감을 느끼고 집중력이 저하되는 등의 증상이 발생합니다.",
+   "quote_ko": "",
+   "note": "저혈당(인슐린 부작용)→집중력 저하를 한 문장으로 연결. 혈당 '변동' 가운데 저혈당 쪽만 해당."
+  },
+  {
+   "symptom": "집중력 저하",
+   "mech_id": "C1",
+   "mech": "C1 혈행 저하(혈소판 응집)",
+   "status": "not_found",
+   "source_id": "",
+   "quote": "",
+   "quote_ko": "",
+   "note": "국내 공식 페이지에서 혈소판 응집·혈행 저하와 집중력 저하를 잇는 문장 못 찾음. 국가건강정보포털 '치매'(cntnts_sn=4566)는 빈 페이지로 응답해 혈관성 치매 문단을 확인하지 못함."
+  }
+ ]
+}

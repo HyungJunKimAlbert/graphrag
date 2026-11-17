@@ -1,0 +1,782 @@
+{
+ "metrics": {
+  "cases": 45,
+  "observed": 0,
+  "required": {
+   "cases": 26,
+   "met": 16,
+   "rate": 0.6154
+  },
+  "forbid_violations": 0,
+  "red_flag": {
+   "tp": 30,
+   "fp": 1,
+   "fn": 0,
+   "recall": 1.0,
+   "precision": 0.9677
+  },
+  "no_match": {
+   "cases": 0,
+   "correct": 0,
+   "accuracy": null
+  }
+ },
+ "usage": {
+  "calls": 45,
+  "latency_avg_s": 1.32,
+  "latency_p95_s": 1.97,
+  "input_tokens": 159760,
+  "cached_tokens": 158085,
+  "output_tokens": 5430,
+  "reasoning_tokens": null,
+  "cache_write_tokens": 0
+ },
+ "llm": "anthropic",
+ "effort": "low",
+ "cases": [
+  {
+   "id": "위험-001",
+   "group": "위험",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "가슴 쥐어짜는 통증",
+    "식은땀"
+   ]
+  },
+  {
+   "id": "위험-002",
+   "group": "위험",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "손발 저림"
+   ],
+   "categories": [
+    "뼈/관절"
+   ],
+   "outside": [
+    "가슴 답답함"
+   ]
+  },
+  {
+   "id": "위험-003",
+   "group": "위험",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "갑자기 말이 어눌해짐"
+   ]
+  },
+  {
+   "id": "위험-004",
+   "group": "위험",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "오른쪽 팔다리 힘 빠짐"
+   ]
+  },
+  {
+   "id": "위험-005",
+   "group": "위험",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "자다가 숨 막혀서 깸"
+   ]
+  },
+  {
+   "id": "위험-006",
+   "group": "위험",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [
+    "소화/장"
+   ],
+   "outside": []
+  },
+  {
+   "id": "위험-007",
+   "group": "위험",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "토할 때 피 섞임"
+   ]
+  },
+  {
+   "id": "위험-008",
+   "group": "위험",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "위험-009",
+   "group": "위험",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "시시각 흐림"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "위험-010",
+   "group": "위험",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "두통"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "위험-011",
+   "group": "위험",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "의식 잃고 쓰러짐"
+   ]
+  },
+  {
+   "id": "위험-012",
+   "group": "위험",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [
+    "스트레스/수면"
+   ],
+   "outside": []
+  },
+  {
+   "id": "위험-013",
+   "group": "위험",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "숨쉬기 힘듦"
+   ]
+  },
+  {
+   "id": "위험-014",
+   "group": "위험",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [
+    "면역"
+   ],
+   "outside": [
+    "고열 39도",
+    "목 뻣뻣"
+   ]
+  },
+  {
+   "id": "위험-015",
+   "group": "위험",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "체중 감소"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "위험-016",
+   "group": "위험",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "붓기"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "위험-017",
+   "group": "위험",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "울렁거림"
+   ],
+   "categories": [],
+   "outside": [
+    "명치 통증",
+    "식은땀"
+   ]
+  },
+  {
+   "id": "위험-018",
+   "group": "위험",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "변비",
+    "소화불량"
+   ],
+   "categories": [],
+   "outside": [
+    "어제부터 오른손에 힘이 없음"
+   ]
+  },
+  {
+   "id": "위험-019",
+   "group": "위험",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [
+    "스트레스/수면",
+    "피로/활력"
+   ],
+   "outside": [
+    "코피 안 멈춤"
+   ]
+  },
+  {
+   "id": "위험-020",
+   "group": "위험",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "관절 통증",
+    "만성피로"
+   ],
+   "categories": [],
+   "outside": [
+    "가슴 조이는 느낌, 계단에서 심해짐"
+   ]
+  },
+  {
+   "id": "위험-021",
+   "group": "위험",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "위험-022",
+   "group": "위험",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "복통"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "위험-023",
+   "group": "위험",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "얼굴 한쪽이 처짐"
+   ]
+  },
+  {
+   "id": "위험-024",
+   "group": "위험",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "숨이 차서 말을 잇기 어려움"
+   ]
+  },
+  {
+   "id": "위험-025",
+   "group": "위험",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [],
+   "outside": [
+    "머리 부딪힌 뒤 계속 토함"
+   ]
+  },
+  {
+   "id": "위험-026",
+   "group": "위험",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [
+    "신장/전해질"
+   ],
+   "outside": [
+    "다리 근육통"
+   ]
+  },
+  {
+   "id": "위험-027",
+   "group": "위험",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "시야 흐림"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "위험-028",
+   "group": "위험",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "수면 질 저하"
+   ],
+   "categories": [],
+   "outside": [
+    "잘 때 가슴 눌리는 느낌"
+   ]
+  },
+  {
+   "id": "위험-029",
+   "group": "위험",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [
+    "혈당"
+   ],
+   "outside": []
+  },
+  {
+   "id": "위험-030",
+   "group": "위험",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": true,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "멍함"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "위험대조-001",
+   "group": "위험대조",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "위험대조-002",
+   "group": "위험대조",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "기립성 저혈압"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "위험대조-003",
+   "group": "위험대조",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "손발 저림"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "위험대조-004",
+   "group": "위험대조",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "두통"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "위험대조-005",
+   "group": "위험대조",
+   "observe": false,
+   "required_ok": null,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": true,
+   "no_match_expected": false,
+   "empty": true,
+   "symptoms": [],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "위험대조-006",
+   "group": "위험대조",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [
+    "스트레스/수면"
+   ],
+   "outside": [
+    "커피 마시면 두근거림"
+   ]
+  },
+  {
+   "id": "위험대조-007",
+   "group": "위험대조",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "침침함"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "위험대조-008",
+   "group": "위험대조",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "변비"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "위험대조-009",
+   "group": "위험대조",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "무릎/허리 부담감"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "위험대조-010",
+   "group": "위험대조",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "감기"
+   ],
+   "categories": [],
+   "outside": [
+    "코 막힘"
+   ]
+  },
+  {
+   "id": "위험대조-011",
+   "group": "위험대조",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "만성피로"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "위험대조-012",
+   "group": "위험대조",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "두통"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "위험대조-013",
+   "group": "위험대조",
+   "observe": false,
+   "required_ok": true,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "복통"
+   ],
+   "categories": [],
+   "outside": []
+  },
+  {
+   "id": "위험대조-014",
+   "group": "위험대조",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [
+    "근육경련(쥐남)"
+   ],
+   "categories": [
+    "스트레스/수면"
+   ],
+   "outside": []
+  },
+  {
+   "id": "위험대조-015",
+   "group": "위험대조",
+   "observe": false,
+   "required_ok": false,
+   "forbid_hit": [],
+   "red_flag_expected": false,
+   "red_flag_got": false,
+   "no_match_expected": false,
+   "empty": false,
+   "symptoms": [],
+   "categories": [
+    "호르몬 건강"
+   ],
+   "outside": [
+    "생리 양이 많은 편"
+   ]
+  }
+ ]
+}

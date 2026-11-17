@@ -1,0 +1,4820 @@
+{
+ "seed": 20261109,
+ "cases": [
+  {
+   "id": "SF-001",
+   "group": "일반",
+   "profile": "남성, 30대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "혈당",
+     "name": "식후 졸림"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-002",
+   "group": "일반",
+   "profile": "여성, 40대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "혈행/순환",
+     "name": "기립성 저혈압"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-003",
+   "group": "일반",
+   "profile": "여성, 50대",
+   "symptoms": [
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "피부 건조함"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-004",
+   "group": "일반",
+   "profile": "남성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "뼈/관절",
+     "name": "관절 소리"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-005",
+   "group": "일반",
+   "profile": "여성, 30대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "뼈/관절",
+     "name": "관절 소리"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-006",
+   "group": "일반",
+   "profile": "여성, 30대",
+   "symptoms": [
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "야간뇨"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-007",
+   "group": "일반",
+   "profile": "남성, 40대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "체중/체지방",
+     "name": "체중 감소"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-008",
+   "group": "일반",
+   "profile": "",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "야맹증"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-009",
+   "group": "일반",
+   "profile": "여성, 20대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "부종"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-010",
+   "group": "일반",
+   "profile": "남성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "야맹증"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-011",
+   "group": "일반",
+   "profile": "여성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "갱년기 증상"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-012",
+   "group": "일반",
+   "profile": "",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "뼈/관절",
+     "name": "관절 통증"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-013",
+   "group": "일반",
+   "profile": "남성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "신경과민"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-014",
+   "group": "일반",
+   "profile": "",
+   "symptoms": [
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "손발톱 약화"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-015",
+   "group": "일반",
+   "profile": "여성, 40대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "혈행/순환",
+     "name": "기립성 저혈압"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-016",
+   "group": "일반",
+   "profile": "여성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "설사"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-017",
+   "group": "일반",
+   "profile": "여성, 50대",
+   "symptoms": [
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "잇몸 출혈"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-018",
+   "group": "일반",
+   "profile": "남성, 80대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "눈 피로감"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-019",
+   "group": "일반",
+   "profile": "여성, 20대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "생리주기 불규칙"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-020",
+   "group": "일반",
+   "profile": "남성, 80대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "충혈"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-021",
+   "group": "일반",
+   "profile": "",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "피로/활력",
+     "name": "집중력 저하"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-022",
+   "group": "일반",
+   "profile": "여성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "울렁거림"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-023",
+   "group": "일반",
+   "profile": "",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "혈행/순환",
+     "name": "손발 저림"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-024",
+   "group": "일반",
+   "profile": "여성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "피로/활력",
+     "name": "체력 저하"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-025",
+   "group": "일반",
+   "profile": "남성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "시야 흐림"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-026",
+   "group": "일반",
+   "profile": "남성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "시야 흐림"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-027",
+   "group": "일반",
+   "profile": "남성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "간/해독",
+     "name": "피부 트러블"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-028",
+   "group": "일반",
+   "profile": "남성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "인지/기억",
+     "name": "반응 속도 저하"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-029",
+   "group": "일반",
+   "profile": "남성, 20대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "긴장"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-030",
+   "group": "일반",
+   "profile": "남성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "인지/기억",
+     "name": "멍함"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-031",
+   "group": "일반",
+   "profile": "여성, 80대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "설사"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-032",
+   "group": "일반",
+   "profile": "여성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "인지/기억",
+     "name": "기억력 감소"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-033",
+   "group": "일반",
+   "profile": "남성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "기분 저하"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-034",
+   "group": "일반",
+   "profile": "여성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "간/해독",
+     "name": "약물 복용 후 메스꺼움"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-035",
+   "group": "일반",
+   "profile": "남성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "간/해독",
+     "name": "입 텁텁함"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-036",
+   "group": "일반",
+   "profile": "여성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "인지/기억",
+     "name": "반응 속도 저하"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-037",
+   "group": "일반",
+   "profile": "남성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "두통"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-038",
+   "group": "일반",
+   "profile": "여성, 30대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "혈당",
+     "name": "식후 졸림"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-039",
+   "group": "일반",
+   "profile": "남성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "신장/전해질",
+     "name": "무력감"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-040",
+   "group": "일반",
+   "profile": "남성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "새벽 각성"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-041",
+   "group": "일반",
+   "profile": "남성, 40대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "기력 저하"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-042",
+   "group": "일반",
+   "profile": "남성, 40대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "면역",
+     "name": "감기"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-043",
+   "group": "일반",
+   "profile": "남성, 30대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "부종"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-044",
+   "group": "일반",
+   "profile": "남성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "혈행/순환",
+     "name": "혈액순환 전반"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-045",
+   "group": "일반",
+   "profile": "여성, 30대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "기분 저하"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-046",
+   "group": "일반",
+   "profile": "남성, 80대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "시야 흐림"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-047",
+   "group": "일반",
+   "profile": "여성, 80대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "불면"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-048",
+   "group": "일반",
+   "profile": "남성, 40대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "간/해독",
+     "name": "음주 후 불평감"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-049",
+   "group": "일반",
+   "profile": "",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "체중/체지방",
+     "name": "식욕변화"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-050",
+   "group": "일반",
+   "profile": "",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "혈행/순환",
+     "name": "기립성 저혈압"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-051",
+   "group": "일반",
+   "profile": "",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "눈 피로감"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-052",
+   "group": "일반",
+   "profile": "여성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "신장/전해질",
+     "name": "부종"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-053",
+   "group": "일반",
+   "profile": "남성, 40대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "체중/체지방",
+     "name": "복부 지방 증가"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-054",
+   "group": "일반",
+   "profile": "여성, 30대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "혈행/순환",
+     "name": "수족냉증"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-055",
+   "group": "일반",
+   "profile": "여성, 20대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "설사"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-056",
+   "group": "일반",
+   "profile": "여성, 20대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "혈행/순환",
+     "name": "붓기"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-057",
+   "group": "일반",
+   "profile": "남성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "울렁거림"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-058",
+   "group": "일반",
+   "profile": "남성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "인지/기억",
+     "name": "기억력 감소"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-059",
+   "group": "일반",
+   "profile": "남성, 40대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "피로/활력",
+     "name": "기운 없음"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-060",
+   "group": "일반",
+   "profile": "",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "시력 저하"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-061",
+   "group": "일반",
+   "profile": "남성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "면역",
+     "name": "감기"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-062",
+   "group": "일반",
+   "profile": "여성, 40대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "기력 저하"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-063",
+   "group": "일반",
+   "profile": "여성, 20대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "인지/기억",
+     "name": "반응 속도 저하"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-064",
+   "group": "일반",
+   "profile": "남성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "수면 질 저하"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-065",
+   "group": "일반",
+   "profile": "여성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "혈당",
+     "name": "식후 졸림"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-066",
+   "group": "일반",
+   "profile": "남성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "울렁거림"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-067",
+   "group": "일반",
+   "profile": "남성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "신장/전해질",
+     "name": "갈증"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-068",
+   "group": "일반",
+   "profile": "여성, 40대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "피로/활력",
+     "name": "무기력"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-069",
+   "group": "일반",
+   "profile": "여성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "간/해독",
+     "name": "약물 복용 후 메스꺼움"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-070",
+   "group": "일반",
+   "profile": "",
+   "symptoms": [
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "근육통"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-071",
+   "group": "일반",
+   "profile": "",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "면역",
+     "name": "감기"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-072",
+   "group": "일반",
+   "profile": "남성, 20대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "야맹증"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-073",
+   "group": "일반",
+   "profile": "여성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "울렁거림"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-074",
+   "group": "일반",
+   "profile": "남성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "뼈/관절",
+     "name": "움직임 불편"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-075",
+   "group": "일반",
+   "profile": "",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "긴장"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-076",
+   "group": "일반",
+   "profile": "여성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "변비"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-077",
+   "group": "일반",
+   "profile": "여성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "온도 민감"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-078",
+   "group": "일반",
+   "profile": "남성, 30대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "간/해독",
+     "name": "음주 후 불평감"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-079",
+   "group": "일반",
+   "profile": "여성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "혈당",
+     "name": "식후 졸림"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-080",
+   "group": "일반",
+   "profile": "남성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "불안"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-081",
+   "group": "일반",
+   "profile": "남성, 40대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "변비"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-082",
+   "group": "일반",
+   "profile": "남성, 40대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "기력 저하"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-083",
+   "group": "일반",
+   "profile": "여성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "침침함"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-084",
+   "group": "일반",
+   "profile": "여성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "시야 흐림"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-085",
+   "group": "일반",
+   "profile": "남성, 30대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "눈 떨림"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-086",
+   "group": "일반",
+   "profile": "남성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "눈 피로감"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-087",
+   "group": "일반",
+   "profile": "여성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "뼈/관절",
+     "name": "무릎/허리 부담감"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-088",
+   "group": "일반",
+   "profile": "여성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "설사"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-089",
+   "group": "일반",
+   "profile": "남성, 80대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "모발 건강",
+     "name": "비듬"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-090",
+   "group": "일반",
+   "profile": "",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "새벽 각성"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-091",
+   "group": "일반",
+   "profile": "남성, 30대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "기력 저하"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-092",
+   "group": "일반",
+   "profile": "여성, 40대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "혈당",
+     "name": "공복 현기증"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-093",
+   "group": "일반",
+   "profile": "남성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "피로/활력",
+     "name": "무기력"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-094",
+   "group": "일반",
+   "profile": "",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "신장/전해질",
+     "name": "부종"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-095",
+   "group": "일반",
+   "profile": "남성, 80대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "충혈"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-096",
+   "group": "일반",
+   "profile": "남성, 80대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "뼈/관절",
+     "name": "관절 통증"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-097",
+   "group": "일반",
+   "profile": "여성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "시력 저하"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-098",
+   "group": "일반",
+   "profile": "남성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "신장/전해질",
+     "name": "잦은 배뇨"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-099",
+   "group": "일반",
+   "profile": "남성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "혈행/순환",
+     "name": "수족냉증"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-100",
+   "group": "일반",
+   "profile": "여성, 70대",
+   "symptoms": [
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "근육통"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-101",
+   "group": "일반",
+   "profile": "여성, 20대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "신경과민"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-102",
+   "group": "일반",
+   "profile": "남성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "눈 피로감"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-103",
+   "group": "일반",
+   "profile": "",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "면역",
+     "name": "염증"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-104",
+   "group": "일반",
+   "profile": "여성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "체중/체지방",
+     "name": "체중 증가"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-105",
+   "group": "일반",
+   "profile": "여성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "모발 건강",
+     "name": "비듬"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-106",
+   "group": "일반",
+   "profile": "여성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "스트레스"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-107",
+   "group": "일반",
+   "profile": "여성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "인지/기억",
+     "name": "멍함"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-108",
+   "group": "일반",
+   "profile": "남성, 40대",
+   "symptoms": [
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "코막힘"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-109",
+   "group": "일반",
+   "profile": "여성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "인지/기억",
+     "name": "기억력 감소"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-110",
+   "group": "일반",
+   "profile": "남성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "신장/전해질",
+     "name": "근육경련(쥐남)"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-111",
+   "group": "일반",
+   "profile": "남성, 30대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "체중/체지방",
+     "name": "복부 지방 증가"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-112",
+   "group": "일반",
+   "profile": "남성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "눈 부심"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-113",
+   "group": "일반",
+   "profile": "남성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "피로/활력",
+     "name": "만성피로"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-114",
+   "group": "일반",
+   "profile": "남성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "모발 건강",
+     "name": "두피 가려움"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-115",
+   "group": "일반",
+   "profile": "남성, 40대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "뼈/관절",
+     "name": "관절 통증"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "예민함"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-116",
+   "group": "일반",
+   "profile": "남성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "신장/전해질",
+     "name": "부종"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "체중/체지방",
+     "name": "체중 감소"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-117",
+   "group": "일반",
+   "profile": "",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "인지/기억",
+     "name": "반응 속도 저하"
+    },
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "피부 건조함"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-118",
+   "group": "일반",
+   "profile": "남성, 40대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "모발 건강",
+     "name": "비듬"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "혈행/순환",
+     "name": "손발 저림"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-119",
+   "group": "일반",
+   "profile": "남성, 40대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "신장/전해질",
+     "name": "무력감"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "예민함"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-120",
+   "group": "일반",
+   "profile": "여성, 40대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "생리주기 불규칙"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "면역",
+     "name": "감기"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-121",
+   "group": "일반",
+   "profile": "남성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "뼈/관절",
+     "name": "관절 소리"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "뼈/관절",
+     "name": "무릎/허리 부담감"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-122",
+   "group": "일반",
+   "profile": "남성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "간/해독",
+     "name": "음주 후 불평감"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "피로/활력",
+     "name": "기운 없음"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-123",
+   "group": "일반",
+   "profile": "여성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "갱년기 증상"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "기분 저하"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-124",
+   "group": "일반",
+   "profile": "여성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "새벽 각성"
+    },
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "어지러움"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-125",
+   "group": "일반",
+   "profile": "여성, 30대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "신장/전해질",
+     "name": "부종"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "충혈"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-126",
+   "group": "일반",
+   "profile": "남성, 50대",
+   "symptoms": [
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "구강통증"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "눈 피로감"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-127",
+   "group": "일반",
+   "profile": "여성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "면역",
+     "name": "감기"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "뼈/관절",
+     "name": "관절 통증"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-128",
+   "group": "일반",
+   "profile": "남성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "불면"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "충혈"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-129",
+   "group": "일반",
+   "profile": "남성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "간/해독",
+     "name": "피부 트러블"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "면역",
+     "name": "염증"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-130",
+   "group": "일반",
+   "profile": "남성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "신장/전해질",
+     "name": "갈증"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "변비"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-131",
+   "group": "일반",
+   "profile": "남성, 30대",
+   "symptoms": [
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "코막힘"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "혈행/순환",
+     "name": "붓기"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-132",
+   "group": "일반",
+   "profile": "여성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "부종"
+    },
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "손발톱 약화"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-133",
+   "group": "일반",
+   "profile": "여성, 40대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "간/해독",
+     "name": "소화불량"
+    },
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "피부 건조함"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-134",
+   "group": "일반",
+   "profile": "남성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "침침함"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "시야 흐림"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-135",
+   "group": "일반",
+   "profile": "여성, 80대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "온도 민감"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "피로/활력",
+     "name": "무기력"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-136",
+   "group": "일반",
+   "profile": "남성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "면역",
+     "name": "염증"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "온도 민감"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-137",
+   "group": "일반",
+   "profile": "여성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "신경과민"
+    },
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "가려움"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-138",
+   "group": "일반",
+   "profile": "여성, 30대",
+   "symptoms": [
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "무감각"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "생리통"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-139",
+   "group": "일반",
+   "profile": "남성, 40대",
+   "symptoms": [
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "피부 건조함"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "스트레스"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-140",
+   "group": "일반",
+   "profile": "남성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "신장/전해질",
+     "name": "갈증"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "혈행/순환",
+     "name": "손발 저림"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-141",
+   "group": "일반",
+   "profile": "남성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "복통"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "모발 건강",
+     "name": "두피 가려움"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-142",
+   "group": "일반",
+   "profile": "여성, 50대",
+   "symptoms": [
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "손발톱 약화"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "새벽 각성"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-143",
+   "group": "일반",
+   "profile": "여성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "혈행/순환",
+     "name": "붓기"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "뼈/관절",
+     "name": "움직임 불편"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-144",
+   "group": "일반",
+   "profile": "남성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "긴장"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "신장/전해질",
+     "name": "부종"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-145",
+   "group": "일반",
+   "profile": "남성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "혈행/순환",
+     "name": "붓기"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "신장/전해질",
+     "name": "무력감"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-146",
+   "group": "일반",
+   "profile": "남성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "소화불량"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "혈행/순환",
+     "name": "수족냉증"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-147",
+   "group": "일반",
+   "profile": "남성, 30대",
+   "symptoms": [
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "어깨통증"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "수면 질 저하"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-148",
+   "group": "일반",
+   "profile": "남성, 40대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "갱년기 증상"
+    },
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "코막힘"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-149",
+   "group": "일반",
+   "profile": "남성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "복부 팽만감"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "불면"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-150",
+   "group": "일반",
+   "profile": "여성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "혈행/순환",
+     "name": "수족냉증"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "스트레스"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-151",
+   "group": "일반",
+   "profile": "남성, 40대",
+   "symptoms": [
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "코막힘"
+    },
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "어깨통증"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-152",
+   "group": "일반",
+   "profile": "남성, 40대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "체중/체지방",
+     "name": "복부 지방 증가"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "뼈/관절",
+     "name": "무릎/허리 부담감"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-153",
+   "group": "일반",
+   "profile": "남성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "신경과민"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "간/해독",
+     "name": "입 텁텁함"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-154",
+   "group": "일반",
+   "profile": "여성, 80대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "체중/체지방",
+     "name": "식욕변화"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "소화불량"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-155",
+   "group": "일반",
+   "profile": "여성, 30대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "생리주기 불규칙"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "침침함"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-156",
+   "group": "일반",
+   "profile": "남성, 80대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "간/해독",
+     "name": "입 텁텁함"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "뼈/관절",
+     "name": "관절 통증"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-157",
+   "group": "일반",
+   "profile": "여성, 40대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "예민함"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "뼈/관절",
+     "name": "움직임 불편"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-158",
+   "group": "일반",
+   "profile": "남성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "속쓰림"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "눈 떨림"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-159",
+   "group": "일반",
+   "profile": "남성, 80대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "뼈/관절",
+     "name": "관절 소리"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "간/해독",
+     "name": "느린 피로 회복"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-160",
+   "group": "일반",
+   "profile": "여성, 30대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "시력 저하"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "혈당",
+     "name": "공복 현기증"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-161",
+   "group": "일반",
+   "profile": "여성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "신장/전해질",
+     "name": "부종"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "눈 떨림"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-162",
+   "group": "일반",
+   "profile": "남성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "침침함"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "혈당",
+     "name": "공복 현기증"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-163",
+   "group": "일반",
+   "profile": "여성, 30대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "생리주기 불규칙"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "속쓰림"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-164",
+   "group": "일반",
+   "profile": "남성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "소화불량"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "눈 떨림"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-165",
+   "group": "일반",
+   "profile": "여성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "뼈/관절",
+     "name": "움직임 불편"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "혈당",
+     "name": "식후 졸림"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-166",
+   "group": "일반",
+   "profile": "남성, 70대",
+   "symptoms": [
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "야간뇨"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "수면 질 저하"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-167",
+   "group": "일반",
+   "profile": "남성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "혈행/순환",
+     "name": "손발 저림"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "피로/활력",
+     "name": "집중력 저하"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-168",
+   "group": "일반",
+   "profile": "남성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "신장/전해질",
+     "name": "갈증"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "간/해독",
+     "name": "피부 트러블"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-169",
+   "group": "일반",
+   "profile": "여성, 40대",
+   "symptoms": [
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "야간뇨"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "침침함"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-170",
+   "group": "일반",
+   "profile": "남성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "불안"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "수면 질 저하"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-171",
+   "group": "일반",
+   "profile": "남성, 80대",
+   "symptoms": [
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "코막힘"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "피로/활력",
+     "name": "무기력"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-172",
+   "group": "일반",
+   "profile": "여성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "간/해독",
+     "name": "약물 복용 후 메스꺼움"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "갱년기 증상"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-173",
+   "group": "일반",
+   "profile": "남성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "부종"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "눈 건조함"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-174",
+   "group": "일반",
+   "profile": "여성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "눈 부심"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "변비"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-175",
+   "group": "일반",
+   "profile": "",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "충혈"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "속쓰림"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-176",
+   "group": "일반",
+   "profile": "남성, 20대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "눈 부심"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "뼈/관절",
+     "name": "관절 통증"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-177",
+   "group": "일반",
+   "profile": "남성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "혈당",
+     "name": "식후 졸림"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "온도 민감"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-178",
+   "group": "일반",
+   "profile": "남성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "스트레스"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "복부 팽만감"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-179",
+   "group": "일반",
+   "profile": "남성, 30대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "신장/전해질",
+     "name": "근육경련(쥐남)"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "피로/활력",
+     "name": "만성피로"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-180",
+   "group": "일반",
+   "profile": "남성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "인지/기억",
+     "name": "멍함"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "혈행/순환",
+     "name": "손발 저림"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-181",
+   "group": "일반",
+   "profile": "",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "울렁거림"
+    },
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "기침"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-182",
+   "group": "일반",
+   "profile": "여성, 20대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "체중/체지방",
+     "name": "체중 증가"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "생리통"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-183",
+   "group": "일반",
+   "profile": "남성, 70대",
+   "symptoms": [
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "어깨통증"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "복통"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-184",
+   "group": "일반",
+   "profile": "남성, 40대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "피로/활력",
+     "name": "체력 저하"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "눈 부심"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-185",
+   "group": "일반",
+   "profile": "남성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "긴장"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "간/해독",
+     "name": "느린 피로 회복"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-186",
+   "group": "일반",
+   "profile": "남성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "야맹증"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "인지/기억",
+     "name": "반응 속도 저하"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-187",
+   "group": "일반",
+   "profile": "남성, 40대",
+   "symptoms": [
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "구강통증"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "신경과민"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-188",
+   "group": "일반",
+   "profile": "여성, 80대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "피로/활력",
+     "name": "무기력"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "두통"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-189",
+   "group": "일반",
+   "profile": "남성, 40대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "간/해독",
+     "name": "음주 후 불평감"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "피로/활력",
+     "name": "기운 없음"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-190",
+   "group": "일반",
+   "profile": "여성, 80대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "혈행/순환",
+     "name": "붓기"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "체중/체지방",
+     "name": "체중 증가"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-191",
+   "group": "일반",
+   "profile": "남성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "눈 건조함"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "부종"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-192",
+   "group": "일반",
+   "profile": "남성, 80대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "시력 저하"
+    },
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "무감각"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-193",
+   "group": "일반",
+   "profile": "여성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "신장/전해질",
+     "name": "잦은 배뇨"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "두통"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-194",
+   "group": "일반",
+   "profile": "남성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "기분 저하"
+    },
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "구강통증"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-195",
+   "group": "일반",
+   "profile": "여성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "모발 건강",
+     "name": "두피 가려움"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "혈당",
+     "name": "공복 현기증"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-196",
+   "group": "일반",
+   "profile": "여성, 40대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "혈행/순환",
+     "name": "기립성 저혈압"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "피로/활력",
+     "name": "만성피로"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-197",
+   "group": "일반",
+   "profile": "여성, 30대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "간/해독",
+     "name": "소화불량"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "체중/체지방",
+     "name": "복부 지방 증가"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-198",
+   "group": "일반",
+   "profile": "남성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "간/해독",
+     "name": "음주 후 불평감"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "눈 떨림"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-199",
+   "group": "일반",
+   "profile": "여성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "혈행/순환",
+     "name": "혈액순환 전반"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "눈 피로감"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-200",
+   "group": "일반",
+   "profile": "여성, 40대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "생리주기 불규칙"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "눈 부심"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-201",
+   "group": "일반",
+   "profile": "남성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "신장/전해질",
+     "name": "근육경련(쥐남)"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "피로/활력",
+     "name": "체력 저하"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-202",
+   "group": "일반",
+   "profile": "여성, 60대",
+   "symptoms": [
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "손발톱 약화"
+    },
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "어깨통증"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-203",
+   "group": "일반",
+   "profile": "여성, 20대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "침침함"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "생리통"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-204",
+   "group": "일반",
+   "profile": "남성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "신경과민"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "피로/활력",
+     "name": "체력 저하"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-205",
+   "group": "일반",
+   "profile": "남성, 40대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "소화불량"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "부종"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-206",
+   "group": "일반",
+   "profile": "남성, 80대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "시력 저하"
+    },
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "잇몸 출혈"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-207",
+   "group": "일반",
+   "profile": "여성, 60대",
+   "symptoms": [
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "무감각"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "간/해독",
+     "name": "입 텁텁함"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-208",
+   "group": "일반",
+   "profile": "여성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "모발 건강",
+     "name": "탈모"
+    },
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "잇몸 출혈"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-209",
+   "group": "일반",
+   "profile": "여성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "인지/기억",
+     "name": "멍함"
+    },
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "피부 건조함"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-210",
+   "group": "일반",
+   "profile": "여성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "피로/활력",
+     "name": "기운 없음"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "간/해독",
+     "name": "피부 트러블"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-211",
+   "group": "일반",
+   "profile": "여성, 50대",
+   "symptoms": [
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "근육통"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "갱년기 증상"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-212",
+   "group": "일반",
+   "profile": "남성, 80대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "모발 건강",
+     "name": "비듬"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "예민함"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-213",
+   "group": "일반",
+   "profile": "여성, 60대",
+   "symptoms": [
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "가려움"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "설사"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-214",
+   "group": "일반",
+   "profile": "남성, 50대",
+   "symptoms": [
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "기침"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "복통"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-215",
+   "group": "일반",
+   "profile": "남성, 80대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "뼈/관절",
+     "name": "움직임 불편"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "모발 건강",
+     "name": "비듬"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-216",
+   "group": "일반",
+   "profile": "남성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "체중/체지방",
+     "name": "복부 지방 증가"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "예민함"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-217",
+   "group": "일반",
+   "profile": "여성, 40대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "인지/기억",
+     "name": "반응 속도 저하"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "모발 건강",
+     "name": "탈모"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-218",
+   "group": "일반",
+   "profile": "여성, 20대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "체중/체지방",
+     "name": "식욕변화"
+    },
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "어지러움"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-219",
+   "group": "일반",
+   "profile": "여성, 40대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "혈행/순환",
+     "name": "기립성 저혈압"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "뼈/관절",
+     "name": "무릎/허리 부담감"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-220",
+   "group": "일반",
+   "profile": "남성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "야맹증"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "신장/전해질",
+     "name": "근육경련(쥐남)"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-221",
+   "group": "일반",
+   "profile": "남성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "면역",
+     "name": "감기"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "기력 저하"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-222",
+   "group": "일반",
+   "profile": "남성, 30대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "뼈/관절",
+     "name": "관절 소리"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "인지/기억",
+     "name": "멍함"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-223",
+   "group": "일반",
+   "profile": "남성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "혈행/순환",
+     "name": "기립성 저혈압"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "뼈/관절",
+     "name": "무릎/허리 부담감"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-224",
+   "group": "일반",
+   "profile": "여성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "불면"
+    },
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "가려움"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-225",
+   "group": "일반",
+   "profile": "남성, 40대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "체중/체지방",
+     "name": "체중 감소"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "피로/활력",
+     "name": "무기력"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-226",
+   "group": "일반",
+   "profile": "여성, 40대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "설사"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "혈행/순환",
+     "name": "혈액순환 전반"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "간/해독",
+     "name": "입 텁텁함"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-227",
+   "group": "일반",
+   "profile": "여성, 80대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "신장/전해질",
+     "name": "무력감"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "피로/활력",
+     "name": "집중력 저하"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "모발 건강",
+     "name": "탈모"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-228",
+   "group": "일반",
+   "profile": "여성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "체중/체지방",
+     "name": "식욕변화"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "간/해독",
+     "name": "느린 피로 회복"
+    },
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "구강통증"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-229",
+   "group": "일반",
+   "profile": "남성, 50대",
+   "symptoms": [
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "어지러움"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "복통"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "수면 질 저하"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-230",
+   "group": "일반",
+   "profile": "여성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "간/해독",
+     "name": "느린 피로 회복"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "간/해독",
+     "name": "약물 복용 후 메스꺼움"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "신장/전해질",
+     "name": "잦은 배뇨"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-231",
+   "group": "일반",
+   "profile": "남성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "체중/체지방",
+     "name": "체중 증가"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "소화불량"
+    },
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "손발톱 약화"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-232",
+   "group": "일반",
+   "profile": "남성, 40대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "혈당",
+     "name": "공복 현기증"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "혈행/순환",
+     "name": "손발 저림"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "신장/전해질",
+     "name": "잦은 배뇨"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-233",
+   "group": "일반",
+   "profile": "",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "체중/체지방",
+     "name": "복부 지방 증가"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "인지/기억",
+     "name": "기억력 감소"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "뼈/관절",
+     "name": "관절 소리"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-234",
+   "group": "일반",
+   "profile": "여성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "피로/활력",
+     "name": "기운 없음"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "피로/활력",
+     "name": "체력 저하"
+    },
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "근육통"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-235",
+   "group": "일반",
+   "profile": "남성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "두통"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "간/해독",
+     "name": "음주 후 불평감"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "시력 저하"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-236",
+   "group": "일반",
+   "profile": "",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "온도 민감"
+    },
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "잇몸 출혈"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "모발 건강",
+     "name": "탈모"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-237",
+   "group": "일반",
+   "profile": "남성, 40대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "울렁거림"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "복부 팽만감"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "인지/기억",
+     "name": "멍함"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-238",
+   "group": "일반",
+   "profile": "여성, 50대",
+   "symptoms": [
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "가려움"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "인지/기억",
+     "name": "기억력 감소"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "간/해독",
+     "name": "소화불량"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-239",
+   "group": "일반",
+   "profile": "여성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "온도 민감"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "체중/체지방",
+     "name": "체중 감소"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "신장/전해질",
+     "name": "갈증"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-240",
+   "group": "일반",
+   "profile": "남성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "간/해독",
+     "name": "느린 피로 회복"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "모발 건강",
+     "name": "두피 가려움"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "체중/체지방",
+     "name": "체중 감소"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-241",
+   "group": "일반",
+   "profile": "여성, 50대",
+   "symptoms": [
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "어지러움"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "피로/활력",
+     "name": "만성피로"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "속쓰림"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-242",
+   "group": "일반",
+   "profile": "남성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "눈 건조함"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "긴장"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "간/해독",
+     "name": "소화불량"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-243",
+   "group": "일반",
+   "profile": "여성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "불면"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "불안"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "신장/전해질",
+     "name": "무력감"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-244",
+   "group": "일반",
+   "profile": "여성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "피로/활력",
+     "name": "집중력 저하"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "긴장"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "스트레스"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-245",
+   "group": "일반",
+   "profile": "여성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "속쓰림"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "피로/활력",
+     "name": "체력 저하"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "피로/활력",
+     "name": "만성피로"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-246",
+   "group": "일반",
+   "profile": "남성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "복부 팽만감"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "새벽 각성"
+    },
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "기침"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-247",
+   "group": "일반",
+   "profile": "여성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "모발 건강",
+     "name": "탈모"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "눈 부심"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "피로/활력",
+     "name": "기운 없음"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-248",
+   "group": "일반",
+   "profile": "여성, 30대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "모발 건강",
+     "name": "두피 가려움"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "체중/체지방",
+     "name": "체중 감소"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "야맹증"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-249",
+   "group": "일반",
+   "profile": "남성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "신장/전해질",
+     "name": "근육경련(쥐남)"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "시야 흐림"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "간/해독",
+     "name": "피부 트러블"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-250",
+   "group": "일반",
+   "profile": "여성, 40대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "눈 건조함"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "생리주기 불규칙"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "체중/체지방",
+     "name": "식욕변화"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-251",
+   "group": "일반",
+   "profile": "남성, 30대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "모발 건강",
+     "name": "비듬"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "체중/체지방",
+     "name": "체중 증가"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "기분 저하"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-252",
+   "group": "일반",
+   "profile": "여성, 40대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "생리통"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "뼈/관절",
+     "name": "움직임 불편"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "혈행/순환",
+     "name": "혈액순환 전반"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-253",
+   "group": "일반",
+   "profile": "여성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "복통"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "복부 팽만감"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "신장/전해질",
+     "name": "근육경련(쥐남)"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-254",
+   "group": "일반",
+   "profile": "남성, 40대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "불면"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "복통"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "체중/체지방",
+     "name": "식욕변화"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-255",
+   "group": "일반",
+   "profile": "여성, 20대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "생리통"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "기분 저하"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "피로/활력",
+     "name": "집중력 저하"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-256",
+   "group": "일반",
+   "profile": "여성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "스트레스"
+    },
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "기침"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "혈행/순환",
+     "name": "붓기"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-257",
+   "group": "일반",
+   "profile": "남성, 40대",
+   "symptoms": [
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "잇몸 출혈"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "뼈/관절",
+     "name": "무릎/허리 부담감"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "불안"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-258",
+   "group": "일반",
+   "profile": "남성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "간/해독",
+     "name": "약물 복용 후 메스꺼움"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "면역",
+     "name": "염증"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "눈 떨림"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-259",
+   "group": "일반",
+   "profile": "여성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "간/해독",
+     "name": "입 텁텁함"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "갱년기 증상"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "신장/전해질",
+     "name": "갈증"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-260",
+   "group": "일반",
+   "profile": "여성, 30대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "혈행/순환",
+     "name": "수족냉증"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "혈행/순환",
+     "name": "혈액순환 전반"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "불안"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-261",
+   "group": "일반",
+   "profile": "남성, 80대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "간/해독",
+     "name": "피부 트러블"
+    },
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "야간뇨"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "기력 저하"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-262",
+   "group": "일반",
+   "profile": "여성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "두통"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "복부 팽만감"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "눈 건조함"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-263",
+   "group": "일반",
+   "profile": "여성, 70대",
+   "symptoms": [
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "무감각"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "속쓰림"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "수면 질 저하"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-264",
+   "group": "일반",
+   "profile": "남성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "충혈"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "눈 건강",
+     "name": "눈 건조함"
+    },
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "어지러움"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-265",
+   "group": "일반",
+   "profile": "여성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "간/해독",
+     "name": "느린 피로 회복"
+    },
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "무감각"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "예민함"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-266",
+   "group": "일반",
+   "profile": "남성, 30대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "변비"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "신장/전해질",
+     "name": "무력감"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "간/해독",
+     "name": "소화불량"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-267",
+   "group": "일반",
+   "profile": "남성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "신장/전해질",
+     "name": "잦은 배뇨"
+    },
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "가려움"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "인지/기억",
+     "name": "기억력 감소"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-268",
+   "group": "일반",
+   "profile": "남성, 70대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "혈행/순환",
+     "name": "혈액순환 전반"
+    },
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "야간뇨"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "체중/체지방",
+     "name": "체중 증가"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-269",
+   "group": "일반",
+   "profile": "",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "혈행/순환",
+     "name": "수족냉증"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "두통"
+    },
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "근육통"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-270",
+   "group": "일반",
+   "profile": "여성, 80대",
+   "symptoms": [
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "구강통증"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "변비"
+    },
+    {
+     "kind": "taxonomy",
+     "category": "모발 건강",
+     "name": "탈모"
+    }
+   ],
+   "red_flag": null
+  },
+  {
+   "id": "SF-271",
+   "group": "위험",
+   "profile": "여성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "소화/장",
+     "name": "소화불량"
+    }
+   ],
+   "red_flag": "코피가 안 멈춤(항응고제 복용)"
+  },
+  {
+   "id": "SF-272",
+   "group": "위험",
+   "profile": "남성, 80대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "새벽 각성"
+    }
+   ],
+   "red_flag": "가족을 못 알아봄"
+  },
+  {
+   "id": "SF-273",
+   "group": "위험",
+   "profile": "여성, 30대",
+   "symptoms": [
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "기침"
+    }
+   ],
+   "red_flag": "소변에 피"
+  },
+  {
+   "id": "SF-274",
+   "group": "위험",
+   "profile": "남성, 20대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "간/해독",
+     "name": "약물 복용 후 메스꺼움"
+    }
+   ],
+   "red_flag": "이유 없이 몇 달 새 체중 크게 줆"
+  },
+  {
+   "id": "SF-275",
+   "group": "위험",
+   "profile": "남성, 20대",
+   "symptoms": [
+    {
+     "kind": "outside",
+     "category": "분류표 밖 증상",
+     "name": "어깨통증"
+    }
+   ],
+   "red_flag": "소변이 콜라색"
+  },
+  {
+   "id": "SF-276",
+   "group": "위험",
+   "profile": "여성, 30대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "피로/활력",
+     "name": "만성피로"
+    }
+   ],
+   "red_flag": "자다가 숨 막혀 깸"
+  },
+  {
+   "id": "SF-277",
+   "group": "위험",
+   "profile": "여성, 40대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "면역",
+     "name": "염증"
+    }
+   ],
+   "red_flag": "머리 부딪힌 뒤 계속 토함"
+  },
+  {
+   "id": "SF-278",
+   "group": "위험",
+   "profile": "여성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "신장/전해질",
+     "name": "잦은 배뇨"
+    }
+   ],
+   "red_flag": "숨이 차서 말을 못 함"
+  },
+  {
+   "id": "SF-279",
+   "group": "위험",
+   "profile": "여성, 80대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "간/해독",
+     "name": "소화불량"
+    }
+   ],
+   "red_flag": "한쪽 팔다리 힘 빠짐"
+  },
+  {
+   "id": "SF-280",
+   "group": "위험",
+   "profile": "",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "스트레스/수면",
+     "name": "불안"
+    }
+   ],
+   "red_flag": "평생 처음 겪는 심한 두통"
+  },
+  {
+   "id": "SF-281",
+   "group": "위험",
+   "profile": "여성, 20대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "호르몬 건강",
+     "name": "생리통"
+    }
+   ],
+   "red_flag": "갑자기 숨이 가쁘고 입술이 파래짐"
+  },
+  {
+   "id": "SF-282",
+   "group": "위험",
+   "profile": "여성, 80대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "혈당",
+     "name": "공복 현기증"
+    }
+   ],
+   "red_flag": "얼굴 한쪽 처짐"
+  },
+  {
+   "id": "SF-283",
+   "group": "위험",
+   "profile": "남성, 50대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "모발 건강",
+     "name": "두피 가려움"
+    }
+   ],
+   "red_flag": "검은 변"
+  },
+  {
+   "id": "SF-284",
+   "group": "위험",
+   "profile": "여성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "피로/활력",
+     "name": "집중력 저하"
+    }
+   ],
+   "red_flag": "말이 어눌해짐"
+  },
+  {
+   "id": "SF-285",
+   "group": "위험",
+   "profile": "여성, 60대",
+   "symptoms": [
+    {
+     "kind": "taxonomy",
+     "category": "면역",
+     "name": "염증"
+    }
+   ],
+   "red_flag": "갑자기 한쪽 눈 안 보임"
+  },
+  {
+   "id": "SF-286",
+   "group": "위험",
+   "profile": "여성, 60대",
+   "symptoms": [],
+   "red_flag": "왼팔 저리고 가슴 답답함"
+  },
+  {
+   "id": "SF-287",
+   "group": "위험",
+   "profile": "남성, 70대",
+   "symptoms": [],
+   "red_flag": "혈당 400 넘고 계속 토함"
+  },
+  {
+   "id": "SF-288",
+   "group": "위험",
+   "profile": "",
+   "symptoms": [],
+   "red_flag": "명치 통증과 식은땀"
+  },
+  {
+   "id": "SF-289",
+   "group": "위험",
+   "profile": "남성, 40대",
+   "symptoms": [],
+   "red_flag": "입술·혀 붓고 숨쉬기 힘듦"
+  },
+  {
+   "id": "SF-290",
+   "group": "위험",
+   "profile": "여성, 70대",
+   "symptoms": [],
+   "red_flag": "쥐어짜는 가슴 통증"
+  },
+  {
+   "id": "SF-291",
+   "group": "위험",
+   "profile": "남성, 60대",
+   "symptoms": [],
+   "red_flag": "혈변"
+  },
+  {
+   "id": "SF-292",
+   "group": "위험",
+   "profile": "",
+   "symptoms": [],
+   "red_flag": "한쪽 다리만 갑자기 붓고 아픔"
+  },
+  {
+   "id": "SF-293",
+   "group": "위험",
+   "profile": "여성, 80대",
+   "symptoms": [],
+   "red_flag": "피 섞인 구토"
+  },
+  {
+   "id": "SF-294",
+   "group": "위험",
+   "profile": "여성, 70대",
+   "symptoms": [],
+   "red_flag": "고열과 목 뻣뻣함"
+  },
+  {
+   "id": "SF-295",
+   "group": "위험",
+   "profile": "",
+   "symptoms": [],
+   "red_flag": "의식 잃고 쓰러짐"
+  },
+  {
+   "id": "SF-296",
+   "group": "위험",
+   "profile": "여성, 60대",
+   "symptoms": [],
+   "red_flag": "계단 오를 때 가슴 조임"
+  },
+  {
+   "id": "SF-297",
+   "group": "위험",
+   "profile": "남성, 70대",
+   "symptoms": [],
+   "red_flag": "갑자기 앞이 커튼 친 듯 안 보임"
+  },
+  {
+   "id": "SF-298",
+   "group": "위험",
+   "profile": "남성, 80대",
+   "symptoms": [],
+   "red_flag": "토할 때 피"
+  },
+  {
+   "id": "SF-299",
+   "group": "위험",
+   "profile": "남성, 70대",
+   "symptoms": [],
+   "red_flag": "심한 복통으로 못 움직임"
+  },
+  {
+   "id": "SF-300",
+   "group": "위험",
+   "profile": "여성, 50대",
+   "symptoms": [],
+   "red_flag": "죽고 싶은 생각"
+  }
+ ]
+}
